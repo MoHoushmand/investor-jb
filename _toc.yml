@@ -1,0 +1,24 @@
+format: jb-book
+root: index
+
+defaults:  # The defaults key will be applied to all chapters and sub-sections
+  titlesonly: True
+options:
+  numbered: true
+
+parts:
+  - caption: QDaria Intro
+    numbered: true
+    chapters:
+      - file: content/qdaria-core/qdaria-business-plan-25
+      - file: content/qdaria-core/qdaria-whitepaper
+
+  - caption: Research Papers
+    numbered: true
+    chapters:
+    - file: Quantum Reservoir Computing
+      sections:
+      - file: content/research-papers/qrc/5-papers-mixed-abstract
+      - file: content/research-papers/qrc/rigetii-qc
+      - file: content/research-papers/qrc/fibonacci-anyons-agentic
+
