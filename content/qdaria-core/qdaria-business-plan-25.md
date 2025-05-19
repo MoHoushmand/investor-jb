@@ -126,7 +126,7 @@ We plan to continue leveraging partnerships (with both larger companies and rese
 
 <div id="competitorFundingChart" class="chart-placeholder"></div>
 
-### *(Funding raised by notable quantum companies (pre-IPO) vs QDaria’s seed target, highlighting QDaria’s lean approach. (IonQ: $84M, Rigetti: $198M, D-Wave: $300M+, PsiQuantum: $665M; QDaria: $12M seed).)*
+*(Funding raised by notable quantum companies (pre-IPO) vs QDaria’s seed target, highlighting QDaria’s lean approach. (IonQ: $84M, Rigetti: $198M, D-Wave: $300M+, PsiQuantum: $665M; QDaria: $12M seed).)*
 
 ## Products and Services
 
@@ -220,8 +220,10 @@ Our financial plan reflects this multi-faceted growth strategy. We forecast fina
 **Revenue Drivers:** From 2025–2026, revenue is primarily from **quantum kit rentals** and **consulting/pilot projects** (e.g., a paid proof-of-concept for Qm9 at a hedge fund, or a custom AI solution using QDiana for a client). These are relatively low-volume, high-touch sales. Starting 2027, as products hit the market, **software and platform sales** ramp up. By 2028–2030, we assume our main revenue streams are SaaS subscriptions (for QDiana in enterprises or QMikeAI seats, etc.), usage fees (for Qm9 cloud platform), and software licensing (Zipminator corporate licenses, etc.). We project overall revenue growing from virtually nil in 2024 to ~$1M in 2027, ~$20M in 2028, ~$50M in 2029, reaching about $100M in 2030 in our base-case. This represents a ~110% CAGR from 2026 to 2030 – aggressive, but plausible given the high-growth markets and multiple product launches (for comparison, many successful SaaS companies have 50–100% annual growth in early years, and we have multiple engines of growth).
 
 **Cost Structure:** In early years, a large portion of spend is **R&D** – roughly 55–60% of expenses through 2026. We invest heavily in developing the complex tech (quantum algorithms, AI models). As products launch, **Sales & Marketing** expenses ramp up from maybe 10% initially to ~25% by 2028 (we’ll need to educate the market and sell enterprise deals, which may involve a direct sales force especially for something like Qm9 or Zipminator). **G&A** (general admin) might be ~15% of spend initially (we keep lean operations) trending down slightly as a percentage with scale. One big cost unique to us is **quantum hardware and cloud costs** – running computations on quantum cloud services or maintaining our own QPU. We account for operating the dilution refrigerator and related lab costs under R&D or COGS. Fortunately, these costs, while significant per machine (maintenance, calibration, etc.), are not huge relative to software revenue – one fridge might cost a few hundred thousand per year to maintain, which by the time we have tens of millions in revenue is small.
-*   **Gross Margin:** Our business mix includes high-margin software and lower-margin hardware services. Initially, with kit rentals dominant, gross margins are lower (~50% in mid-2020s) due to depreciation of kits, hardware support, etc. But as software becomes the majority, blended gross margin should rise to ~70% or more by 2030. Software subscriptions and licenses can have 80–90% margins, whereas kit rentals might be 40–50%. We assume by 2030, software comprises ~80% of revenue, hardware/services ~20%.
-*   **Profitability Timeline:** We do not expect to be net profitable until around **2029** in the base case. The rationale: we will continually reinvest in growth (especially expanding each venture pre-IPO). Operating losses will likely peak in 2026-2027 as we scale R&D and staff up ahead of significant revenue. By 2028, one subsidiary (Zipminator) might already be profitable on its own, but consolidated QDaria will still be investing in others. After the 2028 IPO, Zipminator’s financials separate (but for modeling we still consolidate until we possibly partially divest). By 2029, the combined revenue from multiple products starts covering our consolidated costs, and we anticipate crossing into **positive net income in 2029**. By 2030, with substantial revenue and the benefit of scale, net margins could reach 20–25% (typical of a software-heavy group).
+
+* **Gross Margin:** Our business mix includes high-margin software and lower-margin hardware services. Initially, with kit rentals dominant, gross margins are lower (~50% in mid-2020s) due to depreciation of kits, hardware support, etc. But as software becomes the majority, blended gross margin should rise to ~70% or more by 2030. Software subscriptions and licenses can have 80–90% margins, whereas kit rentals might be 40–50%. We assume by 2030, software comprises ~80% of revenue, hardware/services ~20%.
+* **Profitability Timeline:** We do not expect to be net profitable until around **2029** in the base case. The rationale: we will continually reinvest in growth (especially expanding each venture pre-IPO). Operating losses will likely peak in 2026-2027 as we scale R&D and staff up ahead of significant revenue. By 2028, one subsidiary (Zipminator) might already be profitable on its own, but consolidated QDaria will still be investing in others. After the 2028 IPO, Zipminator’s financials separate (but for modeling we still consolidate until we possibly partially divest). By 2029, the combined revenue from multiple products starts covering our consolidated costs, and we anticipate crossing into **positive net income in 2029**. By 2030, with substantial revenue and the benefit of scale, net margins could reach 20–25% (typical of a software-heavy group).
+
 **Funding Plan:** We’ve mentioned fundraising at various stages: $12M seed (current), Series A ~$8M (2026), Series B ~$20M (2027). Post-2027, the IPOs serve as funding events for the subsidiaries, so we don’t model large private raises beyond B. If needed, we could do a Series C at holding level or late-stage in a subsidiary, but ideally the IPOs provide the growth capital. We also assume the ability to access some **grant funding** (especially for our research-heavy projects like topological qubits or quantum education) – say a few million spread over years, which we haven’t explicitly added but could extend runway or reduce need for external capital slightly.
 
 In terms of *uses* of the initial seed and subsequent funding:
@@ -316,58 +318,3 @@ This development timeline will be regularly updated as we learn and as technolog
 **Quantum + AI Synergy in Practice:** A distinctive technical strategy of QDaria is embedding AI at multiple levels of our quantum technology stack. Concretely, we are developing an AI-driven **automatic code generator** for quantum algorithms: an AI model that can, given a high-level problem description, propose a quantum circuit or algorithm to solve it (essentially QMikeAI’s core brain). This involves training on a large corpus of known quantum algorithms and their natural language descriptions. We’ve found early on that GPT-4 style models can output basic quantum code (like Q# or Qiskit) from descriptions; we’re pushing that further by fine-tuning on specialized data and having the AI execute simulations of its own output to self-evaluate and refine (an approach similar to AlphaGo’s self-play, but for code). We pair this with a **quantum heuristic optimizer** – for example, using evolutionary algorithms (which themselves can be enhanced by quantum randomness) to optimize circuit parameters. On the AI side, for QDiana’s conversational ability, we’re incorporating a **symbolic reasoning module** that leverages quantum logic for inference. For instance, to solve a tricky logical puzzle a student asks, QDiana might internally set up the logical constraints as a satisfiability problem and use a quantum annealer to find a solution, then explain it. This cross-play between AI and quantum computation is cutting-edge and largely experimental, but our internal tests indicate it can improve accuracy on certain classes of problems.
 
 **Use of Mojo and Advanced Languages:** We are early**...Use of Mojo and Advanced Languages:** As an implementation detail, we are leveraging new programming languages like **Mojo** (a high-performance Python superset for AI/ML) to write performance-critical components of our hybrid algorithms. For instance, parts of TeHaA’s model and QMikeAI’s optimization routines are being developed in Mojo, which offers near [`C++`](https://en.wikipedia.org/wiki/C%2B%2B) speed with Python-like syntax. This allows us to iterate quickly on quantum-classical code without sacrificing runtime performance, ensuring that when our AI orchestrates quantum tasks, the classical side is as optimized as possible. We believe this cutting-edge software engineering approach will give us an execution advantage and make our systems more efficient than those relying purely on legacy tools.
-
-</file_content>
-
-Now that you have the latest state of the file, try the operation again with fewer, more precise SEARCH blocks. For large files especially, it may be prudent to try to limit yourself to <5 SEARCH/REPLACE blocks at a time, then wait for the user to respond with the result of the operation before following up with another replace_in_file call to make additional edits.
-(If you run into this error 3 times in a row, you may use the write_to_file tool as a fallback.)
-</error><environment_details>
-# VSCode Visible Files
-content/qdaria-core/qdaria-business-plan-25.md
-
-# VSCode Open Tabs
-_config.yml
-TODO.md
-.gitignore
-.clinerules/jb-rules.md
-.clinerules/git-conventions.md
-.markdownlint.json
-.clinerules/mcp-usage-rules.md
-content/qdaria-core/qdaria-business-plan-25.md
-
-# Current Time
-19/05/2025, 9:21:24 am (Europe/Oslo, UTC+2:00)
-
-# Context Window Usage
-297,614 / 1,048.576K tokens used (28%)
-
-# Current Mode
-ACT MODE
-</environment_details>
-
-</file_content>
-
-IMPORTANT: For any future changes to this file, use the final_file_content shown above as your reference. This content reflects the current state of the file, including any auto-formatting (e.g., if you used single quotes but the formatter converted them to double quotes). Always base your SEARCH/REPLACE operations on this final version to ensure accuracy.<environment_details>
-# VSCode Visible Files
-content/qdaria-core/qdaria-business-plan-25.html
-
-# VSCode Open Tabs
-_config.yml
-TODO.md
-.gitignore
-.markdownlint.json
-.clinerules/mcp-usage-rules.md
-content/qdaria-core/qdaria-business-plan-25.md
-.clinerules/git-conventions.md
-content/qdaria-core/qdaria-business-plan-25.html
-.clinerules/jb-rules.md
-
-# Current Time
-19/05/2025, 9:37:59 am (Europe/Oslo, UTC+2:00)
-
-# Context Window Usage
-816,907 / 1,048.576K tokens used (78%)
-
-# Current Mode
-ACT MODE
-</environment_details>

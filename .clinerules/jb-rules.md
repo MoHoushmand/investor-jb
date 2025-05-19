@@ -21,7 +21,7 @@ This document outlines the rules and best practices to follow when developing an
 
 - **Markdown Flavor:** Primarily use MyST (Markedly Structured Text) Markdown for enhanced features.
 - **Headings:** Use appropriate heading levels (`#`, `##`, `###`, etc.) to structure content logically.
-- **Directives and Roles:** Utilize MyST directives (e.g., ````{note}```, ````{warning}```, ````{figure}```) and roles for rich content.
+- **Directives and Roles:** Utilize MyST directives (e.g., ```` {note} ````, ```` {warning} ````, ```` {figure} ````) and roles for rich content.
 - **Citations:** Manage citations using a `.bib` file (e.g., `references.bib`) and reference them using `{[cite]}key` syntax.
 - **Cross-Referencing:** Use MyST roles for cross-referencing sections, figures, and equations.
 
