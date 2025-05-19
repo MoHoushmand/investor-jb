@@ -153,3 +153,6 @@ Temporary Items
 # myenv/
 # If your micromamba env is named 'env' and is in the project root:
 /env/
+
+# Ignore index.html in the root directory
+/index.html
