@@ -1,7 +1,6 @@
 format: jb-book
 root: index
-
-defaults:  # The defaults key will be applied to all chapters and sub-sections
+defaults:
   titlesonly: True
 options:
   numbered: true
@@ -10,15 +9,19 @@ parts:
   - caption: QDaria Intro
     numbered: true
     chapters:
-      - file: content/qdaria-core/qdaria-business-plan-25
-      - file: content/qdaria-core/qdaria-whitepaper
+      - file: content/qdaria-core/qdaria-intro
+        sections:
+          - file: content/qdaria-core/qdaria-business/qdaria-business-plan-25
+          - file: content/qdaria-core/qdaria-business/qdaria-whitepaper
 
   - caption: Research Papers
     numbered: true
     chapters:
-    - file: Quantum Reservoir Computing
-      sections:
-      - file: content/research-papers/qrc/5-papers-mixed-abstract
-      - file: content/research-papers/qrc/rigetii-qc
-      - file: content/research-papers/qrc/fibonacci-anyons-agentic
-
+      - file: content/research-papers/intro-qrc
+        sections:
+          - file: content/research-papers/qrc/part1-4-9qubits
+          - file: content/research-papers/qrc/part2-4-9qubit
+      - file: content/research-papers/intro-tqc
+        sections:
+          - file: content/research-papers/tqc/Advances-in-Non-Abelian-Anyons-for-Topological-Quantum-Computing
+          - file: content/research-papers/tqc/Agent-Orchestrated-Discovery-of-Fibonacci-Anyon-Materials-for-Topological-Quantum-Computing
