@@ -6,20 +6,23 @@ This document outlines the Git conventions to follow for this project.
 
 - **`main` branch:** This branch should always reflect a stable, deployable state of the book. Direct commits to `main` are discouraged.
 - **Feature branches:** All new work (e.g., writing a new chapter, fixing a bug, experimenting with a new feature) should be done in a feature branch.
-    - Naming: Use a descriptive name, prefixed with a type if desired (e.g., `feat/`, `fix/`, `docs/`, `chore/`).
-        - Example: `feat/add-chapter-on-risk-analysis`
-        - Example: `fix/broken-link-in-intro`
-        - Example: `docs/update-readme`
+  - Naming: Use a descriptive name, prefixed with a type if desired (e.g., `feat/`, `fix/`, `docs/`, `chore/`).
+    - Example: `feat/add-chapter-on-risk-analysis`
+    - Example: `fix/broken-link-in-intro`
+    - Example: `docs/update-readme`
 - **Pull Requests (PRs):** Once work on a feature branch is complete, open a Pull Request to merge it into `main`.
-    - PRs should be reviewed if possible.
-    - Ensure any automated checks (if set up later) pass before merging.
+  - PRs should be reviewed if possible.
+  - Ensure any automated checks (if set up later) pass before merging.
 
 ## 2. Commit Messages
 
-Follow a structured commit message format to maintain clarity and consistency in the project history. We will adopt a simplified version of the [Conventional Commits](https://www.conventionalcommits.org/) specification.
+Follow a structured commit message format to maintain clarity and consistency in the
+project history. We will adopt a simplified version of the
+[Conventional Commits](https://www.conventionalcommits.org/) specification.
 
 **Format:**
-```
+
+```text
 <type>[optional scope]: <description>
 
 [optional body]
@@ -28,6 +31,7 @@ Follow a structured commit message format to maintain clarity and consistency in
 ```
 
 **Types:**
+
 - `feat`: A new feature or new content (e.g., adding a new chapter, a new section).
 - `fix`: A bug fix (e.g., correcting a typo, fixing a broken link, resolving a build error).
 - `docs`: Documentation-only changes (e.g., updates to README, `_toc.yml`, `_config.yml`, rule files).
@@ -40,44 +44,48 @@ Follow a structured commit message format to maintain clarity and consistency in
 - `chore`: Other changes that don't modify src or test files (e.g., updating `.gitignore`).
 
 **Scope (Optional):**
+
 The scope provides additional contextual information and is contained within parentheses, e.g., `feat(chapter3): ...`. It could be a chapter name, a specific section, or a module.
 
 **Description:**
+
 - Concise summary of the change.
 - Use the imperative, present tense: "add" not "added" nor "adds".
 - Don't capitalize the first letter.
 - No dot (.) at the end.
 
 **Body (Optional):**
+
 - Use the imperative, present tense.
 - Include motivation for the change and contrast this with previous behavior.
 
 **Footer (Optional):**
+
 - Information about Breaking Changes (start with `BREAKING CHANGE:`).
 - Reference issue numbers if applicable (e.g., `Closes #123`).
 
 **Examples:**
 
-```
+```text
 feat: add initial draft of chapter on market sentiment
 ```
 
-```
+```text
 fix: correct broken link in introduction section
 ```
 
-```
+```text
 docs: update _toc.yml to include new appendix
 ```
 
-```
+```text
 refactor(notebooks): simplify data loading in analysis notebook
 
-The previous data loading logic was complex and hard to follow. This change
-streamlines the process and adds more comments for clarity.
+The previous data loading logic was complex and hard to follow.
+This change streamlines the process and adds more comments for clarity.
 ```
 
-```
+```text
 feat(risk-models): implement Value at Risk calculation
 
 BREAKING CHANGE: The `calculate_risk` function now requires an additional
@@ -86,6 +94,7 @@ Closes #42
 ```
 
 ## 3. General Practices
+
 - Commit frequently with small, logical changes.
 - Write clear and descriptive commit messages.
 - Pull the latest changes from `main` into your feature branch before opening a PR to minimize merge conflicts.

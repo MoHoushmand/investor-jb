@@ -1,0 +1,9 @@
+{
+  "default": true,
+  "MD007": { "indent": 2, "start_indented": false },
+  "MD013": false,
+  "MD033": {
+    "allowed_elements": ["div", "Chart"]
+  },
+  "MD040": true
+}
