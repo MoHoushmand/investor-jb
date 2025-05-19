@@ -10,18 +10,19 @@ parts:
     numbered: true
     chapters:
       - file: content/qdaria-core/qdaria-intro
-        sections:
-          - file: content/qdaria-core/qdaria-business/qdaria-business-plan-25
-          - file: content/qdaria-core/qdaria-business/qdaria-whitepaper
+      - file: content/qdaria-core/qdaria-business/qdaria-business-plan-25
+      - file: content/qdaria-core/qdaria-business/qdaria-whitepaper
 
-  - caption: Research Papers
+  - caption: Research Papers - Quantum Reservoir Computing
     numbered: true
     chapters:
       - file: content/research-papers/intro-qrc
-        sections:
-          - file: content/research-papers/qrc/part1-4-9qubits
-          - file: content/research-papers/qrc/part2-4-9qubit
+      - file: content/research-papers/qrc/part1-4-9qubits
+      - file: content/research-papers/qrc/part2-4-9qubit
+
+  - caption: Research Papers - Topological Quantum Computing
+    numbered: true
+    chapters:
       - file: content/research-papers/intro-tqc
-        sections:
-          - file: content/research-papers/tqc/Advances-in-Non-Abelian-Anyons-for-Topological-Quantum-Computing
-          - file: content/research-papers/tqc/Agent-Orchestrated-Discovery-of-Fibonacci-Anyon-Materials-for-Topological-Quantum-Computing
+      - file: content/research-papers/tqc/Advances-in-Non-Abelian-Anyons-for-Topological-Quantum-Computing
+      - file: content/research-papers/tqc/Agent-Orchestrated-Discovery-of-Fibonacci-Anyon-Materials-for-Topological-Quantum-Computing
