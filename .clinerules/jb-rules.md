@@ -24,8 +24,18 @@ This document outlines the rules and best practices to follow when developing an
 - **Directives and Roles:** Utilize MyST directives (e.g., ```` {note} ````, ```` {warning} ````, ```` {figure} ````) and roles for rich content.
 - **Citations:** Manage citations using a `.bib` file (e.g., `references.bib`) and reference them using `{[cite]}key` syntax.
 - **Cross-Referencing:** Use MyST roles for cross-referencing sections, figures, and equations.
+- **Escaping Special Characters:** Ensure that special characters in Markdown, particularly the dollar sign (`$`) used for currency, are properly escaped (e.g., `\$100`) to prevent misinterpretation by LaTeX or MathJax renderers.
 
-## 4. Notebooks (`.ipynb`)
+## 4. Formatting Conventions
+
+- **Spacing after Bolded Pseudo-Headings:** Bolded pseudo-headings (e.g., `**Section Title:**`) must be followed by a blank line before the subsequent paragraph to ensure readability and consistency. Example:
+  ```markdown
+  **My Section Title:**
+
+  This is the paragraph following the title.
+  ```
+
+## 5. Notebooks (`.ipynb`)
 
 - **Clarity:** Ensure notebooks are well-commented and easy to follow.
 - **Cell Output:** Clear all cell outputs before committing, unless the output is essential for understanding the content without re-running (e.g., plots for a static view).
@@ -75,3 +85,8 @@ This document outlines the rules and best practices to follow when developing an
 
 - Store custom CSS in `_static/custom.css` (or a similar named file) and ensure it's loaded via `_config.yml`.
 - Minimize custom JavaScript unless necessary.
+
+## 11. General Markdown Best Practices
+- Strive for clarity and consistency in formatting across all documents.
+- Use semantic line breaks where appropriate to improve diff readability.
+- Keep lines to a reasonable length (e.g., 80-120 characters) where possible, unless it breaks tables or code blocks.
