@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git Conventions for investor-jb &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="../_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/scripts/sphinx-book-theme.js"></script>
+      <script src="../_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script src="../_static/chart-config.js?v=b454993d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Git Conventions for investor-jb</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/.clinerules/git-conventions.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="git-conventions-for-investor-jb">
+<h1>Git Conventions for investor-jb<a class="headerlink" href="#git-conventions-for-investor-jb" title="Link to this heading"></a></h1>
+<p>This document outlines the Git conventions to follow for this project.</p>
+<section id="branching-strategy">
+<h2>1. Branching Strategy<a class="headerlink" href="#branching-strategy" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">main</span></code> branch:</strong> This branch should always reflect a stable, deployable state of the book. Direct commits to <code class="docutils literal notranslate"><span class="pre">main</span></code> are discouraged.</p></li>
+<li><p><strong>Feature branches:</strong> All new work (e.g., writing a new chapter, fixing a bug, experimenting with a new feature) should be done in a feature branch.</p>
+<ul>
+<li><p>Naming: Use a descriptive name, prefixed with a type if desired (e.g., <code class="docutils literal notranslate"><span class="pre">feat/</span></code>, <code class="docutils literal notranslate"><span class="pre">fix/</span></code>, <code class="docutils literal notranslate"><span class="pre">docs/</span></code>, <code class="docutils literal notranslate"><span class="pre">chore/</span></code>).</p>
+<ul>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">feat/add-chapter-on-risk-analysis</span></code></p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">fix/broken-link-in-intro</span></code></p></li>
+<li><p>Example: <code class="docutils literal notranslate"><span class="pre">docs/update-readme</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Pull Requests (PRs):</strong> Once work on a feature branch is complete, open a Pull Request to merge it into <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p>
+<ul>
+<li><p>PRs should be reviewed if possible.</p></li>
+<li><p>Ensure any automated checks (if set up later) pass before merging.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="commit-messages">
+<h2>2. Commit Messages<a class="headerlink" href="#commit-messages" title="Link to this heading"></a></h2>
+<p>Follow a structured commit message format to maintain clarity and consistency in the
+project history. We will adopt a simplified version of the
+<a class="reference external" href="https://www.conventionalcommits.org/">Conventional Commits</a> specification.</p>
+<p><strong>Format:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;type&gt;[optional scope]: &lt;description&gt;
+
+[optional body]
+
+[optional footer]
+</pre></div>
+</div>
+<p><strong>Types:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">feat</span></code>: A new feature or new content (e.g., adding a new chapter, a new section).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fix</span></code>: A bug fix (e.g., correcting a typo, fixing a broken link, resolving a build error).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs</span></code>: Documentation-only changes (e.g., updates to README, <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, rule files).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">style</span></code>: Changes that do not affect the meaning of the content or code (e.g., white-space, formatting, missing semi-colons in code cells if applicable).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refactor</span></code>: A code change that neither fixes a bug nor adds a feature (e.g., restructuring a notebook for clarity).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">perf</span></code>: A code change that improves performance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test</span></code>: Adding missing tests or correcting existing tests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">build</span></code>: Changes that affect the build system or external dependencies (e.g., <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>, <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ci</span></code>: Changes to CI configuration files and scripts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chore</span></code>: Other changes that don’t modify src or test files (e.g., updating <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>).</p></li>
+</ul>
+<p><strong>Scope (Optional):</strong></p>
+<p>The scope provides additional contextual information and is contained within parentheses, e.g., <code class="docutils literal notranslate"><span class="pre">feat(chapter3):</span> <span class="pre">...</span></code>. It could be a chapter name, a specific section, or a module.</p>
+<p><strong>Description:</strong></p>
+<ul class="simple">
+<li><p>Concise summary of the change.</p></li>
+<li><p>Use the imperative, present tense: “add” not “added” nor “adds”.</p></li>
+<li><p>Don’t capitalize the first letter.</p></li>
+<li><p>No dot (.) at the end.</p></li>
+</ul>
+<p><strong>Body (Optional):</strong></p>
+<ul class="simple">
+<li><p>Use the imperative, present tense.</p></li>
+<li><p>Include motivation for the change and contrast this with previous behavior.</p></li>
+</ul>
+<p><strong>Footer (Optional):</strong></p>
+<ul class="simple">
+<li><p>Information about Breaking Changes (start with <code class="docutils literal notranslate"><span class="pre">BREAKING</span> <span class="pre">CHANGE:</span></code>).</p></li>
+<li><p>Reference issue numbers if applicable (e.g., <code class="docutils literal notranslate"><span class="pre">Closes</span> <span class="pre">#123</span></code>).</p></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>feat: add initial draft of chapter on market sentiment
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fix: correct broken link in introduction section
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docs: update _toc.yml to include new appendix
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>refactor(notebooks): simplify data loading in analysis notebook
+
+The previous data loading logic was complex and hard to follow.
+This change streamlines the process and adds more comments for clarity.
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>feat(risk-models): implement Value at Risk calculation
+
+BREAKING CHANGE: The `calculate_risk` function now requires an additional
+parameter `confidence_level`.
+Closes #42
+</pre></div>
+</div>
+</section>
+<section id="general-practices">
+<h2>3. General Practices<a class="headerlink" href="#general-practices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Commit frequently with small, logical changes.</p></li>
+<li><p>Write clear and descriptive commit messages.</p></li>
+<li><p>Pull the latest changes from <code class="docutils literal notranslate"><span class="pre">main</span></code> into your feature branch before opening a PR to minimize merge conflicts.</p></li>
+<li><p>Delete feature branches after they have been merged into <code class="docutils literal notranslate"><span class="pre">main</span></code>.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./.clinerules"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

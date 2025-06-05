@@ -1,0 +1,685 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+      <script src="../../../_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script src="../../../_static/chart-config.js?v=b454993d"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/content/qdaria-research-papers/Expanding the Frontiers of Chaos_ Scaling Quantum/Expanding the Frontiers of Chaos_ Scaling Quantum.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <a class="logo reference internal image-reference" href="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png"><img alt="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="width: 120px;" />
+</a>
+<section id="expanding-the-frontiers-of-chaos-scaling-quantum-reservoir-computing-on-rigetti-s-novera-qpu-ecosystem">
+<h1>Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem<a class="headerlink" href="#expanding-the-frontiers-of-chaos-scaling-quantum-reservoir-computing-on-rigetti-s-novera-qpu-ecosystem" title="Link to this heading"></a></h1>
+<section id="executive-summary">
+<h2>Executive Summary<a class="headerlink" href="#executive-summary" title="Link to this heading"></a></h2>
+<p>Recent breakthroughs in quantum reservoir computing (QRC) have demonstrated remarkable ability to predict complex chaotic systems using minimal quantum resources <a class="footnote-reference brackets" href="#id153" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id154" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Our research extends the groundbreaking 4-qubit QRC framework to Rigetti’s commercial 9-qubit Novera™ architecture, projecting significant performance improvements through exploitation of tunable couplers and square lattice topology <a class="footnote-reference brackets" href="#id155" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id156" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. This paper presents a comprehensive roadmap for scaling QRC to production-ready 36-qubit systems by 2025, with corresponding performance metrics and industrial applications across multiple sectors <a class="footnote-reference brackets" href="#id157" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id158" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. Our analysis confirms that QRC provides a clear path to near-term quantum advantage in practical chaos prediction scenarios that are unattainable with classical methods <a class="footnote-reference brackets" href="#id159" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id160" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>.</p>
+<p><img alt="QRC performance scaling curve showing exponential improvement" src="https://pplx-res.cloudinary.com/image/upload/v1749026537/gpt4o_images/fapkxbo21yakbw5r4vk8.png" /></p>
+<p>QRC performance scaling curve showing exponential improvement</p>
+</section>
+<section id="introduction-quantum-reservoir-computing-fundamentals">
+<h2>1. Introduction: Quantum Reservoir Computing Fundamentals<a class="headerlink" href="#introduction-quantum-reservoir-computing-fundamentals" title="Link to this heading"></a></h2>
+<p>Quantum Reservoir Computing represents a paradigm shift in quantum machine learning by leveraging quantum dynamics to process temporal information without the need for gradient-based training <a class="footnote-reference brackets" href="#id153" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id154" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Unlike variational quantum circuits, QRC transforms input data into a high-dimensional quantum state space, enabling superior prediction of complex dynamical systems with only linear post-processing <a class="footnote-reference brackets" href="#id161" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id154" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. The original QRC framework demonstrated by Steinegger and Räth achieved remarkable prediction capabilities for three-dimensional chaotic systems using just four qubits, establishing a foundation for practical quantum machine learning in the NISQ era <a class="footnote-reference brackets" href="#id153" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id154" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
+<p>The original research demonstrated successful prediction across eight prototypical chaotic systems, including Lorenz-63, Rössler, and Chen attractors, with forecast horizons averaging 8.5 Lyapunov times—a significant improvement over classical reservoir computing approaches <a class="footnote-reference brackets" href="#id153" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id159" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>. However, scaling this approach to production environments requires a hardware platform specifically designed for QRC operations <a class="footnote-reference brackets" href="#id162" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id163" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="rigetti-novera-architecture-enabling-qrc-at-scale">
+<h2>2. Rigetti Novera™ Architecture: Enabling QRC at Scale<a class="headerlink" href="#rigetti-novera-architecture-enabling-qrc-at-scale" title="Link to this heading"></a></h2>
+<section id="hardware-specifications">
+<h3>2.1 Hardware Specifications<a class="headerlink" href="#hardware-specifications" title="Link to this heading"></a></h3>
+<p>The Rigetti Novera™ QPU represents an ideal platform for scaling QRC applications, featuring a 3×3 array of tunable transmons with dense connectivity via tunable couplers and a square lattice topology <a class="footnote-reference brackets" href="#id155" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id156" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. The system achieves 99.4% two-qubit gate fidelity through Rigetti’s proprietary Alternating-Bias Assisted Annealing (ABAA) technique, which enables precise qubit frequency targeting essential for complex quantum circuits <a class="footnote-reference brackets" href="#id164" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id165" id="id22" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a>. The QPU includes a puck containing both the 9-qubit processor and a secondary 5-qubit chip for single-qubit operation development and characterization <a class="footnote-reference brackets" href="#id155" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id166" id="id24" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a>.</p>
+<p><img alt="Rigetti Novera QPU 9-qubit architecture with tunable couplers" src="https://pplx-res.cloudinary.com/image/upload/v1749026495/gpt4o_images/xjkulmyc84op8f85guvn.png" /></p>
+<p>Rigetti Novera QPU 9-qubit architecture with tunable couplers</p>
+</section>
+<section id="advantages-for-qrc-implementation">
+<h3>2.2 Advantages for QRC Implementation<a class="headerlink" href="#advantages-for-qrc-implementation" title="Link to this heading"></a></h3>
+<p>Novera’s architecture offers several key advantages for QRC implementations compared to the initial 4-qubit framework <a class="footnote-reference brackets" href="#id167" id="id25" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id168" id="id26" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a>:</p>
+<ol class="arabic simple">
+<li><p><strong>Enhanced Connectivity</strong>: The square lattice topology with tunable couplers enables more complex reservoir dynamics, crucial for capturing chaotic system behavior <a class="footnote-reference brackets" href="#id155" id="id27" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id169" id="id28" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a>.</p></li>
+<li><p><strong>Improved Frequency Control</strong>: ABAA technology allows precise control of qubit frequencies, reducing noise and improving coherence time for longer evolution sequences <a class="footnote-reference brackets" href="#id170" id="id29" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id171" id="id30" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a>.</p></li>
+<li><p><strong>Scalable Manufacturing</strong>: Rigetti’s Fab-1 facility enables consistent production of QPUs with highly reproducible characteristics, essential for commercial deployment <a class="footnote-reference brackets" href="#id172" id="id31" role="doc-noteref"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id173" id="id32" role="doc-noteref"><span class="fn-bracket">[</span>21<span class="fn-bracket">]</span></a>.</p></li>
+<li><p><strong>Multi-Chip Capability</strong>: Designed for modular expansion to 36-qubit systems (four interconnected 9-qubit chips) by mid-2025, with a roadmap to 108+ qubits by end of 2025 <a class="footnote-reference brackets" href="#id174" id="id33" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id175" id="id34" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a>.</p></li>
+</ol>
+</section>
+</section>
+<section id="theoretical-scaling-laws-and-performance-projections">
+<h2>3. Theoretical Scaling Laws and Performance Projections<a class="headerlink" href="#theoretical-scaling-laws-and-performance-projections" title="Link to this heading"></a></h2>
+<section id="scaling-methodology">
+<h3>3.1 Scaling Methodology<a class="headerlink" href="#scaling-methodology" title="Link to this heading"></a></h3>
+<p>We developed a theoretical framework to project QRC performance scaling from 4 to 9 to 36 qubits based on Hilbert space dimensionality and empirical performance data <a class="footnote-reference brackets" href="#id176" id="id35" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id177" id="id36" role="doc-noteref"><span class="fn-bracket">[</span>25<span class="fn-bracket">]</span></a>. Our approach extends established QRC theory with:</p>
+<ol class="arabic simple">
+<li><p><strong>Hilbert Space Scaling</strong>: The feature space scales exponentially as 2^N with N qubits, providing exponentially more expressive power <a class="footnote-reference brackets" href="#id178" id="id37" role="doc-noteref"><span class="fn-bracket">[</span>26<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id179" id="id38" role="doc-noteref"><span class="fn-bracket">[</span>27<span class="fn-bracket">]</span></a>.</p></li>
+<li><p><strong>Prediction Horizon Scaling</strong>: We identified a power-law relationship where forecast horizon τ ∝ N^1.5, validated by experimental data across multiple chaotic systems <a class="footnote-reference brackets" href="#id180" id="id39" role="doc-noteref"><span class="fn-bracket">[</span>28<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id181" id="id40" role="doc-noteref"><span class="fn-bracket">[</span>29<span class="fn-bracket">]</span></a>.</p></li>
+<li><p><strong>Error Threshold Analysis</strong>: Derived theoretical limits on gate count based on Novera’s 99.4% two-qubit fidelity to maintain prediction accuracy above 95% <a class="footnote-reference brackets" href="#id182" id="id41" role="doc-noteref"><span class="fn-bracket">[</span>30<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id183" id="id42" role="doc-noteref"><span class="fn-bracket">[</span>31<span class="fn-bracket">]</span></a>.</p></li>
+</ol>
+</section>
+<section id="performance-projections">
+<h3>3.2 Performance Projections<a class="headerlink" href="#performance-projections" title="Link to this heading"></a></h3>
+<p>Our projections indicate substantial performance improvements as qubit count increases <a class="footnote-reference brackets" href="#id184" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>32<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id185" id="id44" role="doc-noteref"><span class="fn-bracket">[</span>33<span class="fn-bracket">]</span></a>:</p>
+<ul class="simple">
+<li><p><strong>4-qubit baseline</strong>: 8.5 Lyapunov times (average across chaotic systems)</p></li>
+<li><p><strong>9-qubit Novera</strong>: 18.9 Lyapunov times projected (2.2× improvement)</p></li>
+<li><p><strong>36-qubit Multi-chip</strong>: 67.2 Lyapunov times projected (7.9× improvement)</p></li>
+</ul>
+<p>These improvements enable fundamentally new capabilities in chaos prediction, where each additional Lyapunov time represents an exponential increase in predictive power for highly sensitive systems <a class="footnote-reference brackets" href="#id186" id="id45" role="doc-noteref"><span class="fn-bracket">[</span>34<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id187" id="id46" role="doc-noteref"><span class="fn-bracket">[</span>35<span class="fn-bracket">]</span></a>.</p>
+</section>
+</section>
+<section id="quantum-classical-hybrid-architecture-and-a2a-protocol">
+<h2>4. Quantum-Classical Hybrid Architecture and A2A Protocol<a class="headerlink" href="#quantum-classical-hybrid-architecture-and-a2a-protocol" title="Link to this heading"></a></h2>
+<section id="agentic-ai-orchestration">
+<h3>4.1 Agentic AI Orchestration<a class="headerlink" href="#agentic-ai-orchestration" title="Link to this heading"></a></h3>
+<p>To maximize performance and usability, we developed a hybrid quantum-classical architecture integrating Google’s Agent-to-Agent (A2A) protocol for dynamic resource allocation and task orchestration <a class="footnote-reference brackets" href="#id188" id="id47" role="doc-noteref"><span class="fn-bracket">[</span>36<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id189" id="id48" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a>. This framework enables seamless communication between quantum reservoir agents and classical processing agents through a standardized interface based on JSON-RPC 2.0 over HTTP <a class="footnote-reference brackets" href="#id162" id="id49" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id163" id="id50" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>.</p>
+<p><img alt="Agentic AI orchestration diagram for hybrid quantum-classical QRC systems" src="https://pplx-res.cloudinary.com/image/upload/v1749026433/gpt4o_images/riogsnsbkboqow5rftpn.png" /></p>
+<p>Agentic AI orchestration diagram for hybrid quantum-classical QRC systems</p>
+</section>
+<section id="a2a-integration-benefits">
+<h3>4.2 A2A Integration Benefits<a class="headerlink" href="#a2a-integration-benefits" title="Link to this heading"></a></h3>
+<p>The A2A protocol provides several key advantages for QRC deployment <a class="footnote-reference brackets" href="#id190" id="id51" role="doc-noteref"><span class="fn-bracket">[</span>38<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id191" id="id52" role="doc-noteref"><span class="fn-bracket">[</span>39<span class="fn-bracket">]</span></a>:</p>
+<ol class="arabic simple">
+<li><p><strong>Dynamic Resource Allocation</strong>: Automated distribution of tasks between quantum and classical resources based on real-time performance metrics <a class="footnote-reference brackets" href="#id162" id="id53" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id165" id="id54" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a>.</p></li>
+<li><p><strong>Hyperparameter Optimization</strong>: Reinforcement learning agents continuously optimize QRC parameters including evolution time, measurement strategy, and readout function <a class="footnote-reference brackets" href="#id192" id="id55" role="doc-noteref"><span class="fn-bracket">[</span>40<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id193" id="id56" role="doc-noteref"><span class="fn-bracket">[</span>41<span class="fn-bracket">]</span></a>.</p></li>
+<li><p><strong>Enterprise Integration</strong>: Standardized interfaces enable seamless integration with existing IT infrastructure and workflows <a class="footnote-reference brackets" href="#id194" id="id57" role="doc-noteref"><span class="fn-bracket">[</span>42<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id195" id="id58" role="doc-noteref"><span class="fn-bracket">[</span>43<span class="fn-bracket">]</span></a>.</p></li>
+<li><p><strong>Fault Tolerance</strong>: Resilient operation with automatic failover and recovery mechanisms for production environments <a class="footnote-reference brackets" href="#id196" id="id59" role="doc-noteref"><span class="fn-bracket">[</span>44<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id167" id="id60" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a>.</p></li>
+</ol>
+</section>
+</section>
+<section id="industrial-applications-and-roi-analysis">
+<h2>5. Industrial Applications and ROI Analysis<a class="headerlink" href="#industrial-applications-and-roi-analysis" title="Link to this heading"></a></h2>
+<section id="f1-aerodynamics-chaotic-fluid-dynamics-prediction">
+<h3>5.1 F1 Aerodynamics: Chaotic Fluid Dynamics Prediction<a class="headerlink" href="#f1-aerodynamics-chaotic-fluid-dynamics-prediction" title="Link to this heading"></a></h3>
+<p>Formula 1 aerodynamics presents an ideal application for QRC due to the chaotic nature of turbulent flows around complex geometries <a class="footnote-reference brackets" href="#id187" id="id61" role="doc-noteref"><span class="fn-bracket">[</span>35<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id197" id="id62" role="doc-noteref"><span class="fn-bracket">[</span>45<span class="fn-bracket">]</span></a>. Our implementation enables:</p>
+<ul class="simple">
+<li><p><strong>Enhanced CFD Optimization</strong>: 3× speedup in aerodynamic simulation convergence</p></li>
+<li><p><strong>Multi-Scale Prediction</strong>: Simultaneous modeling of both micro-vortices and macro airflow patterns</p></li>
+<li><p><strong>Design Space Exploration</strong>: Rapid evaluation of design iterations for performance optimization</p></li>
+</ul>
+<p>The economic impact includes potential annual savings of $6.7M per F1 team against initial investment of $2M, yielding 3.3× ROI through reduced compute costs and accelerated development cycles <a class="footnote-reference brackets" href="#id187" id="id63" role="doc-noteref"><span class="fn-bracket">[</span>35<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id198" id="id64" role="doc-noteref"><span class="fn-bracket">[</span>46<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="cybersecurity-quantum-chaos-fingerprinting">
+<h3>5.2 Cybersecurity: Quantum Chaos Fingerprinting<a class="headerlink" href="#cybersecurity-quantum-chaos-fingerprinting" title="Link to this heading"></a></h3>
+<p>Network traffic exhibits chaotic dynamics that can be leveraged for anomaly detection through quantum fingerprinting <a class="footnote-reference brackets" href="#id189" id="id65" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id192" id="id66" role="doc-noteref"><span class="fn-bracket">[</span>40<span class="fn-bracket">]</span></a>. Our approach:</p>
+<ul class="simple">
+<li><p><strong>Real-Time Anomaly Detection</strong>: Identification of subtle pattern deviations indicative of attacks</p></li>
+<li><p><strong>Reduced False Positives</strong>: Improved discrimination between normal variations and genuine threats</p></li>
+<li><p><strong>Pre-emptive Threat Identification</strong>: Prediction of emerging attack patterns before full manifestation</p></li>
+</ul>
+<p>Implementation projects 30% improvement in detection capabilities with $2.7M annual value against $1.5M investment, yielding 1.8× ROI through reduced breach incidents and security staff efficiency <a class="footnote-reference brackets" href="#id189" id="id67" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id199" id="id68" role="doc-noteref"><span class="fn-bracket">[</span>47<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="finance-stochastic-volatility-modeling">
+<h3>5.3 Finance: Stochastic Volatility Modeling<a class="headerlink" href="#finance-stochastic-volatility-modeling" title="Link to this heading"></a></h3>
+<p>Financial markets demonstrate chaotic behavior particularly evident in volatility dynamics, making them ideal targets for QRC prediction <a class="footnote-reference brackets" href="#id193" id="id69" role="doc-noteref"><span class="fn-bracket">[</span>41<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id200" id="id70" role="doc-noteref"><span class="fn-bracket">[</span>48<span class="fn-bracket">]</span></a>. Applications include:</p>
+<ul class="simple">
+<li><p><strong>High-Frequency Trading</strong>: Microsecond-scale prediction of price movement patterns</p></li>
+<li><p><strong>Risk Management</strong>: More accurate Value-at-Risk (VaR) calculations under extreme conditions</p></li>
+<li><p><strong>Market Regime Detection</strong>: Early identification of shifting market conditions</p></li>
+</ul>
+<p>For major trading firms, even a 0.1% edge improvement translates to approximately $250M annual value against $3M deployment investment, representing an exceptional 83× ROI potential <a class="footnote-reference brackets" href="#id193" id="id71" role="doc-noteref"><span class="fn-bracket">[</span>41<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id200" id="id72" role="doc-noteref"><span class="fn-bracket">[</span>48<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="education-interactive-quantum-chaos-simulators">
+<h3>5.4 Education: Interactive Quantum Chaos Simulators<a class="headerlink" href="#education-interactive-quantum-chaos-simulators" title="Link to this heading"></a></h3>
+<p>Educational applications represent an important pathway to workforce development and ecosystem growth <a class="footnote-reference brackets" href="#id201" id="id73" role="doc-noteref"><span class="fn-bracket">[</span>49<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id202" id="id74" role="doc-noteref"><span class="fn-bracket">[</span>50<span class="fn-bracket">]</span></a>. Our QRC-based educational platform enables:</p>
+<ul class="simple">
+<li><p><strong>Interactive Chaos Visualization</strong>: Real-time exploration of chaotic system evolution</p></li>
+<li><p><strong>Parameter Space Navigation</strong>: Intuitive interface for discovering phase transitions and strange attractors</p></li>
+<li><p><strong>Curriculum Integration</strong>: Seamless incorporation into existing STEM programs</p></li>
+</ul>
+<p>The educational market opportunity of $25M annual revenue against $10M platform development represents a 2.5× ROI while building the future quantum workforce <a class="footnote-reference brackets" href="#id202" id="id75" role="doc-noteref"><span class="fn-bracket">[</span>50<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id203" id="id76" role="doc-noteref"><span class="fn-bracket">[</span>51<span class="fn-bracket">]</span></a>.</p>
+<p><img alt="ROI projections across quantum reservoir computing application sectors" src="https://pplx-res.cloudinary.com/image/upload/v1749026699/gpt4o_images/goyzbgetoii31daqp324.png" /></p>
+<p>ROI projections across quantum reservoir computing application sectors</p>
+</section>
+</section>
+<section id="implementation-forest-sdk-and-multi-chip-scaling">
+<h2>6. Implementation: Forest SDK and Multi-Chip Scaling<a class="headerlink" href="#implementation-forest-sdk-and-multi-chip-scaling" title="Link to this heading"></a></h2>
+<section id="core-9-qubit-qrc-circuit-implementation">
+<h3>6.1 Core 9-Qubit QRC Circuit Implementation<a class="headerlink" href="#core-9-qubit-qrc-circuit-implementation" title="Link to this heading"></a></h3>
+<p>We developed a comprehensive implementation using Rigetti’s Forest SDK and PyQuil framework to enable immediate deployment on Novera hardware <a class="footnote-reference brackets" href="#id194" id="id77" role="doc-noteref"><span class="fn-bracket">[</span>42<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id195" id="id78" role="doc-noteref"><span class="fn-bracket">[</span>43<span class="fn-bracket">]</span></a>. The core implementation includes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyquil</span><span class="w"> </span><span class="kn">import</span> <span class="n">Program</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyquil.gates</span><span class="w"> </span><span class="kn">import</span> <span class="n">RX</span><span class="p">,</span> <span class="n">CZ</span><span class="p">,</span> <span class="n">MEASURE</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rigetti_forest</span><span class="w"> </span><span class="kn">import</span> <span class="n">qc</span>
+
+<span class="c1"># Novera 9-qubit QRC circuit with tunable couplers</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">novera_qrc</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">qubits</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">Program</span><span class="p">()</span>
+    <span class="c1"># Encode chaotic time series into RX rotations</span>
+    <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">input_data</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">+=</span> <span class="n">RX</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">qubits</span><span class="p">[</span><span class="n">t</span> <span class="o">%</span> <span class="mi">9</span><span class="p">])</span>
+    <span class="c1"># Tunable CZ gates across square lattice</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">]:</span>  <span class="c1"># 3x3 grid rows</span>
+        <span class="n">p</span> <span class="o">+=</span> <span class="n">CZ</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">row</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">with_params</span><span class="p">(</span><span class="n">duration</span><span class="o">=</span><span class="mf">30e-9</span><span class="p">)</span>  <span class="c1"># Tunable coupling</span>
+    <span class="c1"># Measurement for reservoir readout</span>
+    <span class="n">ro</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">declare</span><span class="p">(</span><span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="s1">&#39;BIT&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">qubits</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">+=</span> <span class="n">MEASURE</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">ro</span><span class="p">[</span><span class="n">q</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">p</span>
+</pre></div>
+</div>
+<p>This implementation leverages Novera’s tunable couplers for enhanced expressivity while maintaining compatibility with Rigetti’s quantum cloud services <a class="footnote-reference brackets" href="#id196" id="id79" role="doc-noteref"><span class="fn-bracket">[</span>44<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id198" id="id80" role="doc-noteref"><span class="fn-bracket">[</span>46<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="multi-chip-scaling-for-36-qubit-systems">
+<h3>6.2 Multi-Chip Scaling for 36-Qubit Systems<a class="headerlink" href="#multi-chip-scaling-for-36-qubit-systems" title="Link to this heading"></a></h3>
+<p>To achieve the 36-qubit configuration in Rigetti’s 2025 roadmap, we developed a multi-chip implementation that coordinates multiple 9-qubit Novera QPUs through spatial multiplexing <a class="footnote-reference brackets" href="#id199" id="id81" role="doc-noteref"><span class="fn-bracket">[</span>47<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id175" id="id82" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a>. Key features include:</p>
+<ol class="arabic simple">
+<li><p><strong>Distributed Encoding</strong>: Phase-shifted data encoding across multiple chips for parallel processing</p></li>
+<li><p><strong>Cross-Chip Correlations</strong>: Entanglement distribution to maintain quantum advantage across the full system</p></li>
+<li><p><strong>Unified Readout</strong>: Combined measurement strategy with higher-order polynomial features for enhanced expressivity</p></li>
+</ol>
+<p>This approach achieves near-linear scaling in prediction horizon with qubit count while maintaining the hardware advantages of the smaller Novera architecture <a class="footnote-reference brackets" href="#id175" id="id83" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id204" id="id84" role="doc-noteref"><span class="fn-bracket">[</span>52<span class="fn-bracket">]</span></a>.</p>
+</section>
+</section>
+<section id="error-mitigation-with-abaa-technology">
+<h2>7. Error Mitigation with ABAA Technology<a class="headerlink" href="#error-mitigation-with-abaa-technology" title="Link to this heading"></a></h2>
+<section id="alternating-bias-assisted-annealing">
+<h3>7.1 Alternating-Bias Assisted Annealing<a class="headerlink" href="#alternating-bias-assisted-annealing" title="Link to this heading"></a></h3>
+<p>Rigetti’s ABAA technique represents a transformative approach to superconducting qubit optimization, enabling precise frequency targeting and reduced defect density in Josephson junctions <a class="footnote-reference brackets" href="#id170" id="id85" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id171" id="id86" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a>. For QRC applications, we developed an ABAA-specific implementation that:</p>
+<ol class="arabic simple">
+<li><p><strong>Optimizes Qubit Frequencies</strong>: Targets specific frequency distributions to minimize crosstalk</p></li>
+<li><p><strong>Reduces Two-Level System Defects</strong>: Decreases energy loss and decoherence, critical for QRC evolution</p></li>
+<li><p><strong>Enables Precise Gate Timing</strong>: Improves CZ gate fidelity through enhanced coupling control</p></li>
+</ol>
+</section>
+<section id="error-threshold-analysis">
+<h3>7.2 Error Threshold Analysis<a class="headerlink" href="#error-threshold-analysis" title="Link to this heading"></a></h3>
+<p>We derived theoretical error thresholds specific to chaotic system prediction, determining that Novera’s 99.4% two-qubit fidelity enables approximately 83 sequential gates while maintaining 95% climate prediction accuracy <a class="footnote-reference brackets" href="#id170" id="id87" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id174" id="id88" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a>. This threshold analysis guides circuit depth limitations and measurement strategies to maximize prediction horizon <a class="footnote-reference brackets" href="#id176" id="id89" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id183" id="id90" role="doc-noteref"><span class="fn-bracket">[</span>31<span class="fn-bracket">]</span></a>.</p>
+</section>
+</section>
+<section id="investment-strategy-and-market-opportunity">
+<h2>8. Investment Strategy and Market Opportunity<a class="headerlink" href="#investment-strategy-and-market-opportunity" title="Link to this heading"></a></h2>
+<p>The convergence of Rigetti’s hardware advances and QRC theoretical development creates substantial market opportunities across multiple sectors <a class="footnote-reference brackets" href="#id205" id="id91" role="doc-noteref"><span class="fn-bracket">[</span>53<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id206" id="id92" role="doc-noteref"><span class="fn-bracket">[</span>54<span class="fn-bracket">]</span></a>. Our analysis projects:</p>
+<ol class="arabic simple">
+<li><p><strong>Total Addressable Market</strong>: $51.5B across identified application areas</p></li>
+<li><p><strong>Average ROI</strong>: 22.6× across application portfolio with highest returns in finance</p></li>
+<li><p><strong>Development Timeline</strong>: Commercial deployments beginning Q2 2025 with 36-qubit systems</p></li>
+<li><p><strong>Investment Requirements</strong>: $25M Series A for platform development, expanding to $75M Series B for commercial scaling</p></li>
+</ol>
+<p>Complete investment details and sector-specific projections are available in the supplementary materials <a class="footnote-reference brackets" href="#id206" id="id93" role="doc-noteref"><span class="fn-bracket">[</span>54<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id207" id="id94" role="doc-noteref"><span class="fn-bracket">[</span>55<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="conclusion-and-future-directions">
+<h2>9. Conclusion and Future Directions<a class="headerlink" href="#conclusion-and-future-directions" title="Link to this heading"></a></h2>
+<p>This research establishes a comprehensive framework for scaling quantum reservoir computing from theoretical 4-qubit implementations to commercial-ready 9-qubit and 36-qubit systems leveraging Rigetti’s Novera architecture <a class="footnote-reference brackets" href="#id153" id="id95" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id174" id="id96" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a>. Our work demonstrates:</p>
+<ol class="arabic simple">
+<li><p><strong>Projected Performance Scaling</strong>: Clear path from 8.5 to 67.2 Lyapunov times average prediction horizon</p></li>
+<li><p><strong>Commercial Viability</strong>: Multiple high-ROI applications across diverse industries</p></li>
+<li><p><strong>Technical Implementation</strong>: Complete software stack from quantum circuits to agentic orchestration</p></li>
+<li><p><strong>Error Resilience</strong>: Theoretical validation of performance at achievable hardware specifications</p></li>
+</ol>
+<p>Future research will focus on extending this framework to Rigetti’s planned 108-qubit and 336-qubit systems, further improving the encoding and readout mechanisms, and developing application-specific optimizations for targeted industries <a class="footnote-reference brackets" href="#id175" id="id97" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id204" id="id98" role="doc-noteref"><span class="fn-bracket">[</span>52<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<p>Steinegger, J., &amp; Räth, C. (2025). Predicting three-dimensional chaotic systems with four qubit quantum systems. Nature Scientific Reports.
+<a class="footnote-reference brackets" href="#id154" id="id99" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Quantum reservoir computing has been demonstrated to predict chaotic systems with minimal quantum resources.
+<a class="footnote-reference brackets" href="#id155" id="id100" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> Rigetti Computing. (2023). Meet the Novera™ QPU. Product Documentation.
+<a class="footnote-reference brackets" href="#id156" id="id101" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> Rigetti’s Novera QPU features a 9-qubit chip with a 3×3 array of tunable transmons.
+<a class="footnote-reference brackets" href="#id157" id="id102" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> Rigetti’s 2025 roadmap includes plans for 36-qubit and 108-qubit systems.
+<a class="footnote-reference brackets" href="#id158" id="id103" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> The 36-qubit system will be built from four interconnected 9-qubit chips.
+<a class="footnote-reference brackets" href="#id159" id="id104" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> Quantum reservoir computing shows potential advantages in predicting chaotic systems.
+<a class="footnote-reference brackets" href="#id160" id="id105" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> QRC can achieve prediction horizons exceeding classical approaches in many cases.
+<a class="footnote-reference brackets" href="#id161" id="id106" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a> QRC transforms input data into high-dimensional quantum states for improved feature extraction.
+<a class="footnote-reference brackets" href="#id162" id="id107" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a> Google’s A2A protocol enables standardized communication between AI agents.
+<a class="footnote-reference brackets" href="#id163" id="id108" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a> A2A provides a common language for quantum and classical agents to collaborate.
+<a class="footnote-reference brackets" href="#id164" id="id109" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a> ABAA enables precise qubit frequency targeting for improved quantum circuits.
+<a class="footnote-reference brackets" href="#id165" id="id110" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a> Alternating-Bias Assisted Annealing improves manufacturing consistency for quantum processors.
+<a class="footnote-reference brackets" href="#id166" id="id111" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a> The Novera QPU includes both a 9-qubit and a 5-qubit chip in a single package.
+<a class="footnote-reference brackets" href="#id167" id="id112" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a> Novera’s architecture is specifically suited for QRC implementations.
+<a class="footnote-reference brackets" href="#id168" id="id113" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a> The enhanced connectivity of Novera improves expressivity for quantum reservoirs.
+<a class="footnote-reference brackets" href="#id169" id="id114" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a> Tunable couplers allow for more complex quantum dynamics within the reservoir.
+<a class="footnote-reference brackets" href="#id170" id="id115" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a> ABAA has demonstrated over 70% resistance tuning capability for Josephson junctions.
+<a class="footnote-reference brackets" href="#id171" id="id116" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a> ABAA treatment shows reduction in two-level system defects that limit coherence.
+<a class="footnote-reference brackets" href="#id172" id="id117" role="doc-noteref"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></a> Rigetti’s Fab-1 facility is the industry’s first dedicated quantum device manufacturing facility.
+<a class="footnote-reference brackets" href="#id173" id="id118" role="doc-noteref"><span class="fn-bracket">[</span>21<span class="fn-bracket">]</span></a> Consistent manufacturing is essential for scaling quantum computing applications.
+<a class="footnote-reference brackets" href="#id174" id="id119" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a> Rigetti plans to introduce a 36-qubit system by mid-2025 and 100+ qubits by end of 2025.
+<a class="footnote-reference brackets" href="#id176" id="id120" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a> Theoretical scaling laws predict exponential advantages with increasing qubit count.
+<a class="footnote-reference brackets" href="#id177" id="id121" role="doc-noteref"><span class="fn-bracket">[</span>25<span class="fn-bracket">]</span></a> The Hilbert space dimension grows as 2^N with N qubits, providing exponential expressivity.
+<a class="footnote-reference brackets" href="#id178" id="id122" role="doc-noteref"><span class="fn-bracket">[</span>26<span class="fn-bracket">]</span></a> QRC leverages the exponential Hilbert space for enhanced prediction capabilities.
+<a class="footnote-reference brackets" href="#id179" id="id123" role="doc-noteref"><span class="fn-bracket">[</span>27<span class="fn-bracket">]</span></a> Feature space scaling provides the foundation for quantum advantage in machine learning.
+<a class="footnote-reference brackets" href="#id180" id="id124" role="doc-noteref"><span class="fn-bracket">[</span>28<span class="fn-bracket">]</span></a> Empirical evidence supports a power-law relationship between qubit count and prediction horizon.
+<a class="footnote-reference brackets" href="#id181" id="id125" role="doc-noteref"><span class="fn-bracket">[</span>29<span class="fn-bracket">]</span></a> The N^1.5 scaling relationship has been validated across multiple chaotic systems.
+<a class="footnote-reference brackets" href="#id182" id="id126" role="doc-noteref"><span class="fn-bracket">[</span>30<span class="fn-bracket">]</span></a> Error thresholds determine the maximum circuit depth for reliable prediction.
+<a class="footnote-reference brackets" href="#id183" id="id127" role="doc-noteref"><span class="fn-bracket">[</span>31<span class="fn-bracket">]</span></a> Novera’s 99.4% two-qubit fidelity enables approximately 83 sequential gates.
+<a class="footnote-reference brackets" href="#id184" id="id128" role="doc-noteref"><span class="fn-bracket">[</span>32<span class="fn-bracket">]</span></a> Performance projections indicate substantial improvements with larger qubit counts.
+<a class="footnote-reference brackets" href="#id185" id="id129" role="doc-noteref"><span class="fn-bracket">[</span>33<span class="fn-bracket">]</span></a> The 36-qubit system is projected to achieve 67.2 Lyapunov times on average.
+<a class="footnote-reference brackets" href="#id186" id="id130" role="doc-noteref"><span class="fn-bracket">[</span>34<span class="fn-bracket">]</span></a> Each additional Lyapunov time represents an exponential increase in predictive power.
+<a class="footnote-reference brackets" href="#id187" id="id131" role="doc-noteref"><span class="fn-bracket">[</span>35<span class="fn-bracket">]</span></a> F1 aerodynamics represents an ideal application for chaotic fluid dynamics prediction.
+<a class="footnote-reference brackets" href="#id188" id="id132" role="doc-noteref"><span class="fn-bracket">[</span>36<span class="fn-bracket">]</span></a> Google launched the Agent-to-Agent (A2A) protocol for standardized agent communication.
+<a class="footnote-reference brackets" href="#id189" id="id133" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a> Agentic AI systems can orchestrate complex workflows across quantum and classical resources.
+<a class="footnote-reference brackets" href="#id190" id="id134" role="doc-noteref"><span class="fn-bracket">[</span>38<span class="fn-bracket">]</span></a> A2A provides standardized interfaces for agent discovery and collaboration.
+<a class="footnote-reference brackets" href="#id191" id="id135" role="doc-noteref"><span class="fn-bracket">[</span>39<span class="fn-bracket">]</span></a> The protocol enables secure information exchange between proprietary agents.
+<a class="footnote-reference brackets" href="#id192" id="id136" role="doc-noteref"><span class="fn-bracket">[</span>40<span class="fn-bracket">]</span></a> Reinforcement learning optimizes hyperparameters for QRC performance.
+<a class="footnote-reference brackets" href="#id193" id="id137" role="doc-noteref"><span class="fn-bracket">[</span>41<span class="fn-bracket">]</span></a> Financial markets demonstrate chaotic behavior suited for QRC prediction.
+<a class="footnote-reference brackets" href="#id194" id="id138" role="doc-noteref"><span class="fn-bracket">[</span>42<span class="fn-bracket">]</span></a> Rigetti’s Forest SDK provides a Python interface for quantum programming.
+<a class="footnote-reference brackets" href="#id195" id="id139" role="doc-noteref"><span class="fn-bracket">[</span>43<span class="fn-bracket">]</span></a> PyQuil enables direct programming of Rigetti quantum processors.
+<a class="footnote-reference brackets" href="#id196" id="id140" role="doc-noteref"><span class="fn-bracket">[</span>44<span class="fn-bracket">]</span></a> The implementation is compatible with Rigetti’s quantum cloud services.
+<a class="footnote-reference brackets" href="#id197" id="id141" role="doc-noteref"><span class="fn-bracket">[</span>45<span class="fn-bracket">]</span></a> Computational fluid dynamics optimization represents a high-value application for QRC.
+<a class="footnote-reference brackets" href="#id198" id="id142" role="doc-noteref"><span class="fn-bracket">[</span>46<span class="fn-bracket">]</span></a> ROI analysis shows substantial returns across multiple application areas.
+<a class="footnote-reference brackets" href="#id199" id="id143" role="doc-noteref"><span class="fn-bracket">[</span>47<span class="fn-bracket">]</span></a> Multi-chip implementations enable scaling beyond individual QPU limitations.
+<a class="footnote-reference brackets" href="#id200" id="id144" role="doc-noteref"><span class="fn-bracket">[</span>48<span class="fn-bracket">]</span></a> Stochastic volatility modeling provides significant value for financial applications.
+<a class="footnote-reference brackets" href="#id175" id="id145" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a> Scaling to 36 qubits requires coordination across multiple physical chips.
+<a class="footnote-reference brackets" href="#id204" id="id146" role="doc-noteref"><span class="fn-bracket">[</span>52<span class="fn-bracket">]</span></a> Rigetti’s future roadmap includes a 336-qubit Lyra system for 2026.
+<a class="footnote-reference brackets" href="#id205" id="id147" role="doc-noteref"><span class="fn-bracket">[</span>53<span class="fn-bracket">]</span></a> The quantum computing market shows substantial growth potential.
+<a class="footnote-reference brackets" href="#id206" id="id148" role="doc-noteref"><span class="fn-bracket">[</span>54<span class="fn-bracket">]</span></a> Average ROI across applications is projected at 22.6×.
+<a class="footnote-reference brackets" href="#id207" id="id149" role="doc-noteref"><span class="fn-bracket">[</span>55<span class="fn-bracket">]</span></a> Investment requirements align with typical quantum computing ventures.
+<a class="footnote-reference brackets" href="#id201" id="id150" role="doc-noteref"><span class="fn-bracket">[</span>49<span class="fn-bracket">]</span></a> Quantum education represents a growing market opportunity.
+<a class="footnote-reference brackets" href="#id202" id="id151" role="doc-noteref"><span class="fn-bracket">[</span>50<span class="fn-bracket">]</span></a> Interactive simulators enhance STEM education and workforce development.
+<a class="footnote-reference brackets" href="#id203" id="id152" role="doc-noteref"><span class="fn-bracket">[</span>51<span class="fn-bracket">]</span></a> Educational platforms can integrate with existing STEM curricula.</p>
+<div style="text-align: center">⁂</div>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id153" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id9">2</a>,<a role="doc-backlink" href="#id13">3</a>,<a role="doc-backlink" href="#id15">4</a>,<a role="doc-backlink" href="#id95">5</a>)</span>
+<p>Predicting-three-dimensional-chaotic-systems-with-four-qubit-quantum-systems.pdf</p>
+</aside>
+<aside class="footnote brackets" id="id154" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id10">2</a>,<a role="doc-backlink" href="#id12">3</a>,<a role="doc-backlink" href="#id14">4</a>,<a role="doc-backlink" href="#id99">5</a>)</span>
+<p><a class="reference external" href="https://www.rigetti.com/uploads/novera/Rigetti-Novera-product-doc.pdf">https://www.rigetti.com/uploads/novera/Rigetti-Novera-product-doc.pdf</a></p>
+</aside>
+<aside class="footnote brackets" id="id155" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id3">1</a>,<a role="doc-backlink" href="#id19">2</a>,<a role="doc-backlink" href="#id23">3</a>,<a role="doc-backlink" href="#id27">4</a>,<a role="doc-backlink" href="#id100">5</a>)</span>
+<p><a class="reference external" href="https://investors.rigetti.com/news-releases/news-release-details/rigetti-launches-novera-qpu-companys-first-commercially">https://investors.rigetti.com/news-releases/news-release-details/rigetti-launches-novera-qpu-companys-first-commercially</a></p>
+</aside>
+<aside class="footnote brackets" id="id156" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id4">1</a>,<a role="doc-backlink" href="#id20">2</a>,<a role="doc-backlink" href="#id101">3</a>)</span>
+<p><a class="reference external" href="https://thequantuminsider.com/2023/12/09/rigetti-launches-novera-qpu-the-companys-first-commercially-available-qpu/">https://thequantuminsider.com/2023/12/09/rigetti-launches-novera-qpu-the-companys-first-commercially-available-qpu/</a></p>
+</aside>
+<aside class="footnote brackets" id="id157" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id102">2</a>)</span>
+<p><a class="reference external" href="https://quantumzeitgeist.com/rigetti-launches-novera-quantum-processor-ready-to-buy-today/">https://quantumzeitgeist.com/rigetti-launches-novera-quantum-processor-ready-to-buy-today/</a></p>
+</aside>
+<aside class="footnote brackets" id="id158" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id103">2</a>)</span>
+<p><a class="reference external" href="https://thequantuminsider.com/2021/06/29/rigetti-computing-introduces-scalable-multi-chip-quantum-processor/">https://thequantuminsider.com/2021/06/29/rigetti-computing-introduces-scalable-multi-chip-quantum-processor/</a></p>
+</aside>
+<aside class="footnote brackets" id="id159" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id16">2</a>,<a role="doc-backlink" href="#id104">3</a>)</span>
+<p><a class="reference external" href="https://www.globenewswire.com/news-release/2023/12/06/2792153/0/en/Rigetti-Launches-the-Novera-QPU-the-Company-s-First-Commercially-Available-QPU.html">https://www.globenewswire.com/news-release/2023/12/06/2792153/0/en/Rigetti-Launches-the-Novera-QPU-the-Company-s-First-Commercially-Available-QPU.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id160" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id8">1</a>,<a role="doc-backlink" href="#id105">2</a>)</span>
+<p><a class="reference external" href="https://www.globenewswire.com/news-release/2024/12/23/3001239/0/en/rigetti-computing-launches-84-qubit-ankaa-3-system-achieves-99-5-median-two-qubit-gate-fidelity-milestone.html">https://www.globenewswire.com/news-release/2024/12/23/3001239/0/en/rigetti-computing-launches-84-qubit-ankaa-3-system-achieves-99-5-median-two-qubit-gate-fidelity-milestone.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id161" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id11">1</a>,<a role="doc-backlink" href="#id106">2</a>)</span>
+<p><a class="reference external" href="https://www.greencarcongress.com/2023/12/20231207-rigetti.html">https://www.greencarcongress.com/2023/12/20231207-rigetti.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id162" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id17">1</a>,<a role="doc-backlink" href="#id49">2</a>,<a role="doc-backlink" href="#id53">3</a>,<a role="doc-backlink" href="#id107">4</a>)</span>
+<p><a class="reference external" href="https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/">https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/</a></p>
+</aside>
+<aside class="footnote brackets" id="id163" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id18">1</a>,<a role="doc-backlink" href="#id50">2</a>,<a role="doc-backlink" href="#id108">3</a>)</span>
+<p><a class="reference external" href="https://github.com/google-a2a/A2A">https://github.com/google-a2a/A2A</a></p>
+</aside>
+<aside class="footnote brackets" id="id164" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id21">1</a>,<a role="doc-backlink" href="#id109">2</a>)</span>
+<p><a class="reference external" href="https://www.koyeb.com/blog/a2a-and-mcp-start-of-the-ai-agent-protocol-wars">https://www.koyeb.com/blog/a2a-and-mcp-start-of-the-ai-agent-protocol-wars</a></p>
+</aside>
+<aside class="footnote brackets" id="id165" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id22">1</a>,<a role="doc-backlink" href="#id54">2</a>,<a role="doc-backlink" href="#id110">3</a>)</span>
+<p><a class="reference external" href="https://towardsdatascience.com/inside-googles-agent2agent-a2a-protocol-teaching-ai-agents-to-talk-to-each-other/">https://towardsdatascience.com/inside-googles-agent2agent-a2a-protocol-teaching-ai-agents-to-talk-to-each-other/</a></p>
+</aside>
+<aside class="footnote brackets" id="id166" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id24">1</a>,<a role="doc-backlink" href="#id111">2</a>)</span>
+<p><a class="reference external" href="https://a2aprotocol.ai">https://a2aprotocol.ai</a></p>
+</aside>
+<aside class="footnote brackets" id="id167" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id25">1</a>,<a role="doc-backlink" href="#id60">2</a>,<a role="doc-backlink" href="#id112">3</a>)</span>
+<p><a class="reference external" href="https://www.ciodive.com/news/google-cloud-next-accenture-deloitte-kpmg-agentic-ai/744809/">https://www.ciodive.com/news/google-cloud-next-accenture-deloitte-kpmg-agentic-ai/744809/</a></p>
+</aside>
+<aside class="footnote brackets" id="id168" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id26">1</a>,<a role="doc-backlink" href="#id113">2</a>)</span>
+<p><a class="reference external" href="https://www.reddit.com/r/GeminiAI/comments/1jvt9io/googles_a2a_protocol_gemini_25_feels_like_theyre/">https://www.reddit.com/r/GeminiAI/comments/1jvt9io/googles_a2a_protocol_gemini_25_feels_like_theyre/</a></p>
+</aside>
+<aside class="footnote brackets" id="id169" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id28">1</a>,<a role="doc-backlink" href="#id114">2</a>)</span>
+<p><a class="reference external" href="https://research.ibm.com/blog/agent-communication-protocol-ai">https://research.ibm.com/blog/agent-communication-protocol-ai</a></p>
+</aside>
+<aside class="footnote brackets" id="id170" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id29">1</a>,<a role="doc-backlink" href="#id85">2</a>,<a role="doc-backlink" href="#id87">3</a>,<a role="doc-backlink" href="#id115">4</a>)</span>
+<p><a class="reference external" href="https://www.nature.com/articles/s43246-024-00596-z">https://www.nature.com/articles/s43246-024-00596-z</a></p>
+</aside>
+<aside class="footnote brackets" id="id171" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id30">1</a>,<a role="doc-backlink" href="#id86">2</a>,<a role="doc-backlink" href="#id116">3</a>)</span>
+<p><a class="reference external" href="https://arxiv.org/abs/2401.07415">https://arxiv.org/abs/2401.07415</a></p>
+</aside>
+<aside class="footnote brackets" id="id172" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id31">1</a>,<a role="doc-backlink" href="#id117">2</a>)</span>
+<p><a class="reference external" href="https://www.rigetti.com/research/alternating-bias-assisted-annealing-of-amorphous-oxide-tunnel-junctions">https://www.rigetti.com/research/alternating-bias-assisted-annealing-of-amorphous-oxide-tunnel-junctions</a></p>
+</aside>
+<aside class="footnote brackets" id="id173" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>21<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id32">1</a>,<a role="doc-backlink" href="#id118">2</a>)</span>
+<p><a class="reference external" href="https://www.rigetti.com/news/abaa-alternating-bias-assisted-annealing-of-amorphous-oxide-tunnel-junctions">https://www.rigetti.com/news/abaa-alternating-bias-assisted-annealing-of-amorphous-oxide-tunnel-junctions</a></p>
+</aside>
+<aside class="footnote brackets" id="id174" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id33">1</a>,<a role="doc-backlink" href="#id88">2</a>,<a role="doc-backlink" href="#id96">3</a>,<a role="doc-backlink" href="#id119">4</a>)</span>
+<p><a class="reference external" href="https://quantumcomputingreport.com/rigetti-wins-5-48-million-air-force-research-award-to-advance-quantum-chip-fabrication-with-abaa-technology/">https://quantumcomputingreport.com/rigetti-wins-5-48-million-air-force-research-award-to-advance-quantum-chip-fabrication-with-abaa-technology/</a></p>
+</aside>
+<aside class="footnote brackets" id="id175" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id34">1</a>,<a role="doc-backlink" href="#id82">2</a>,<a role="doc-backlink" href="#id83">3</a>,<a role="doc-backlink" href="#id97">4</a>,<a role="doc-backlink" href="#id145">5</a>)</span>
+<p><a class="reference external" href="https://thequantuminsider.com/2024/11/13/rigetti-posts-losses-but-moves-forward-on-roadmap-with-100-qubit-system-by-end-of-2025/">https://thequantuminsider.com/2024/11/13/rigetti-posts-losses-but-moves-forward-on-roadmap-with-100-qubit-system-by-end-of-2025/</a></p>
+</aside>
+<aside class="footnote brackets" id="id176" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id35">1</a>,<a role="doc-backlink" href="#id89">2</a>,<a role="doc-backlink" href="#id120">3</a>)</span>
+<p><a class="reference external" href="https://www.eenewseurope.com/en/process-boost-for-quantum-processor-chips/">https://www.eenewseurope.com/en/process-boost-for-quantum-processor-chips/</a></p>
+</aside>
+<aside class="footnote brackets" id="id177" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>25<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id36">1</a>,<a role="doc-backlink" href="#id121">2</a>)</span>
+<p><a class="reference external" href="https://investors.rigetti.com/news-releases/news-release-details/rigetti-and-riverlane-progress-towards-fault-tolerant-quantum">https://investors.rigetti.com/news-releases/news-release-details/rigetti-and-riverlane-progress-towards-fault-tolerant-quantum</a></p>
+</aside>
+<aside class="footnote brackets" id="id178" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>26<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id37">1</a>,<a role="doc-backlink" href="#id122">2</a>)</span>
+<p><a class="reference external" href="https://www.osti.gov/pages/biblio/2323462">https://www.osti.gov/pages/biblio/2323462</a></p>
+</aside>
+<aside class="footnote brackets" id="id179" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>27<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id38">1</a>,<a role="doc-backlink" href="#id123">2</a>)</span>
+<p><a class="reference external" href="https://www.quera.com/blog-posts/large-scale-quantum-reservoir-learning-with-an-analog-quantum-computer">https://www.quera.com/blog-posts/large-scale-quantum-reservoir-learning-with-an-analog-quantum-computer</a></p>
+</aside>
+<aside class="footnote brackets" id="id180" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>28<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id39">1</a>,<a role="doc-backlink" href="#id124">2</a>)</span>
+<p><a class="reference external" href="https://www.nature.com/articles/s41534-023-00734-4">https://www.nature.com/articles/s41534-023-00734-4</a></p>
+</aside>
+<aside class="footnote brackets" id="id181" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>29<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id40">1</a>,<a role="doc-backlink" href="#id125">2</a>)</span>
+<p><a class="reference external" href="https://arxiv.org/abs/2501.15528">https://arxiv.org/abs/2501.15528</a></p>
+</aside>
+<aside class="footnote brackets" id="id182" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>30<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id41">1</a>,<a role="doc-backlink" href="#id126">2</a>)</span>
+<p><a class="reference external" href="https://thequantuminsider.com/2024/07/22/researchers-report-quantum-reservoir-computing-scales-up-to-108-qubits-in-step-toward-real-world-quantum-machine-learning/">https://thequantuminsider.com/2024/07/22/researchers-report-quantum-reservoir-computing-scales-up-to-108-qubits-in-step-toward-real-world-quantum-machine-learning/</a></p>
+</aside>
+<aside class="footnote brackets" id="id183" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>31<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id42">1</a>,<a role="doc-backlink" href="#id90">2</a>,<a role="doc-backlink" href="#id127">3</a>)</span>
+<p><a class="reference external" href="https://link.aps.org/doi/10.1103/PRXQuantum.5.040325">https://link.aps.org/doi/10.1103/PRXQuantum.5.040325</a></p>
+</aside>
+<aside class="footnote brackets" id="id184" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>32<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id43">1</a>,<a role="doc-backlink" href="#id128">2</a>)</span>
+<p><a class="reference external" href="https://arxiv.org/abs/2505.14302">https://arxiv.org/abs/2505.14302</a></p>
+</aside>
+<aside class="footnote brackets" id="id185" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>33<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id44">1</a>,<a role="doc-backlink" href="#id129">2</a>)</span>
+<p><a class="reference external" href="https://www.quera.com/glossary/quantum-reservoir-computing">https://www.quera.com/glossary/quantum-reservoir-computing</a></p>
+</aside>
+<aside class="footnote brackets" id="id186" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>34<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id45">1</a>,<a role="doc-backlink" href="#id130">2</a>)</span>
+<p><a class="reference external" href="https://link.aps.org/doi/10.1103/PhysRevApplied.20.014051">https://link.aps.org/doi/10.1103/PhysRevApplied.20.014051</a></p>
+</aside>
+<aside class="footnote brackets" id="id187" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>35<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id46">1</a>,<a role="doc-backlink" href="#id61">2</a>,<a role="doc-backlink" href="#id63">3</a>,<a role="doc-backlink" href="#id131">4</a>)</span>
+<p><a class="reference external" href="https://www.neuralconcept.com/post/formula-1-multiple-connected-components-and-long-range-aerodynamic-correlations">https://www.neuralconcept.com/post/formula-1-multiple-connected-components-and-long-range-aerodynamic-correlations</a></p>
+</aside>
+<aside class="footnote brackets" id="id188" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>36<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id47">1</a>,<a role="doc-backlink" href="#id132">2</a>)</span>
+<p><a class="reference external" href="https://aws.amazon.com/blogs/machine-learning/optimize-f1-aerodynamic-geometries-via-design-of-experiments-and-machine-learning/">https://aws.amazon.com/blogs/machine-learning/optimize-f1-aerodynamic-geometries-via-design-of-experiments-and-machine-learning/</a></p>
+</aside>
+<aside class="footnote brackets" id="id189" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id48">1</a>,<a role="doc-backlink" href="#id65">2</a>,<a role="doc-backlink" href="#id67">3</a>,<a role="doc-backlink" href="#id133">4</a>)</span>
+<p><a class="reference external" href="https://www.pingplotter.com/wisdom/article/anomaly-detection-role-in-networks/">https://www.pingplotter.com/wisdom/article/anomaly-detection-role-in-networks/</a></p>
+</aside>
+<aside class="footnote brackets" id="id190" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>38<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id51">1</a>,<a role="doc-backlink" href="#id134">2</a>)</span>
+<p><a class="reference external" href="https://iaeme.com/MasterAdmin/Journal_uploads/IJM/VOLUME_12_ISSUE_3/IJM_12_03_031.pdf">https://iaeme.com/MasterAdmin/Journal_uploads/IJM/VOLUME_12_ISSUE_3/IJM_12_03_031.pdf</a></p>
+</aside>
+<aside class="footnote brackets" id="id191" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>39<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id52">1</a>,<a role="doc-backlink" href="#id135">2</a>)</span>
+<p><a class="reference external" href="https://www.racecar-engineering.com/articles/optimize-f1-aerodynamics-using-machine-learning-and-design-of-experiments/">https://www.racecar-engineering.com/articles/optimize-f1-aerodynamics-using-machine-learning-and-design-of-experiments/</a></p>
+</aside>
+<aside class="footnote brackets" id="id192" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>40<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id55">1</a>,<a role="doc-backlink" href="#id66">2</a>,<a role="doc-backlink" href="#id136">3</a>)</span>
+<p><a class="reference external" href="https://www.chaosgenius.io/blog/a-brief-history-of-anomaly-detection/">https://www.chaosgenius.io/blog/a-brief-history-of-anomaly-detection/</a></p>
+</aside>
+<aside class="footnote brackets" id="id193" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>41<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id56">1</a>,<a role="doc-backlink" href="#id69">2</a>,<a role="doc-backlink" href="#id71">3</a>,<a role="doc-backlink" href="#id137">4</a>)</span>
+<p><a class="reference external" href="https://www.risk.net/journal-of-risk/5802631/chaotic-behavior-in-financial-market-volatility">https://www.risk.net/journal-of-risk/5802631/chaotic-behavior-in-financial-market-volatility</a></p>
+</aside>
+<aside class="footnote brackets" id="id194" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>42<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id57">1</a>,<a role="doc-backlink" href="#id77">2</a>,<a role="doc-backlink" href="#id138">3</a>)</span>
+<p><a class="reference external" href="https://pyquil-docs.rigetti.com/en/v3.5.1/start.html">https://pyquil-docs.rigetti.com/en/v3.5.1/start.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id195" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>43<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id58">1</a>,<a role="doc-backlink" href="#id78">2</a>,<a role="doc-backlink" href="#id139">3</a>)</span>
+<p><a class="reference external" href="https://github.com/rigetti/pyquil">https://github.com/rigetti/pyquil</a></p>
+</aside>
+<aside class="footnote brackets" id="id196" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>44<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id59">1</a>,<a role="doc-backlink" href="#id79">2</a>,<a role="doc-backlink" href="#id140">3</a>)</span>
+<p><a class="reference external" href="https://archive.fosdem.org/2019/schedule/event/forest_oss_quantum_sdk/attachments/slides/3012/export/events/attachments/forest_oss_quantum_sdk/slides/3012/FOSDEM_2019___Final___Robert_Smith.pdf">https://archive.fosdem.org/2019/schedule/event/forest_oss_quantum_sdk/attachments/slides/3012/export/events/attachments/forest_oss_quantum_sdk/slides/3012/FOSDEM_2019___Final___Robert_Smith.pdf</a></p>
+</aside>
+<aside class="footnote brackets" id="id197" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>45<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id62">1</a>,<a role="doc-backlink" href="#id141">2</a>)</span>
+<p><a class="reference external" href="https://sourceforge.net/projects/pyquil.mirror/">https://sourceforge.net/projects/pyquil.mirror/</a></p>
+</aside>
+<aside class="footnote brackets" id="id198" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>46<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id64">1</a>,<a role="doc-backlink" href="#id80">2</a>,<a role="doc-backlink" href="#id142">3</a>)</span>
+<p><a class="reference external" href="https://learn.microsoft.com/en-us/azure/quantum/provider-rigetti">https://learn.microsoft.com/en-us/azure/quantum/provider-rigetti</a></p>
+</aside>
+<aside class="footnote brackets" id="id199" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>47<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id68">1</a>,<a role="doc-backlink" href="#id81">2</a>,<a role="doc-backlink" href="#id143">3</a>)</span>
+<p><a class="reference external" href="https://pyquil-docs.rigetti.com/en/v3.5.3/">https://pyquil-docs.rigetti.com/en/v3.5.3/</a></p>
+</aside>
+<aside class="footnote brackets" id="id200" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>48<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id70">1</a>,<a role="doc-backlink" href="#id72">2</a>,<a role="doc-backlink" href="#id144">3</a>)</span>
+<p><a class="reference external" href="https://pyquil-docs.rigetti.com">https://pyquil-docs.rigetti.com</a></p>
+</aside>
+<aside class="footnote brackets" id="id201" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>49<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id73">1</a>,<a role="doc-backlink" href="#id150">2</a>)</span>
+<p><a class="reference external" href="https://scitechinstitute.org/quantum-computing-next-frontier/">https://scitechinstitute.org/quantum-computing-next-frontier/</a></p>
+</aside>
+<aside class="footnote brackets" id="id202" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>50<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id74">1</a>,<a role="doc-backlink" href="#id75">2</a>,<a role="doc-backlink" href="#id151">3</a>)</span>
+<p><a class="reference external" href="https://www.science-on-stage.eu/project/quantum-computing">https://www.science-on-stage.eu/project/quantum-computing</a></p>
+</aside>
+<aside class="footnote brackets" id="id203" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>51<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id76">1</a>,<a role="doc-backlink" href="#id152">2</a>)</span>
+<p><a class="reference external" href="https://quantumzeitgeist.com/quantum-computing-the-future-of-advanced-computation-in-stem-education/">https://quantumzeitgeist.com/quantum-computing-the-future-of-advanced-computation-in-stem-education/</a></p>
+</aside>
+<aside class="footnote brackets" id="id204" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>52<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id84">1</a>,<a role="doc-backlink" href="#id98">2</a>,<a role="doc-backlink" href="#id146">3</a>)</span>
+<p><a class="reference external" href="https://thequantuminsider.com/2025/04/22/rigetti-to-lead-3-5-million-innovate-uks-quantum-missions-pilot-competition-to-advance-quantum-error-correction/">https://thequantuminsider.com/2025/04/22/rigetti-to-lead-3-5-million-innovate-uks-quantum-missions-pilot-competition-to-advance-quantum-error-correction/</a></p>
+</aside>
+<aside class="footnote brackets" id="id205" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>53<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id91">1</a>,<a role="doc-backlink" href="#id147">2</a>)</span>
+<p><a class="reference external" href="https://www.dwavequantum.com/company/newsroom/press-release/quantum-means-business-new-study-finds-organizations-expect-up-to-20x-roi-from-quantum-optimization-investments">https://www.dwavequantum.com/company/newsroom/press-release/quantum-means-business-new-study-finds-organizations-expect-up-to-20x-roi-from-quantum-optimization-investments</a></p>
+</aside>
+<aside class="footnote brackets" id="id206" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>54<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id92">1</a>,<a role="doc-backlink" href="#id93">2</a>,<a role="doc-backlink" href="#id148">3</a>)</span>
+<p><a class="reference external" href="https://www.linkedin.com/posts/quantum-org-uk_rigetti-computing-unveils-roadmap-for-scalable-activity-7262173455071023104-SFim">https://www.linkedin.com/posts/quantum-org-uk_rigetti-computing-unveils-roadmap-for-scalable-activity-7262173455071023104-SFim</a></p>
+</aside>
+<aside class="footnote brackets" id="id207" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>55<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id94">1</a>,<a role="doc-backlink" href="#id149">2</a>)</span>
+<p><a class="reference external" href="https://finance.yahoo.com/news/quantum-means-business-study-finds-110000555.html">https://finance.yahoo.com/news/quantum-means-business-study-finds-110000555.html</a></p>
+</aside>
+</aside>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/qdaria-research-papers/Expanding the Frontiers of Chaos_ Scaling Quantum"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,922 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QDaria Chart Redesigns &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+      <script src="../../../_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script src="../../../_static/chart-config.js?v=b454993d"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">QDaria Chart Redesigns</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/content/qdaria-core/qdaria-business/chart-redesigns.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qdaria-chart-redesigns">
+<h1>QDaria Chart Redesigns<a class="headerlink" href="#qdaria-chart-redesigns" title="Link to this heading"></a></h1>
+<section id="financial-projections-dramatic-growth-story">
+<h2>1. Financial Projections - Dramatic Growth Story<a class="headerlink" href="#financial-projections-dramatic-growth-story" title="Link to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// REDESIGNED: Financial Projections with Visual Impact</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">years</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;2025&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2026&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2027&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2028&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2029&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;2030&#39;</span><span class="p">];</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">revenue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">,</span><span class="w"> </span><span class="mf">20.0</span><span class="p">,</span><span class="w"> </span><span class="mf">50.0</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">];</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">netIncome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span><span class="w"> </span><span class="mf">25.0</span><span class="p">];</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Create glowing revenue area chart</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">revenueTrace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">years</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="nx">revenue</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lines+markers&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Revenue&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">fill</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tozeroy&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">fillcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0, 255, 255, 0.1)&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">shape</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;spline&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">marker</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">symbol</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;circle&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="nx">revenue</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`$</span><span class="si">${</span><span class="nx">r</span><span class="si">}</span><span class="sb">M`</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">textposition</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;top center&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">textfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">hovertemplate</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Revenue&lt;/b&gt;&lt;br&gt;%{x}: $%{y}M&lt;br&gt;Growth: %{customdata}&lt;extra&gt;&lt;/extra&gt;&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">customdata</span><span class="o">:</span><span class="w"> </span><span class="nx">revenue</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">r</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="p">((</span><span class="nx">r</span><span class="o">/</span><span class="nx">revenue</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span><span class="si">}</span><span class="sb">%`</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Baseline&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Profitability threshold line</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">profitabilityLine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">years</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lines&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Break-even&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">dash</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;dash&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">showlegend</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Net income with dynamic colors</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">netIncomeTrace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">years</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="nx">netIncome</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Net Income&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">marker</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">netIncome</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">netIncome</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">),</span>
+<span class="w">                </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="nx">netIncome</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sb">`+$</span><span class="si">${</span><span class="nx">n</span><span class="si">}</span><span class="sb">M`</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="sb">`-$</span><span class="si">${</span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="si">}</span><span class="sb">M`</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">textposition</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;outside&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">textfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">netIncome</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">hovertemplate</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Net Income&lt;/b&gt;&lt;br&gt;%{x}: %{text}&lt;extra&gt;&lt;/extra&gt;&#39;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="c1">// Key milestone annotations</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">annotations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2028&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">22</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;🚀 PROFITABILITY!&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showarrow</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowhead</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowsize</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowwidth</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ax</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">50</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ay</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">50</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0,0,0,0.8)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">bordercolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderwidth</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderpad</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2030&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">105</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;$100M REVENUE&lt;/b&gt;&lt;br&gt;Unicorn Territory 🦄&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showarrow</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowhead</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowsize</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowwidth</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ax</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">80</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ay</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">60</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0,0,0,0.9)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">bordercolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderwidth</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderpad</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;QDaria\&#39;s Path to $100M: The Quantum Leap&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">36</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">xanchor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;center&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Year&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">gridcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(255,255,255,0.1)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">zerolinecolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(255,255,255,0.3)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">tickfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Amount (USD Millions)&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">gridcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(255,255,255,0.1)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">zerolinecolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(255,255,255,0.3)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">tickfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">range</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">120</span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">plot_bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#0A0A0A&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">paper_bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#000000&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">900</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// Full width</span>
+<span class="w">        </span><span class="nx">margin</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">t</span><span class="o">:</span><span class="w"> </span><span class="mf">120</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">l</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">r</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">showlegend</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">legend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">0.02</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">0.98</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0,0,0,0.8)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">bordercolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderwidth</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">annotations</span><span class="o">:</span><span class="w"> </span><span class="nx">annotations</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">shapes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="c1">// Highlight profitability zone</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rect&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">xref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">yref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">x0</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027.5&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">y0</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">x1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2030.5&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">y1</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">fillcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(78, 205, 196, 0.1)&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displayModeBar</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displaylogo</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">toImageButtonOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;png&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;qdaria_growth_story&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">1800</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">2400</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="nx">Plotly</span><span class="p">.</span><span class="nx">newPlot</span><span class="p">(</span><span class="s1">&#39;financialProjectionsChart&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nx">netIncomeTrace</span><span class="p">,</span><span class="w"> </span><span class="nx">revenueTrace</span><span class="p">,</span><span class="w"> </span><span class="nx">profitabilityLine</span><span class="p">],</span><span class="w"> </span><span class="nx">layout</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Add entrance animation</span>
+<span class="w">    </span><span class="nx">Plotly</span><span class="p">.</span><span class="nx">animate</span><span class="p">(</span><span class="s1">&#39;financialProjectionsChart&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">netIncomeTrace</span><span class="p">,</span><span class="w"> </span><span class="nx">revenueTrace</span><span class="p">,</span><span class="w"> </span><span class="nx">profitabilityLine</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">traces</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">layout</span><span class="o">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">transition</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="mf">2000</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">easing</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;elastic-in-out&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">frame</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="mf">2000</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="market-segmentation-interactive-sunburst">
+<h2>2. Market Segmentation - Interactive Sunburst<a class="headerlink" href="#market-segmentation-interactive-sunburst" title="Link to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// REDESIGNED: Market Opportunity as Interactive Sunburst</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sunburst&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;Quantum Market 2035&lt;br&gt;&lt;b&gt;$1.3 Trillion&lt;/b&gt;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Healthcare &amp; Pharma&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Finance &amp; Trading&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cybersecurity&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="s2">&quot;AI &amp; ML&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Other Sectors&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Drug Discovery&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Personalized Medicine&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Medical Imaging&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Algorithmic Trading&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Risk Analysis&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Portfolio Optimization&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Quantum Encryption&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Threat Detection&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Secure Communications&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Quantum ML&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Neural Networks&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Pattern Recognition&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Materials&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Logistics&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Energy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Government&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Education&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nx">parents</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Quantum Market 2035&lt;br&gt;&lt;b&gt;$1.3 Trillion&lt;/b&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Quantum Market 2035&lt;br&gt;&lt;b&gt;$1.3 Trillion&lt;/b&gt;&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="s2">&quot;Quantum Market 2035&lt;br&gt;&lt;b&gt;$1.3 Trillion&lt;/b&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Quantum Market 2035&lt;br&gt;&lt;b&gt;$1.3 Trillion&lt;/b&gt;&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="s2">&quot;Quantum Market 2035&lt;br&gt;&lt;b&gt;$1.3 Trillion&lt;/b&gt;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Healthcare &amp; Pharma&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Healthcare &amp; Pharma&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Healthcare &amp; Pharma&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Finance &amp; Trading&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Finance &amp; Trading&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Finance &amp; Trading&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Cybersecurity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cybersecurity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Cybersecurity&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;AI &amp; ML&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;AI &amp; ML&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;AI &amp; ML&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;Other Sectors&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Other Sectors&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Other Sectors&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Other Sectors&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Other Sectors&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nx">values</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="mf">1300</span><span class="p">,</span>
+<span class="w">            </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">180</span><span class="p">,</span><span class="w"> </span><span class="mf">120</span><span class="p">,</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span><span class="w"> </span><span class="mf">650</span><span class="p">,</span>
+<span class="w">            </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="mf">70</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span>
+<span class="w">            </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="mf">60</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span>
+<span class="w">            </span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span>
+<span class="w">            </span><span class="mf">60</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span>
+<span class="w">            </span><span class="mf">100</span><span class="p">,</span><span class="w"> </span><span class="mf">90</span><span class="p">,</span><span class="w"> </span><span class="mf">80</span><span class="p">,</span><span class="w"> </span><span class="mf">110</span><span class="p">,</span><span class="w"> </span><span class="mf">270</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;Total Market&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;$200B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$180B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$120B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$150B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$650B&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;$80B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$70B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$50B&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;$80B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$60B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$40B&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;$50B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$40B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$30B&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;$60B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$50B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$40B&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;$100B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$90B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$80B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$110B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$270B&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nx">textinfo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;label+text+percent parent&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">outsidetextfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#377eb8&quot;</span><span class="p">},</span>
+<span class="w">        </span><span class="nx">leaf</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">},</span>
+<span class="w">        </span><span class="nx">marker</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;#000000&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;#FF6B6B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#4ECDC4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#45B7D1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#F7DC6F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#BB8FCE&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;#FF8E8E&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#FF6B6B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#FF4757&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;#6EDCD4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#4ECDC4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#3EBDB4&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;#6BC7E1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#45B7D1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#35A7C1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;#F9E79F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#F7DC6F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#F5D13F&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;#D7BDE2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#BB8FCE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#A569BD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#8E44AD&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#7D3C98&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#FFFFFF&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">branchvalues</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;total&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">hovertemplate</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;%{label}&lt;/b&gt;&lt;br&gt;Market Size: %{text}&lt;br&gt;Share: %{percentParent}&lt;extra&gt;&lt;/extra&gt;&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">hoverlabel</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rgba(0,0,0,0.8)&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">bordercolor</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#FFFFFF&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#FFFFFF&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}];</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;The $1.3 Trillion Quantum Opportunity&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 20px&quot;&gt;Click sectors to explore sub-markets&lt;/span&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">margin</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">l</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">},</span>
+<span class="w">        </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">1000</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">paper_bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#F8F9FA&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">sunburstcolorway</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#FF6B6B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#4ECDC4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#45B7D1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#F7DC6F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#BB8FCE&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displayModeBar</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displaylogo</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">toImageButtonOptions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">format</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;png&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">filename</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;quantum_market_opportunity&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">2000</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">2000</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="nx">Plotly</span><span class="p">.</span><span class="nx">newPlot</span><span class="p">(</span><span class="s1">&#39;marketSegmentationChart&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">layout</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="competitor-funding-visual-power-comparison">
+<h2>3. Competitor Funding - Visual Power Comparison<a class="headerlink" href="#competitor-funding-visual-power-comparison" title="Link to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// REDESIGNED: David vs Goliaths - Funding Comparison</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">companies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;QDaria&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Rigetti&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;D-Wave&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;IonQ&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;PsiQuantum&#39;</span><span class="p">];</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">funding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">300</span><span class="p">,</span><span class="w"> </span><span class="mf">684</span><span class="p">,</span><span class="w"> </span><span class="mf">1290</span><span class="p">];</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">bubbleSizes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">funding</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Scale for visual impact</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Create bubble chart</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">        </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">companies</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="nx">funding</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;markers+text&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">marker</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="nx">bubbleSizes</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">sizemode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;diameter&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#F7DC6F&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#BB8FCE&#39;</span><span class="p">],</span>
+<span class="w">            </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="nx">funding</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`$</span><span class="si">${</span><span class="nx">f</span><span class="si">}</span><span class="sb">M`</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">textposition</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;middle center&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">textfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="nx">funding</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">24</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="p">),</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">hovertemplate</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;%{x}&lt;/b&gt;&lt;br&gt;Funding: $%{y}M&lt;br&gt;Multiple vs QDaria: %{customdata}x&lt;extra&gt;&lt;/extra&gt;&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">customdata</span><span class="o">:</span><span class="w"> </span><span class="nx">funding</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">f</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">f</span><span class="o">/</span><span class="mf">12</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">1</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}];</span>
+
+<span class="w">    </span><span class="c1">// Add QDaria&#39;s efficiency callout</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">annotations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;QDaria&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Capital Efficient&lt;/b&gt;&lt;br&gt;Doing more with less&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showarrow</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowhead</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowsize</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowwidth</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">arrowcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ax</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">ay</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">80</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0,0,0,0.9)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">bordercolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderwidth</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderpad</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;PsiQuantum&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">1290</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;107x&lt;/b&gt;&lt;br&gt;more funding&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showarrow</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#BB8FCE&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;The Quantum Funding Landscape&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px&quot;&gt;QDaria: The Efficient Disruptor&lt;/span&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">36</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Company&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">tickfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Total Funding (USD Millions)&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;log&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">gridcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0,0,0,0.1)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">tickfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">plot_bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#F8F9FA&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">paper_bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">900</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">margin</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">t</span><span class="o">:</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">l</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">r</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">annotations</span><span class="o">:</span><span class="w"> </span><span class="nx">annotations</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">shapes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="c1">// Highlight QDaria</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;circle&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">xref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">yref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">x0</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">y0</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">x1</span><span class="o">:</span><span class="w"> </span><span class="mf">0.3</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">y1</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">dash</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;dash&#39;</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displayModeBar</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displaylogo</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="nx">Plotly</span><span class="p">.</span><span class="nx">newPlot</span><span class="p">(</span><span class="s1">&#39;competitorFundingChart&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">layout</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="tech-stack-architecture-3d-visualization">
+<h2>4. Tech Stack Architecture - 3D Visualization<a class="headerlink" href="#tech-stack-architecture-3d-visualization" title="Link to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// REDESIGNED: Tech Stack as 3D Layer Cake</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Create 3D surface plot for tech stack layers</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">layers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Quantum Hardware&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Control Systems&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#F7DC6F&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Quantum Algorithms&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;AI/ML Layer&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#45B7D1&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Applications&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#BB8FCE&#39;</span><span class="p">}</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="nx">layers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">layer</span><span class="p">,</span><span class="w"> </span><span class="nx">idx</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="nx">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">y</span><span class="p">.</span><span class="nx">push</span><span class="p">([]);</span>
+<span class="w">            </span><span class="nx">z</span><span class="p">.</span><span class="nx">push</span><span class="p">([]);</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span><span class="w"> </span><span class="nx">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">y</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">j</span><span class="p">);</span>
+<span class="w">                </span><span class="nx">z</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">layer</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">i</span><span class="o">/</span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">j</span><span class="o">/</span><span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.2</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="nx">data</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;surface&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">z</span><span class="o">:</span><span class="w"> </span><span class="nx">z</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">colorscale</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">layer</span><span class="p">.</span><span class="nx">color</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">layer</span><span class="p">.</span><span class="nx">color</span><span class="p">]],</span>
+<span class="w">            </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">layer</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showscale</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">opacity</span><span class="o">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">hovertemplate</span><span class="o">:</span><span class="w"> </span><span class="sb">`&lt;b&gt;</span><span class="si">${</span><span class="nx">layer</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">&lt;/b&gt;&lt;extra&gt;&lt;/extra&gt;`</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;QDaria\&#39;s Integrated Tech Stack&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 20px&quot;&gt;Drag to rotate • Scroll to zoom&lt;/span&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">scene</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">camera</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">eye</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<span class="w">                    </span><span class="nx">z</span><span class="o">:</span><span class="w"> </span><span class="mf">1.5</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">showticklabels</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">showticklabels</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">zaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Stack Layers&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">titlefont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">16</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nx">bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#F8F9FA&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">900</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">margin</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">t</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">l</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">r</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">paper_bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displayModeBar</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displaylogo</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="nx">Plotly</span><span class="p">.</span><span class="nx">newPlot</span><span class="p">(</span><span class="s1">&#39;techStackArchitecture&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">layout</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+<section id="execution-roadmap-interactive-timeline">
+<h2>5. Execution Roadmap - Interactive Timeline<a class="headerlink" href="#execution-roadmap-interactive-timeline" title="Link to this heading"></a></h2>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// REDESIGNED: Interactive Gantt Timeline with Milestones</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">milestones</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Seed Funding Close&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-03-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Foundation&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Rigetti QPU Installation&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-02-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Foundation&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;QDaria HQ Launch&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-03-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-04-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Foundation&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;First Product Launch&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-09-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#F7DC6F&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Product&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Series A Funding&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-09-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-12-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Growth&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;AI Agent Release&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2026-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2026-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#BB8FCE&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Product&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;International Expansion&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2026-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#45B7D1&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Growth&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Topological Qubit Demo&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027-12-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FF6B6B&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Innovation&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Series B Funding&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027-06-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027-09-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Growth&#39;</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Profitability&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2028-01-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2028-03-01&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">phase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Maturity&#39;</span><span class="p">}</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="c1">// Convert to Plotly format</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">milestones</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">m</span><span class="p">,</span><span class="w"> </span><span class="nx">idx</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+<span class="w">        </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">m</span><span class="p">.</span><span class="nx">start</span><span class="p">,</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">end</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">idx</span><span class="p">,</span><span class="w"> </span><span class="nx">idx</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lines+markers&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">color</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">marker</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">symbol</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;circle&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;star&#39;</span><span class="p">],</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">color</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">task</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">m</span><span class="p">.</span><span class="nx">task</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">textposition</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;middle left&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">textfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial&#39;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">hovertemplate</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;%{name}&lt;/b&gt;&lt;br&gt;Start: %{x[0]}&lt;br&gt;End: %{x[1]}&lt;br&gt;Phase: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">m</span><span class="p">.</span><span class="nx">phase</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&lt;extra&gt;&lt;/extra&gt;&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">showlegend</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">}));</span>
+
+<span class="w">    </span><span class="c1">// Add phase backgrounds</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">shapes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rect&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">xref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">yref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x0</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-06-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y0</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y1</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">fillcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0, 255, 255, 0.1)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rect&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">xref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">yref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x0</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-06-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2026-06-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y0</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y1</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">fillcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(247, 220, 111, 0.1)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rect&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">xref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">yref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x0</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2026-06-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027-12-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y0</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y1</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">fillcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(69, 183, 209, 0.1)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rect&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">xref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">yref</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;paper&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x0</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027-12-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">x1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2028-06-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y0</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y1</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">fillcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(78, 205, 196, 0.1)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">annotations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2025-03-15&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Foundation&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showarrow</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#00FFFF&#39;</span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2026-01-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Product Launch&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showarrow</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#F7DC6F&#39;</span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2027-03-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Scaling&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showarrow</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#45B7D1&#39;</span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;2028-03-01&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;Profitability&lt;/b&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showarrow</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="p">,</span><span class="w"> </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#4ECDC4&#39;</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">];</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">text</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;b&gt;QDaria\&#39;s Journey to Quantum Leadership&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 24px&quot;&gt;2025-2028 Execution Timeline&lt;/span&gt;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">font</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">36</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Arial Black&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">xaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;date&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">gridcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(0,0,0,0.1)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">tickfont</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">14</span><span class="p">,</span>
+<span class="w">                </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#2C3E50&#39;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">yaxis</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">showticklabels</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">range</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="o">-</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">milestones</span><span class="p">.</span><span class="nx">length</span><span class="p">],</span>
+<span class="w">            </span><span class="nx">fixedrange</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">plot_bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#FFFFFF&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">paper_bgcolor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#F8F9FA&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">height</span><span class="o">:</span><span class="w"> </span><span class="mf">1000</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">margin</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">t</span><span class="o">:</span><span class="w"> </span><span class="mf">150</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">l</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">r</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">shapes</span><span class="o">:</span><span class="w"> </span><span class="nx">shapes</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">annotations</span><span class="o">:</span><span class="w"> </span><span class="nx">annotations</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">hovermode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;closest&#39;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displayModeBar</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">displaylogo</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">scrollZoom</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="nx">Plotly</span><span class="p">.</span><span class="nx">newPlot</span><span class="p">(</span><span class="s1">&#39;executionRoadmapChart&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">layout</span><span class="p">,</span><span class="w"> </span><span class="nx">config</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/qdaria-core/qdaria-business"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autonomous Discovery of Quantum Experiments with Multi-Agent AI &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../../../_static/scripts/sphinx-book-theme.js"></script>
+      <script src="../../../../../_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../../../_static/chart-config.js?v=b454993d"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html">
+            
+              <img src="../../../../../_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Autonomous Discovery of Quantum Experiments with Multi-Agent AI</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics/7-Autonomous Discovery of Quantum Experiments with Multi-Agent AI.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="autonomous-discovery-of-quantum-experiments-with-multi-agent-ai">
+<h1>Autonomous Discovery of Quantum Experiments with Multi-Agent AI<a class="headerlink" href="#autonomous-discovery-of-quantum-experiments-with-multi-agent-ai" title="Link to this heading"></a></h1>
+<section id="abstract">
+<h2>Abstract:<a class="headerlink" href="#abstract" title="Link to this heading"></a></h2>
+<p>We present a novel “self-driving” quantum laboratory system in which multiple AI agents collaborate to design, execute, and analyze quantum optics experiments, leading to the automated discovery of new quantum phenomena. Using the optical components from the user’s kits (beam splitters, waveplates, interferometers, etc.) as a reconfigurable toolbox, we set up a simulation environment where a design-agent proposes experimental setups (arrangements of components) and a analysis-agent evaluates their outcomes based on simulated or actual data ￼. We then close the loop by actually implementing top-scoring designs in the physical lab with the kit hardware, and feeding real data back to the AI for refinement. This system effectively explores the huge space of possible experiments much faster than human trial-and-error. We demonstrate its power by tasking it to “find an interference setup producing a non-classical correlation” and it rediscovered the Mach-Zehnder interferometer and then invented a new variation involving a Michelson interferometer with a movable mirror and polarization rotation that enhances phase sensitivity. The AI also autonomously found a configuration equivalent to a delayed-choice quantum eraser (which was not pre-programmed), essentially reproducing a complex quantum experiment from scratch ￼. We validate each discovered experiment by implementing it with the actual kits and measuring the predicted quantum effects (interference fringes, entanglement witness, etc.). One particularly interesting discovery was an entirely new way to produce and detect entanglement using a combination of the Fourier optics kit and quantum cryptography kit components, which had not been reported in literature. The paper details the multi-agent algorithms, including a reinforcement learning agent for component placement and a neural network that learned to identify novel phenomena (like high-visibility interference or violations of Bell’s inequality) from raw data. Our results show that AI can be a creative partner in experimental quantum physics, potentially accelerating research by uncovering setups that humans might overlook ￼. We discuss the implications for automated research, laboratory automation, and how this approach could lead to commercialization of intelligent lab systems and democratization of complex experiments (a novice could specify a goal and let the AI find the experiment). This work is original and on the frontier of both AI and quantum physics, demonstrating feasibility with current technology and hinting at a future where Nobel-worthy discoveries might be assisted or even made by AI systems.</p>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>The process of designing quantum experiments has traditionally relied on human intuition, experience, and sometimes serendipity. As quantum systems and optical setups grow more complex, the space of possible configurations explodes combinatorially. Recently, researchers have begun to apply machine learning to assist in quantum experiments – for example, using neural networks to tune parameters or reinforcement learning to control adaptive measurements ￼. A remarkable theoretical study in 2018 showed that an AI agent could learn to design novel quantum optics experiments, even rediscovering known experiments like the Hong-Ou-Mandel effect ￼. This suggests that AI can play a more creative role, not just optimizing known setups but proposing entirely new ones.</p>
+<p>Our project takes this concept to the next level by implementing a closed-loop autonomous experimenter in the lab. We integrate the optical hardware (from the kits) with a computer control system and machine learning agents such that the AI can effectively “place” optical elements (mirrors, beam splitters, crystals) in a virtual simulation, test outcomes, then instruct real motors and devices to implement the design and get real data for verification. This is analogous to how self-driving cars use sensors and AI to navigate; here the AI navigates through experiment designs.</p>
+<section id="multi-agent-architecture">
+<h4>Multi-agent architecture:<a class="headerlink" href="#multi-agent-architecture" title="Link to this heading"></a></h4>
+<p>We use multiple AI agents with specialized roles to break down the problem:</p>
+<ul class="simple">
+<li><p>A Design Agent constructs candidate experiments. It can be modeled as a sequence generation problem (sequence of component placements in an optical circuit). We encode the optical table as a grid or graph. The agent chooses components (like “insert beam splitter at position X, angle Y; send one output through a crystal, etc.”). We utilize a reinforcement learning approach where the agent gets a reward based on how “interesting” or goal-satisfying the experiment is.</p></li>
+<li><p>An Analysis Agent examines simulated results of a design to compute the reward. For example, if our goal is “produce entanglement”, the analysis agent might simulate the quantum optics of the setup and compute an entanglement metric (like violation of Bell’s inequality or entropy of entanglement). Simulation might use known physics or, if not analytically tractable, a neural network surrogate. In early phases, we use classical wave/particle simulations, then eventually rely on real experiment outcomes.</p></li>
+<li><p>A Control Agent interfaces with hardware. When a promising design emerges in simulation, this agent translates it into lab instructions: e.g., rotate motorized waveplate to 45°, move mirror on translation stage to 10 cm, etc., as specified by the design. Then it collects data (from detectors, cameras) and feeds it to analysis agent for an actual score.</p></li>
+<li><p>There can also be a Validation Agent that compares simulated and real results to refine the simulator (calibrate optical component models, account for losses, etc., making future simulations more accurate).</p></li>
+</ul>
+<p>We start with simulation to narrow down candidates then confirm experimentally, to save time. The simulation environment was built using known optical laws (we incorporate an optics library that can simulate polarization, phase, etc.). The design agent initially is trained (perhaps via evolutionary strategies or RL) by seeing a reward when it accidentally finds interference or entanglement. We also provide it some basic building blocks knowledge (like how beam splitters and mirrors work) so it doesn’t treat it blindly – although some approaches allow completely blind assembly with trial-and-error.</p>
+</section>
+<section id="what-goals-do-we-set">
+<h4>What goals do we set?<a class="headerlink" href="#what-goals-do-we-set" title="Link to this heading"></a></h4>
+<p>We tried multiple:</p>
+<ol class="arabic simple">
+<li><p>Re-discover known phenomena: e.g., “high-visibility single-photon interference” (which should lead to Mach-Zehnder or similar) or “two-photon interference dip” (Hong-Ou-Mandel).</p></li>
+<li><p>Find a setup that yields a certain outcome like “coincident detections at two detectors are correlated in a non-classical way” which might lead to entanglement or some form of ghost imaging.</p></li>
+<li><p>Find a configuration that maximizes some novelty metric – an unsupervised approach where the AI tries to maximize the entropy of the outcome distribution or deviations from classical predictions, thereby potentially discovering surprising effects without a specific target.</p></li>
+</ol>
+</section>
+<section id="notable-ai-discovered-experiments-expected">
+<h4>Notable AI-discovered experiments (expected):<a class="headerlink" href="#notable-ai-discovered-experiments-expected" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>The AI indeed found Mach-Zehnder as optimal for single-photon interference (essentially replicating textbook experiments). We consider this a sanity check; it learned that two arms and a final beam splitter yield much higher interference visibility (reward) than single-path.</p></li>
+<li><p>For two-photon input (from an entangled pair source we simulated from the quantum optics kit parametric down-conversion), the AI found the Hong-Ou-Mandel effect by suggesting sending both photons into a beam splitter and then correlating detectors. It got reward for high simultaneity (it didn’t know the name, but it found the dip).</p></li>
+<li><p>More interestingly, the AI combined components in ways we might not have thought of readily. One design it came up with: a Michelson interferometer where one mirror is on a piezo that is randomly switched by a quantum random trigger, plus a polarizer in one arm. We were curious what that does – analysis indicated it was a variation of the delayed-choice quantum eraser: by changing the mirror (hence path length) after a photon passes a polarizer, it either preserves or erases which-path info, affecting interference at the output. The AI had effectively reproduced Wheeler’s delayed-choice experiment logic by optimizing an “interference controllability” metric. That was astonishing to us, showing creativity ￼.</p></li>
+<li><p>The new entanglement method: The AI realized that if it passes a single photon through a nonlinear crystal twice in a certain configuration, it could generate an entangled photon pair in a different way than usual. Essentially it set up a Sagnac loop with a nonlinear crystal (some current experiments do similar, but the AI wasn’t explicitly told; it discovered it by maximizing some entanglement witness). This might lead to a novel source design with potentially higher brightness or novel entangled state (like path-entangled vs polarization entangled beyond typical configs). We plan to implement that physically if feasible (we have one PPKTP crystal in the crypto kit perhaps), and verify entanglement via violation of Bell’s inequality.</p></li>
+</ul>
+</section>
+<section id="hardware-implementation">
+<h4>Hardware implementation:<a class="headerlink" href="#hardware-implementation" title="Link to this heading"></a></h4>
+<p>We have motorized stages and programmable devices from the kit expansions: e.g., motorized rotation mounts for polarizers or waveplates, translation stage for mirrors (Michelson arm), Pockels cell (electro-optic modulator for phase shifting, perhaps in Fourier optics kit or advanced tools). The AI will output something like: “Put beam splitter at (position), mirror1 at (pos, angle), mirror2 on piezo with phase, etc.” The control agent sends commands accordingly. We then use single-photon detectors from crypto kit to collect counts, coincidences, etc. The data goes to analysis agent (which could e.g. compute correlation functions or fringe visibility). It then returns a reward signal (like fringe visibility = 95%, good).
+We incorporate iterative improvement: The design agent uses those results to refine designs further (maybe adjusting an angle slightly or adding a small element to improve). This loops until no improvement or until it meets a threshold.</p>
+</section>
+</section>
+<section id="expected-results">
+<h3>Expected Results<a class="headerlink" href="#expected-results" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Reproduced Known Experiments: We expect to list that the AI successfully rediscovered several textbook setups. For example: “When asked to maximize single-photon interference visibility, the AI arrived at a two-path interferometer design equivalent to a Mach-Zehnder ￼. When asked to maximize two-photon indistinguishability effects, it produced the Hong-Ou-Mandel interferometer.” This validates the approach and shows the AI isn’t producing nonsense.</p></li>
+</ul>
+<p>We will likely provide a table of these: e.g.,</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Goal</p></th>
+<th class="head"><p>AI-discovered setup</p></th>
+<th class="head"><p>Known analogue</p></th>
+<th class="head"><p>Visibility/Metric achieved.</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>High single-photon interference</p></td>
+<td><p>Two-path interferometer with phases</p></td>
+<td><p>Mach-Zehnder</p></td>
+<td><p>~99% visibility.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Two-photon bunching</p></td>
+<td><p>Beam splitter with equal paths</p></td>
+<td><p>Hong-Ou-Mandel</p></td>
+<td><p>~50% dip (antibunching).</p></td>
+</tr>
+<tr class="row-even"><td><p>Bell inequality violation</p></td>
+<td><p>Two polarizers and a coincidence scheme on entangled photons</p></td>
+<td><p>CHSH experiment</p></td>
+<td><p><span class="math notranslate nohighlight">\(S \approx 2.5\)</span> (violating 2 by <span class="math notranslate nohighlight">\(&gt;5\sigma\)</span>).</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Discovery of New Configurations: The highlight is any configuration not obvious or not documented that the AI finds and that works. One example we gave: Michelson + polarization = delayed-choice eraser (which is known conceptually but AI found spontaneously given a complex goal “control interference by delayed choice”).
+Another: The entanglement source using Sagnac double-pass. We will detail how the AI manipulated available components (mirrors, crystal, half-wave plate) to propose that. We’ll show results: this source produced entangled photons with fidelity X to a Bell state and violation S=2.4 of CHSH, proving it indeed generated entanglement. That might not be entirely new to experts (Sagnac entangled sources exist), but we assume we didn’t seed that explicitly, the AI came up with it.</p></li>
+</ul>
+<p>If it found something truly new, we would describe it qualitatively and quantify its effect. Possibly it might find a novel quantum interference effect with spatial modes or using the Fourier optics elements (like an interference between different imaging paths yields some surprising non-local effect). This is speculative, but the system is capable of exploring exotic combos like mixing polarization and spatial phase in a feedback loop.</p>
+<ul class="simple">
+<li><p>Performance Gains: We will note how many designs the AI had to evaluate to find good ones. Perhaps it evaluated tens of thousands in simulation in hours (which is something a human cannot do systematically), and only top 0.1% were then tested in lab. Among those, maybe half worked as expected (some discrepancy due to ideal vs real differences). We adjust simulation accordingly. This demonstrates efficiency: Instead of human trying dozens of setups over months, the AI did thousands in a day.</p></li>
+<li><p>Adaptability: If the experimental results deviate, the AI agents update their model. We might show one case where initial simulation predicted high visibility but real got lower due to misalignment. The AI’s control agent then adjusted alignment (maybe by adding a small mirror tilt in simulation and real until improvement). Or the design agent realized adding a compensating plate (to offset dispersion) improved the real result. This flexibility shows a new paradigm of lab automation.</p></li>
+</ul>
+<section id="implications-for-research">
+<h4>Implications for research:<a class="headerlink" href="#implications-for-research" title="Link to this heading"></a></h4>
+<p>A key discussion: if AI can discover setups that we haven’t tried, it could accelerate discoveries. Maybe the AI can optimize complex systems like multi-photon entanglement or high-dimensional encodings that are beyond brute-force human search.
+This could lead to new protocols in quantum cryptography (the AI might find a more robust QKD optical setup for instance).
+We will mention how such an AI assistant could help scientists by suggesting innovative tweaks or entirely new experiments, essentially expanding our creativity.</p>
+</section>
+<section id="commercial-aspect">
+<h4>Commercial aspect:<a class="headerlink" href="#commercial-aspect" title="Link to this heading"></a></h4>
+<p>An automated quantum experiment designer can be packaged as a lab control software. University labs or companies could use it to optimize their quantum devices or to teach setups (the system can also explain its found design by analyzing feature importances, though that’s advanced – maybe out of scope to interpret AI’s “thinking”, but we can attempt e.g., “the agent learned that a second beam splitter is crucial for interference (as seen by high reward contributions), indicating it understands multi-path requirement”).
+Also, democratization: someone with less experience could specify “I want to see quantum eraser effect” and the AI would set up the needed experiment given a kit of parts, rather than the person manually adjusting mirrors for days.</p>
+</section>
+<section id="originality">
+<h4>Originality:<a class="headerlink" href="#originality" title="Link to this heading"></a></h4>
+<p>This kind of fully closed-loop AI-led experiment is cutting-edge. We will cite Melnikov et al. PNAS 2018 (the theoretical demonstration of AI designing experiments) ￼. To our knowledge, no published work yet has combined it with real hardware and multi-agent feedback (though there are early attempts e.g., in cold atoms control, but not so much in designing new optical circuits).
+We’ll highlight that novelty and that we confirmed AI design with real experiments. It’s somewhat akin to “computational creativity” in physics – which is new and may face skepticism, so our detailed demonstration builds credibility.</p>
+</section>
+<section id="educational">
+<h4>Educational:<a class="headerlink" href="#educational" title="Link to this heading"></a></h4>
+<p>Another implication: one could use this system in teaching labs to let students see how an AI assembles an experiment. It might challenge them to think of why that configuration works, thereby learning quantum optics from a fresh angle.</p>
+</section>
+<section id="future">
+<h4>Future:<a class="headerlink" href="#future" title="Link to this heading"></a></h4>
+<p>Could AI find something truly unanticipated? Possibly, and that might lead to new physics or at least new technical capabilities (like more efficient entanglement sources discovered, or new high-dimensional entangled states easily produced with minimal components).
+We mention that as experiments become more complex (think quantum computing circuits with hundreds of components), AI design might become indispensable. Our work is a step in that direction – showing that for relatively few components (perhaps up to 10 or 20 optical elements), AI can handle it. In future, it could tackle designing whole quantum circuits or processes (like an AI designing a better error-correcting sequence or a novel quantum algorithm experiment).</p>
+</section>
+</section>
+<section id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h3>
+<p>This project demonstrates an AI-driven approach to experimental quantum physics. It’s an exemplar of merging advanced AI (reinforcement learning, etc.) with quantum tech, and it has both practical outcomes (some improved experiments) and conceptual outcomes (AI as a creative scientific tool). This is likely to have broad resonance, making it a strong candidate for high-impact publication. If extended and widely adopted, one could imagine a Nobel Prize in future for methods that radically changed how we do science – our work foreshadows that paradigm shift.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Party Quantum Cryptography on an AI-Optimized Network &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="../../../../../_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../../../_static/scripts/sphinx-book-theme.js"></script>
+      <script src="../../../../../_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script src="../../../../../_static/chart-config.js?v=b454993d"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html">
+            
+              <img src="../../../../../_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Multi-Party Quantum Cryptography on an AI-Optimized Network</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics/3-Multi-Party Quantum Cryptography on an AI-Optimized Network.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multi-party-quantum-cryptography-on-an-ai-optimized-network">
+<h1>Multi-Party Quantum Cryptography on an AI-Optimized Network<a class="headerlink" href="#multi-party-quantum-cryptography-on-an-ai-optimized-network" title="Link to this heading"></a></h1>
+<section id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading"></a></h2>
+<p>We present a comprehensive quantum cryptography network that goes beyond point-to-point key distribution, incorporating multi-party protocols and device-independent security. Using the Quantum Cryptography Kit as a foundation, we establish a three-node quantum network where two users (Alice and Bob) and a third party (Charlie) engage in advanced cryptographic tasks: quantum key distribution (QKD), quantum digital signatures, and secret sharing. The network utilizes entangled photon sources and polarization encoding (via the Polarization &amp; 3D Cinema Kit) to distribute entanglement between nodes. For the first time, we integrate a device-independent QKD scheme, leveraging violation of Bell’s inequality over two 10 km fiber links to certify security without trusting the devices ￼. A cloud-based AI orchestration system monitors the network in real time, dynamically adjusting basis choices and error correction parameters in response to eavesdropping attempts or changing noise conditions. This AI optimization enhances the secure key rate by identifying optimal system settings faster than humans. We perform a literature review confirming no existing network combines these features (multi-party + DI-QKD + AI control). Expected results include a sustained secure key exchange between any two parties even with untrusted devices, demonstration of quantum-secured three-way communication (e.g., sending a quantum-signed message ￼ ￼), and an implementation of a counterfactual quantum communication protocol on the network for added novelty. These outcomes validate the originality and feasibility of a near-future quantum internet with maximal security, and we discuss how the system could be commercialized as a turnkey secure communication solution.</p>
+<p>Introduction</p>
+<p>Quantum cryptography has matured to the point where basic QKD links (BB84 protocols over optical fiber) are well-established, and even metropolitan quantum networks have been deployed (e.g., in China and Europe) connecting dozens of users with trusted nodes. However, several frontiers remain that are active research areas: (1) enabling cryptographic tasks beyond simple key distribution, such as quantum digital signatures and secret sharing; (2) achieving device-independent security, which guarantees secrecy even if the quantum devices (sources, detectors) are uncharacterized or possibly malicious; (3) managing a multi-party network where any pair or group of users can securely communicate without all pairs needing direct fiber links. Our project targets all three frontiers simultaneously by constructing a small quantum network and demonstrating these advanced protocols.</p>
+<p>The user’s kit inventory provides the building blocks: the Quantum Cryptography Kit likely contains components for a standard BB84 QKD link (polarizers, single-photon detectors, maybe a faint-pulse laser or entangled photon pair source). The Polarization and 3D Cinema Kit gives us a rich set of polarizers and analyzers to encode and decode polarization-encoded qubits, which is essential for most quantum communication protocols. We also have the Breadboard and Damping Feet to stabilize the free-space or fiber coupling of photons, and Spectrometer and Time-Resolved Absorption kits which, while not standard in cryptography, could be repurposed to characterize channel properties (spectral loss profile, time-of-flight) to inform our network model.</p>
+<p>Prior work: QKD beyond point-to-point has been demonstrated in networks – for instance, a quantum network in China connected multiple cities with intermediate trusted nodes, and a recent work demonstrated quantum secure direct communication of messages ￼. Quantum digital signatures (QDS) have been experimentally sent over tens of kilometers of fiber ￼, showing that one sender can sign a message and two receivers can verify it with information-theoretic security. Device-independent QKD (DI-QKD) has only recently been achieved in a laboratory setting; in 2022, two groups reported the first DI-QKD secure key generation, relying on high-efficiency entangled photon detection to violate Bell’s inequality by a large margin ￼. However, these were point-to-point demonstrations and required extremely low noise and high detection efficiency over short distances (a few meters or so of fiber or free-space). No demonstration yet exists of DI-QKD over meaningful distance or incorporated into a larger network with other protocols. Our literature search indicates no multi-party quantum network to date has combined DI-QKD and QDS in one unified system, which underscores the novelty of our proposal.</p>
+<p>We also incorporate AI optimization into the network. This is inspired by the fact that a real network will experience time-varying conditions: fiber noise, drifting polarization, potential eavesdropping (which might manifest as changes in error rates). Human operators can adjust parameters (e.g., polarization basis probabilities, or switching to a different QKD protocol if one is performing poorly), but AI can do this faster and possibly find non-intuitive strategies. For example, an AI agent could monitor the quantum bit error rate (QBER) and detect patterns indicating an attempted intercept-resend attack, then automatically switch the basis biasing to frustrate the attacker or increase privacy amplification accordingly ￼. Some initial studies suggest AI can enhance QKD security monitoring ￼, but we will take this further by having a fully autonomous control of the cryptographic tasks scheduling and optimization among three nodes.</p>
+<p>Proposed Methodology</p>
+<ol class="arabic simple">
+<li><p>Network Topology and Hardware: We set up three stations: Alice, Bob, and Charlie. Alice and Bob are the two primary users who want to communicate securely; Charlie can act either as a third user or as an untrusted relay depending on the protocol. The physical link structure will be flexible: we have fiber spools (or free-space optical links with telescopes, if available) between each pair of stations. For concreteness, imagine Alice-Bob are connected by a direct fiber of length ~10 km, Alice-Charlie by ~10 km, and Bob-Charlie by ~10 km, forming a triangle network. Each station is equipped with a polarization-entangled photon source (from the Quantum Optics Kit) or at least a highly attenuated laser for prepare-and-measure schemes. We will utilize entangled photons for the entanglement-based DI-QKD: e.g., Charlie could have an entangled source sending one photon to Alice and one to Bob, such that measuring them in certain bases yields correlated outcomes to generate a key ￼. Alternatively, for device-independent security, the typical scenario is that an untrusted source (which could be Charlie) sends entangled pairs to Alice and Bob who both perform measurements and look for a Bell violation ￼. We will implement that: Charlie’s station has a spontaneous parametric down-conversion crystal generating entangled photon pairs at 810 nm, sending one through a fiber to Alice and one to Bob.</p></li>
+</ol>
+<p>Each station’s kit includes single-photon detectors (likely avalanche photodiodes) and polarization analysis modules. The Polarization Kit provides polarizing beamsplitters, waveplates, etc., so Alice and Bob can each set their measurement basis (say horizontal/vertical or diagonal/anti-diagonal) randomly for the Bell test or QKD basis choices. We’ll ensure high detection efficiency by using perhaps superconductor nanowire detectors (if available via custom tools, since device-independence demands efficiency &gt; ~80% to close the detection loophole ￼).</p>
+<ol class="arabic simple" start="2">
+<li><p>Device-Independent QKD Protocol: Our first protocol uses the entangled photons for DI-QKD. In each trial, Charlie’s source emits a pair; ideally, if no eavesdropper and devices are working properly, Alice and Bob share a pure entangled state. They each randomly choose one of two measurement bases: basis X or Y, for example. A fraction of these measurements (when both choose X, say) are used to check a Bell-CHSH inequality. A strong violation of CHSH (correlation value S &gt; 2) indicates the presence of entanglement and no local hidden variable explanation, which in turn guarantees that the outcomes are private (since any eavesdropper or malicious device cannot reproduce that violation without genuine entanglement) ￼. The remaining measurement outcomes (when Alice chose X and Bob chose Y, for instance) are used as raw key bits. Because this is device-independent, Alice and Bob do not need to trust Charlie or even their own measurement devices – the security is based on the observed quantum correlations. We will implement error correction and privacy amplification on these raw keys using classical communication over a public authenticated channel (e.g., one station will have a computer to perform LDPC code error correction, and an agreed algorithm like Toeplitz matrix hashing for privacy amplification). The output will be a secure, random key string shared by Alice and Bob.</p></li>
+</ol>
+<p>We expect to demonstrate DI-QKD over our ~10 km links. If 10 km is too lossy for a strong Bell violation with current detector efficiency, we will start with shorter fiber (or free-space across a lab) to prove the principle, and then show through extrapolation or using our Time-Resolved Spectroscopy Kit to characterize fiber loss that with improved detectors or quantum repeaters the scheme could work at long distance. Achieving device-independence in a network has never been done; our experiment might be one of the first to take DI-QKD out of the lab prototype stage and into a realistic link scenario, albeit still relatively short.</p>
+<ol class="arabic simple" start="3">
+<li><p>Quantum Digital Signatures (QDS): In parallel, we implement a quantum digital signature protocol among the three parties. In a QDS protocol, Alice wants to send a signed message to Bob such that Bob can be sure it’s from Alice and not forged, and if Bob forwards that message to Charlie, Charlie can verify it came from Alice and not tampered by Bob ￼. One way to achieve QDS with quantum mechanics is for Alice to distribute correlated sets of secret keys to Bob and Charlie (using QKD) and use those keys in a way analogous to one-time-pad signatures, or to send sequences of single photons in states known only to Alice which the recipients measure. We will likely follow a known QDS scheme ￼: Alice prepares a large number of single photons randomly in one of four polarization states (e.g., horizontal, vertical, +45°, -45°), and sends identical copies of these sequences to Bob and Charlie (maybe via two fiber links). Bob and Charlie measure these photons in random bases. Later, Alice announces the basis choices but not the states, so Bob and Charlie now have some correlated information (the bits where they chose the correct basis reveal what state Alice sent). This serves as Alice’s “signature string.” If Bob wants to convince Charlie of a message’s authenticity, he shows Charlie the signature string he got from Alice. Charlie compares it with his own results from Alice to confirm enough matches. If an attacker (say Eve pretending to be Alice) tried, they wouldn’t be able to reproduce the correlations beyond a threshold, hence the signature is secure. We will use our polarization photonic setup to realize this, benefiting from the high-quality single-photon sources and detectors.</p></li>
+</ol>
+<p>To get this to a practical demonstration, we will actually integrate it: use our QKD link to share keys between Alice-Bob and Alice-Charlie, then those keys simulate the quantum signature scheme (there are also fully quantum versions as described above). We expect to successfully sign a short message (e.g., the text “Hello”) such that Bob and Charlie can verify it, with a certain failure probability (false acceptance or rejection) below a desired bound ￼. We will follow metrics from Collins et al. (2017) where they did QDS over 90 km fiber: e.g., we will report the signature length and the observed error rates, and show it’s within security bounds ￼.</p>
+<ol class="arabic simple" start="4">
+<li><p>Quantum Secret Sharing: Another advanced protocol we incorporate is quantum secret sharing (QSS), where a secret key or message is split among multiple parties such that only certain groups can reconstruct it. For instance, Alice wants to split a key between Bob and Charlie such that neither Bob nor Charlie alone can know the key, but together they can. We can do this by distributing a GHZ state (3-party entangled state) or by sharing two separate keys with certain XOR relationships. Given our apparatus, a simple demonstration is: Alice creates an entangled photon pair and sends one to Bob, one to Charlie. This yields correlated random bits with Alice if she also measures. Alone, Bob has a random bit, Charlie has a random bit, but the parity of their bits is known to Alice. Using classical communication, Bob and Charlie can combine their data to reconstruct Alice’s key bit but individually they have zero info. We will show a few bits of secret can be shared in this way. Alternatively, use two QKD links (Alice-Bob and Alice-Charlie) to deliver two keys k1 and k2, then the secret key = k1 ⊕ k2 which only Alice knows separately, but Bob and Charlie must collaborate (each has one part) to recover. This showcases multi-party capability.</p></li>
+<li><p>AI Network Control: Overseeing all these processes is an AI-based control system. We implement a software agent that continuously monitors certain metrics: QBER on each link, Bell violation S-value from the entangled Bell test, photon count rates, etc. The AI is trained (or heuristically programmed) to adjust settings to optimize secure throughput. For example, if the Bell inequality S starts dropping (possibly indicating misalignment or an attempt at hacking via blinding detectors), the AI might increase the bias of basis choices to spend more trials on the Bell test to diagnose the issue ￼. Or it might lower the sending rate if detectors are saturating (thus lowering QBER). The AI can also allocate network resources: if Alice is currently signing a message to Bob, while simultaneously generating a key with Charlie, the AI schedules these so they don’t interfere (like not using the same photons for two protocols at once). It effectively time-multiplexes the protocols.</p></li>
+</ol>
+<p>We foresee using a reinforcement learning agent that had been simulated on a digital twin of the network. We simulate various attack scenarios (e.g., Eve tries a man-in-the-middle, or a detector blinding attack where bright light is used to control detectors) and let the AI learn to identify and mitigate them. In the actual experiment, the AI’s actions might include rotating polarization bases via motorized waveplates (to compensate drift), switching protocols (if one link is too noisy for DI-QKD, fall back to regular QKD with decoy states), and alerting if security thresholds are breached (like if QBER &gt; 11% it might abort key usage). This level of adaptiveness is beyond current QKD systems which mostly follow static protocols with maybe some adaptive sifting.</p>
+<p>Expected Results</p>
+<p>We expect our integrated network to achieve several groundbreaking milestones:
+•	Secure Key Exchange with Device Independence: Alice and Bob will generate a secret key, for example of length 1 kilobit, with security not relying on any detailed calibration of their devices. This will be evidenced by a measured CHSH Bell parameter S (we will target S ≥ 2.5 or so for statistical significance) and a final key with a positive secrecy rate. We will show the key passes standard randomness tests and that the privacy amplification removed any information Eve could have gained (calculated from observed S and QBER). This would be one of the first demonstrations of DI-QKD in a multi-node setting, and certainly the first combining it with other tasks. The key rate might be low (perhaps a few bits per second given experimental losses), but proving the concept is the main result. We will compare it to a conventional QKD run on the same link to highlight the trade-off: conventional QKD yields higher rate but is not device-independent, whereas our DI-QKD yields unconditional security at the cost of rate.
+•	Quantum Digital Signature Transmission: We expect to successfully sign and verify a short message. The success condition is that Bob and Charlie’s verification rejects forged messages with near-zero probability and accepts Alice’s real messages with high probability. In our test, we might have Alice send an “OK” signal signed by quantum means, Bob forwards it to Charlie, and Charlie verifies. We’ll show that if an adversary (say Eve impersonating Alice) tries to send a message, both Bob and Charlie detect the forgery (with error rates maybe &lt;1e-6). We will cite metrics like the measured quantum uncertainty in state overlaps matches the theoretical predictions that guarantee security ￼.
+•	Multi-Party Secret Sharing: We will demonstrate that Bob and Charlie together can retrieve a secret that individually they cannot. This could be done by actually having them attempt to guess the secret individually (they will be wrong 50% of time due to no info) versus together (always correct when they pool info). For example, Alice’s secret bit = 1, Bob’s measurement gave him 0, Charlie’s gave 1, individually meaningless, but Alice structured it such that XOR of Bob and Charlie’s bit = 1 which reveals the secret. We might run 100 trials and show that in 100% of trials, the collaboration yields the right secret, whereas each alone is at ~50% (random guess). This quantifies the success of quantum secret sharing.
+•	AI Enhancement: The AI’s performance will be evaluated by comparing network operation with and without AI intervention. We anticipate the AI-controlled system yields a higher average secret key rate and faster adaptation to environmental changes. For example, if polarization slowly drifts in fiber, without AI the QBER might rise above threshold for a while until a manual realignment; with AI continuously adjusting waveplate angles via stepper motors, the QBER remains low, extending uninterrupted operation time by, say, 2x. In a controlled test, we might deliberately introduce a disturbance (slightly misalign a fiber or simulate an attacker increasing noise), and show that the AI responds within milliseconds by tuning parameters, whereas a static system would suffer or require manual reset. This demonstrates the feasibility of an autonomous quantum network – a notable advance because current QKD networks often need careful calibration by engineers.
+•	Originality Confirmation: We will provide a detailed comparison table in the paper contrasting our network’s capabilities with prior QKD demonstrations. For instance: prior networks – point-to-point QKD, or trusted repeater networks (e.g., Chinese 2000 km network, but device-dependent); our work – first DI-QKD network. Prior QDS experiments – done but not combined with QKD in same system; our work – first simultaneous demonstration. Prior AI in QKD – only simulated for parameter optimization ￼; our work – first real-time AI-managed QKD network. This clearly establishes the novelty.</p>
+<p>Implications and Outlook</p>
+<p>The implications of this work reach into both fundamental science and practical technology. Fundamentally, achieving device-independent security in a network addresses one of the last open loopholes in quantum cryptography. It means even if tomorrow someone finds a flaw in detector behavior or a new side-channel, the security can still be assured by the laws of physics (Bell’s theorem) rather than engineering assumptions. This builds trust that quantum cryptography can indeed provide absolute security. Our multi-party approach also shows the versatility of quantum communication – not just point-to-point keys, but complex tasks like signing and secret sharing are possible, moving closer to a full quantum internet that supports a range of cryptographic primitives.</p>
+<p>From a commercialization perspective, our demonstration is a prototype for a future quantum-secured communication network product. One can envision deploying a system where each node is a box with entangled photon sources and detectors, and our AI orchestration software. Such a system could allow government or corporate entities to communicate with guaranteed security. Especially device-independent QKD is attractive to high-security users (like defense or finance), because it removes the need to trust the manufacturer of the QKD devices – you get security even if the device is made by a third party, as long as you can verify Bell violations. This could alleviate supply chain trust issues in adopting QKD technology. We discuss how our setup could be scaled: using telecom-wavelength entangled photon sources for longer distance, perhaps involving satellites for global reach.</p>
+<p>The AI component could itself become a commercial spin-off: an intelligent network manager for quantum communications. As quantum networks grow in size (future quantum internet connecting many nodes), human management becomes impractical, so AI will be essential. Our project would be one of the first showcasing AI in action for quantum security, likely spurring further research and development.</p>
+<p>On the educational side, this experiment is a rich showcase of quantum and classical technologies working together. Students can learn about Bell’s inequality (we literally test it), QKD protocols, and also about error correction, authentication (classical but essential in QKD), and machine learning applied to physics. It’s interdisciplinary: quantum physics, computer science (cryptography and AI), and engineering (telecom fibers and networking). We anticipate turning parts of this network into educational demos: for instance, a simplified version with short free-space links on a tabletop can be shown to students to illustrate concepts like “no eavesdropper can break this because any attempt will be noticed as errors – see how QBER rises when we block the beam slightly, simulating an eavesdropper.”</p>
+<p>In conclusion, Paper 3 demonstrates a next-generation quantum cryptography network that is secure against all known attacks (even those on devices), versatile in functionality, and smart in operation. It takes quantum cryptography from isolated links to an intelligent network, representing a key step toward the vision of a global quantum internet. Such an achievement would be Nobel-worthy as it confirms long-standing theoretical security claims (device independence rooted in fundamental quantum nonlocality) in a practical system and greatly advances the field of secure communications.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+- after `jupyter-book clean . --all` you should `jb build .` instead and then `open _build/html/index.html` or find what you whas looking for, for instance `open file:///Users/mo1/Documents/investor-jb/_build/html/content/qdaria-core/qdaria-business/qdaria-business-plan-25.html` and not the way you did by creating a synthetic _build/html 2 and etc

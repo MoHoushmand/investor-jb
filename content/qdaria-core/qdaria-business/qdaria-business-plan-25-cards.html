@@ -1,0 +1,542 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. QDaria Business Plan - Premium Chart Card Implementation &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+      <script src="../../../_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script src="../../../_static/chart-config.js?v=b454993d"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="6. QDaria Investor Dashboards" href="investor-dashboards.html" />
+    <link rel="prev" title="4. QDaria Chart Card Examples" href="chart-card-examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>QDaria Business Plan - Premium Chart Card Implementation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/content/qdaria-core/qdaria-business/qdaria-business-plan-25-cards.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qdaria-business-plan-premium-chart-card-implementation">
+<h1><span class="section-number">5. </span>QDaria Business Plan - Premium Chart Card Implementation<a class="headerlink" href="#qdaria-business-plan-premium-chart-card-implementation" title="Link to this heading"></a></h1>
+<p>This file demonstrates how to apply the premium chart cards to specific charts from the business plan.</p>
+<section id="example-market-growth-chart-with-premium-card">
+<h2><span class="section-number">5.1. </span>Example: Market Growth Chart with Premium Card<a class="headerlink" href="#example-market-growth-chart-with-premium-card" title="Link to this heading"></a></h2>
+<p>Here’s how the market growth chart looks with the premium card wrapper:</p>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm qdaria-chart-card primary full-width docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📈 <strong>Quantum Computing Market Growth Projection (2020-2035)</strong></div>
+<div id="marketGrowthChart" class="chart-placeholder"></div>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced Market Growth Chart with Professional Features
+    var years = [2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034, 2035];
+    
+    // Optimistic scenario - exponential growth
+    var optimistic = [0.5, 0.7, 1.0, 1.2, 1.3, 2.5, 5.0, 10.0, 25.0, 60.0, 150.0, 350.0, 650.0, 950.0, 1200.0, 1500.0];
+    
+    // Neutral/Base case scenario
+    var neutral = [0.5, 0.7, 1.0, 1.2, 1.3, 2.0, 3.5, 6.0, 12.0, 25.0, 50.0, 100.0, 250.0, 500.0, 850.0, 1300.0];
+    
+    // Pessimistic scenario - slower adoption
+    var pessimistic = [0.5, 0.7, 1.0, 1.2, 1.3, 1.5, 2.0, 3.0, 4.5, 7.0, 12.0, 20.0, 35.0, 60.0, 100.0, 180.0];
+    
+    // QDaria's projected market capture
+    var qdariaShare = years.map((year, i) => {
+        if (year < 2025) return 0;
+        if (year === 2025) return 0.001;
+        if (year === 2026) return 0.005;
+        if (year === 2027) return 0.05;
+        if (year === 2028) return 0.2;
+        if (year === 2029) return 0.5;
+        if (year === 2030) return 1.0;
+        return neutral[i] * 0.001; // 0.1% market share post-2030
+    });
+    
+    var data = [
+        {
+            x: years,
+            y: neutral,
+            type: 'scatter',
+            mode: 'lines+markers',
+            name: 'Base Case',
+            line: {color: '#00CED1', width: 3},
+            marker: {size: 8}
+        },
+        {
+            x: years,
+            y: optimistic,
+            type: 'scatter',
+            mode: 'lines',
+            name: 'Optimistic',
+            line: {color: '#20B2AA', width: 2, dash: 'dash'}
+        },
+        {
+            x: years,
+            y: pessimistic,
+            type: 'scatter',
+            mode: 'lines',
+            name: 'Conservative',
+            line: {color: '#4682B4', width: 2, dash: 'dot'}
+        },
+        {
+            x: years.slice(5),
+            y: qdariaShare.slice(5),
+            type: 'bar',
+            name: 'QDaria Revenue',
+            marker: {color: '#FF6347'},
+            yaxis: 'y2'
+        }
+    ];
+    
+    var layout = {
+        title: {
+            text: 'Quantum Computing Market Evolution & QDaria Growth',
+            font: {size: 24}
+        },
+        xaxis: {
+            title: 'Year',
+            showgrid: true,
+            gridcolor: '#E0E0E0'
+        },
+        yaxis: {
+            title: 'Market Size ($ Billions)',
+            showgrid: true,
+            gridcolor: '#E0E0E0',
+            rangemode: 'tozero'
+        },
+        yaxis2: {
+            title: 'QDaria Revenue ($ Billions)',
+            overlaying: 'y',
+            side: 'right',
+            rangemode: 'tozero'
+        },
+        legend: {
+            x: 0.02,
+            y: 0.98,
+            bgcolor: 'rgba(255,255,255,0.8)',
+            borderwidth: 1
+        },
+        hovermode: 'x unified',
+        plot_bgcolor: '#FAFAFA',
+        paper_bgcolor: 'white'
+    };
+    
+    var config = {
+        responsive: true,
+        displayModeBar: true,
+        modeBarButtonsToAdd: ['downloadSVG'],
+        modeBarButtonsToRemove: ['pan2d', 'lasso2d']
+    };
+    
+    Plotly.newPlot('marketGrowthChart', data, layout, config);
+});
+</script>
+</div>
+<div class="sd-card-footer docutils">
+<div class="chart-description">
+<span class="insight-badge">💡 Key Insight</span>
+<span class="insight-badge">🚀 CAGR: 45%+</span>
+The quantum computing market is entering a period of explosive growth, with projections 
+ranging from $180B to $1.5T by 2035. QDaria's strategic entry in 2025 positions us to 
+capture significant value as the market transitions from research to commercial applications. 
+Our unique topological approach addresses the fundamental challenge of error correction, 
+potentially accelerating the timeline to fault-tolerant quantum computing.
+</div>
+</div>
+</div>
+</section>
+<section id="example-competitor-funding-analysis-with-interactive-controls">
+<h2><span class="section-number">5.2. </span>Example: Competitor Funding Analysis with Interactive Controls<a class="headerlink" href="#example-competitor-funding-analysis-with-interactive-controls" title="Link to this heading"></a></h2>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm qdaria-chart-card secondary docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+💰 <strong>Quantum Computing Competitive Landscape</strong></div>
+<div class="chart-controls">
+    <button class="active" onclick="updateCompetitorChart('all')">All Companies</button>
+    <button onclick="updateCompetitorChart('hardware')">Hardware Focus</button>
+    <button onclick="updateCompetitorChart('software')">Software Focus</button>
+    <button onclick="updateCompetitorChart('fullstack')">Full Stack</button>
+</div>
+<div id="competitorFundingChart" class="chart-placeholder"></div>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<script>
+// Store all competitor data
+const competitorData = {
+    all: {
+        companies: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'IonQ', 'Xanadu', 'D-Wave', 
+                   'Quantinuum', 'PsiQuantum', 'Atom Computing', 'Pasqal', 'Horizon Quantum', 
+                   'Classiq', 'Q-CTRL', 'ColdQuanta', 'QDaria'],
+        funding: [5000, 4500, 300, 650, 250, 300, 425, 665, 215, 140, 75, 63, 70, 110, 12],
+        type: ['Full Stack', 'Full Stack', 'Full Stack', 'Hardware', 'Hardware', 'Hardware',
+               'Full Stack', 'Hardware', 'Hardware', 'Hardware', 'Software', 'Software', 
+               'Software', 'Hardware', 'Full Stack']
+    }
+};
+
+function updateCompetitorChart(filter) {
+    // Update button states
+    document.querySelectorAll('.chart-controls button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+    
+    // Filter data based on selection
+    let filteredCompanies = [];
+    let filteredFunding = [];
+    
+    if (filter === 'all') {
+        filteredCompanies = competitorData.all.companies;
+        filteredFunding = competitorData.all.funding;
+    } else {
+        competitorData.all.companies.forEach((company, index) => {
+            const companyType = competitorData.all.type[index].toLowerCase().replace(' ', '');
+            if (filter === 'fullstack' && companyType === 'fullstack' ||
+                filter === 'hardware' && companyType === 'hardware' ||
+                filter === 'software' && companyType === 'software') {
+                filteredCompanies.push(company);
+                filteredFunding.push(competitorData.all.funding[index]);
+            }
+        });
+    }
+    
+    // Update chart
+    var data = [{
+        x: filteredCompanies,
+        y: filteredFunding,
+        type: 'bar',
+        marker: {
+            color: filteredCompanies.map(company => 
+                company === 'QDaria' ? '#FF6347' : '#4169E1'
+            ),
+            line: {
+                color: 'rgba(0,0,0,0.1)',
+                width: 1
+            }
+        },
+        text: filteredFunding.map(val => '$' + val + 'M'),
+        textposition: 'outside'
+    }];
+    
+    var layout = {
+        title: {
+            text: 'Funding Comparison - ' + filter.charAt(0).toUpperCase() + filter.slice(1),
+            font: {size: 20}
+        },
+        xaxis: {
+            title: 'Company',
+            tickangle: -45
+        },
+        yaxis: {
+            title: 'Total Funding ($ Millions)',
+            rangemode: 'tozero'
+        },
+        plot_bgcolor: '#FAFAFA',
+        bargap: 0.2
+    };
+    
+    Plotly.newPlot('competitorFundingChart', data, layout, {responsive: true});
+}
+
+// Initial chart load
+document.addEventListener('DOMContentLoaded', function() {
+    updateCompetitorChart('all');
+});
+</script>
+</div>
+<div class="sd-card-footer docutils">
+<div class="chart-description">
+<span class="insight-badge">🎯 Strategic Position</span>
+<span class="insight-badge">💎 Differentiation: Topological QC</span>
+While tech giants have invested billions in quantum computing, QDaria's focused approach 
+on topological quantum computing using Fibonacci anyons represents a fundamentally different 
+path to fault tolerance. Our $12M seed round, though modest compared to competitors, is 
+strategically allocated to achieve specific breakthroughs that larger companies are not pursuing.
+</div>
+</div>
+</div>
+</section>
+<section id="example-financial-projections-with-quantum-theme">
+<h2><span class="section-number">5.3. </span>Example: Financial Projections with Quantum Theme<a class="headerlink" href="#example-financial-projections-with-quantum-theme" title="Link to this heading"></a></h2>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm qdaria-chart-card quantum full-width docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+📊 <strong>QDaria Financial Projections &amp; Path to Profitability</strong></div>
+<div id="financialProjectionsChart" class="chart-placeholder"></div>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var years = ['2025', '2026', '2027', '2028', '2029'];
+    
+    var revenue = [0.5, 2.5, 8.0, 25.0, 75.0];
+    var costs = [3.0, 5.0, 7.5, 12.0, 20.0];
+    var netIncome = revenue.map((r, i) => r - costs[i]);
+    var cumulative = [];
+    var sum = 0;
+    netIncome.forEach(val => {
+        sum += val;
+        cumulative.push(sum);
+    });
+    
+    var data = [
+        {
+            x: years,
+            y: revenue,
+            type: 'bar',
+            name: 'Revenue',
+            marker: {color: '#9370DB'}
+        },
+        {
+            x: years,
+            y: costs.map(c => -c),
+            type: 'bar',
+            name: 'Operating Costs',
+            marker: {color: '#DC143C'}
+        },
+        {
+            x: years,
+            y: cumulative,
+            type: 'scatter',
+            mode: 'lines+markers',
+            name: 'Cumulative Cash Flow',
+            line: {color: '#FFD700', width: 3},
+            marker: {size: 10},
+            yaxis: 'y2'
+        }
+    ];
+    
+    var layout = {
+        title: {
+            text: 'Financial Trajectory with Multiple Revenue Streams',
+            font: {size: 24}
+        },
+        xaxis: {
+            title: 'Year'
+        },
+        yaxis: {
+            title: 'Annual Flow ($ Millions)',
+            zeroline: true,
+            zerolinewidth: 2,
+            zerolinecolor: '#000'
+        },
+        yaxis2: {
+            title: 'Cumulative ($ Millions)',
+            overlaying: 'y',
+            side: 'right'
+        },
+        barmode: 'relative',
+        hovermode: 'x unified',
+        plot_bgcolor: '#FAFAFA',
+        shapes: [{
+            type: 'line',
+            x0: '2027',
+            x1: '2027',
+            y0: -20,
+            y1: 80,
+            line: {
+                color: '#32CD32',
+                width: 2,
+                dash: 'dot'
+            }
+        }],
+        annotations: [{
+            x: '2027',
+            y: 85,
+            text: 'Break-even',
+            showarrow: false,
+            font: {color: '#32CD32', size: 14}
+        }]
+    };
+    
+    var config = {
+        responsive: true,
+        displayModeBar: true,
+        modeBarButtonsToAdd: ['downloadSVG']
+    };
+    
+    Plotly.newPlot('financialProjectionsChart', data, layout, config);
+});
+</script>
+</div>
+<div class="sd-card-footer docutils">
+<div class="chart-description">
+<span class="insight-badge">📈 3-Year CAGR: 287%</span>
+<span class="insight-badge">✅ Break-even: Q4 2027</span>
+<span class="insight-badge">💰 2029 Revenue: $75M</span>
+Our financial model demonstrates a clear path to profitability within 3 years. Revenue 
+acceleration is driven by multiple sources: quantum hardware-as-a-service subscriptions 
+provide immediate recurring revenue, while our seven venture products scale through 
+their respective markets. The break-even point in 2027 marks our transition from 
+growth investment to sustainable profitability.
+</div>
+</div>
+</div>
+</section>
+<section id="implementation-instructions">
+<h2><span class="section-number">5.4. </span>Implementation Instructions<a class="headerlink" href="#implementation-instructions" title="Link to this heading"></a></h2>
+<p>To implement these premium cards in the main business plan:</p>
+<ol class="arabic">
+<li><p><strong>Install sphinx-design</strong> (if not already done):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>sphinx-design&gt;<span class="o">=</span><span class="m">0</span>.5.0
+</pre></div>
+</div>
+</li>
+<li><p><strong>Replace chart sections</strong> in <code class="docutils literal notranslate"><span class="pre">qdaria-business-plan-25.md</span></code> with the card-wrapped versions shown above</p></li>
+<li><p><strong>Build the book</strong> to see the enhanced presentation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>clean<span class="w"> </span>.<span class="w"> </span>--all
+jupyter-book<span class="w"> </span>build<span class="w"> </span>.
+open<span class="w"> </span>_build/html/index.html
+</pre></div>
+</div>
+</li>
+<li><p><strong>Customize further</strong> by:</p>
+<ul class="simple">
+<li><p>Adjusting card colors in custom.css</p></li>
+<li><p>Adding more interactive controls</p></li>
+<li><p>Including data tables below charts</p></li>
+<li><p>Adding export/download buttons</p></li>
+</ul>
+</li>
+</ol>
+<p>The premium cards transform basic embedded charts into professional, presentation-quality infographics that enhance the overall impact of the business plan.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/qdaria-core/qdaria-business"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="chart-card-examples.html" class="btn btn-neutral float-left" title="4. QDaria Chart Card Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="investor-dashboards.html" class="btn btn-neutral float-right" title="6. QDaria Investor Dashboards" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

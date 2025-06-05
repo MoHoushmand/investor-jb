@@ -1,0 +1,462 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QDaria Chart Improvement Action Plan &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/scripts/sphinx-book-theme.js"></script>
+      <script src="_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script src="_static/chart-config.js?v=b454993d"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">QDaria Chart Improvement Action Plan</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/QDaria_Chart_Improvement_Action_Plan.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qdaria-chart-improvement-action-plan">
+<h1>QDaria Chart Improvement Action Plan<a class="headerlink" href="#qdaria-chart-improvement-action-plan" title="Link to this heading"></a></h1>
+<section id="executive-summary-for-investor-grade-visualizations">
+<h2>Executive Summary for Investor-Grade Visualizations<a class="headerlink" href="#executive-summary-for-investor-grade-visualizations" title="Link to this heading"></a></h2>
+<section id="current-state-analysis">
+<h3>Current State Analysis<a class="headerlink" href="#current-state-analysis" title="Link to this heading"></a></h3>
+<p>Based on the review of QDaria’s business plan, the current visualizations use basic Plotly.js charts with limited color palette (primarily teal #00CED1) and standard chart types. While functional, they lack the visual sophistication and data density expected in top-tier investor presentations.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="top-5-immediate-impact-changes">
+<h2>🎯 Top 5 Immediate Impact Changes<a class="headerlink" href="#top-5-immediate-impact-changes" title="Link to this heading"></a></h2>
+<section id="implement-multi-dimensional-color-system">
+<h3>1. <strong>Implement Multi-Dimensional Color System</strong><a class="headerlink" href="#implement-multi-dimensional-color-system" title="Link to this heading"></a></h3>
+<p><strong>Priority: CRITICAL</strong></p>
+<ul class="simple">
+<li><p>Replace single-color approach with sophisticated palette</p></li>
+<li><p>Create visual hierarchy through color intensity</p></li>
+<li><p>Add semantic meaning to color choices</p></li>
+</ul>
+</section>
+<section id="add-advanced-interactivity-animations">
+<h3>2. <strong>Add Advanced Interactivity &amp; Animations</strong><a class="headerlink" href="#add-advanced-interactivity-animations" title="Link to this heading"></a></h3>
+<p><strong>Priority: HIGH</strong></p>
+<ul class="simple">
+<li><p>Implement smooth scroll-triggered animations</p></li>
+<li><p>Add drill-down capabilities for financial data</p></li>
+<li><p>Create hover states with detailed tooltips showing calculations</p></li>
+</ul>
+</section>
+<section id="upgrade-to-premium-chart-types">
+<h3>3. <strong>Upgrade to Premium Chart Types</strong><a class="headerlink" href="#upgrade-to-premium-chart-types" title="Link to this heading"></a></h3>
+<p><strong>Priority: HIGH</strong></p>
+<ul class="simple">
+<li><p>Replace basic area charts with 3D surface plots for TAM projections</p></li>
+<li><p>Implement Sankey diagrams for revenue flow visualization</p></li>
+<li><p>Add network graphs for partnership ecosystem</p></li>
+</ul>
+</section>
+<section id="enhance-data-density-information-architecture">
+<h3>4. <strong>Enhance Data Density &amp; Information Architecture</strong><a class="headerlink" href="#enhance-data-density-information-architecture" title="Link to this heading"></a></h3>
+<p><strong>Priority: MEDIUM-HIGH</strong></p>
+<ul class="simple">
+<li><p>Combine multiple related metrics in single visualizations</p></li>
+<li><p>Add mini sparklines for trend indicators</p></li>
+<li><p>Implement dashboard-style layouts</p></li>
+</ul>
+</section>
+<section id="create-consistent-visual-language">
+<h3>5. <strong>Create Consistent Visual Language</strong><a class="headerlink" href="#create-consistent-visual-language" title="Link to this heading"></a></h3>
+<p><strong>Priority: MEDIUM</strong></p>
+<ul class="simple">
+<li><p>Standardize all chart components</p></li>
+<li><p>Implement responsive design system</p></li>
+<li><p>Add QDaria branding elements subtly</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="qdaria-visual-style-guide">
+<h2>🎨 QDaria Visual Style Guide<a class="headerlink" href="#qdaria-visual-style-guide" title="Link to this heading"></a></h2>
+<section id="color-palette">
+<h3>Color Palette<a class="headerlink" href="#color-palette" title="Link to this heading"></a></h3>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* Primary Brand Colors */</span>
+<span class="nt">--qdaria-quantum-teal</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">00CED1</span><span class="o">;</span>
+<span class="nt">--qdaria-deep-space</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">0A1628</span><span class="o">;</span>
+<span class="nt">--qdaria-nova-purple</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">7209B7</span><span class="o">;</span>
+<span class="nt">--qdaria-photon-gold</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">F4D35E</span><span class="o">;</span>
+
+<span class="c">/* Semantic Colors */</span>
+<span class="nt">--success-emerald</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">10B981</span><span class="o">;</span>
+<span class="nt">--growth-coral</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">F97316</span><span class="o">;</span>
+<span class="nt">--caution-amber</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">F59E0B</span><span class="o">;</span>
+<span class="nt">--risk-ruby</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">EF4444</span><span class="o">;</span>
+
+<span class="c">/* Data Visualization Gradients */</span>
+<span class="nt">--gradient-quantum</span><span class="o">:</span><span class="w"> </span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">135deg</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">00CED1</span><span class="w"> </span><span class="nt">0</span><span class="o">%,</span><span class="w"> </span><span class="p">#</span><span class="nn">7209B7</span><span class="w"> </span><span class="nt">100</span><span class="o">%);</span>
+<span class="nt">--gradient-revenue</span><span class="o">:</span><span class="w"> </span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">135deg</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">F4D35E</span><span class="w"> </span><span class="nt">0</span><span class="o">%,</span><span class="w"> </span><span class="p">#</span><span class="nn">F97316</span><span class="w"> </span><span class="nt">100</span><span class="o">%);</span>
+<span class="nt">--gradient-tech</span><span class="o">:</span><span class="w"> </span><span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">135deg</span><span class="o">,</span><span class="w"> </span><span class="p">#</span><span class="nn">0A1628</span><span class="w"> </span><span class="nt">0</span><span class="o">%,</span><span class="w"> </span><span class="p">#</span><span class="nn">00CED1</span><span class="w"> </span><span class="nt">100</span><span class="o">%);</span>
+
+<span class="c">/* Neutral Tones */</span>
+<span class="nt">--chart-background</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">F8FAFC</span><span class="o">;</span>
+<span class="nt">--grid-lines</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">E5E7EB</span><span class="o">;</span>
+<span class="nt">--text-primary</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">111827</span><span class="o">;</span>
+<span class="nt">--text-secondary</span><span class="o">:</span><span class="w"> </span><span class="p">#</span><span class="nn">6B7280</span><span class="o">;</span>
+</pre></div>
+</div>
+</section>
+<section id="typography-rules">
+<h3>Typography Rules<a class="headerlink" href="#typography-rules" title="Link to this heading"></a></h3>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* Chart Typography System */</span>
+<span class="p">.</span><span class="nc">chart-title</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Inter&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--qdaria-deep-space</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">axis-label</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Inter&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">    </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.05</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">data-label</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;IBM Plex Mono&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">monospace</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">;</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="animation-standards">
+<h3>Animation Standards<a class="headerlink" href="#animation-standards" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">animationConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">entrance</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="mf">1200</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">easing</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;cubic-bezier(0.4, 0, 0.2, 1)&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">stagger</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">hover</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">scale</span><span class="o">:</span><span class="w"> </span><span class="mf">1.05</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">glow</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;0 0 20px rgba(0, 206, 209, 0.3)&#39;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">transition</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">duration</span><span class="o">:</span><span class="w"> </span><span class="mf">600</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">easing</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ease-in-out&#39;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="interaction-patterns">
+<h3>Interaction Patterns<a class="headerlink" href="#interaction-patterns" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Hover</strong>: Reveal detailed metrics + contextual insights</p></li>
+<li><p><strong>Click</strong>: Drill down to sub-category data</p></li>
+<li><p><strong>Drag</strong>: Pan across time periods</p></li>
+<li><p><strong>Scroll</strong>: Zoom in/out of data ranges</p></li>
+<li><p><strong>Touch</strong>: Mobile-optimized gestures</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="advanced-visualization-implementations">
+<h2>📊 Advanced Visualization Implementations<a class="headerlink" href="#advanced-visualization-implementations" title="Link to this heading"></a></h2>
+<section id="d-revenue-surface-plot">
+<h3>1. <strong>3D Revenue Surface Plot</strong><a class="headerlink" href="#d-revenue-surface-plot" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// TAM Evolution Visualization</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;surface&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">z</span><span class="o">:</span><span class="w"> </span><span class="nx">tamData</span><span class="p">,</span><span class="w"> </span><span class="c1">// 3D matrix of TAM values</span>
+<span class="w">    </span><span class="nx">colorscale</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Viridis&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">contours</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">z</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">show</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">usecolormap</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">project</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">z</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sankey-diagram-for-revenue-flow">
+<h3>2. <strong>Sankey Diagram for Revenue Flow</strong><a class="headerlink" href="#sankey-diagram-for-revenue-flow" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Revenue Stream to Product Mapping</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sankey&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">node</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">pad</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">thickness</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">},</span>
+<span class="w">        </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Software&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Consulting&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hardware&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Zipminator&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;TeHaA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;QDiana&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#00CED1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#7209B7&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#F4D35E&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#10B981&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#F97316&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#EF4444&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">link</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">15</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="network-graph-for-partnership-ecosystem">
+<h3>3. <strong>Network Graph for Partnership Ecosystem</strong><a class="headerlink" href="#network-graph-for-partnership-ecosystem" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Interactive Partnership Network</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;networkx&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">nodes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;QDaria&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">40</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Rigetti&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MIT&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">25</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Enterprise Clients&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nx">links</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;QDaria&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Rigetti&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;QDaria&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MIT&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;QDaria&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">target</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Enterprise Clients&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="animated-timeline-for-roadmap">
+<h3>4. <strong>Animated Timeline for Roadmap</strong><a class="headerlink" href="#animated-timeline-for-roadmap" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Milestone Timeline with Progress Indicators</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lines+markers&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">timelineData</span><span class="p">.</span><span class="nx">dates</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="nx">timelineData</span><span class="p">.</span><span class="nx">progress</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">marker</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">size</span><span class="o">:</span><span class="w"> </span><span class="nx">timelineData</span><span class="p">.</span><span class="nx">importance</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="nx">timelineData</span><span class="p">.</span><span class="nx">status</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">symbol</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;diamond&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#DDD&#39;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">line</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">shape</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;spline&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">width</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">gradient</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">stops</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#00CED1&#39;</span><span class="p">],</span>
+<span class="w">                </span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#7209B7&#39;</span><span class="p">],</span>
+<span class="w">                </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#F4D35E&#39;</span><span class="p">]</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="implementation-roadmap">
+<h2>🚀 Implementation Roadmap<a class="headerlink" href="#implementation-roadmap" title="Link to this heading"></a></h2>
+<section id="phase-1-foundation-week-1">
+<h3>Phase 1: Foundation (Week 1)<a class="headerlink" href="#phase-1-foundation-week-1" title="Link to this heading"></a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implement new color system across all charts</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add entrance animations to existing visualizations</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Standardize typography and spacing</p></li>
+</ul>
+</section>
+<section id="phase-2-enhancement-week-2">
+<h3>Phase 2: Enhancement (Week 2)<a class="headerlink" href="#phase-2-enhancement-week-2" title="Link to this heading"></a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Convert static charts to interactive dashboards</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add drill-down functionality to financial projections</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implement responsive design for mobile investors</p></li>
+</ul>
+</section>
+<section id="phase-3-innovation-week-3">
+<h3>Phase 3: Innovation (Week 3)<a class="headerlink" href="#phase-3-innovation-week-3" title="Link to this heading"></a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Deploy 3D surface plots for market analysis</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create Sankey diagram for revenue streams</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Build network visualization for partnerships</p></li>
+</ul>
+</section>
+<section id="phase-4-polish-week-4">
+<h3>Phase 4: Polish (Week 4)<a class="headerlink" href="#phase-4-polish-week-4" title="Link to this heading"></a></h3>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Add micro-interactions and hover effects</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Implement smooth scroll-triggered animations</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create exportable high-resolution versions</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-differentiators">
+<h2>💎 Key Differentiators<a class="headerlink" href="#key-differentiators" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Quantum-Inspired Aesthetics</strong>: Use particle effects and wave animations to subtly reference quantum mechanics</p></li>
+<li><p><strong>Data Storytelling</strong>: Each chart tells a chapter of QDaria’s growth story</p></li>
+<li><p><strong>Investor Intelligence</strong>: Built-in comparisons to industry benchmarks</p></li>
+<li><p><strong>Accessibility</strong>: Full WCAG compliance with alternative text and keyboard navigation</p></li>
+<li><p><strong>Performance</strong>: Lazy loading and progressive enhancement for fast load times</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="success-metrics">
+<h2>📈 Success Metrics<a class="headerlink" href="#success-metrics" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Engagement</strong>: 3x increase in time spent on financial projections</p></li>
+<li><p><strong>Comprehension</strong>: 50% reduction in investor questions about data clarity</p></li>
+<li><p><strong>Conversion</strong>: 25% improvement in follow-up meeting requests</p></li>
+<li><p><strong>Shareability</strong>: Charts designed for easy extraction into investor decks</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Immediate</strong>: Update color palette in existing charts (2 hours)</p></li>
+<li><p><strong>This Week</strong>: Implement top 5 changes listed above</p></li>
+<li><p><strong>This Month</strong>: Complete full visual system overhaul</p></li>
+<li><p><strong>Ongoing</strong>: A/B test visualizations with investor focus groups</p></li>
+</ol>
+<p><em>This action plan positions QDaria’s visualizations at the forefront of quantum computing investment materials, combining sophisticated data visualization with the innovative spirit of the company.</em></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

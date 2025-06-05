@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QDaria Business Plan Chart Width Fix Implementation &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/scripts/sphinx-book-theme.js"></script>
+      <script src="_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script src="_static/chart-config.js?v=b454993d"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">QDaria Business Plan Chart Width Fix Implementation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/CHART_FIXES_IMPLEMENTATION.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qdaria-business-plan-chart-width-fix-implementation">
+<h1>QDaria Business Plan Chart Width Fix Implementation<a class="headerlink" href="#qdaria-business-plan-chart-width-fix-implementation" title="Link to this heading"></a></h1>
+<section id="problem-summary">
+<h2>Problem Summary<a class="headerlink" href="#problem-summary" title="Link to this heading"></a></h2>
+<p>Charts in the QDaria business plan are not using the full content width, leaving grey space on the right side. Chart heights are also suboptimal for data visualization.</p>
+</section>
+<section id="solution-components">
+<h2>Solution Components<a class="headerlink" href="#solution-components" title="Link to this heading"></a></h2>
+<section id="css-enhancements-static-custom-css">
+<h3>1. CSS Enhancements (<code class="docutils literal notranslate"><span class="pre">_static/custom.css</span></code>)<a class="headerlink" href="#css-enhancements-static-custom-css" title="Link to this heading"></a></h3>
+<p>✅ <strong>COMPLETED</strong> - Added comprehensive CSS rules that:</p>
+<ul class="simple">
+<li><p>Remove max-width constraints on content containers</p></li>
+<li><p>Force charts to use 100% width with viewport-width technique</p></li>
+<li><p>Set optimal heights (800-1000px) for better data visibility</p></li>
+<li><p>Add responsive breakpoints for mobile/tablet</p></li>
+<li><p>Remove grey space issues</p></li>
+</ul>
+</section>
+<section id="javascript-configuration-static-chart-config-js">
+<h3>2. JavaScript Configuration (<code class="docutils literal notranslate"><span class="pre">_static/chart-config.js</span></code>)<a class="headerlink" href="#javascript-configuration-static-chart-config-js" title="Link to this heading"></a></h3>
+<p>✅ <strong>COMPLETED</strong> - Created JavaScript enhancement that:</p>
+<ul class="simple">
+<li><p>Automatically configures Plotly charts for responsive behavior</p></li>
+<li><p>Provides better default settings</p></li>
+<li><p>Adds window resize handlers</p></li>
+<li><p>Monkey-patches Plotly.newPlot for automatic optimization</p></li>
+</ul>
+</section>
+<section id="config-updates-config-yml">
+<h3>3. Config Updates (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>)<a class="headerlink" href="#config-updates-config-yml" title="Link to this heading"></a></h3>
+<p>✅ <strong>COMPLETED</strong> - Updated configuration to:</p>
+<ul class="simple">
+<li><p>Include the chart-config.js file</p></li>
+<li><p>Maintain existing CSS inclusion</p></li>
+</ul>
+</section>
+<section id="chart-layout-modifications-pending">
+<h3>4. Chart Layout Modifications (Pending)<a class="headerlink" href="#chart-layout-modifications-pending" title="Link to this heading"></a></h3>
+<p>🔄 <strong>NEXT STEPS</strong> - Update individual chart configurations in business plan:</p>
+<section id="required-changes">
+<h4>Required Changes:<a class="headerlink" href="#required-changes" title="Link to this heading"></a></h4>
+<p>Remove fixed width/height from these chart layouts:</p>
+<ul class="simple">
+<li><p>Market Growth Chart (line ~500): <code class="docutils literal notranslate"><span class="pre">height:</span> <span class="pre">800,</span> <span class="pre">width:</span> <span class="pre">1200</span></code></p></li>
+<li><p>Market Segmentation (line ~721): <code class="docutils literal notranslate"><span class="pre">height:</span> <span class="pre">700,</span> <span class="pre">width:</span> <span class="pre">1000</span></code></p></li>
+<li><p>Product Portfolio (line ~1382): <code class="docutils literal notranslate"><span class="pre">height:</span> <span class="pre">900,</span> <span class="pre">width:</span> <span class="pre">1400</span></code></p></li>
+<li><p>Tech Stack (line ~1674): <code class="docutils literal notranslate"><span class="pre">height:</span> <span class="pre">800,</span> <span class="pre">width:</span> <span class="pre">800</span></code></p></li>
+<li><p>Execution Roadmap (line ~2168): <code class="docutils literal notranslate"><span class="pre">height:</span> <span class="pre">600,</span> <span class="pre">width:</span> <span class="pre">1200</span></code></p></li>
+<li><p>Funding Allocation (line ~2294): <code class="docutils literal notranslate"><span class="pre">height:</span> <span class="pre">600,</span> <span class="pre">width:</span> <span class="pre">800</span></code></p></li>
+<li><p>Financial Projections (line ~2835): <code class="docutils literal notranslate"><span class="pre">height:</span> <span class="pre">800,</span> <span class="pre">width:</span> <span class="pre">1200</span></code></p></li>
+</ul>
+<p>Replace with: <code class="docutils literal notranslate"><span class="pre">autosize:</span> <span class="pre">true</span></code></p>
+</section>
+<section id="html-div-updates">
+<h4>HTML Div Updates:<a class="headerlink" href="#html-div-updates" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>Revenue Stream Chart: Remove inline styles, add <code class="docutils literal notranslate"><span class="pre">class=&quot;chart-placeholder&quot;</span></code></p></li>
+<li><p>Risk Assessment Matrix: Remove inline styles, add <code class="docutils literal notranslate"><span class="pre">class=&quot;chart-placeholder&quot;</span></code></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="files-created-modified">
+<h2>Files Created/Modified<a class="headerlink" href="#files-created-modified" title="Link to this heading"></a></h2>
+<section id="modified-files">
+<h3>✅ Modified Files:<a class="headerlink" href="#modified-files" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_static/custom.css</span></code></strong> - Enhanced with chart-specific CSS rules</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></strong> - Added JavaScript file inclusion</p></li>
+</ol>
+</section>
+<section id="new-files">
+<h3>✅ New Files:<a class="headerlink" href="#new-files" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_static/chart-config.js</span></code></strong> - Plotly chart configuration enhancement</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_static/chart-fixes.md</span></code></strong> - Implementation guide</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">_static/chart-layout-fixes.md</span></code></strong> - Specific chart modification instructions</p></li>
+</ol>
+</section>
+</section>
+<section id="implementation-instructions">
+<h2>Implementation Instructions<a class="headerlink" href="#implementation-instructions" title="Link to this heading"></a></h2>
+<section id="to-complete-the-fix">
+<h3>To Complete the Fix:<a class="headerlink" href="#to-complete-the-fix" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>Update Chart Layouts</strong> (Manual Step Required):</p>
+<ul class="simple">
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">content/qdaria-core/qdaria-business/qdaria-business-plan-25.md</span></code></p></li>
+<li><p>Replace fixed width/height with <code class="docutils literal notranslate"><span class="pre">autosize:</span> <span class="pre">true</span></code> in chart layouts</p></li>
+<li><p>Update HTML divs to use <code class="docutils literal notranslate"><span class="pre">class=&quot;chart-placeholder&quot;</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Build and Test</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jb<span class="w"> </span>clean<span class="w"> </span>.<span class="w"> </span>--all
+jb<span class="w"> </span>build<span class="w"> </span>.
+open<span class="w"> </span>_build/html/content/qdaria-core/qdaria-business/qdaria-business-plan-25.html
+</pre></div>
+</div>
+</li>
+<li><p><strong>Verify Results</strong>:</p>
+<ul class="simple">
+<li><p>Charts should use full content width</p></li>
+<li><p>Heights should be 800-1000px</p></li>
+<li><p>No grey space on right side</p></li>
+<li><p>Responsive behavior on window resize</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="expected-results">
+<h2>Expected Results<a class="headerlink" href="#expected-results" title="Link to this heading"></a></h2>
+<section id="desktop-1200px">
+<h3>Desktop (&gt;1200px):<a class="headerlink" href="#desktop-1200px" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Charts use ~95% of viewport width (accounting for sidebar)</p></li>
+<li><p>Heights: 800-1000px for optimal data visualization</p></li>
+<li><p>Professional appearance suitable for investor presentation</p></li>
+</ul>
+</section>
+<section id="tablet-768-1200px">
+<h3>Tablet (768-1200px):<a class="headerlink" href="#tablet-768-1200px" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Charts adapt to reduced padding</p></li>
+<li><p>Heights: 600px minimum</p></li>
+<li><p>Maintain readability</p></li>
+</ul>
+</section>
+<section id="mobile-768px">
+<h3>Mobile (&lt;768px):<a class="headerlink" href="#mobile-768px" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Charts remain functional with horizontal scroll if needed</p></li>
+<li><p>Heights: 400px minimum</p></li>
+<li><p>Touch interactions preserved</p></li>
+</ul>
+</section>
+</section>
+<section id="css-class-reference">
+<h2>CSS Class Reference<a class="headerlink" href="#css-class-reference" title="Link to this heading"></a></h2>
+<section id="chart-height-categories">
+<h3>Chart Height Categories:<a class="headerlink" href="#chart-height-categories" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Large charts</strong> (1000px): Market Growth, Financial Projections, Execution Roadmap</p></li>
+<li><p><strong>Medium charts</strong> (900px): Competitor Funding, Funding Allocation, Organizational</p></li>
+<li><p><strong>Standard charts</strong> (850px): Market Segmentation, Product Portfolio, Tech Stack</p></li>
+</ul>
+</section>
+<section id="key-css-classes">
+<h3>Key CSS Classes:<a class="headerlink" href="#key-css-classes" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.chart-placeholder</span></code> - Main chart container styling</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.js-plotly-plot</span></code> - Plotly-specific overrides</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.plotly-graph-div</span></code> - Graph container styling</p></li>
+</ul>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="if-charts-still-show-grey-space">
+<h3>If charts still show grey space:<a class="headerlink" href="#if-charts-still-show-grey-space" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Check browser console for JavaScript errors</p></li>
+<li><p>Verify chart-config.js is loaded</p></li>
+<li><p>Use browser DevTools to inspect chart containers</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">window.fixChartWidth('chartId')</span></code> in console</p></li>
+</ol>
+</section>
+<section id="for-mobile-issues">
+<h3>For mobile issues:<a class="headerlink" href="#for-mobile-issues" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Test on actual devices, not just browser resize</p></li>
+<li><p>Check touch interactions work properly</p></li>
+<li><p>Verify horizontal scroll functions if needed</p></li>
+</ol>
+</section>
+</section>
+<section id="success-metrics">
+<h2>Success Metrics<a class="headerlink" href="#success-metrics" title="Link to this heading"></a></h2>
+<p>✅ <strong>Completed Metrics:</strong></p>
+<ul class="simple">
+<li><p>CSS framework supports full-width charts</p></li>
+<li><p>JavaScript enhancement ready</p></li>
+<li><p>Configuration updated</p></li>
+</ul>
+<p>🎯 <strong>Target Metrics:</strong></p>
+<ul class="simple">
+<li><p>Charts use 100% of available content width</p></li>
+<li><p>No visible grey space on right side</p></li>
+<li><p>Charts heights 800-1000px for desktop viewing</p></li>
+<li><p>Professional appearance suitable for investor presentations</p></li>
+<li><p>Responsive behavior maintained</p></li>
+</ul>
+</section>
+<section id="next-action-required">
+<h2>Next Action Required<a class="headerlink" href="#next-action-required" title="Link to this heading"></a></h2>
+<p><strong>Update chart layouts in the business plan markdown file</strong> by replacing fixed dimensions with <code class="docutils literal notranslate"><span class="pre">autosize:</span> <span class="pre">true</span></code> and updating HTML divs to use the <code class="docutils literal notranslate"><span class="pre">chart-placeholder</span></code> class.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

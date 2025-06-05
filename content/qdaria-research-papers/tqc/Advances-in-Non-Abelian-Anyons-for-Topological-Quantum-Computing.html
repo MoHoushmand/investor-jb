@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Topological Quantum Computing (TQC) &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+      <script src="../../../_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/chart-config.js?v=b454993d"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Topological Quantum Computing (TQC)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/content/qdaria-research-papers/tqc/Advances-in-Non-Abelian-Anyons-for-Topological-Quantum-Computing.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="topological-quantum-computing-tqc">
+<h1>Topological Quantum Computing (TQC)<a class="headerlink" href="#topological-quantum-computing-tqc" title="Link to this heading"></a></h1>
+<section id="advances-in-non-abelian-anyons-for-topological-quantum-computing">
+<h2>Advances in Non-Abelian Anyons for Topological Quantum Computing<a class="headerlink" href="#advances-in-non-abelian-anyons-for-topological-quantum-computing" title="Link to this heading"></a></h2>
+<section id="abstract">
+<h3>Abstract<a class="headerlink" href="#abstract" title="Link to this heading"></a></h3>
+<p>Non-Abelian anyons are exotic quasiparticles whose braiding can perform quantum gate operations with built-in fault tolerance. Recent experiments have made significant strides in this realm: In 2023, Google’s Quantum AI team reported the first experimental demonstration of non-Abelian anyon braiding using a superconducting qubit array ￼. The anyons realized in that experiment are of the Ising type (such as Majorana zero modes), which validate non-Abelian exchange statistics but offer only a restricted set of quantum gates and are not universal for quantum computation ￼. Braiding Ising anyons generates essentially only the Clifford gate set, requiring additional non-topological operations to achieve universality ￼. By contrast, a different species known as Fibonacci anyons can in principle support universal topological quantum computing using braids alone ￼. However, Fibonacci anyons have yet to be physically realized in any material system, despite theoretical proposals (e.g. the fragile <span class="math notranslate nohighlight">\(\nu=12/5\)</span> fractional quantum Hall state) that predict their existence ￼. In this work, we address this gap by [investigating/proposing] a new approach toward realizing and manipulating Fibonacci anyons. We present [analysis/results] indicating that [under specific conditions] a quantum system could exhibit Fibonacci anyon-like excitations and braiding, bringing topologically universal quantum logic closer to reality. Our findings underscore the growing experimental progress in non-Abelian anyons while charting a path forward to the long-sought goal of universal topological quantum computation.</p>
+</section>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Non-Abelian anyons offer a fundamentally different paradigm for quantum computation, encoding information nonlocally in degenerate states that are manipulated by braiding particles around one another ￼ ￼. Unlike ordinary bosons or fermions, exchanging two non-Abelian anyons can rotate the system’s quantum state in a multi-dimensional Hilbert space rather than merely imparting a phase ￼. This property could be harnessed to perform quantum gate operations that are intrinsically fault-tolerant, since small local perturbations do not easily change the topological state. Topological quantum computing schemes aim to exploit this robustness by storing qubits in anyonic states and executing logic gates via braiding sequences ￼ ￼. For years, achieving such a platform has been a central but elusive goal in quantum information science.</p>
+<p>Early experimental efforts focused on identifying non-Abelian anyons in condensed-matter systems. In particular, Ising anyons – the non-Abelian quasiparticles associated with Majorana zero modes – were predicted to emerge in systems like <span class="math notranslate nohighlight">\(p\)</span>-wave superconductors and certain fractional quantum Hall states (e.g. at <span class="math notranslate nohighlight">\(\nu=5/2\)</span>) ￼. These Ising anyons are the simplest non-Abelian anyon model, but their braiding operations are not universal for quantum computation ￼. In essence, braiding Majorana/Ising anyons can only generate a limited set of gates (essentially the Clifford group), which by itself cannot approximate an arbitrary quantum algorithm ￼. Universal quantum computation based on braiding requires more complex anyon types. A prime candidate is the Fibonacci anyon, whose braid operations are dense in the space of unitary transformations ￼. The Fibonacci anyon model supports a full gate set via braiding alone, eliminating the need for nontopological interventions and thereby preserving fault-tolerance in principle ￼. However, realizing such Fibonacci anyons has proven extremely challenging. They do not naturally appear in any experimentally confirmed system to date. Even the <span class="math notranslate nohighlight">\(\nu=12/5\)</span> fractional quantum Hall state – long suspected to host Fibonacci anyons as <span class="math notranslate nohighlight">\(Z_3\)</span> parafermion excitations ￼ ￼ – has yet to yield definitive evidence of their non-Abelian statistics. Thus, until recently, no non-Abelian anyon had been unequivocally observed, and the road to a universal topological quantum computer remained purely hypothetical.</p>
+<section id="recent-breakthroughs-ising-anyon-braiding">
+<h3>Recent Breakthroughs – Ising Anyon Braiding<a class="headerlink" href="#recent-breakthroughs-ising-anyon-braiding" title="Link to this heading"></a></h3>
+<p>This landscape changed with the first experimental demonstrations of non-Abelian anyon braiding. Notably, Google’s Quantum AI group reported observing non-Abelian exchange behavior on a superconducting quantum processor ￼. In their approach, an array of 2D superconducting qubits was used to simulate a topological stabilizer code hosting Ising anyon excitations ￼. By deforming the code and applying unitary gates, they created pairs of Ising anyons, braided them, and measured the resultant state changes to verify the anyons’ fusion and braiding rules ￼. This milestone experiment directly showed for the first time that exchanging two engineered quasiparticles can produce the hallmark non-Abelian outcome: a change in the system’s quantum state observable in the final wavefunction ￼.  At nearly the same time, a separate group used a 68-qubit programmable processor to perform a high-fidelity digital simulation of Ising anyon braiding, likewise confirming the expected non-Abelian statistics ￼ ￼. These breakthroughs conclusively establish that non-Abelian anyons are more than a theoretical idea – they can be realized and controlled in modern quantum devices.</p>
+</section>
+<section id="ising-vs-fibonacci-anyons-computational-power">
+<h3>Ising vs. Fibonacci Anyons – Computational Power<a class="headerlink" href="#ising-vs-fibonacci-anyons-computational-power" title="Link to this heading"></a></h3>
+<p>Importantly, the non-Abelian anyons created in these experiments are of the Ising type (equivalent to Majorana modes) and therefore do not enable universal quantum computation on their own ￼. Braiding Ising anyons implements only a restricted set of operations (e.g. <span class="math notranslate nohighlight">\(90^\circ\)</span> rotations on the Bloch sphere), which generate the Clifford group of gates ￼. This gate set is not universal; for example, it cannot approximate arbitrary single-qubit phase rotations and lacks entangling two-qubit gates beyond simple swapping. In practical terms, a quantum computer built solely on Ising anyon braiding would require supplemental non-topological elements (such as magic state injection for a <span class="math notranslate nohighlight">\(\pi/8\)</span> phase gate ￼) to perform general computations – an approach that forfeits some of the topological protection. Fibonacci anyons, on the other hand, are theorized to bypass this limitation. In the Fibonacci anyon model, braids of the quasiparticles can implement a dense set of unitary operations, effectively providing a built-in universal gate library ￼. This dramatic advantage has made Fibonacci anyons the holy grail for topological quantum computing: if one could reliably produce and braid them, any quantum algorithm could in principle be executed with topological immunity from error ￼. The chief obstacle is that no known natural system has yet been shown to host true Fibonacci anyons. They are expected to emerge in certain highly entangled phases of matter (such as the Read-Rezayi <span class="math notranslate nohighlight">\(k=3\)</span> state in fractional quantum Hall systems ￼ ￼), but experiments have not definitively confirmed their presence. The challenge, therefore, is twofold: (1) extend the recent experimental control of non-Abelian anyons from Ising to a universal anyon model, and (2) identify or engineer a physical platform where Fibonacci anyons (or similarly universal quasiparticles) can be realized and manipulated.</p>
+<p>In this work, we aim to tackle aspects of both challenges. Building on the momentum of the Ising anyon demonstrations, we [introduce/propose] a new approach to realize Fibonacci anyons in a controlled setting. Our approach leverages [brief description of method or system] – an idea that sidesteps some of the obstacles faced in previous proposals. We show that under [certain conditions/assumptions], this scheme can create excitations that obey the Fibonacci anyon fusion rules and braiding statistics. For example, [briefly highlight a key result: e.g., “we theoretically demonstrate a braid operation on two such excitations that yields the non-trivial <span class="math notranslate nohighlight">\(R\)</span>-matrix expected for Fibonacci anyons”]. We also analyze the robustness of these anyonic modes and outline how they could be used to encode and process quantum information. These results provide a blueprint for experimentally pursuing universal topological qubits. More broadly, by clearly distinguishing the current capabilities of Ising anyon systems from the desired features of Fibonacci anyon systems, our work delineates a concrete path forward in the quest for fault-tolerant quantum computation.</p>
+</section>
+</section>
+<section id="discussion">
+<h2>Discussion<a class="headerlink" href="#discussion" title="Link to this heading"></a></h2>
+<p>The experimental observation of non-Abelian anyon braiding in 2023 marks a pivotal advance in quantum physics, turning a decades-old theoretical prediction into reality ￼. For the first time, researchers have witnessed the non-commuting exchange statistics of identical quasiparticles in a laboratory setting. This achievement both validates the fundamental principles of anyon theory and serves as a proof-of-concept for topological quantum logic. Our work builds on this foundation, addressing the critical question of how to move from the Ising anyon era to the Fibonacci anyon era of quantum computing. The Ising anyon implementations to date, while groundbreaking, realize only a limited braid group that cannot perform arbitrary quantum operations ￼. As we have emphasized, braids of Ising anyons alone cannot form a universal gate set – they lack, for instance, the ability to generate a <span class="math notranslate nohighlight">\(T\)</span>-gate (π/8 phase rotation) or other non-Clifford operations necessary for full quantum programmability ￼. In contrast, a platform featuring Fibonacci anyons would inherently support a complete set of topologically protected gates, potentially enabling quantum computations that are resilient to local noise by design.</p>
+<p>A key contribution of this work is outlining a viable route toward such a Fibonacci-based topological quantum computer. By [summary of what we did/proposed], we have shown a path to create and control Fibonacci anyon excitations in a [synthetic/by design] system. While this proposal remains to be experimentally realized, it offers a tangible target for future efforts.  An intriguing possibility is to combine the digital quantum simulation approach demonstrated by Google with the concepts in our scheme – for example, using advanced quantum processors not just to braid Ising anyons, but to programmatically emulate Fibonacci anyon braids ￼ ￼. Indeed, very recent work has reported preliminary braiding of Fibonacci anyons on a smaller superconducting circuit, yielding outcomes consistent with their predicted fusion and braid behavior ￼ ￼.  Looking ahead, the continued convergence of experiment and theory will be crucial. On one front, experimental physicists are pushing the boundaries of qubit coherence and controllability to simulate ever more complex anyon models (as evidenced by the rapid progress from Abelian to non-Abelian anyons on quantum hardware). On another front, materials physicists are investigating new strongly-correlated electron systems (e.g. alternative fractional quantum Hall states, spin liquid materials, or designer heterostructures) that might intrinsically host Fibonacci anyons or related non-Abelian defects ￼. To date, no “intrinsic” material realization of a universal anyon has been confirmed, underscoring the difficulty of this task ￼. Our results reinforce that difficulty while providing optimism that it can be overcome: by demonstrating [theoretical prediction/result], we narrow down the conditions necessary for Fibonacci anyons to appear and guide where to look for them.</p>
+<p>In conclusion, the field of non-Abelian anyonics has entered an exciting new phase. Ising anyons, once purely theoretical, are now experimentally accessible – but the ultimate prize lies in discovering or engineering an anyon system that is computationally universal. This work contributes to that endeavor by bridging the gap between current non-universal anyon platforms and the requirements of a fully topological quantum computer. Acknowledging the real-world progress (the verified braiding of Ising anyons ￼) while highlighting the remaining challenge (realizing the more powerful Fibonacci anyons ￼) adds credibility and urgency to our approach. By updating the theoretical framework to incorporate these developments, we ensure that our proposals remain aligned with the state of the art. We anticipate that the methods and insights presented here will inform the next generation of experiments, ultimately bringing the vision of universal topological quantum computation closer to fruition.</p>
+</section>
+<section id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Link to this heading"></a></h2>
+<p>The braiding of Ising anyons on a superconducting platform was reported in Nature 618, 264 (2023) ￼, confirming non-Abelian statistics experimentally for the first time. However, as noted by Horsman et al. (2017) and others, Ising anyon braids generate only the Clifford gates and are not computationally universal ￼ ￼. Universal quantum computation via braiding requires Fibonacci anyons or similar, which remain experimentally unrealized to date ￼ ￼. The <span class="math notranslate nohighlight">\(\nu=12/5\)</span> fractional quantum Hall state is a leading theoretical candidate for Fibonacci anyons ￼, and recent quantum simulations have begun to explore their braiding in processor-based experiments ￼. These developments frame the context and motivation for the present work.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/qdaria-research-papers/tqc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

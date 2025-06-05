@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JupyterBook Development Rules and Best Practices &mdash; Daniel Mo Houshmand</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=20074c1a" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+      <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=4c969af8" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=d2dc8771" />
+      <link rel="stylesheet" type="text/css" href="../_static/mo_addmination.css?v=9870a3a3" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/scripts/sphinx-book-theme.js"></script>
+      <script src="../_static/tabs.js?v=3ee01567"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+      <script src="../_static/chart-config.js?v=b454993d"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/D58.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Project name not set</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">JupyterBook Development Rules and Best Practices</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/.clinerules/jb-rules.md" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="jupyterbook-development-rules-and-best-practices">
+<h1>JupyterBook Development Rules and Best Practices<a class="headerlink" href="#jupyterbook-development-rules-and-best-practices" title="Link to this heading"></a></h1>
+<p>This document outlines the rules and best practices to follow when developing and maintaining this JupyterBook project.</p>
+<section id="file-and-directory-structure">
+<h2>1. File and Directory Structure<a class="headerlink" href="#file-and-directory-structure" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Naming Conventions:</strong></p>
+<ul>
+<li><p>Use lowercase, hyphen-separated names for files and directories (e.g., <code class="docutils literal notranslate"><span class="pre">my-chapter.md</span></code>, <code class="docutils literal notranslate"><span class="pre">section-one/</span></code>).</p></li>
+<li><p>Notebook files should end with <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>. Markdown files with <code class="docutils literal notranslate"><span class="pre">.md</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Content Organization:</strong></p>
+<ul>
+<li><p>Group related content into subdirectories within the <code class="docutils literal notranslate"><span class="pre">content/</span></code> directory.</p></li>
+<li><p>Store images in a dedicated <code class="docutils literal notranslate"><span class="pre">_static/images/</span></code> directory (or similar, ensure consistency) and reference them appropriately.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="table-of-contents-toc-yml">
+<h2>2. Table of Contents (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>)<a class="headerlink" href="#table-of-contents-toc-yml" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Structure:</strong> Maintain a clear and logical hierarchy. Use <code class="docutils literal notranslate"><span class="pre">part:</span></code> to define book parts and <code class="docutils literal notranslate"><span class="pre">chapters:</span></code> (or <code class="docutils literal notranslate"><span class="pre">sections:</span></code>) to list files/globs within each part/chapter.</p></li>
+<li><p><strong>Formatting:</strong> Follow YAML syntax strictly. Use <code class="docutils literal notranslate"><span class="pre">file:</span></code> for individual pages and <code class="docutils literal notranslate"><span class="pre">glob:</span></code> for including multiple files from a directory.</p></li>
+<li><p><strong>Numbering:</strong> JupyterBook will auto-number based on <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> structure. You can customize numbering if needed via <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.</p></li>
+</ul>
+</section>
+<section id="content-authoring-markdown-myst">
+<h2>3. Content Authoring (Markdown &amp; MyST)<a class="headerlink" href="#content-authoring-markdown-myst" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Markdown Flavor:</strong> Primarily use MyST (Markedly Structured Text) Markdown for enhanced features.</p></li>
+<li><p><strong>Headings:</strong> Use appropriate heading levels (<code class="docutils literal notranslate"><span class="pre">#</span></code>, <code class="docutils literal notranslate"><span class="pre">##</span></code>, <code class="docutils literal notranslate"><span class="pre">###</span></code>, etc.) to structure content logically.</p></li>
+<li><p><strong>Directives and Roles:</strong> Utilize MyST directives (e.g., <code class="docutils literal notranslate"><span class="pre">{note}</span></code>, <code class="docutils literal notranslate"><span class="pre">{warning}</span></code>, <code class="docutils literal notranslate"><span class="pre">{figure}</span></code>) and roles for rich content.</p></li>
+<li><p><strong>Citations:</strong> Manage citations using a <code class="docutils literal notranslate"><span class="pre">.bib</span></code> file (e.g., <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>) and reference them using <code class="docutils literal notranslate"><span class="pre">{[cite]}key</span></code> syntax.</p></li>
+<li><p><strong>Cross-Referencing:</strong> Use MyST roles for cross-referencing sections, figures, and equations.</p></li>
+<li><p><strong>Escaping Special Characters:</strong> Ensure that special characters in Markdown, particularly the dollar sign (<code class="docutils literal notranslate"><span class="pre">$</span></code>) used for currency, are properly escaped (e.g., <code class="docutils literal notranslate"><span class="pre">\$100</span></code>) to prevent misinterpretation by LaTeX or MathJax renderers.</p></li>
+</ul>
+</section>
+<section id="formatting-conventions">
+<h2>4. Formatting Conventions<a class="headerlink" href="#formatting-conventions" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Spacing after Bolded Pseudo-Headings:</strong> Bolded pseudo-headings (e.g., <code class="docutils literal notranslate"><span class="pre">**Section</span> <span class="pre">Title:**</span></code>) must be followed by a blank line before the subsequent paragraph to ensure readability and consistency. Example:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gs">**My Section Title:**</span>
+
+This is the paragraph following the title.
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="notebooks-ipynb">
+<h2>5. Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>)<a class="headerlink" href="#notebooks-ipynb" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Clarity:</strong> Ensure notebooks are well-commented and easy to follow.</p></li>
+<li><p><strong>Cell Output:</strong> Clear all cell outputs before committing, unless the output is essential for understanding the content without re-running (e.g., plots for a static view).</p>
+<ul>
+<li><p>Consider using tools like <code class="docutils literal notranslate"><span class="pre">nbstripout</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Execution:</strong> Ensure all notebooks run from top to bottom without errors.</p></li>
+<li><p><strong>Kernel:</strong> Specify the kernel used if it’s not the default.</p></li>
+<li><p><strong>Conciseness:</strong> Keep notebooks focused on a specific topic or analysis. Break down long notebooks.</p></li>
+</ul>
+</section>
+<section id="dependencies-and-environment">
+<h2>5. Dependencies and Environment<a class="headerlink" href="#dependencies-and-environment" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Environment Activation (MUST DO):</strong> <strong>It is CRITICAL to ensure your project-specific micromamba environment (defined in <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code>) is activated BEFORE starting any development work or building the book. Use commands like <code class="docutils literal notranslate"><span class="pre">micromamba</span> <span class="pre">activate</span> <span class="pre">./env</span></code> (if the environment is in a local <code class="docutils literal notranslate"><span class="pre">./env</span></code> folder) or <code class="docutils literal notranslate"><span class="pre">micromamba</span> <span class="pre">activate</span> <span class="pre">&lt;env_name&gt;</span></code> (if the environment is named). Working outside the correct activated environment can lead to errors, inconsistencies, and issues with dependencies.</strong></p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> (Conda/Micromamba):</strong> Keep this file updated with all necessary packages. Create/update the environment using <code class="docutils literal notranslate"><span class="pre">micromamba</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span> <span class="pre">-p</span> <span class="pre">./env</span></code> (for a local env) or <code class="docutils literal notranslate"><span class="pre">micromamba</span> <span class="pre">env</span> <span class="pre">update</span> <span class="pre">-f</span> <span class="pre">environment.yml</span> <span class="pre">-n</span> <span class="pre">&lt;env_name&gt;</span></code>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> (Pip):</strong> If using Pip (can be used alongside Conda/Micromamba for packages not on Conda channels), keep this file updated.</p></li>
+<li><p><strong>Specify versions:</strong> Pin package versions to ensure reproducibility.</p></li>
+</ul>
+</section>
+<section id="configuration-config-yml">
+<h2>6. Configuration (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>)<a class="headerlink" href="#configuration-config-yml" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Metadata:</strong> Ensure project title, author, and other metadata are correctly set.</p></li>
+<li><p><strong>Extensions:</strong> List and configure any Sphinx extensions used.</p></li>
+<li><p><strong>HTML Theme:</strong> Configure the theme and its options as needed.</p></li>
+</ul>
+</section>
+<section id="building-and-testing">
+<h2>7. Building and Testing<a class="headerlink" href="#building-and-testing" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Local Builds:</strong> Regularly build the book locally (<code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> or, if using a specific micromamba environment: <code class="docutils literal notranslate"><span class="pre">micromamba</span> <span class="pre">run</span> <span class="pre">-n</span> <span class="pre">&lt;your_env_name&gt;</span> <span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> <strong>Alternatively, if the environment is activated, <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> should suffice.</strong>).</p></li>
+<li><p><strong>Routine Check &amp; Visual Content Review (MUST DO):</strong> <strong>After any significant changes, or at regular intervals, build the book (<code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code>) and then open <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> in a browser. Navigate through new or modified pages to visually inspect the output. Specifically verify:</strong></p>
+<ul>
+<li><p><strong>Content formatting is correct and text flows well.</strong></p></li>
+<li><p><strong>There are no unusually long or broken lines of text that impair readability.</strong></p></li>
+<li><p><strong>Images, tables, code blocks, and mathematical equations render as expected.</strong></p></li>
+<li><p><strong>Interactive elements (e.g., from Thebe, embedded Plotly charts) are functional.</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Link Checking:</strong> Use <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span> <span class="pre">--builder</span> <span class="pre">linkcheck</span></code> (or with <code class="docutils literal notranslate"><span class="pre">micromamba</span> <span class="pre">run</span> <span class="pre">...</span></code> or after activation) to find broken links.</p></li>
+<li><p><strong>Clean Builds:</strong> Occasionally perform a clean build (<code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">clean</span> <span class="pre">.</span> <span class="pre">&amp;&amp;</span> <span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code>)</p></li>
+<li><p><strong>Linting:</strong> <strong>All Markdown files should be checked with a Markdown linter (e.g., <code class="docutils literal notranslate"><span class="pre">markdownlint</span></code> using the project’s <code class="docutils literal notranslate"><span class="pre">.markdownlint.json</span></code> configuration) before committing. Resolve all warnings and errors to maintain consistent formatting.</strong></p></li>
+</ul>
+</section>
+<section id="version-control-git">
+<h2>8. Version Control (Git)<a class="headerlink" href="#version-control-git" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code>:</strong> Ensure build artifacts (<code class="docutils literal notranslate"><span class="pre">_build/</span></code>), cache files (<code class="docutils literal notranslate"><span class="pre">.jupyter_cache/</span></code>), environment directories (e.g., <code class="docutils literal notranslate"><span class="pre">env/</span></code> if local), and other non-essential files are ignored. (Consider adding common Python/Jupyter ignores like <code class="docutils literal notranslate"><span class="pre">__pycache__/</span></code>, <code class="docutils literal notranslate"><span class="pre">*.pyc</span></code>, <code class="docutils literal notranslate"><span class="pre">.ipynb_checkpoints/</span></code>).</p></li>
+<li><p><strong>Commit Messages:</strong> Write clear and descriptive commit messages.</p></li>
+<li><p><strong>Branching:</strong> Follow a consistent branching strategy (e.g., feature branches).</p></li>
+</ul>
+</section>
+<section id="accessibility">
+<h2>9. Accessibility<a class="headerlink" href="#accessibility" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Provide alternative text for images.</p></li>
+<li><p>Ensure good color contrast.</p></li>
+<li><p>Use semantic HTML elements where possible (via MyST directives).</p></li>
+</ul>
+</section>
+<section id="custom-css-js">
+<h2>10. Custom CSS/JS<a class="headerlink" href="#custom-css-js" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Store custom CSS in <code class="docutils literal notranslate"><span class="pre">_static/custom.css</span></code> (or a similar named file) and ensure it’s loaded via <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.</p></li>
+<li><p>Minimize custom JavaScript unless necessary.</p></li>
+</ul>
+</section>
+<section id="general-markdown-best-practices">
+<h2>11. General Markdown Best Practices<a class="headerlink" href="#general-markdown-best-practices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Strive for clarity and consistency in formatting across all documents.</p></li>
+<li><p>Use semantic line breaks where appropriate to improve diff readability.</p></li>
+<li><p>Keep lines to a reasonable length (e.g., 80-120 characters) where possible, unless it breaks tables or code blocks.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./.clinerules"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
