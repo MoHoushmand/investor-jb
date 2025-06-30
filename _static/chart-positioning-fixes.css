@@ -1,0 +1,273 @@
+/* Chart Positioning Fixes for QDaria Business Plan */
+/* Fixes chart overflow issues by ensuring proper left alignment and constraints */
+
+/* =================================================================
+   MAIN CHART CONTAINER FIXES
+   ================================================================= */
+
+/* Target all Plotly chart containers */
+div[id$="Chart"],
+div[id*="chart"],
+div[id*="Chart"],
+#competitorFundingChart,
+#revenueProjectionChart,
+#executionTimelineChart,
+#teamStructureChart,
+#marketSizeChart,
+#customerAcquisitionChart,
+#riskMatrixChart,
+#financialMetricsChart,
+#marketGrowthChart,
+#financialProjectionsChart,
+#executionRoadmapChart,
+#fundingAllocationChart,
+#organizationalChart,
+#marketSegmentationChart,
+#productPortfolioMatrix,
+#techStackArchitecture {
+    /* Reset positioning to prevent overflow */
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    
+    /* Left-align charts with controlled margins */
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+    /* Constrain width to prevent overflow */
+    max-width: calc(100% - 2rem) !important;
+    width: calc(100% - 2rem) !important;
+    
+    /* Ensure proper box model */
+    box-sizing: border-box !important;
+    
+    /* Add subtle padding for breathing room */
+    padding: 0 1rem !important;
+    
+    /* Override any transform or translate */
+    transform: none !important;
+}
+
+/* Override the problematic full-width viewport styles from custom.css */
+.chart-placeholder {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+}
+
+/* =================================================================
+   PLOTLY-SPECIFIC ADJUSTMENTS
+   ================================================================= */
+
+/* Plotly graph div corrections */
+.js-plotly-plot,
+.plotly-graph-div {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* SVG container within Plotly */
+.main-svg,
+.svg-container {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Plotly plot container */
+.plot-container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* =================================================================
+   JUPYTER BOOK SPECIFIC FIXES
+   ================================================================= */
+
+/* Fix overflow in Jupyter Book content area */
+.bd-content .bd-article-container {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+/* Ensure charts don't break the article layout */
+.bd-article-container .section {
+    overflow-x: hidden !important;
+}
+
+/* Content wrapper adjustments */
+.wy-nav-content {
+    overflow-x: hidden !important;
+}
+
+/* =================================================================
+   RESPONSIVE DESIGN
+   ================================================================= */
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    div[id$="Chart"],
+    div[id*="chart"],
+    div[id*="Chart"],
+    .chart-placeholder {
+        /* Full width on mobile with minimal padding */
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 0.5rem !important;
+        
+        /* Adjust margins for mobile */
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Force Plotly responsive layout on mobile */
+    .plotly-graph-div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Adjust modebar for mobile */
+    .modebar {
+        right: 5px !important;
+        top: 5px !important;
+        transform: scale(0.9);
+    }
+    
+    /* Reduce chart heights on mobile */
+    div[id*="Chart"],
+    div[id*="chart"] {
+        min-height: 300px !important;
+        height: auto !important;
+    }
+}
+
+/* Tablet devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    div[id$="Chart"],
+    div[id*="chart"],
+    div[id*="Chart"],
+    .chart-placeholder {
+        /* Slightly more padding on tablets */
+        padding: 0 1rem !important;
+        max-width: calc(100% - 2rem) !important;
+    }
+}
+
+/* Desktop with sidebar (min-width: 1025px) */
+@media (min-width: 1025px) {
+    div[id$="Chart"],
+    div[id*="chart"],
+    div[id*="Chart"],
+    .chart-placeholder {
+        /* Account for sidebar on desktop */
+        max-width: calc(100% - 3rem) !important;
+        padding: 0 1.5rem !important;
+    }
+    
+    /* Limit max width for readability on large screens */
+    .js-plotly-plot {
+        max-width: 1200px !important;
+    }
+}
+
+/* Very large screens (min-width: 1920px) */
+@media (min-width: 1920px) {
+    div[id$="Chart"],
+    div[id*="chart"],
+    div[id*="Chart"],
+    .chart-placeholder {
+        /* Center charts on very large screens */
+        max-width: 1400px !important;
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+}
+
+/* =================================================================
+   ACCESSIBILITY & UX IMPROVEMENTS
+   ================================================================= */
+
+/* Ensure modebar is always accessible */
+.modebar {
+    position: absolute !important;
+    z-index: 1001 !important;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.modebar:hover {
+    opacity: 1;
+}
+
+/* Focus styles for keyboard navigation */
+div[id$="Chart"]:focus,
+div[id*="chart"]:focus,
+.js-plotly-plot:focus {
+    outline: 3px solid #00CED1;
+    outline-offset: 2px;
+}
+
+/* =================================================================
+   PRINT STYLES
+   ================================================================= */
+
+@media print {
+    div[id$="Chart"],
+    div[id*="chart"],
+    div[id*="Chart"],
+    .chart-placeholder {
+        /* Ensure charts fit on printed page */
+        page-break-inside: avoid;
+        margin: 1rem 0 !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        min-height: auto !important;
+        height: auto !important;
+    }
+    
+    /* Hide interactive elements when printing */
+    .modebar {
+        display: none !important;
+    }
+}
+
+/* =================================================================
+   SPECIFIC CHART OVERRIDES (if needed)
+   ================================================================= */
+
+/* Example: If specific charts need different positioning */
+#executionTimelineChart {
+    /* Timeline charts might need more horizontal space */
+    max-width: calc(100% - 1rem) !important;
+}
+
+#organizationalChart {
+    /* Org charts might need centering */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* =================================================================
+   FALLBACK STYLES
+   ================================================================= */
+
+/* Ensure no horizontal scrolling at document level */
+html, body {
+    overflow-x: hidden !important;
+}
+
+/* Final catch-all to prevent any overflow */
+.rst-content {
+    overflow-x: hidden !important;
+}

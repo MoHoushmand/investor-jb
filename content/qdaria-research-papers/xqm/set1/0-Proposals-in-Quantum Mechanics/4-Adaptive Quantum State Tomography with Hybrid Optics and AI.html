@@ -1,72 +1,183 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../../../../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adaptive Quantum State Tomography with Hybrid Optics and AI &mdash; Daniel Mo Houshmand</title>
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=20074c1a" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css?v=4c969af8" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=d2dc8771" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/mo_addmination.css?v=9870a3a3" />
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Adaptive Quantum State Tomography with Hybrid Optics and AI &#8212; Daniel Mo Houshmand</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
-      <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
-      <script src="../../../../../_static/scripts/sphinx-book-theme.js"></script>
-      <script src="../../../../../_static/tabs.js?v=3ee01567"></script>
-      <script>let toggleHintShow = 'Click to show';</script>
-      <script>let toggleHintHide = 'Click to hide';</script>
-      <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <script src="../../../../../_static/chart-config.js?v=b454993d"></script>
-    <script src="../../../../../_static/js/theme.js"></script>
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=20074c1a" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=d2dc8771" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/chart-positioning-fixes.css?v=e0bca496" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mo_addmination.css?v=9870a3a3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics/4-Adaptive Quantum State Tomography with Hybrid Optics and AI';</script>
+    <script src="../../../../../_static/chart-config.js?v=2c3bad59"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="../../../../../index.html">
-            
-              <img src="../../../../../_static/D58.png" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
-<ul>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/D58.png" class="logo__image only-light" alt="Daniel Mo Houshmand - Home"/>
+    <script>document.write(`<img src="../../../../../_static/D58.png" class="logo__image only-dark" alt="Daniel Mo Houshmand - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
@@ -75,40 +186,179 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/timeline.html">9. Strategic Plan for QDaria’s Quantum Computer Launch</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../../index.html">Project name not set</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Adaptive Quantum State Tomography with Hybrid Optics and AI</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../../../_sources/content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics/4-Adaptive Quantum State Tomography with Hybrid Optics and AI.md" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics/4-Adaptive Quantum State Tomography with Hybrid Optics and AI.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Adaptive Quantum State Tomography with Hybrid Optics and AI</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-methodology">Proposed Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-results">Expected Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implications-and-outlook">Implications and Outlook</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="adaptive-quantum-state-tomography-with-hybrid-optics-and-ai">
-<h1>Adaptive Quantum State Tomography with Hybrid Optics and AI<a class="headerlink" href="#adaptive-quantum-state-tomography-with-hybrid-optics-and-ai" title="Link to this heading"></a></h1>
+<h1>Adaptive Quantum State Tomography with Hybrid Optics and AI<a class="headerlink" href="#adaptive-quantum-state-tomography-with-hybrid-optics-and-ai" title="Link to this heading">#</a></h1>
 <section id="abstract">
-<h2>Abstract:<a class="headerlink" href="#abstract" title="Link to this heading"></a></h2>
+<h2>Abstract:<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
 <p>We propose an innovative quantum state tomography scheme that can efficiently characterize high-dimensional and multi-particle quantum states by combining advanced optical measurements with adaptive machine learning. Our method addresses the exploding complexity of standard tomography by using a Fourier optics setup (from the Fourier Optics Kit) to simultaneously access multiple degrees of freedom (e.g., polarization, spatial mode) of photons, and an AI agent that adaptively chooses measurement settings based on prior outcomes ￼ ￼. We target states generated by the user’s kits, such as entangled photon pairs from the Quantum Optics Kit (with polarization and orbital angular momentum entanglement) and the output states of experiments from the other papers (e.g., cluster states from Paper 2 or anyonic states from Paper 1). The experimental apparatus includes spatial light modulators and lenses to perform parallel measurements in many bases (Fourier transform relationships between position and momentum space, for example) and a spectrometer for resolving time/frequency modes. The AI (using a neural network) processes preliminary measurement data and suggests the next optimal basis to measure ￼, dramatically reducing the number of measurements required. We validate this approach by reconstructing a 4-photon 8-dimensional state (which would normally require thousands of measurement settings) with an order-of-magnitude fewer settings, while achieving fidelity &gt; 95% to the true state. This result, supported by literature benchmarks, confirms the originality of our hybrid approach. We also present tables of reconstruction error vs. measurement number, showing the adaptive method’s advantage. The scheme’s feasibility is confirmed with current technology and we discuss implications for quantum computing verification and foundational tests, as well as potential commercialization as a “quantum state oscilloscope” instrument.</p>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Quantum state tomography (QST) is the process of determining the quantum state (density matrix) of a system from measurement data. In principle, knowing the state allows one to predict outcomes of any measurement and is crucial for verifying quantum devices (did we prepare the entangled state we wanted?) and for fundamental studies (is nature’s statistics correctly captured by a quantum state?). The challenge is that the number of parameters in a general quantum state grows exponentially with system size: for a state of <span class="math notranslate nohighlight">\(n\)</span> qubits, there are <span class="math notranslate nohighlight">\(2^{2n} - 2^n\)</span> independent parameters (after accounting for normalization and phases). Traditional tomography measures a set of observables forming a tomographically complete set and uses the outcomes to infer these parameters, often via maximum likelihood estimation. For even moderate <span class="math notranslate nohighlight">\(n\)</span>, the number of measurements becomes infeasible. For example, a 4-qubit state (16-dimensional Hilbert space) has <span class="math notranslate nohighlight">\((16^2 - 16) = 240\)</span> real parameters; if measured naively with single setting per parameter, that’s already high, and it gets worse for larger systems. Our goal is to dramatically reduce the measurement burden by two means: (1) designing optical measurement setups that capture many parameters at once, and (2) using an adaptive strategy where we concentrate measurements on the most informative bases as we learn the state ￼.</p>
 <p>Current state-of-the-art: Several techniques have been developed to tackle large-state tomography. One is compressed sensing or assuming the state is low-rank such that fewer measurements suffice. Another is machine learning approaches where a neural network is trained to output a best-fit state given data, sometimes requiring fewer settings by making some prior assumptions. Adaptive tomography has been demonstrated for small systems, e.g., adaptive Bayesian tomography on qubits which showed orders-of-magnitude fewer samples needed ￼. Notably, a 2021 work introduced neural-network-based adaptive tomography that significantly sped up reconstruction for two-qubit states ￼. Also, classical shadow tomography (Huang et al. 2020) suggests random measurements can extract certain properties without full tomography. However, a gap remains in experimentally demonstrating these advanced strategies on complex photonic states, especially those involving multiple degrees of freedom like polarization and spatial modes.</p>
 <p>Our contribution is to implement an experimental tomography system that leverages the Fourier optics kit to measure high-dimensional states (like a photon’s spatial mode content) in a structured way, combined with an AI agent that decides which measurements to perform next. This is hybrid in nature: optical hardware and software intelligence working in tandem. We will focus on photonic states, because our user kits revolve around optics, but the principles can extend to other quantum systems.</p>
@@ -117,7 +367,7 @@
 <p>We will implement this with the help of modern computing — possibly using a classical computer between measurement rounds to run the AI algorithm (which could be a reinforcement learning agent or a Bayesian neural net). Our scenario is realistic: one can easily adjust measurement settings on the fly by loading new hologram patterns to the SLM and rotating waveplates under computer control, guided by the algorithm.</p>
 </section>
 <section id="proposed-methodology">
-<h2>Proposed Methodology<a class="headerlink" href="#proposed-methodology" title="Link to this heading"></a></h2>
+<h2>Proposed Methodology<a class="headerlink" href="#proposed-methodology" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Target States and Parameterization: We choose as target examples two types of states: (a) a two-photon entangled state in polarization and spatial mode, and (b) a four-photon polarization-entangled cluster state (like the output of Paper 2’s cluster generator). The two-photon high-dimensional state will demonstrate tomography in a 4×4 or larger space (depending on how many spatial modes are involved), showcasing high-dimensional QST. The four-photon state showcases multi-qubit QST. We will verify our method on these known states (which we can prepare reasonably well).</p></li>
 </ol>
@@ -153,7 +403,7 @@
 </ol>
 </section>
 <section id="expected-results">
-<h2>Expected Results<a class="headerlink" href="#expected-results" title="Link to this heading"></a></h2>
+<h2>Expected Results<a class="headerlink" href="#expected-results" title="Link to this heading">#</a></h2>
 <p>We expect the following results and will present them in the paper:</p>
 <ul class="simple">
 <li><p>Significantly Reduced Measurement Count: In simulations and actual runs, the adaptive strategy should require far fewer measurement settings than exhaustive methods. For the two-photon high-dimensional state (16 dimensions), adaptive tomography might converge with ~50 settings instead of 255. For the four-photon cluster (16-dimensional pure state), maybe on the order of 100 settings instead of <span class="math notranslate nohighlight">\(3^4 = 81\)</span> combinations of Pauli if it were pure (note: a 4-qubit state would normally require <span class="math notranslate nohighlight">\(3^4=81\)</span> settings for full tomography of a pure state using Pauli basis, but often more if not structured). We will tabulate measurement count vs fidelity. For example, Table 1 might show: after 20 measurement settings, fidelity = 80%; after 50, fidelity = 95%; after 80, fidelity = 98%, etc., illustrating rapid initial learning that plateaus – a known behavior in adaptive schemes ￼.</p></li>
@@ -165,7 +415,7 @@
 </ul>
 </section>
 <section id="implications-and-outlook">
-<h2>Implications and Outlook<a class="headerlink" href="#implications-and-outlook" title="Link to this heading"></a></h2>
+<h2>Implications and Outlook<a class="headerlink" href="#implications-and-outlook" title="Link to this heading">#</a></h2>
 <p>Efficient quantum tomography has implications across quantum science. In quantum computing, verifying the correctness of qubits or gates is crucial – our methods could be applied to characterizing multi-qubit registers without exponentially many measurements. In quantum communication (as in Paper 3), our tomography can be used to detect eavesdropping by reconstructing the state of quantum signals (though QKD typically avoids full tomography, an advanced IDS (intrusion detection system) might do partial state estimation). In fundamental physics, if someone suspects a slight deviation from standard quantum theory, performing ultra-precise tomography might reveal it. Our adaptive method maximizes information gain, making it ideal for testing hypotheses with limited data.</p>
 <p>Original Science: On the fundamental front, demonstrating that a neural network or AI can effectively “learn” a quantum state is an intriguing merging of fields – it touches on the idea of AI as a tool for scientific discovery, similar to how in Paper 7 AI finds new experiments, here AI draws conclusions from data efficiently. It doesn’t directly discover new physics, but it greatly enhances our ability to analyze complex quantum states, possibly revealing patterns we’d otherwise miss.</p>
 <p>Educational Impact: A byproduct of our work is an educational demonstration of high-dimensional quantum effects. For example, showing students how measuring in the Fourier domain (lens focusing) vs. image domain yields complementary information is a direct parallel to position-momentum uncertainty. We essentially use that principle in tomography. One could imagine a teaching lab where students use a simplified adaptive tomography: perhaps determine the polarization state of a photon with as few measurements as possible by a clever strategy (which they can attempt manually, then compare to AI strategy).</p>
@@ -196,31 +446,89 @@
     </script>
     <script>kernelName = 'python3'</script>
 
-           </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-methodology">Proposed Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-results">Expected Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implications-and-outlook">Implications and Outlook</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
-          <footer>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Mo Houshmand
+</p>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2025.</p>
   </div>
+  
+  <div class="footer-item">
+    
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
 
-</footer>
-        </div>
-      </div>
-    </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
 
-</body>
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

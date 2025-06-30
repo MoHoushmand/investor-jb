@@ -1,72 +1,183 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../../../../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Macroscopic Quantum Superpositions via Levitated Optomechanics &mdash; Daniel Mo Houshmand</title>
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=20074c1a" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/tabs.css?v=4c969af8" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=d2dc8771" />
-      <link rel="stylesheet" type="text/css" href="../../../../../_static/mo_addmination.css?v=9870a3a3" />
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Macroscopic Quantum Superpositions via Levitated Optomechanics &#8212; Daniel Mo Houshmand</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-      <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
-      <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
-      <script src="../../../../../_static/scripts/sphinx-book-theme.js"></script>
-      <script src="../../../../../_static/tabs.js?v=3ee01567"></script>
-      <script>let toggleHintShow = 'Click to show';</script>
-      <script>let toggleHintHide = 'Click to hide';</script>
-      <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <script src="../../../../../_static/chart-config.js?v=b454993d"></script>
-    <script src="../../../../../_static/js/theme.js"></script>
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=20074c1a" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/custom.css?v=d2dc8771" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/chart-positioning-fixes.css?v=e0bca496" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mo_addmination.css?v=9870a3a3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics/6-Macroscopic Quantum Superpositions via Levitated Optomechanics';</script>
+    <script src="../../../../../_static/chart-config.js?v=2c3bad59"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="../../../../../index.html">
-            
-              <img src="../../../../../_static/D58.png" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
-<ul>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/D58.png" class="logo__image only-light" alt="Daniel Mo Houshmand - Home"/>
+    <script>document.write(`<img src="../../../../../_static/D58.png" class="logo__image only-dark" alt="Daniel Mo Houshmand - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
@@ -75,44 +186,198 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qdaria-core/qdaria-business/timeline.html">9. Strategic Plan for QDaria’s Quantum Computer Launch</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../../index.html">Project name not set</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Macroscopic Quantum Superpositions via Levitated Optomechanics</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../../../_sources/content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics/6-Macroscopic Quantum Superpositions via Levitated Optomechanics.md" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/content/qdaria-research-papers/xqm/set1/0-Proposals-in-Quantum Mechanics/6-Macroscopic Quantum Superpositions via Levitated Optomechanics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Macroscopic Quantum Superpositions via Levitated Optomechanics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#feasibility-check">Feasibility check:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-methodology">Proposed Methodology</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#optical-trap-and-cooling">1. Optical Trap and Cooling:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-state-preparation">2. Quantum State Preparation:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#decoherence-and-ai-control">3. Decoherence and AI control:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-observation">4. Data/Observation:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-results">Expected Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#path-to-commercialization">Path to Commercialization:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational">Educational:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="macroscopic-quantum-superpositions-via-levitated-optomechanics">
-<h1>Macroscopic Quantum Superpositions via Levitated Optomechanics<a class="headerlink" href="#macroscopic-quantum-superpositions-via-levitated-optomechanics" title="Link to this heading"></a></h1>
+<h1>Macroscopic Quantum Superpositions via Levitated Optomechanics<a class="headerlink" href="#macroscopic-quantum-superpositions-via-levitated-optomechanics" title="Link to this heading">#</a></h1>
 <section id="abstract">
-<h2>Abstract:<a class="headerlink" href="#abstract" title="Link to this heading"></a></h2>
+<h2>Abstract:<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
 <p>We propose and analyze an experiment to create and observe macroscopic quantum superpositions using a levitated nanoparticle, pushing the boundary of quantum mechanics into a new regime. Leveraging the Portable Optical Tweezers Kit and cryogenic vacuum systems, we optically trap a sub-micron dielectric sphere and cool its center-of-mass motion to the quantum ground state ￼ ￼. We then use a fast optical interference technique to split the particle’s wavefunction into two spatially separated wave packets (analogous to a double-slit for a massive object) and let them evolve before recombining them to observe interference. The methodology includes a Michelson interferometer configuration for matter-waves: one arm of the interferometer corresponds to one position of the nanoparticle, achieved by applying a tailored optical potential (a pulsed optical field) to kick the particle into a superposition of two locations separated by tens of nanometers. The Time-Resolved Absorption Spectroscopy Kit helps measure the resulting interference pattern by tracking the nanoparticle’s motion and phase coherence over time. We incorporate AI control for feedback cooling and phase stabilization, ensuring that decoherence (from residual gas, thermal photons, etc.) is minimized. Based on current literature, ground-state cooling of levitated nanoparticles has been achieved ￼ ￼, but a full spatial superposition and interference of a free nanoparticle has not yet been seen. Our setup anticipates creating a superposition lasting a few milliseconds with a spatial separation of ~50 nm, large enough to test objective collapse models and gravitational decoherence hypotheses. Expected results: an interference fringe pattern in the nanoparticle’s position distribution, observable via a sensitive position sensor or optical inference, demonstrating quantum coherence at a mass of ~<span class="math notranslate nohighlight">\(10^9\)</span> atomic mass units (orders of magnitude beyond previous matter-wave records ￼). We will compare the observed coherence time with theoretical models of spontaneous collapse ￼ ￼. This experiment, if successful, would be a landmark validation of quantum mechanics at macroscopic scales and open a path toward quantum sensors and tests of quantum gravity.</p>
 <section id="introduction">
-<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h3>
 <p>Quantum superposition – the idea that an object can be in two or more states at once – has been confirmed for electrons, atoms, and even large molecules ￼ ￼. However, creating superpositions of truly macroscopic objects (containing billions of atoms) remains an outstanding challenge. Some interpretations or modifications of quantum mechanics (like spontaneous collapse models) predict that beyond a certain mass/size, superpositions should spontaneously localize (collapse) due to natural noise or new physics. Testing these requires pushing quantum interference experiments to heavier masses.</p>
 <p>In recent years, there has been rapid progress in levitated optomechanics: trapping nanoscale particles (<span class="math notranslate nohighlight">\(10^8–10^{10}\)</span> atomic mass units) in optical or electromagnetic traps and cooling their motion to near the quantum ground state ￼. The user’s Portable Optical Tweezers Kit is essentially a tool for optical trapping, used normally in biophysics to hold microscopic beads. By integrating it with vacuum chambers and feedback systems, researchers have turned it into a precise harmonic trap for quantum experiments. Ground-state cooling of a levitated nanoparticle was reported in 2020 (via cavity cooling or feedback cooling) ￼ ￼, meaning the particle’s motion is dominated by quantum zero-point energy. The stage is set to attempt a matter-wave interference experiment with such a particle, akin to the famous double-slit but for a massive object.</p>
 <p>Our experiment aims to delocalize a single trapped nanoparticle into a spatial superposition and then recombine it to observe interference. This is extremely challenging: one must isolate the particle from environmental decoherence (hence high vacuum, <span class="math notranslate nohighlight">\(10^{-9}\)</span> mbar or better, and cryogenic environment to reduce blackbody radiation), and one must coherently manipulate its center-of-mass wavefunction. There are proposals to use pulsed optical potentials or cavity interactions to do this. One approach (Romero-Isart et al., 2011) suggests using a cavity to impart momentum “kicks” to split the wavefunction. Another (von Haandel et al.) suggests dropping the trap for a brief free evolution. Our approach will be a hybrid: use optical tweezers to initially confine and cool, then release the particle into near free-fall (by switching off parts of the optical potential) while using an interference setup of light pulses to create a superposition.</p>
 <section id="feasibility-check">
-<h4>Feasibility check:<a class="headerlink" href="#feasibility-check" title="Link to this heading"></a></h4>
+<h4>Feasibility check:<a class="headerlink" href="#feasibility-check" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>The mass scale: our particle might be ~100 nm diameter silica sphere (~<span class="math notranslate nohighlight">\(10^9\)</span> amu). The largest molecule interfered to date is ~<span class="math notranslate nohighlight">\(2 \times 10^4\)</span> amu ￼, so this is 5 orders heavier, a huge leap. Many theory papers consider up to <span class="math notranslate nohighlight">\(10^9–10^{10}\)</span> amu, so we are at frontier.</p></li>
 <li><p>Ground-state cooling: Achieved for example by Delić et al. (2020) with cavity cooling of 150 nm silica to ~10 <span class="math notranslate nohighlight">\(\mu\)</span>K (ground state) ￼. So assume we can start at ground state (our kit plus custom cryo optical cavity or feedback).</p></li>
@@ -123,13 +388,13 @@ Possibly use a short intense laser pulse tuned to an optical resonance or using 
 </section>
 </section>
 <section id="proposed-methodology">
-<h3>Proposed Methodology<a class="headerlink" href="#proposed-methodology" title="Link to this heading"></a></h3>
+<h3>Proposed Methodology<a class="headerlink" href="#proposed-methodology" title="Link to this heading">#</a></h3>
 <section id="optical-trap-and-cooling">
-<h4>1. Optical Trap and Cooling:<a class="headerlink" href="#optical-trap-and-cooling" title="Link to this heading"></a></h4>
+<h4>1. Optical Trap and Cooling:<a class="headerlink" href="#optical-trap-and-cooling" title="Link to this heading">#</a></h4>
 <p>We use a tightly focused laser beam (1064 nm, high power) to trap a silica nanosphere in a vacuum chamber. The Breadboard and damping feet are used to mount optics to ensure stability. Initially, a moderate vacuum (1e-6 mbar) combined with feedback cooling is used: we detect the particle’s motion via scattered light (collected by microscope objective from kit, and directed to a photodiode). The Time-Resolved Absorption/fluorescence Kit might have a fast photodiode or APD that can measure the particle’s oscillation at MHz frequencies. We feed that signal into an FPGA or controller that modulates the trapping laser intensity or an electro-optic modulator to apply damping forces (this is active feedback cooling). We have a cryogenic environment by either placing the whole optical tweezer inside a cryostat or using a cold finger to reduce thermal radiation—this also helps by freezing out air molecules (plus we pump out to high vacuum). Our goal is to cool the center-of-mass mode to near ground state (&lt;1 phonon occupancy). We’ll verify cooling by observing the motional sidebands (cooling is evidenced by absence of the red sideband, etc.).</p>
 </section>
 <section id="quantum-state-preparation">
-<h4>2. Quantum State Preparation:<a class="headerlink" href="#quantum-state-preparation" title="Link to this heading"></a></h4>
+<h4>2. Quantum State Preparation:<a class="headerlink" href="#quantum-state-preparation" title="Link to this heading">#</a></h4>
 <p>Once in the ground state of the optical trap (a harmonic oscillator potential), we adjust the trap frequency to be low (so wavefunction is as delocalized as possible initially). Possibly adiabatically lower the trap stiffness to increase position spread. Then we plan to create a superposition of two positions. We consider two methods:</p>
 <ul class="simple">
 <li><p>Method A (momentum kick): Use a pair of counter-propagating laser pulses (like an optical standing wave) as a grating. At a chosen time, we flash an intense pulse which forms a transient optical lattice. If timed correctly (half a mechanical period, maybe), this can split the wavefunction: akin to a Kapitza-Dirac diffraction, the particle’s wavefunction diffracts into two momentum states <span class="math notranslate nohighlight">\(\pm p\)</span>. Then allow it to evolve such that these momentum states move apart spatially.
@@ -154,7 +419,7 @@ The interference pattern ideally would show as oscillation in detection probabil
 We plan to vary a phase (e.g., apply a small potential difference between wells or a laser phase between pulses) to see fringes in output probabilities.</p>
 </section>
 <section id="decoherence-and-ai-control">
-<h4>3. Decoherence and AI control:<a class="headerlink" href="#decoherence-and-ai-control" title="Link to this heading"></a></h4>
+<h4>3. Decoherence and AI control:<a class="headerlink" href="#decoherence-and-ai-control" title="Link to this heading">#</a></h4>
 <p>Achieving coherence requires minimizing:</p>
 <ul class="simple">
 <li><p>Gas collisions: we go to ultra-high vacuum, the cryo help (maybe at 4 K blackbody, pressure ~<span class="math notranslate nohighlight">\(10^{-10}\)</span> mbar).</p></li>
@@ -167,7 +432,7 @@ That is plausible but at the forefront of experimental control.</p></li>
 </ul>
 </section>
 <section id="data-observation">
-<h4>4. Data/Observation:<a class="headerlink" href="#data-observation" title="Link to this heading"></a></h4>
+<h4>4. Data/Observation:<a class="headerlink" href="#data-observation" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>We aim to measure an interference visibility. If quantum mechanics holds, we expect near 100% visibility (limited by decoherence).
 If a collapse model like CSL (Continuous Spontaneous Localization) with certain parameters is true, coherence might be lost above a certain separation/mass, so our experiment might see reduced visibility vs distance or time that deviates from QM.
@@ -178,7 +443,7 @@ Perhaps figure: one curve from quantum theory (only environment decoherence, whi
 </section>
 </section>
 <section id="expected-results">
-<h3>Expected Results<a class="headerlink" href="#expected-results" title="Link to this heading"></a></h3>
+<h3>Expected Results<a class="headerlink" href="#expected-results" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Observation of Fringe Pattern: The hallmark result would be seeing interference, confirming a spatial superposition. This might be represented as an oscillation in the particle detection probability between two output ports as we vary a phase. We expect a sinusoidal oscillation from 0 to nearly 100% in each port complementary, analogous to photon interference but with a massive particle. This would be a stunning demonstration. If achieved, it extends quantum coherence by many orders of magnitude in mass. We will emphasize this by comparing to known experiments: e.g., “Our particle’s mass (~<span class="math notranslate nohighlight">\(10^9\)</span> amu) is ~<span class="math notranslate nohighlight">\(10^5\)</span> times heavier than the largest molecule (25,000 amu) shown to interfere ￼, thus significantly expanding the quantum-classical boundary.”</p></li>
 <li><p>Coherence Time and Environmental Decoherence: We expect to measure how long the superposition can be maintained. Possibly vary the delay T in the interferometer. Without intentional decoherence, limited by residual gas collisions or trap stability, maybe we can go up to a few milliseconds or tens of ms before losing coherence. That already might be enough to test some collapse models. If we see the interference visibility drop as T increases, we’ll analyze whether the rate matches known decoherence sources (gas collisions rate calculable from pressure, etc.) or if there’s an excess decoherence that could hint at new physics. We likely predict it matches known sources, thus placing upper bounds on spontaneous collapse mechanisms (like CSL rate parameter <span class="math notranslate nohighlight">\(\lambda\)</span>, ruling it out up to some strength).</p></li>
@@ -196,16 +461,16 @@ Possibly embed something like [10†L25-L33] if any fig or [10] reference detail
 </li>
 </ul>
 <section id="path-to-commercialization">
-<h4>Path to Commercialization:<a class="headerlink" href="#path-to-commercialization" title="Link to this heading"></a></h4>
+<h4>Path to Commercialization:<a class="headerlink" href="#path-to-commercialization" title="Link to this heading">#</a></h4>
 <p>This experiment is fundamental, but spin-offs could be ultra-sensitive force sensors. A levitated particle interferometer could detect tiny forces because any decoherence (phase shift) could indicate e.g. a passing gravitational wave or a particle. It’s like a very sensitive accelerometer. We mention that: “In addition to fundamental tests, a nanoparticle in a quantum superposition could act as a sensor for faint forces or impulses at unprecedented sensitivity, since any disturbance would collapse the superposition or shift the interference phase detectably. This might inspire quantum-enhanced inertial sensors or perhaps, someday, tests of quantum gravity by witnessing entanglement between two such masses.”</p>
 </section>
 <section id="educational">
-<h4>Educational:<a class="headerlink" href="#educational" title="Link to this heading"></a></h4>
+<h4>Educational:<a class="headerlink" href="#educational" title="Link to this heading">#</a></h4>
 <p>Achieving or even attempting this demonstrates many physics concepts (quantum optomechanics, decoherence theory, etc.). It’s a good demonstration of cross-disciplinary physics: optics, vacuum tech, cryo, feedback control, quantum theory. It could inspire advanced students. If fully realized, showing a “Schrödinger cat” of a small particle could become an iconic demonstration (though extremely demanding, not a simple classroom demo).</p>
 </section>
 </section>
 <section id="conclusion">
-<h3>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h3>
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h3>
 <p>Finally, if successful, this experiment would essentially be making a “miniature Schrödinger’s cat state” (though cat is alive vs dead, here it’s a particle at two places, but the essence of macroscopically distinct states). Achieving that has been a holy grail in quantum foundations. It would almost certainly be Nobel-worthy: it directly addresses “at what scale does quantum physics break down, if at all?” which is a fundamental question. Our results would indicate that even a nanoscale object can exhibit quantum interference, reinforcing that quantum mechanics has no known limit, and pushing any new physics to an even larger scale.</p>
 </section>
 </section>
@@ -231,31 +496,104 @@ Possibly embed something like [10†L25-L33] if any fig or [10] reference detail
     </script>
     <script>kernelName = 'python3'</script>
 
-           </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#feasibility-check">Feasibility check:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-methodology">Proposed Methodology</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#optical-trap-and-cooling">1. Optical Trap and Cooling:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-state-preparation">2. Quantum State Preparation:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#decoherence-and-ai-control">3. Decoherence and AI control:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-observation">4. Data/Observation:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-results">Expected Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#path-to-commercialization">Path to Commercialization:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#educational">Educational:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
-          <footer>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Mo Houshmand
+</p>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2025.</p>
   </div>
+  
+  <div class="footer-item">
+    
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
 
-</footer>
-        </div>
-      </div>
-    </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
 
-</body>
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

@@ -1,72 +1,182 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>8. QDaria Quantum Computing Whitepaper &mdash; Daniel Mo Houshmand</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8. QDaria Quantum Computing Whitepaper &#8212; Daniel Mo Houshmand</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
-      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="../../../_static/copybutton.js?v=f281be69"></script>
-      <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
-      <script src="../../../_static/tabs.js?v=3ee01567"></script>
-      <script>let toggleHintShow = 'Click to show';</script>
-      <script>let toggleHintHide = 'Click to hide';</script>
-      <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script src="../../../_static/chart-config.js?v=b454993d"></script>
-    <script src="../../../_static/js/theme.js"></script>
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/chart-positioning-fixes.css?v=e0bca496" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/qdaria-core/qdaria-business/qdaria-whitepaper';</script>
+    <script src="../../../_static/chart-config.js?v=2c3bad59"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="prev" title="7. QDaria Competitive Intelligence Visualizations" href="competitive-intelligence-visualizations.html" /> 
-</head>
+    <link rel="next" title="9. Strategic Plan for QDaria’s Quantum Computer Launch" href="timeline.html" />
+    <link rel="prev" title="7. QDaria Competitive Intelligence Visualizations" href="competitive-intelligence-visualizations.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="../../../index.html">
-            
-              <img src="../../../_static/D58.png" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
-<ul class="current">
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/D58.png" class="logo__image only-light" alt="Daniel Mo Houshmand - Home"/>
+    <script>document.write(`<img src="../../../_static/D58.png" class="logo__image only-dark" alt="Daniel Mo Houshmand - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../qdaria-intro.html">1. Intro QDaria</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
@@ -74,35 +184,231 @@
 <li class="toctree-l1"><a class="reference internal" href="qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="timeline.html">9. Strategic Plan for QDaria’s Quantum Computer Launch</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">Project name not set</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">8. </span><strong>QDaria Quantum Computing Whitepaper</strong></li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/content/qdaria-core/qdaria-business/qdaria-whitepaper.md" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/qdaria-core/qdaria-business/qdaria-whitepaper.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>QDaria Quantum Computing Whitepaper</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">8.1. <strong>Table of Contents</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executive-summary">8.2. <strong>Executive Summary</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">8.3. <strong>Introduction</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-and-mission">8.3.1. <strong>Vision and Mission</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-ai-the-new-paradigm">8.3.2. <strong>Quantum &amp; AI: The New Paradigm</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qdarias-quantum-technology-suite">8.4. <strong>QDaria’s Quantum Technology Suite</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zipminator-cybersecurity">8.4.1. <strong>Zipminator (Cybersecurity)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm9-fintech-hfdt">8.4.2. <strong>Qm9 (FinTech &amp; HFDT)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qdiana-education-agi">8.4.3. <strong>QDiana (Education &amp; AGI)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qmikeai-cfd-hpc">8.4.4. <strong>QMikeAI (CFD &amp; HPC)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qnilaya-healthtech-drug-discovery">8.4.5. <strong>QNilaya (HealthTech &amp; Drug Discovery)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehaa-quantum-nlp-llm">8.4.6. <strong>TeHaA (Quantum NLP LLM)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damon-quantum-robotics">8.4.7. <strong>Damon (Quantum Robotics)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-quantum-computing-with-fibonacci-anyons">8.5. <strong>Topological Quantum Computing with Fibonacci Anyons</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci-anyons-a-primer">8.5.1. <strong>Fibonacci Anyons: A Primer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance-and-error-correction">8.5.2. <strong>Fault-Tolerance and Error Correction</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-architecture-qpu-integration">8.5.3. <strong>Hardware Architecture &amp; QPU Integration</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-hpc-quantum-fusion">8.6. <strong>Classical HPC + Quantum Fusion</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hybrid-workloads-and-mojo-programming">8.6.1. <strong>Hybrid Workloads and Mojo Programming</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#webgpu-browser-based-simulations">8.6.2. <strong>WebGPU &amp; Browser-Based Simulations</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decentralized-quantum-cloud-qportal-lillian-hpc">8.6.3. <strong>Decentralized Quantum Cloud (QPortal &amp; Lillian HPC)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-ai-integration">8.7. <strong>Quantum AI Integration</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-enhanced-nlp-tehaa-and-vision">8.7.1. <strong>Quantum-Enhanced NLP (TeHaA) and Vision</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agentic-ai-systems-qdiana-qmikeai">8.7.2. <strong>Agentic AI Systems (QDiana &amp; QMikeAI)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#swarm-intelligence-and-ai-politician-origins">8.7.3. <strong>Swarm Intelligence and AI Politician Origins</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethical-and-societal-implications">8.8. <strong>Ethical and Societal Implications</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ethical-agi-and-governance">8.8.1. <strong>Ethical AGI and Governance</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-reforms-via-qdiana">8.8.2. <strong>Educational Reforms via QDiana</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decentralized-access-democratizing-tech">8.8.3. <strong>Decentralized Access &amp; Democratizing Tech</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-philosophy-development">8.9. <strong>Design Philosophy &amp; Development</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-state-learning-qdianas-pedagogy">8.9.1. <strong>Flow State Learning &amp; QDiana’s Pedagogy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-collaboration-and-partnerships">8.9.2. <strong>Open Collaboration and Partnerships</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proprietary-ip-and-mojo-of-innovation">8.9.3. <strong>Proprietary IP and Mojo of Innovation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roadmap-and-future-milestones">8.10. <strong>Roadmap and Future Milestones</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-readiness-in-norway">8.10.1. <strong>2025 – Quantum Readiness in Norway</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-conferences-qmikeai-launch">8.10.2. <strong>2026 – Global Conferences &amp; QMikeAI Launch</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grailq-and-topological-supremacy">8.10.3. <strong>2027-2030 – GrailQ and Topological Supremacy</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">8.11. <strong>Conclusion</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-figures">8.12. <strong>List of Figures</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-tables">8.13. <strong>List of Tables</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">8.14. <strong>References</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendices">8.15. <strong>Appendices</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-a-qdaria-technical-stack-blueprint">8.15.1. <strong>Appendix A: QDaria Technical Stack Blueprint</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-b-glossary-of-terms">8.15.2. <strong>Appendix B: Glossary of Terms</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="qdaria-quantum-computing-whitepaper">
-<h1><span class="section-number">8. </span><strong>QDaria Quantum Computing Whitepaper</strong><a class="headerlink" href="#qdaria-quantum-computing-whitepaper" title="Link to this heading"></a></h1>
+<h1><span class="section-number">8. </span><strong>QDaria Quantum Computing Whitepaper</strong><a class="headerlink" href="#qdaria-quantum-computing-whitepaper" title="Link to this heading">#</a></h1>
 <p><strong>Author:</strong> QDaria Quantum Technologies
 <strong>Date:</strong> May 1, 2025</p>
 <p><strong>Preliminary prompt answer (for orientation)</strong></p>
@@ -115,7 +421,7 @@
 <p>I’ll review your full site (<a class="reference external" href="http://qdaria.com">qdaria.com</a>), incorporate all relevant content from every nav page, and maximize the depth and token count without compromise. I’ll notify you as soon as the first draft is complete.</p>
 <hr class="docutils" />
 <section id="table-of-contents">
-<h2><span class="section-number">8.1. </span><strong>Table of Contents</strong><a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.1. </span><strong>Table of Contents</strong><a class="headerlink" href="#table-of-contents" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="#qdaria-quantum-computing-whitepaper"><span class="xref myst"><strong>QDaria Quantum Computing Whitepaper</strong></span></a></p>
 <ul>
@@ -196,7 +502,7 @@
 </section>
 <hr class="docutils" />
 <section id="executive-summary">
-<h2><span class="section-number">8.2. </span><strong>Executive Summary</strong><a class="headerlink" href="#executive-summary" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.2. </span><strong>Executive Summary</strong><a class="headerlink" href="#executive-summary" title="Link to this heading">#</a></h2>
 <p>QDaria, based in Oslo, Norway, is spearheading a fusion of <em>quantum computing</em> and <em>artificial intelligence</em> to solve complex challenges and inspire societal progress. Leveraging <strong>topological quantum computing</strong> with <strong>Fibonacci anyons</strong>, QDaria aims to achieve fault-tolerant quantum computation – a “holy grail” in quantum hardware – delivering unprecedented stability and computational power. Through an integrated suite of technologies that span quantum-safe cybersecurity (Zipminator), quantum-enhanced finance (Qm9), education and governance AI (QDiana), computational fluid dynamics (QMikeAI), healthcare (QNilaya), natural language processing (TeHaA), and robotics (Damon), QDaria envisions transforming industries from finance to pharmaceuticals to public policy.</p>
 <p>This whitepaper provides a technically rich and visionary overview of QDaria’s approach, combining:</p>
 <ul class="simple">
@@ -215,9 +521,9 @@
 </section>
 <hr class="docutils" />
 <section id="introduction">
-<h2><span class="section-number">8.3. </span><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.3. </span><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <section id="vision-and-mission">
-<h3><span class="section-number">8.3.1. </span><strong>Vision and Mission</strong><a class="headerlink" href="#vision-and-mission" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.3.1. </span><strong>Vision and Mission</strong><a class="headerlink" href="#vision-and-mission" title="Link to this heading">#</a></h3>
 <p>QDaria’s <strong>vision</strong> is <em>“to be the global leader in topological quantum computing, driving the quantum revolution through cutting-edge research, innovative products, and strategic partnerships”</em>. We <em>envision a future where quantum computing transforms every aspect of society</em>, from secure communications to personalized medicine. Our <strong>mission</strong> is to <em>“revolutionize industries through topological quantum computing, delivering innovative solutions that solve complex challenges and shape the future of technology”</em>, while making quantum computing <strong>accessible and impactful</strong> across cybersecurity, finance, education, and healthcare.</p>
 <p>QDaria sees itself not just as a company, but as a <strong>quantum ecosystem builder</strong>:</p>
 <ul class="simple">
@@ -233,7 +539,7 @@
 <p><strong>Why Norway?</strong> As a Norwegian-founded company, QDaria is proud to contribute to making Norway <em>“Quantum Ready.”</em> Norway’s robust education system and focus on innovation provide fertile ground for quantum research. Yet, before QDaria, Norway had no major quantum hardware projects. QDaria’s partnership to deploy a Rigetti quantum processor in Oslo in 2025 will mark Norway’s <em>entry into quantum computing infrastructure</em>. We also plan to host Europe’s first <strong>Quantum + AI conference (IQT 2026 in Oslo)</strong>, putting Norway on the global quantum map. This is aligned with national interests in tech leadership and builds local talent and awareness.</p>
 </section>
 <section id="quantum-ai-the-new-paradigm">
-<h3><span class="section-number">8.3.2. </span><strong>Quantum &amp; AI: The New Paradigm</strong><a class="headerlink" href="#quantum-ai-the-new-paradigm" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.3.2. </span><strong>Quantum &amp; AI: The New Paradigm</strong><a class="headerlink" href="#quantum-ai-the-new-paradigm" title="Link to this heading">#</a></h3>
 <p>The convergence of <strong>quantum computing</strong> and <strong>artificial intelligence</strong> defines a new technological paradigm with synergy effects:</p>
 <ul class="simple">
 <li><p><strong>Computational Breakthroughs:</strong> Quantum computers can solve or accelerate certain computations that classical computers struggle with – e.g., large-scale optimization, simulating quantum systems (chemistry/materials), factoring (security). AI, particularly machine learning, benefits from vast computational resources. Combining them, a quantum computer could potentially train AI models faster or find patterns in data intractable for classical machines. One near-term example is <em>quantum-enhanced feature mapping</em> in machine learning, where quantum states represent data in high-dimensional spaces, improving classification tasks.</p></li>
@@ -246,11 +552,11 @@
 </section>
 <hr class="docutils" />
 <section id="qdarias-quantum-technology-suite">
-<h2><span class="section-number">8.4. </span><strong>QDaria’s Quantum Technology Suite</strong><a class="headerlink" href="#qdarias-quantum-technology-suite" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.4. </span><strong>QDaria’s Quantum Technology Suite</strong><a class="headerlink" href="#qdarias-quantum-technology-suite" title="Link to this heading">#</a></h2>
 <p>QDaria’s portfolio comprises several <em>interconnected products and platforms</em>. Each is designed as a <strong>modular solution</strong> targeting a specific domain, but all share a common tech foundation (quantum + AI) and can interoperate. This modular approach means breakthroughs in one area (say, a better error-correction code from Zipminator) can benefit others (e.g., making Qm9’s financial calculations more reliable).</p>
 <p>Below is a breakdown of QDaria’s main technologies:</p>
 <section id="zipminator-cybersecurity">
-<h3><span class="section-number">8.4.1. </span><strong>Zipminator (Cybersecurity)</strong><a class="headerlink" href="#zipminator-cybersecurity" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.4.1. </span><strong>Zipminator (Cybersecurity)</strong><a class="headerlink" href="#zipminator-cybersecurity" title="Link to this heading">#</a></h3>
 <p>Zipminator is QDaria’s <strong>quantum-resistant encryption and data compression</strong> platform – essentially our answer to the looming threat of quantum computers breaking classical encryption (the “Y2Q” problem – Years to Quantum). Zipminator combines <strong>Quantum Key Distribution (QKD)</strong> with <em>post-quantum cryptography</em> to provide <strong>“unbreakable protection”</strong> for data in transit and at rest.</p>
 <p><strong>Key Features:</strong></p>
 <ul class="simple">
@@ -270,7 +576,7 @@
 <Chart id="zipminatorEncryptionChart" title="Quantum-Safe Encryption Architecture" type="radar" />
 </section>
 <section id="qm9-fintech-hfdt">
-<h3><span class="section-number">8.4.2. </span><strong>Qm9 (FinTech &amp; HFDT)</strong><a class="headerlink" href="#qm9-fintech-hfdt" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.4.2. </span><strong>Qm9 (FinTech &amp; HFDT)</strong><a class="headerlink" href="#qm9-fintech-hfdt" title="Link to this heading">#</a></h3>
 <p>Qm9 is our <strong>quantum-enhanced financial technology platform</strong>. It’s named after <em>quantum mechanics’ 9th dimension</em> metaphorically, implying extra-dimensional insight into markets. Practically, Qm9 focuses on <strong>high-frequency data trading (HFDT)</strong>, portfolio optimization, and risk management in financial markets.</p>
 <p><strong>Core Capabilities:</strong></p>
 <ul class="simple">
@@ -292,7 +598,7 @@
 <Chart id="tradingLatencyComparison" title="Trading Execution Latency: Classical vs Quantum-Enhanced (Qm9)" type="bar" />
 </section>
 <section id="qdiana-education-agi">
-<h3><span class="section-number">8.4.3. </span><strong>QDiana (Education &amp; AGI)</strong><a class="headerlink" href="#qdiana-education-agi" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.4.3. </span><strong>QDiana (Education &amp; AGI)</strong><a class="headerlink" href="#qdiana-education-agi" title="Link to this heading">#</a></h3>
 <p>QDiana is introduced as the <em>“world’s most advanced polymath AI professor”</em> – an <strong>AGI-based educational and governance AI platform</strong>. It epitomizes QDaria’s commitment to <strong>education reform and ethical AI</strong>. The name evokes <em>“Diana,”</em> possibly alluding to wisdom or a guiding figure. QDiana has two primary facets:</p>
 <ol class="arabic simple">
 <li><p><strong>Educational Platform:</strong> A virtual professor that provides <em>interactive, personalized learning</em> in quantum computing (and potentially other STEM fields).</p></li>
@@ -323,7 +629,7 @@
 <Chart id="qdianaLearningFlow" title="QDiana Learning Path Personalization Flow" type="flow" />
 </section>
 <section id="qmikeai-cfd-hpc">
-<h3><span class="section-number">8.4.4. </span><strong>QMikeAI (CFD &amp; HPC)</strong><a class="headerlink" href="#qmikeai-cfd-hpc" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.4.4. </span><strong>QMikeAI (CFD &amp; HPC)</strong><a class="headerlink" href="#qmikeai-cfd-hpc" title="Link to this heading">#</a></h3>
 <p>QMikeAI is a <strong>quantum-enhanced Computational Fluid Dynamics (CFD) and High-Performance Computing (HPC) assistant</strong>. It’s tailored for applications like <em>weather forecasting</em>, <em>turbulence research</em>, climate modeling, and any domain dealing with complex fluid simulations. Named after “Mike” perhaps to personify it as an AI “meteorologist” or HPC buddy, QMikeAI integrates topological quantum computing to push the frontiers of simulation fidelity and speed.</p>
 <p><strong>Key Use Cases:</strong></p>
 <ul class="simple">
@@ -353,7 +659,7 @@
 <p>According to the roadmap, QMikeAI’s unveiling is planned for April 2026, after we have Novera QPU operational and likely some topological qubits in play. By that time, QMikeAI will be a proof point showcasing how topological quantum computing directly contributes to scientific advancement – e.g., solving a turbulence case study that no classical computer of similar scale could, due to the error-resistant advantage of our qubits.</p>
 </section>
 <section id="qnilaya-healthtech-drug-discovery">
-<h3><span class="section-number">8.4.5. </span><strong>QNilaya (HealthTech &amp; Drug Discovery)</strong><a class="headerlink" href="#qnilaya-healthtech-drug-discovery" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.4.5. </span><strong>QNilaya (HealthTech &amp; Drug Discovery)</strong><a class="headerlink" href="#qnilaya-healthtech-drug-discovery" title="Link to this heading">#</a></h3>
 <p>QNilaya is QDaria’s <strong>quantum-enhanced AI platform for drug discovery and personalized medicine</strong>. The name <em>Nilaya</em> suggests a “blueprint” or “abode” – in context, it’s the foundation for health solutions. It merges neural networks with quantum computing for breakthroughs in biomedical research.</p>
 <p><strong>Key Components:</strong></p>
 <ul class="simple">
@@ -380,7 +686,7 @@
 <Chart id="drugDiscoveryTimeline" title="Drug Discovery Timeline Acceleration with QNilaya" type="timeline" />
 </section>
 <section id="tehaa-quantum-nlp-llm">
-<h3><span class="section-number">8.4.6. </span><strong>TeHaA (Quantum NLP LLM)</strong><a class="headerlink" href="#tehaa-quantum-nlp-llm" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.4.6. </span><strong>TeHaA (Quantum NLP LLM)</strong><a class="headerlink" href="#tehaa-quantum-nlp-llm" title="Link to this heading">#</a></h3>
 <p><strong>TeHaA</strong> stands for “Textual Hallucination Annihilator” or similar (the exact meaning isn’t given, but likely a code name). It is QDaria’s <strong>quantum-enhanced Large Language Model (LLM) for Natural Language Processing (NLP)</strong>. Essentially, this is our effort to build an NLP AI (like GPT series) that leverages quantum computing for either training or inference.</p>
 <p><strong>What TeHaA entails:</strong></p>
 <ul class="simple">
@@ -403,7 +709,7 @@
 <p>TeHaA underscores QDaria’s philosophy that quantum computing is not isolated – it will deeply intertwine with AI progress. If classical ML gave us GPT, perhaps quantum-classical ML will give us an AGI. TeHaA is our stepping stone in that direction, ensuring we are at the forefront of quantum-era AI.</p>
 </section>
 <section id="damon-quantum-robotics">
-<h3><span class="section-number">8.4.7. </span><strong>Damon (Quantum Robotics)</strong><a class="headerlink" href="#damon-quantum-robotics" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.4.7. </span><strong>Damon (Quantum Robotics)</strong><a class="headerlink" href="#damon-quantum-robotics" title="Link to this heading">#</a></h3>
 <p><strong>Damon</strong> is our codename for the <strong>quantum robotics platform</strong> (slated for around March 2026). Robotics involves decision-making, control systems, and sensor processing – all areas where quantum computing can provide a boost via optimization and AI.</p>
 <p><strong>Key Ideas with Damon:</strong></p>
 <ul class="simple">
@@ -418,10 +724,10 @@
 </section>
 <hr class="docutils" />
 <section id="topological-quantum-computing-with-fibonacci-anyons">
-<h2><span class="section-number">8.5. </span><strong>Topological Quantum Computing with Fibonacci Anyons</strong><a class="headerlink" href="#topological-quantum-computing-with-fibonacci-anyons" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.5. </span><strong>Topological Quantum Computing with Fibonacci Anyons</strong><a class="headerlink" href="#topological-quantum-computing-with-fibonacci-anyons" title="Link to this heading">#</a></h2>
 <p>At the heart of QDaria’s technical strategy is <strong>Topological Quantum Computing (TQC)</strong> using <strong>Fibonacci anyons</strong>. This section provides a deep dive into what that means, why it’s groundbreaking, and how we implement it.</p>
 <section id="fibonacci-anyons-a-primer">
-<h3><span class="section-number">8.5.1. </span><strong>Fibonacci Anyons: A Primer</strong><a class="headerlink" href="#fibonacci-anyons-a-primer" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.5.1. </span><strong>Fibonacci Anyons: A Primer</strong><a class="headerlink" href="#fibonacci-anyons-a-primer" title="Link to this heading">#</a></h3>
 <p>In certain exotic physical systems (like fractional quantum Hall fluids or spin liquids), <em>quasi-particles</em> emerge that are neither fermions nor bosons – these are <strong>anyons</strong>. Some anyons are <em>non-Abelian</em>, meaning that exchanging (braiding) them changes the system’s quantum state in a way that depends on the path of the exchange, not just whether they swapped places. These braiding operations can encode quantum logic.</p>
 <p><strong>Fibonacci anyons</strong> are a particular type of non-Abelian anyon that are especially important because they are <strong>universal for quantum computation</strong>. Universal by braiding alone means: by moving Fibonacci anyons around each other, one can, in theory, perform any quantum computation (any unitary operation to arbitrary accuracy).</p>
 <ul class="simple">
@@ -444,7 +750,7 @@
 <Chart id="anyonBraidingGate" title="Braiding Fibonacci Anyons to Perform a Quantum Gate" type="line" />
 </section>
 <section id="fault-tolerance-and-error-correction">
-<h3><span class="section-number">8.5.2. </span><strong>Fault-Tolerance and Error Correction</strong><a class="headerlink" href="#fault-tolerance-and-error-correction" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.5.2. </span><strong>Fault-Tolerance and Error Correction</strong><a class="headerlink" href="#fault-tolerance-and-error-correction" title="Link to this heading">#</a></h3>
 <p>Traditional quantum computers (e.g., superconducting qubits like IBM’s or Rigetti’s) require <strong>quantum error correction (QEC)</strong> schemes involving many physical qubits to form one logical qubit, because of high error rates (~1e-3 to 1e-2 per gate typically). Topological quantum computing essentially builds error correction into the hardware at the physical level:</p>
 <ul class="simple">
 <li><p>Braiding operations have errors only if something non-local and coherent disrupts them, which is exponentially suppressed by system size.</p></li>
@@ -464,7 +770,7 @@
 <p>We also mention aiming for a <em>fully fault-tolerant topological quantum computer by 2030 (Project “GrailQ”)</em>. Fault-tolerant here means we can run arbitrarily long computations with arbitrarily low error probability, limited only by resources, something only possible with QEC. Our belief is that topological qubits can achieve fault-tolerance with manageable overhead, hitting that goal.</p>
 </section>
 <section id="hardware-architecture-qpu-integration">
-<h3><span class="section-number">8.5.3. </span><strong>Hardware Architecture &amp; QPU Integration</strong><a class="headerlink" href="#hardware-architecture-qpu-integration" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.5.3. </span><strong>Hardware Architecture &amp; QPU Integration</strong><a class="headerlink" href="#hardware-architecture-qpu-integration" title="Link to this heading">#</a></h3>
 <p>Our topological qubits will initially be demonstrated likely in smaller scales, but we have a parallel track: the <strong>Novera QPU</strong> (via Rigetti partnership) which is a superconducting quantum processor that gives us a testbed and a customer-facing product in the near term.</p>
 <p><strong>Two-pronged hardware strategy:</strong></p>
 <ol class="arabic simple">
@@ -499,7 +805,7 @@ Our architecture is modular – each topological qubit might occupy a certain ar
 </ul>
 <p>In summary, QDaria’s hardware is an innovative mix: use today’s best conventional quantum hardware to get started, but invest heavily in topological tech to leap ahead in mid-term. If successful, by demonstrating a stable topological qubit, QDaria will leapfrog others in the race to useful quantum computing because we’d then be limited primarily by how many anyons we can produce and braid – a challenge, but one that should scale with engineering rather than physics limitations.</p>
 <p><em>(Table: Comparison of QDaria’s Topological Qubits vs Traditional Superconducting Qubits – highlighting error rates, coherence times, gate fidelity, physical qubits per logical, etc.)</em></p>
-<table class="docutils align-default">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Metric</strong></p></th>
 <th class="head"><p><strong>QDaria Topological Qubit</strong></p></th>
@@ -537,15 +843,16 @@ Our architecture is modular – each topological qubit might occupy a certain ar
 </tr>
 </tbody>
 </table>
+</div>
 <p><em>(Table above is hypothetical data for illustration.)</em></p>
 </section>
 </section>
 <hr class="docutils" />
 <section id="classical-hpc-quantum-fusion">
-<h2><span class="section-number">8.6. </span><strong>Classical HPC + Quantum Fusion</strong><a class="headerlink" href="#classical-hpc-quantum-fusion" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.6. </span><strong>Classical HPC + Quantum Fusion</strong><a class="headerlink" href="#classical-hpc-quantum-fusion" title="Link to this heading">#</a></h2>
 <p>One of QDaria’s guiding technical principles is that <strong>quantum computing will augment, not replace, classical computing</strong>. For the foreseeable future, optimal solutions harness both. We dedicate resources to <em>fusing classical high-performance computing (HPC) with quantum computing</em> to create a seamless computational environment.</p>
 <section id="hybrid-workloads-and-mojo-programming">
-<h3><span class="section-number">8.6.1. </span><strong>Hybrid Workloads and Mojo Programming</strong><a class="headerlink" href="#hybrid-workloads-and-mojo-programming" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.6.1. </span><strong>Hybrid Workloads and Mojo Programming</strong><a class="headerlink" href="#hybrid-workloads-and-mojo-programming" title="Link to this heading">#</a></h3>
 <p><strong>Hybrid Workloads:</strong> Consider a complex task like training a machine learning model or simulating a physics system. Parts of the task may be ideal for quantum (e.g., sampling from a complex probability distribution), while others are best on classical (e.g., large-scale data preprocessing). QDaria’s systems orchestrate such tasks across quantum and classical resources dynamically:</p>
 <ul class="simple">
 <li><p>We utilize <em>workflow schedulers</em> that can dispatch subtasks to a quantum queue or an HPC cluster based on characteristics like data size, latency tolerance, and algorithm suitability.</p></li>
@@ -571,7 +878,7 @@ Our architecture is modular – each topological qubit might occupy a certain ar
 <p>We likely contribute to open-source or internal tools to schedule <em>quantum circuits as tasks in HPC pipelines</em>.</p>
 </section>
 <section id="webgpu-browser-based-simulations">
-<h3><span class="section-number">8.6.2. </span><strong>WebGPU &amp; Browser-Based Simulations</strong><a class="headerlink" href="#webgpu-browser-based-simulations" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.6.2. </span><strong>WebGPU &amp; Browser-Based Simulations</strong><a class="headerlink" href="#webgpu-browser-based-simulations" title="Link to this heading">#</a></h3>
 <p><strong>WebGPU</strong> is a web standard for GPU access in browsers. QDaria leverages WebGPU for:</p>
 <ul class="simple">
 <li><p><strong>Quantum Simulations in Browser:</strong> Through QDiana’s educational interface or our Developer Hub, users can run small-scale quantum simulations right in their web browser using their GPU. For instance, a student can simulate 8 qubit circuits on their gaming laptop at home via WebGPU, experiencing quantum concepts interactively.</p></li>
@@ -582,7 +889,7 @@ Our architecture is modular – each topological qubit might occupy a certain ar
 <p>We ensure that any sensitive aspects are secure. WebGPU runs on the client, so if we’re distributing some QDaria algorithms there, they might be open or obfuscated. But likely we confine sensitive calculations to server.</p>
 </section>
 <section id="decentralized-quantum-cloud-qportal-lillian-hpc">
-<h3><span class="section-number">8.6.3. </span><strong>Decentralized Quantum Cloud (QPortal &amp; Lillian HPC)</strong><a class="headerlink" href="#decentralized-quantum-cloud-qportal-lillian-hpc" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.6.3. </span><strong>Decentralized Quantum Cloud (QPortal &amp; Lillian HPC)</strong><a class="headerlink" href="#decentralized-quantum-cloud-qportal-lillian-hpc" title="Link to this heading">#</a></h3>
 <p>QDaria’s <em>Ecosystem</em> is not just products but also <strong>cloud services and access</strong>:</p>
 <ul class="simple">
 <li><p><strong>QPortal:</strong> Planned by 2028, QPortal is our <strong>quantum cloud platform</strong>. It merges classical HPC and QPU resources such that users (enterprises, researchers) can access both through one cloud interface. Via QPortal, a user might spin up a quantum-classical cluster: e.g., 100 CPU cores, 4 GPUs, and a share of QDaria’s topological QPU time, all orchestrated together. This eliminates friction of using separate services for HPC and QC.</p>
@@ -612,10 +919,10 @@ Our architecture is modular – each topological qubit might occupy a certain ar
 </section>
 <hr class="docutils" />
 <section id="quantum-ai-integration">
-<h2><span class="section-number">8.7. </span><strong>Quantum AI Integration</strong><a class="headerlink" href="#quantum-ai-integration" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.7. </span><strong>Quantum AI Integration</strong><a class="headerlink" href="#quantum-ai-integration" title="Link to this heading">#</a></h2>
 <p>This section explores how QDaria’s stack merges quantum computing with AI to achieve more than either could alone. We highlight specific instances such as <strong>Quantum-Enhanced NLP</strong>, <strong>Quantum Computer Vision</strong>, and our <strong>agentic AI systems</strong>.</p>
 <section id="quantum-enhanced-nlp-tehaa-and-vision">
-<h3><span class="section-number">8.7.1. </span><strong>Quantum-Enhanced NLP (TeHaA) and Vision</strong><a class="headerlink" href="#quantum-enhanced-nlp-tehaa-and-vision" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.7.1. </span><strong>Quantum-Enhanced NLP (TeHaA) and Vision</strong><a class="headerlink" href="#quantum-enhanced-nlp-tehaa-and-vision" title="Link to this heading">#</a></h3>
 <p>Natural Language Processing (NLP) and Computer Vision (CV) are two domains where AI thrives on pattern recognition in high-dimensional data. QDaria is pushing these domains into the quantum-enhanced regime.</p>
 <p><strong>Quantum-Enhanced NLP:</strong></p>
 <ul class="simple">
@@ -638,7 +945,7 @@ We might have metrics showing reduction in error rates or computational speedups
 <p>In our whitepaper context, these are areas of active R&amp;D and early productization. They show that QDaria isn’t only about providing generic quantum compute; we specifically target how quantum can make AI (which is already super useful) even better.</p>
 </section>
 <section id="agentic-ai-systems-qdiana-qmikeai">
-<h3><span class="section-number">8.7.2. </span><strong>Agentic AI Systems (QDiana &amp; QMikeAI)</strong><a class="headerlink" href="#agentic-ai-systems-qdiana-qmikeai" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.7.2. </span><strong>Agentic AI Systems (QDiana &amp; QMikeAI)</strong><a class="headerlink" href="#agentic-ai-systems-qdiana-qmikeai" title="Link to this heading">#</a></h3>
 <p>We’ve described QDiana and QMikeAI in product contexts, but here we focus on their nature as <strong>agentic AI</strong> – AI agents with some autonomy and goal-driven behavior:</p>
 <ul class="simple">
 <li><p><strong>Definition:</strong> An <em>agentic AI system</em> takes high-level goals and carries out multi-step plans to achieve them, interacting with tools as needed. It’s like having an AI colleague.</p></li>
@@ -673,7 +980,7 @@ We might have metrics showing reduction in error rates or computational speedups
 <p>Agentic AI is a stepping stone to AGI. By having them specialized (one for business/education, one for technical), we mitigate the risk and focus their knowledge. QDaria’s bet is that integrating these with quantum computing gives them capabilities beyond other AI agents – e.g., if a competitor has a similar AI tutor but no quantum back-end, QDiana might solve complex problems or simulate scenarios that the competitor simply can’t, giving more accurate or insightful responses.</p>
 </section>
 <section id="swarm-intelligence-and-ai-politician-origins">
-<h3><span class="section-number">8.7.3. </span><strong>Swarm Intelligence and AI Politician Origins</strong><a class="headerlink" href="#swarm-intelligence-and-ai-politician-origins" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.7.3. </span><strong>Swarm Intelligence and AI Politician Origins</strong><a class="headerlink" href="#swarm-intelligence-and-ai-politician-origins" title="Link to this heading">#</a></h3>
 <p>A bit of historical/philosophical context:</p>
 <ul class="simple">
 <li><p>The <em>AI-Politician</em> project (2019) was essentially an attempt at an AI that can understand societal issues and propose solutions neutrally. It hints at QDaria’s early recognition that AI could help govern or at least inform governance – a controversial but forward-thinking notion. We carry that ethos in ensuring QDiana can be used in governance contexts ethically.</p></li>
@@ -686,10 +993,10 @@ We might have metrics showing reduction in error rates or computational speedups
 </section>
 <hr class="docutils" />
 <section id="ethical-and-societal-implications">
-<h2><span class="section-number">8.8. </span><strong>Ethical and Societal Implications</strong><a class="headerlink" href="#ethical-and-societal-implications" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.8. </span><strong>Ethical and Societal Implications</strong><a class="headerlink" href="#ethical-and-societal-implications" title="Link to this heading">#</a></h2>
 <p>With great power comes great responsibility. QDaria is as much a philosophical enterprise as a technical one, conscious of the implications of the technologies we develop. Here we discuss how we approach ethics, societal impact, and inclusivity.</p>
 <section id="ethical-agi-and-governance">
-<h3><span class="section-number">8.8.1. </span><strong>Ethical AGI and Governance</strong><a class="headerlink" href="#ethical-agi-and-governance" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.8.1. </span><strong>Ethical AGI and Governance</strong><a class="headerlink" href="#ethical-agi-and-governance" title="Link to this heading">#</a></h3>
 <p>Developing agentic AI and pushing toward AGI (Artificial General Intelligence) requires an <strong>ethical framework</strong>:</p>
 <ul class="simple">
 <li><p><strong>Transparency:</strong> Our AGI-based systems like QDiana are designed to explain their reasoning or at least be interpretable. For example, if QDiana recommends a policy, it should cite data or simulations supporting it. This is akin to AI ‘showing its work’ to maintain trust. In educational settings, QDiana would avoid simply giving answers; it also provides explanations and sources.</p></li>
@@ -707,7 +1014,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 <p><strong>Decentralized AGI Access:</strong> A concern is that AGI could be controlled by a few, exacerbating power imbalances. QDaria’s model (with cloud access, educational tools) is more democratized. We intend to eventually give broader academic or even public access to our advanced AI systems, under appropriate constraints, so that it’s not just large governments or corporations that benefit.</p>
 </section>
 <section id="educational-reforms-via-qdiana">
-<h3><span class="section-number">8.8.2. </span><strong>Educational Reforms via QDiana</strong><a class="headerlink" href="#educational-reforms-via-qdiana" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.8.2. </span><strong>Educational Reforms via QDiana</strong><a class="headerlink" href="#educational-reforms-via-qdiana" title="Link to this heading">#</a></h3>
 <p>The state of education today faces challenges: lack of engagement, one-size-fits-all curricula, unequal access to quality instruction. QDiana is our instrument to address some of these:</p>
 <ul class="simple">
 <li><p>It provides <strong>personal tutors</strong> at scale. If every student can have a personalized AI tutor, we can dramatically improve learning outcomes especially in underfunded regions. QDaria can deploy QDiana in partnership with ministries or NGOs (imagine distributing a tablet with QDiana to students who have no access to qualified teachers).</p></li>
@@ -719,7 +1026,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 <p><strong>Ethics in Education AI:</strong> We are careful that QDiana supplements rather than supplants human teachers where those teachers are available. The human element in education (mentorship, inspiration) remains important. QDiana can take over routine instruction and frees human educators to focus on more personal, creative mentorship. We design QDiana to also train and inform educators, not just students.</p>
 </section>
 <section id="decentralized-access-democratizing-tech">
-<h3><span class="section-number">8.8.3. </span><strong>Decentralized Access &amp; Democratizing Tech</strong><a class="headerlink" href="#decentralized-access-democratizing-tech" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.8.3. </span><strong>Decentralized Access &amp; Democratizing Tech</strong><a class="headerlink" href="#decentralized-access-democratizing-tech" title="Link to this heading">#</a></h3>
 <p>A recurring theme: we want to avoid a future where only a handful of entities control quantum computers or AGI. We want a <strong>decentralized quantum future</strong>. Concretely:</p>
 <ul class="simple">
 <li><p>QDaria supports open standards and interoperability. Our Developer Hub fosters a community where developers can experiment and share quantum software (we link GitHub, run forums). Perhaps we open-sourced some tools (like a simplified simulator or educational materials).</p></li>
@@ -741,10 +1048,10 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 </section>
 <hr class="docutils" />
 <section id="design-philosophy-development">
-<h2><span class="section-number">8.9. </span><strong>Design Philosophy &amp; Development</strong><a class="headerlink" href="#design-philosophy-development" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.9. </span><strong>Design Philosophy &amp; Development</strong><a class="headerlink" href="#design-philosophy-development" title="Link to this heading">#</a></h2>
 <p>Beyond technology itself, how we design and build our systems is crucial. QDaria emphasizes a philosophy that balances <strong>user-centric design</strong>, <strong>developer experience</strong>, and <strong>sustainable innovation</strong>.</p>
 <section id="flow-state-learning-qdianas-pedagogy">
-<h3><span class="section-number">8.9.1. </span><strong>Flow State Learning &amp; QDiana’s Pedagogy</strong><a class="headerlink" href="#flow-state-learning-qdianas-pedagogy" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.9.1. </span><strong>Flow State Learning &amp; QDiana’s Pedagogy</strong><a class="headerlink" href="#flow-state-learning-qdianas-pedagogy" title="Link to this heading">#</a></h3>
 <p>We revisit flow in context of design. The concept of “flow” (coined by psychologist Mihaly Csikszentmihalyi) – being fully immersed and focused in an activity – is not only for learners but also for <em>users of any software</em> and even for <em>developers building solutions</em>.</p>
 <ul class="simple">
 <li><p>For QDaria’s products, we strive to put users in a state of flow. For example, an analyst using Qm9 should feel a seamless experience where tools adapt to their needs, they get immediate feedback on strategies, and they can iteratively tweak without friction – akin to an immersive video game but in trading. This keeps them engaged and makes complex tasks satisfying.</p></li>
@@ -765,7 +1072,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 </ul>
 </section>
 <section id="open-collaboration-and-partnerships">
-<h3><span class="section-number">8.9.2. </span><strong>Open Collaboration and Partnerships</strong><a class="headerlink" href="#open-collaboration-and-partnerships" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.9.2. </span><strong>Open Collaboration and Partnerships</strong><a class="headerlink" href="#open-collaboration-and-partnerships" title="Link to this heading">#</a></h3>
 <p>QDaria’s journey has been fueled by collaboration:</p>
 <ul class="simple">
 <li><p><strong>Rigetti</strong> – our key technology partner for hardware. We conduct joint hardware development and knowledge exchange. As listed, we achieved successful hardware integration and performance improvements together. This partnership accelerates our timeline; we didn’t have to reinvent superconducting qubits, we leverage Rigetti’s, and in return we might share topological computing insights or software support.</p></li>
@@ -781,7 +1088,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 <p><strong>Community Building:</strong> QDaria likely sponsors hackathons or quantum education events in Norway and beyond. By positioning ourselves not just as a company selling products, but as a <em>thought leader and hub</em>, we attract talent and goodwill. Already recognized as top 5 startup in Europe and invited to Davos, we have a platform to champion responsible quantum tech development in the global stage.</p>
 </section>
 <section id="proprietary-ip-and-mojo-of-innovation">
-<h3><span class="section-number">8.9.3. </span><strong>Proprietary IP and Mojo of Innovation</strong><a class="headerlink" href="#proprietary-ip-and-mojo-of-innovation" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.9.3. </span><strong>Proprietary IP and Mojo of Innovation</strong><a class="headerlink" href="#proprietary-ip-and-mojo-of-innovation" title="Link to this heading">#</a></h3>
 <p>QDaria has a vast pool of ideas and prototypes (the user’s uploaded files listing “1500-2000 AI apps/products” was indicative of brainstorming or generative outputs we have). Not all will become products, but we encourage an innovation culture:</p>
 <ul class="simple">
 <li><p>We allow internal projects (like a hackathon environment) where team members, or even QDiana itself, generate and test new app ideas. Many AI tools listed (like “Adaptability_Quest.py” or “Blockchain_Horizon_Explorer.py” from the list) might be auto-generated and some could spin into future offerings or just be experiments.</p></li>
@@ -808,10 +1115,10 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 </section>
 <hr class="docutils" />
 <section id="roadmap-and-future-milestones">
-<h2><span class="section-number">8.10. </span><strong>Roadmap and Future Milestones</strong><a class="headerlink" href="#roadmap-and-future-milestones" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.10. </span><strong>Roadmap and Future Milestones</strong><a class="headerlink" href="#roadmap-and-future-milestones" title="Link to this heading">#</a></h2>
 <p>QDaria’s roadmap from 2025 to 2030 is ambitious, with clear milestones to measure progress. Here we outline major upcoming milestones and what they represent for the company’s evolution.</p>
 <section id="quantum-readiness-in-norway">
-<h3><span class="section-number">8.10.1. </span><strong>2025 – Quantum Readiness in Norway</strong><a class="headerlink" href="#quantum-readiness-in-norway" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.10.1. </span><strong>2025 – Quantum Readiness in Norway</strong><a class="headerlink" href="#quantum-readiness-in-norway" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Q1 2025: Zipminator 1.0 Release</strong> – By March 2025, we launch Zipminator commercially. This will mark our first revenue-generating product. Success criteria: initial pilot customers (banks, a government department) adopt it, and we secure at least one major contract for national infrastructure encryption (e.g., a deal to secure a governmental communications channel).</p></li>
 <li><p><strong>Q2 2025: Qm9 1.0 Release</strong> – June 2025, Qm9 goes live, possibly first as a private beta with hedge fund partners. We aim to demonstrate a concrete result by end of 2025: e.g., a fund using Qm9 outperforming peers or improving risk metrics significantly. This will validate quantum advantage in finance, even if limited.</p></li>
@@ -824,7 +1131,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 <p>Overall, 2025 is about delivering our <em>first-generation products</em> and establishing a quantum hardware presence. It’s busy, but by end of 2025, QDaria should have real products in market, real users, and a functioning quantum computer on site.</p>
 </section>
 <section id="global-conferences-qmikeai-launch">
-<h3><span class="section-number">8.10.2. </span><strong>2026 – Global Conferences &amp; QMikeAI Launch</strong><a class="headerlink" href="#global-conferences-qmikeai-launch" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.10.2. </span><strong>2026 – Global Conferences &amp; QMikeAI Launch</strong><a class="headerlink" href="#global-conferences-qmikeai-launch" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Q1 2026: Topological Quantum Computer R&amp;D push</strong> – January 2026 is slated for ramping up topological hardware engineering. Internally, this could mean we demonstrate a stable Fibonacci anyon braiding for the first time in our lab, even if just 1 logical qubit or a basic gate. Not a public milestone, but technically huge. Possibly we announce hitting a coherence or error rate record to the scientific community.</p></li>
 <li><p><strong>Q1 2026: Damon 1.0 Release</strong> – March 2026, the robotics platform comes out. We might have a partner in manufacturing to test it (e.g., a Norwegian manufacturing firm tries it on one production line robot or a logistics company for warehouse robots). We’ll measure success if it shows any measurable improvement (like 10% faster route finding for robots, or easier programming for tasks).</p></li>
@@ -836,7 +1143,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 <p>Through 2026, we’ve expanded infrastructure and started international presence via IQT. QMikeAI and Damon place us into new verticals (weather/climate and robotics). By end of 2026, we should be generating notable revenue from products launched (Zipminator, Qm9, maybe QDiana enterprise deals), securing our financial position for heavy R&amp;D spends to come.</p>
 </section>
 <section id="grailq-and-topological-supremacy">
-<h3><span class="section-number">8.10.3. </span><strong>2027-2030 – GrailQ and Topological Supremacy</strong><a class="headerlink" href="#grailq-and-topological-supremacy" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.10.3. </span><strong>2027-2030 – GrailQ and Topological Supremacy</strong><a class="headerlink" href="#grailq-and-topological-supremacy" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Q1 2027: Global Expansion Initiatives</strong> – March 2027 sees us establishing bases in <strong>Singapore, Middle East, Africa, Australia, Americas</strong>. That likely means opening small offices or signing collaboration MOUs in those regions. Perhaps by then we have a Singapore office working with A*STAR on quantum, or an office in Silicon Valley for investor relations and talent hiring, etc. Also partnerships with local universities or companies (e.g., maybe a joint lab in Australia on quantum materials).</p></li>
 <li><p><strong>Q4 2027: QChaos v1.0 – Advanced Quantum Cryptography</strong> – October 2027. This appears to be a new product (the name suggests chaos theory or chaotic systems used in cryptography, or something building on Zipminator). Possibly it is an evolved cryptography toolkit specifically leveraging quantum principles (maybe an extension of QKD networks with topological qubits, or a new protocol for secure multi-party computation). The focus is securing critical infrastructure (finance, government, health) beyond what Zipminator does, possibly introducing topological qubit-based cryptographic functions. By this point, others may also have quantum-safe solutions, so we differentiate by something unique (maybe a truly one-time pad via anyons or high-speed QKD via satellite, etc.). Launching QChaos reaffirms our leadership in cybersecurity as quantum threat becomes more pressing (especially if by 2027 large quantum computers exist elsewhere).</p></li>
@@ -859,7 +1166,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 </section>
 <hr class="docutils" />
 <section id="conclusion">
-<h2><span class="section-number">8.11. </span><strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.11. </span><strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
 <p>QDaria’s journey is one of bold vision and deep technical innovation, underpinned by a commitment to ethical progress and education. In this whitepaper, we have outlined how QDaria is:</p>
 <ul class="simple">
 <li><p>Merging the cutting-edge of <strong>quantum computing</strong> (through topological qubits and error-corrected quantum hardware) with the prowess of <strong>artificial intelligence</strong> (from LLMs to agentic AI) to create solutions that address real-world problems in a transformative way.</p></li>
@@ -882,7 +1189,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 </section>
 <hr class="docutils" />
 <section id="list-of-figures">
-<h2><span class="section-number">8.12. </span><strong>List of Figures</strong><a class="headerlink" href="#list-of-figures" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.12. </span><strong>List of Figures</strong><a class="headerlink" href="#list-of-figures" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Zipminator Quantum-Safe Encryption Architecture</strong> – Radar chart depicting key components of Zipminator’s security (QKD vs Classical Encryption vs PQC vs Performance).</p></li>
 <li><p><strong>Qm9 Trading Execution Latency: Classical vs Quantum-Enhanced</strong> – Bar chart comparing trade execution speeds with and without Qm9 quantum algorithms.</p></li>
@@ -894,7 +1201,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 <p><em>(Note: Actual interactive or detailed figures would be part of the published whitepaper; above descriptions summarize their content.)</em></p>
 </section>
 <section id="list-of-tables">
-<h2><span class="section-number">8.13. </span><strong>List of Tables</strong><a class="headerlink" href="#list-of-tables" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.13. </span><strong>List of Tables</strong><a class="headerlink" href="#list-of-tables" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Topological Qubits vs Superconducting Qubits</strong> – A comparison table of error rates, coherence, etc., between QDaria’s topological qubits and standard superconducting qubits.</p></li>
 <li><p><em>(Additional tables like detailed roadmap items or partner lists could be included as needed, but one main table is shown for brevity.)</em></p></li>
@@ -902,7 +1209,7 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 </section>
 <hr class="docutils" />
 <section id="references">
-<h2><span class="section-number">8.14. </span><strong>References</strong><a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.14. </span><strong>References</strong><a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Freedman, M., Larsen, M., &amp; Wang, Z. (2002). <em>A modular functor which is universal for quantum computation</em>. (Demonstrated that Fibonacci anyon braiding can approximate any unitary, establishing theoretical universality of Fibonacci anyon based quantum computing.)</p></li>
 <li><p>Kitaev, A. (2003). <em>Fault-tolerant quantum computation by anyons</em>. Annals of Physics, 303(1), 2-30. (Introduced the concept of topologically encoded qubits and braiding for fault-tolerance, foundational for schemes like QDaria’s.)</p></li>
@@ -921,13 +1228,13 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
 </section>
 <hr class="docutils" />
 <section id="appendices">
-<h2><span class="section-number">8.15. </span><strong>Appendices</strong><a class="headerlink" href="#appendices" title="Link to this heading"></a></h2>
+<h2><span class="section-number">8.15. </span><strong>Appendices</strong><a class="headerlink" href="#appendices" title="Link to this heading">#</a></h2>
 <section id="appendix-a-qdaria-technical-stack-blueprint">
-<h3><span class="section-number">8.15.1. </span><strong>Appendix A: QDaria Technical Stack Blueprint</strong><a class="headerlink" href="#appendix-a-qdaria-technical-stack-blueprint" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.15.1. </span><strong>Appendix A: QDaria Technical Stack Blueprint</strong><a class="headerlink" href="#appendix-a-qdaria-technical-stack-blueprint" title="Link to this heading">#</a></h3>
 <p><em>(This appendix would include diagrams and technical details for those who want a deeper understanding of QDaria’s system architecture — e.g., the full software stack from front-end apps to back-end services to quantum hardware, data flow diagrams for an example use case, etc. It might also detail specific algorithms employed in various products.)</em></p>
 </section>
 <section id="appendix-b-glossary-of-terms">
-<h3><span class="section-number">8.15.2. </span><strong>Appendix B: Glossary of Terms</strong><a class="headerlink" href="#appendix-b-glossary-of-terms" title="Link to this heading"></a></h3>
+<h3><span class="section-number">8.15.2. </span><strong>Appendix B: Glossary of Terms</strong><a class="headerlink" href="#appendix-b-glossary-of-terms" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Anyon:</strong> A quasi-particle occurring in two-dimensional systems that can have non-standard quantum statistics (beyond fermions/bosons). Braiding anyons can perform quantum operations.</p></li>
 <li><p><strong>Fibonacci Anyon:</strong> A type of non-Abelian anyon whose braid group representations are computationally universal (basis of QDaria’s qubits).</p></li>
@@ -969,33 +1276,164 @@ QDaria’s stance is that <strong>AI should advise, not dictate</strong>. We adv
     </script>
     <script>kernelName = 'python3'</script>
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="competitive-intelligence-visualizations.html" class="btn btn-neutral float-left" title="7. QDaria Competitive Intelligence Visualizations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2025.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="competitive-intelligence-visualizations.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>QDaria Competitive Intelligence Visualizations</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="timeline.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Strategic Plan for QDaria’s Quantum Computer Launch</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">8.1. <strong>Table of Contents</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executive-summary">8.2. <strong>Executive Summary</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">8.3. <strong>Introduction</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vision-and-mission">8.3.1. <strong>Vision and Mission</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-ai-the-new-paradigm">8.3.2. <strong>Quantum &amp; AI: The New Paradigm</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qdarias-quantum-technology-suite">8.4. <strong>QDaria’s Quantum Technology Suite</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zipminator-cybersecurity">8.4.1. <strong>Zipminator (Cybersecurity)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm9-fintech-hfdt">8.4.2. <strong>Qm9 (FinTech &amp; HFDT)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qdiana-education-agi">8.4.3. <strong>QDiana (Education &amp; AGI)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qmikeai-cfd-hpc">8.4.4. <strong>QMikeAI (CFD &amp; HPC)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qnilaya-healthtech-drug-discovery">8.4.5. <strong>QNilaya (HealthTech &amp; Drug Discovery)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehaa-quantum-nlp-llm">8.4.6. <strong>TeHaA (Quantum NLP LLM)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#damon-quantum-robotics">8.4.7. <strong>Damon (Quantum Robotics)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topological-quantum-computing-with-fibonacci-anyons">8.5. <strong>Topological Quantum Computing with Fibonacci Anyons</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci-anyons-a-primer">8.5.1. <strong>Fibonacci Anyons: A Primer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fault-tolerance-and-error-correction">8.5.2. <strong>Fault-Tolerance and Error Correction</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-architecture-qpu-integration">8.5.3. <strong>Hardware Architecture &amp; QPU Integration</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-hpc-quantum-fusion">8.6. <strong>Classical HPC + Quantum Fusion</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hybrid-workloads-and-mojo-programming">8.6.1. <strong>Hybrid Workloads and Mojo Programming</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#webgpu-browser-based-simulations">8.6.2. <strong>WebGPU &amp; Browser-Based Simulations</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decentralized-quantum-cloud-qportal-lillian-hpc">8.6.3. <strong>Decentralized Quantum Cloud (QPortal &amp; Lillian HPC)</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-ai-integration">8.7. <strong>Quantum AI Integration</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-enhanced-nlp-tehaa-and-vision">8.7.1. <strong>Quantum-Enhanced NLP (TeHaA) and Vision</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agentic-ai-systems-qdiana-qmikeai">8.7.2. <strong>Agentic AI Systems (QDiana &amp; QMikeAI)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#swarm-intelligence-and-ai-politician-origins">8.7.3. <strong>Swarm Intelligence and AI Politician Origins</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethical-and-societal-implications">8.8. <strong>Ethical and Societal Implications</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ethical-agi-and-governance">8.8.1. <strong>Ethical AGI and Governance</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#educational-reforms-via-qdiana">8.8.2. <strong>Educational Reforms via QDiana</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decentralized-access-democratizing-tech">8.8.3. <strong>Decentralized Access &amp; Democratizing Tech</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-philosophy-development">8.9. <strong>Design Philosophy &amp; Development</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-state-learning-qdianas-pedagogy">8.9.1. <strong>Flow State Learning &amp; QDiana’s Pedagogy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-collaboration-and-partnerships">8.9.2. <strong>Open Collaboration and Partnerships</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proprietary-ip-and-mojo-of-innovation">8.9.3. <strong>Proprietary IP and Mojo of Innovation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roadmap-and-future-milestones">8.10. <strong>Roadmap and Future Milestones</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-readiness-in-norway">8.10.1. <strong>2025 – Quantum Readiness in Norway</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-conferences-qmikeai-launch">8.10.2. <strong>2026 – Global Conferences &amp; QMikeAI Launch</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grailq-and-topological-supremacy">8.10.3. <strong>2027-2030 – GrailQ and Topological Supremacy</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">8.11. <strong>Conclusion</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-figures">8.12. <strong>List of Figures</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-tables">8.13. <strong>List of Tables</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">8.14. <strong>References</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendices">8.15. <strong>Appendices</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-a-qdaria-technical-stack-blueprint">8.15.1. <strong>Appendix A: QDaria Technical Stack Blueprint</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix-b-glossary-of-terms">8.15.2. <strong>Appendix B: Glossary of Terms</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Mo Houshmand
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

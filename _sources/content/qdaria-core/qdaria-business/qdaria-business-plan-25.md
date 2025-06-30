@@ -13,6 +13,9 @@ kernelspec:
 ---
 # QDaria Business Plan
 
+<link rel="stylesheet" href="../../../_static/chart-positioning-fixes.css">
+<script src="../../../_static/chart-config.js"></script>
+
 ## Executive Summary
 
 QDaria is an early-stage **quantum computing and AI** startup based in Norway, founded with the bold vision of building the world’s first **fault-tolerant topological quantum computer** using exotic **Fibonacci anyons**. In collaboration with Rigetti Computing, QDaria aims to deploy Norway’s first quantum processing unit (the **Novera QPU**) as a stepping stone toward this topological quantum computer breakthrough. Our mission is to revolutionize industries – from cybersecurity and finance to healthcare and education – by fusing **quantum computing** with **artificial intelligence** in unprecedented ways.
@@ -58,7 +61,9 @@ Several factors are fueling this growth in quantum computing:
 
 To illustrate the anticipated growth trend, the chart below shows the **projected economic impact** of quantum computing over the next 10+ years:
 
-<div id="marketGrowthChart" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="marketGrowthChart" class="chart-placeholder"></div>
+</div>
 
 <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
@@ -145,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
             customdata: neutral.map((val, i) => {
                 if (years[i] <= 2024) return 'N/A';
                 var yearsFromStart = years[i] - 2024;
-                return (Math.pow(val/1.3, 1/yearsFromStart) - 1) * 100).toFixed(1);
+                return ((Math.pow(val/1.3, 1/yearsFromStart) - 1) * 100).toFixed(1);
             })
         },
         // Optimistic scenario
@@ -274,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
             font: {
                 family: 'system-ui, -apple-system, sans-serif',
                 size: 32,
-                color: '#1a1a2e',
+                color: '#888888',
                 weight: 700
             },
             y: 0.98,
@@ -462,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 y: 400,
                 font: {
                     size: 11,
-                    color: '#27ae60',
+                    color: '#888888',
                     family: 'system-ui, -apple-system, sans-serif'
                 },
                 opacity: 0.7
@@ -566,9 +571,10 @@ From an investor perspective, QDaria offers exposure to all these frontier tech 
 
 ### Market Opportunity by Segment
 
-<div id="marketSegmentationChart" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="marketSegmentationChart" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Enhanced treemap visualization for market segments
@@ -796,9 +802,10 @@ We plan to continue leveraging partnerships (with both larger companies and rese
 
 *(Below is a visual comparison of QDaria’s position relative to key competitors in terms of funding and focus.)*
 
-<div id="competitorFundingChart" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="competitorFundingChart" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Data for competitor funding
@@ -864,10 +871,10 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         hoverlabel: {
             bgcolor: '#fff',
-            bordercolor: '#333',
+            bordercolor: '#888888',
             font: {
                 size: 14,
-                color: '#333'
+                color: '#888888'
             }
         },
         annotations: [{
@@ -957,9 +964,10 @@ The development of each product will accelerate once our seed funding is in plac
 
 ### Product Portfolio Strategic Matrix
 
-<div id="productPortfolioMatrix" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="productPortfolioMatrix" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Enhanced Product Portfolio Matrix with Advanced Features
@@ -1127,7 +1135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showarrow: false,
             font: {
                 size: 13,
-                color: '#27ae60',
+                color: '#888888',
                 family: 'system-ui, -apple-system, sans-serif'
             },
             bgcolor: 'rgba(46, 204, 113, 0.1)',
@@ -1451,10 +1459,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ### Technology Stack Architecture
 
-<div id="techStackArchitecture" class="chart-placeholder"></div>
-<div id="techStackFlow" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="techStackArchitecture" class="chart-placeholder"></div>
+</div>
+<div class="chart-container">
+    <div id="techStackFlow" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Define the hierarchical technology stack data
@@ -1706,14 +1717,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var sunburstLayout = {
         autosize: true,
+        responsive: true,
         title: {
             text: 'QDaria Technology Stack Architecture',
             font: {
                 size: 28,
-                color: '#2c3e50'
+                color: '#888888'
             }
         },
-        margin: {t: 100, l: 0, r: 0, b: 0},
+        margin: {t: 60, l: 20, r: 80, b: 60},
         height: 800,
         paper_bgcolor: 'rgba(0,0,0,0)',
         plot_bgcolor: 'rgba(0,0,0,0)'
@@ -1721,19 +1733,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var sankeyLayout = {
         autosize: true,
+        responsive: true,
         title: {
             text: 'QDaria Technology Flow & Integration',
             font: {
                 size: 28,
-                color: '#2c3e50'
+                color: '#888888'
             }
         },
         font: {
             size: 12,
-            color: '#34495e'
+            color: '#888888'
         },
         height: 800,
-        margin: {t: 100, l: 50, r: 50, b: 50},
+        margin: {t: 60, l: 20, r: 80, b: 60},
         paper_bgcolor: 'rgba(0,0,0,0)',
         plot_bgcolor: 'rgba(0,0,0,0)'
     };
@@ -1783,9 +1796,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 To achieve our ambitious vision, QDaria will follow a phased expansion roadmap from a single startup into a **multi-subsidiary holding company (QDaria Holdings)** by 2030. Each major product will eventually operate as an independent entity under the group, enabling focused growth and separate capital raises, while benefiting from shared technology and strategy. Below we outline our plan year-by-year, including key milestones and how we will align product spin-offs with funding events (IPOs):
 
-<div id="organizationalChart" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="organizationalChart" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Organizational structure data
@@ -1846,10 +1860,10 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
         marker: {
             colors: [
-                '#2c3e50', // Holdings - dark blue
+                '#888888', // Holdings - gray for dark mode
                 '#00CED1', '#3498db', '#9b59b6', '#e74c3c', // Main subs
                 '#2ecc71', '#f39c12', '#1abc9c', // Emerging
-                '#34495e', '#7f8c8d', // Support
+                '#888888', '#888888', // Support
                 // Sub-division colors (lighter variants)
                 '#5DEDE1', '#5DEDE1', '#5DEDE1',
                 '#5FA5D3', '#5FA5D3', '#5FA5D3',
@@ -1879,25 +1893,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var layout = {
         autosize: true,
+        responsive: true,
         title: {
             text: 'QDaria Holdings Structure (Target 2027)',
             font: {
                 size: 26,
-                color: '#2c3e50',
+                color: '#888888',
                 family: 'Arial, sans-serif'
             }
         },
         margin: {
-            t: 100,
-            l: 0,
-            r: 0,
-            b: 0
+            t: 60,
+            l: 20,
+            r: 80,
+            b: 60
         },
         paper_bgcolor: 'rgba(255,255,255,0)',
         plot_bgcolor: 'rgba(255,255,255,0)',
         font: {
             size: 14,
-            color: '#2c3e50'
+            color: '#888888'
         }
     };
     
@@ -1955,9 +1970,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 This roadmap, summarized visually below, is aggressive but achievable with disciplined execution and adaptation to real-world feedback:
 
-<div id="executionRoadmapChart" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="executionRoadmapChart" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Timeline data for execution roadmap
@@ -1975,14 +1991,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 color: '#f39c12',
                 symbol: 'star',
                 line: {
-                    color: '#d68910',
+                    color: '#888888',
                     width: 2
                 }
             },
             textposition: 'top center',
             textfont: {
                 size: 12,
-                color: '#d68910'
+                color: '#888888'
             },
             hovertemplate: '<b>%{text}</b><br>Date: %{x|%b %Y}<extra></extra>'
         },
@@ -1999,14 +2015,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 color: '#3498db',
                 symbol: 'diamond',
                 line: {
-                    color: '#2874a6',
+                    color: '#888888',
                     width: 2
                 }
             },
             textposition: 'top center',
             textfont: {
                 size: 11,
-                color: '#2874a6'
+                color: '#888888'
             },
             hovertemplate: '<b>%{text}</b><br>Date: %{x|%b %Y}<extra></extra>'
         },
@@ -2023,14 +2039,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 color: '#2ecc71',
                 symbol: 'triangle-up',
                 line: {
-                    color: '#27ae60',
+                    color: '#888888',
                     width: 2
                 }
             },
             textposition: 'top center',
             textfont: {
                 size: 11,
-                color: '#27ae60'
+                color: '#888888'
             },
             hovertemplate: '<b>%{text}</b><br>Date: %{x|%b %Y}<extra></extra>'
         },
@@ -2047,14 +2063,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 color: '#e74c3c',
                 symbol: 'circle',
                 line: {
-                    color: '#c0392b',
+                    color: '#888888',
                     width: 2
                 }
             },
             textposition: 'top center',
             textfont: {
                 size: 12,
-                color: '#c0392b'
+                color: '#888888'
             },
             hovertemplate: '<b>%{text}</b><br>Date: %{x|%b %Y}<extra></extra>'
         }
@@ -2105,11 +2121,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     var layout = {
         autosize: true,
+        responsive: true,
         title: {
             text: 'QDaria Execution Roadmap 2025-2030',
             font: {
                 size: 26,
-                color: '#2c3e50'
+                color: '#888888'
             }
         },
         xaxis: {
@@ -2143,7 +2160,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showarrow: false,
                 font: {
                     size: 14,
-                    color: '#2874a6'
+                    color: '#888888'
                 },
                 xanchor: 'center'
             },
@@ -2156,7 +2173,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showarrow: false,
                 font: {
                     size: 14,
-                    color: '#27ae60'
+                    color: '#888888'
                 },
                 xanchor: 'center'
             },
@@ -2169,7 +2186,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showarrow: false,
                 font: {
                     size: 14,
-                    color: '#c0392b'
+                    color: '#888888'
                 },
                 xanchor: 'center'
             }
@@ -2177,17 +2194,17 @@ document.addEventListener('DOMContentLoaded', function() {
         plot_bgcolor: 'rgba(255,255,255,0)',
         paper_bgcolor: 'rgba(255,255,255,0)',
         margin: {
-            t: 100,
+            t: 60,
             b: 60,
-            l: 100,
-            r: 40
+            l: 20,
+            r: 80
         },
         hoverlabel: {
             bgcolor: '#fff',
-            bordercolor: '#333',
+            bordercolor: '#888888',
             font: {
                 size: 14,
-                color: '#333'
+                color: '#888888'
             }
         },
         legend: {
@@ -2253,9 +2270,10 @@ In terms of *uses* of the initial seed and subsequent funding:
 
 #### *Planned allocation of the \$12M seed funding (approximate): a large portion (25%) for critical equipment, and the rest divided among talent, product development, and operations.*
 
-<div id="fundingAllocationChart" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="fundingAllocationChart" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var data = [{
@@ -2361,9 +2379,10 @@ This \$12M is designed to get us through the critical “prove and launch” pha
 
 **Projected Financial Performance (2025–2030):** In numbers (in USD millions):
 
-<div id="financialProjectionsChart" class="chart-placeholder"></div>
+<div class="chart-container">
+    <div id="financialProjectionsChart" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Enhanced Financial Projections with Advanced Visualizations
@@ -2441,7 +2460,7 @@ document.addEventListener('DOMContentLoaded', function() {
             marker: {
                 color: grossProfit.map((g, i) => `rgba(46, 204, 113, ${0.4 + i * 0.1})`),
                 line: {
-                    color: '#27ae60',
+                    color: '#888888',
                     width: 2
                 }
             },
@@ -2568,7 +2587,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showarrow: false,
             font: {
                 size: 14,
-                color: '#27ae60',
+                color: '#888888',
                 family: 'system-ui, -apple-system, sans-serif'
             },
             bgcolor: 'rgba(46, 204, 113, 0.1)',
@@ -2916,9 +2935,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 *(Note: These are illustrative base-case figures aligning with earlier discussion. 2025–2027 show losses as we invest; by 2028 we approach break-even; 2029–2030 become profitable. Interactive chart above shows the growth trajectory visually.)*
 
-<div id="revenueStreamChart" style="width: 100%; height: 700px;"></div>
+<div class="chart-container">
+    <div id="revenueStreamChart" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Years for x-axis
@@ -3258,9 +3278,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 Like any deep-tech venture, QDaria faces significant risks. We identify the major categories and our mitigation strategies:
 
-<div id="riskAssessmentMatrix" style="width: 100%; height: 600px;"></div>
+<div class="chart-container">
+    <div id="riskAssessmentMatrix" class="chart-placeholder"></div>
+</div>
 
-<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Risk data with probability, impact, mitigation status, and categories

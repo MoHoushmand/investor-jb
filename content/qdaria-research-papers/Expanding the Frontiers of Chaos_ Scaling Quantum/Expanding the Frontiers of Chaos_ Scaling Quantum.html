@@ -1,71 +1,182 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem &mdash; Daniel Mo Houshmand</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem &#8212; Daniel Mo Houshmand</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
-      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="../../../_static/copybutton.js?v=f281be69"></script>
-      <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
-      <script src="../../../_static/tabs.js?v=3ee01567"></script>
-      <script>let toggleHintShow = 'Click to show';</script>
-      <script>let toggleHintHide = 'Click to hide';</script>
-      <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script src="../../../_static/chart-config.js?v=b454993d"></script>
-    <script src="../../../_static/js/theme.js"></script>
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/chart-positioning-fixes.css?v=e0bca496" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/qdaria-research-papers/Expanding the Frontiers of Chaos_ Scaling Quantum/Expanding the Frontiers of Chaos_ Scaling Quantum';</script>
+    <script src="../../../_static/chart-config.js?v=2c3bad59"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="../../../index.html">
-            
-              <img src="../../../_static/D58.png" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
-<ul>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/D58.png" class="logo__image only-light" alt="Daniel Mo Houshmand - Home"/>
+    <script>document.write(`<img src="../../../_static/D58.png" class="logo__image only-dark" alt="Daniel Mo Houshmand - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
@@ -74,57 +185,228 @@
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/timeline.html">9. Strategic Plan for QDaria’s Quantum Computer Launch</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">Project name not set</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/content/qdaria-research-papers/Expanding the Frontiers of Chaos_ Scaling Quantum/Expanding the Frontiers of Chaos_ Scaling Quantum.md" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/qdaria-research-papers/Expanding the Frontiers of Chaos_ Scaling Quantum/Expanding the Frontiers of Chaos_ Scaling Quantum.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executive-summary">Executive Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-quantum-reservoir-computing-fundamentals">1. Introduction: Quantum Reservoir Computing Fundamentals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigetti-novera-architecture-enabling-qrc-at-scale">2. Rigetti Novera™ Architecture: Enabling QRC at Scale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-specifications">2.1 Hardware Specifications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-for-qrc-implementation">2.2 Advantages for QRC Implementation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theoretical-scaling-laws-and-performance-projections">3. Theoretical Scaling Laws and Performance Projections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-methodology">3.1 Scaling Methodology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-projections">3.2 Performance Projections</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-classical-hybrid-architecture-and-a2a-protocol">4. Quantum-Classical Hybrid Architecture and A2A Protocol</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agentic-ai-orchestration">4.1 Agentic AI Orchestration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a2a-integration-benefits">4.2 A2A Integration Benefits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#industrial-applications-and-roi-analysis">5. Industrial Applications and ROI Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f1-aerodynamics-chaotic-fluid-dynamics-prediction">5.1 F1 Aerodynamics: Chaotic Fluid Dynamics Prediction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cybersecurity-quantum-chaos-fingerprinting">5.2 Cybersecurity: Quantum Chaos Fingerprinting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finance-stochastic-volatility-modeling">5.3 Finance: Stochastic Volatility Modeling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#education-interactive-quantum-chaos-simulators">5.4 Education: Interactive Quantum Chaos Simulators</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-forest-sdk-and-multi-chip-scaling">6. Implementation: Forest SDK and Multi-Chip Scaling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-9-qubit-qrc-circuit-implementation">6.1 Core 9-Qubit QRC Circuit Implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-chip-scaling-for-36-qubit-systems">6.2 Multi-Chip Scaling for 36-Qubit Systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-mitigation-with-abaa-technology">7. Error Mitigation with ABAA Technology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternating-bias-assisted-annealing">7.1 Alternating-Bias Assisted Annealing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-threshold-analysis">7.2 Error Threshold Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#investment-strategy-and-market-opportunity">8. Investment Strategy and Market Opportunity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-and-future-directions">9. Conclusion and Future Directions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <a class="logo reference internal image-reference" href="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png"><img alt="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="width: 120px;" />
 </a>
 <section id="expanding-the-frontiers-of-chaos-scaling-quantum-reservoir-computing-on-rigetti-s-novera-qpu-ecosystem">
-<h1>Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem<a class="headerlink" href="#expanding-the-frontiers-of-chaos-scaling-quantum-reservoir-computing-on-rigetti-s-novera-qpu-ecosystem" title="Link to this heading"></a></h1>
+<h1>Expanding the Frontiers of Chaos: Scaling Quantum Reservoir Computing on Rigetti’s Novera™ QPU Ecosystem<a class="headerlink" href="#expanding-the-frontiers-of-chaos-scaling-quantum-reservoir-computing-on-rigetti-s-novera-qpu-ecosystem" title="Link to this heading">#</a></h1>
 <section id="executive-summary">
-<h2>Executive Summary<a class="headerlink" href="#executive-summary" title="Link to this heading"></a></h2>
+<h2>Executive Summary<a class="headerlink" href="#executive-summary" title="Link to this heading">#</a></h2>
 <p>Recent breakthroughs in quantum reservoir computing (QRC) have demonstrated remarkable ability to predict complex chaotic systems using minimal quantum resources <a class="footnote-reference brackets" href="#id153" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id154" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Our research extends the groundbreaking 4-qubit QRC framework to Rigetti’s commercial 9-qubit Novera™ architecture, projecting significant performance improvements through exploitation of tunable couplers and square lattice topology <a class="footnote-reference brackets" href="#id155" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id156" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. This paper presents a comprehensive roadmap for scaling QRC to production-ready 36-qubit systems by 2025, with corresponding performance metrics and industrial applications across multiple sectors <a class="footnote-reference brackets" href="#id157" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id158" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. Our analysis confirms that QRC provides a clear path to near-term quantum advantage in practical chaos prediction scenarios that are unattainable with classical methods <a class="footnote-reference brackets" href="#id159" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id160" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>.</p>
 <p><img alt="QRC performance scaling curve showing exponential improvement" src="https://pplx-res.cloudinary.com/image/upload/v1749026537/gpt4o_images/fapkxbo21yakbw5r4vk8.png" /></p>
 <p>QRC performance scaling curve showing exponential improvement</p>
 </section>
 <section id="introduction-quantum-reservoir-computing-fundamentals">
-<h2>1. Introduction: Quantum Reservoir Computing Fundamentals<a class="headerlink" href="#introduction-quantum-reservoir-computing-fundamentals" title="Link to this heading"></a></h2>
+<h2>1. Introduction: Quantum Reservoir Computing Fundamentals<a class="headerlink" href="#introduction-quantum-reservoir-computing-fundamentals" title="Link to this heading">#</a></h2>
 <p>Quantum Reservoir Computing represents a paradigm shift in quantum machine learning by leveraging quantum dynamics to process temporal information without the need for gradient-based training <a class="footnote-reference brackets" href="#id153" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id154" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. Unlike variational quantum circuits, QRC transforms input data into a high-dimensional quantum state space, enabling superior prediction of complex dynamical systems with only linear post-processing <a class="footnote-reference brackets" href="#id161" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id154" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. The original QRC framework demonstrated by Steinegger and Räth achieved remarkable prediction capabilities for three-dimensional chaotic systems using just four qubits, establishing a foundation for practical quantum machine learning in the NISQ era <a class="footnote-reference brackets" href="#id153" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id154" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.</p>
 <p>The original research demonstrated successful prediction across eight prototypical chaotic systems, including Lorenz-63, Rössler, and Chen attractors, with forecast horizons averaging 8.5 Lyapunov times—a significant improvement over classical reservoir computing approaches <a class="footnote-reference brackets" href="#id153" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id159" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>. However, scaling this approach to production environments requires a hardware platform specifically designed for QRC operations <a class="footnote-reference brackets" href="#id162" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id163" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="rigetti-novera-architecture-enabling-qrc-at-scale">
-<h2>2. Rigetti Novera™ Architecture: Enabling QRC at Scale<a class="headerlink" href="#rigetti-novera-architecture-enabling-qrc-at-scale" title="Link to this heading"></a></h2>
+<h2>2. Rigetti Novera™ Architecture: Enabling QRC at Scale<a class="headerlink" href="#rigetti-novera-architecture-enabling-qrc-at-scale" title="Link to this heading">#</a></h2>
 <section id="hardware-specifications">
-<h3>2.1 Hardware Specifications<a class="headerlink" href="#hardware-specifications" title="Link to this heading"></a></h3>
+<h3>2.1 Hardware Specifications<a class="headerlink" href="#hardware-specifications" title="Link to this heading">#</a></h3>
 <p>The Rigetti Novera™ QPU represents an ideal platform for scaling QRC applications, featuring a 3×3 array of tunable transmons with dense connectivity via tunable couplers and a square lattice topology <a class="footnote-reference brackets" href="#id155" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id156" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>. The system achieves 99.4% two-qubit gate fidelity through Rigetti’s proprietary Alternating-Bias Assisted Annealing (ABAA) technique, which enables precise qubit frequency targeting essential for complex quantum circuits <a class="footnote-reference brackets" href="#id164" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id165" id="id22" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a>. The QPU includes a puck containing both the 9-qubit processor and a secondary 5-qubit chip for single-qubit operation development and characterization <a class="footnote-reference brackets" href="#id155" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id166" id="id24" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a>.</p>
 <p><img alt="Rigetti Novera QPU 9-qubit architecture with tunable couplers" src="https://pplx-res.cloudinary.com/image/upload/v1749026495/gpt4o_images/xjkulmyc84op8f85guvn.png" /></p>
 <p>Rigetti Novera QPU 9-qubit architecture with tunable couplers</p>
 </section>
 <section id="advantages-for-qrc-implementation">
-<h3>2.2 Advantages for QRC Implementation<a class="headerlink" href="#advantages-for-qrc-implementation" title="Link to this heading"></a></h3>
+<h3>2.2 Advantages for QRC Implementation<a class="headerlink" href="#advantages-for-qrc-implementation" title="Link to this heading">#</a></h3>
 <p>Novera’s architecture offers several key advantages for QRC implementations compared to the initial 4-qubit framework <a class="footnote-reference brackets" href="#id167" id="id25" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id168" id="id26" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a>:</p>
 <ol class="arabic simple">
 <li><p><strong>Enhanced Connectivity</strong>: The square lattice topology with tunable couplers enables more complex reservoir dynamics, crucial for capturing chaotic system behavior <a class="footnote-reference brackets" href="#id155" id="id27" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id169" id="id28" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a>.</p></li>
@@ -135,9 +417,9 @@
 </section>
 </section>
 <section id="theoretical-scaling-laws-and-performance-projections">
-<h2>3. Theoretical Scaling Laws and Performance Projections<a class="headerlink" href="#theoretical-scaling-laws-and-performance-projections" title="Link to this heading"></a></h2>
+<h2>3. Theoretical Scaling Laws and Performance Projections<a class="headerlink" href="#theoretical-scaling-laws-and-performance-projections" title="Link to this heading">#</a></h2>
 <section id="scaling-methodology">
-<h3>3.1 Scaling Methodology<a class="headerlink" href="#scaling-methodology" title="Link to this heading"></a></h3>
+<h3>3.1 Scaling Methodology<a class="headerlink" href="#scaling-methodology" title="Link to this heading">#</a></h3>
 <p>We developed a theoretical framework to project QRC performance scaling from 4 to 9 to 36 qubits based on Hilbert space dimensionality and empirical performance data <a class="footnote-reference brackets" href="#id176" id="id35" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id177" id="id36" role="doc-noteref"><span class="fn-bracket">[</span>25<span class="fn-bracket">]</span></a>. Our approach extends established QRC theory with:</p>
 <ol class="arabic simple">
 <li><p><strong>Hilbert Space Scaling</strong>: The feature space scales exponentially as 2^N with N qubits, providing exponentially more expressive power <a class="footnote-reference brackets" href="#id178" id="id37" role="doc-noteref"><span class="fn-bracket">[</span>26<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id179" id="id38" role="doc-noteref"><span class="fn-bracket">[</span>27<span class="fn-bracket">]</span></a>.</p></li>
@@ -146,7 +428,7 @@
 </ol>
 </section>
 <section id="performance-projections">
-<h3>3.2 Performance Projections<a class="headerlink" href="#performance-projections" title="Link to this heading"></a></h3>
+<h3>3.2 Performance Projections<a class="headerlink" href="#performance-projections" title="Link to this heading">#</a></h3>
 <p>Our projections indicate substantial performance improvements as qubit count increases <a class="footnote-reference brackets" href="#id184" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>32<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id185" id="id44" role="doc-noteref"><span class="fn-bracket">[</span>33<span class="fn-bracket">]</span></a>:</p>
 <ul class="simple">
 <li><p><strong>4-qubit baseline</strong>: 8.5 Lyapunov times (average across chaotic systems)</p></li>
@@ -157,15 +439,15 @@
 </section>
 </section>
 <section id="quantum-classical-hybrid-architecture-and-a2a-protocol">
-<h2>4. Quantum-Classical Hybrid Architecture and A2A Protocol<a class="headerlink" href="#quantum-classical-hybrid-architecture-and-a2a-protocol" title="Link to this heading"></a></h2>
+<h2>4. Quantum-Classical Hybrid Architecture and A2A Protocol<a class="headerlink" href="#quantum-classical-hybrid-architecture-and-a2a-protocol" title="Link to this heading">#</a></h2>
 <section id="agentic-ai-orchestration">
-<h3>4.1 Agentic AI Orchestration<a class="headerlink" href="#agentic-ai-orchestration" title="Link to this heading"></a></h3>
+<h3>4.1 Agentic AI Orchestration<a class="headerlink" href="#agentic-ai-orchestration" title="Link to this heading">#</a></h3>
 <p>To maximize performance and usability, we developed a hybrid quantum-classical architecture integrating Google’s Agent-to-Agent (A2A) protocol for dynamic resource allocation and task orchestration <a class="footnote-reference brackets" href="#id188" id="id47" role="doc-noteref"><span class="fn-bracket">[</span>36<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id189" id="id48" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a>. This framework enables seamless communication between quantum reservoir agents and classical processing agents through a standardized interface based on JSON-RPC 2.0 over HTTP <a class="footnote-reference brackets" href="#id162" id="id49" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id163" id="id50" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a>.</p>
 <p><img alt="Agentic AI orchestration diagram for hybrid quantum-classical QRC systems" src="https://pplx-res.cloudinary.com/image/upload/v1749026433/gpt4o_images/riogsnsbkboqow5rftpn.png" /></p>
 <p>Agentic AI orchestration diagram for hybrid quantum-classical QRC systems</p>
 </section>
 <section id="a2a-integration-benefits">
-<h3>4.2 A2A Integration Benefits<a class="headerlink" href="#a2a-integration-benefits" title="Link to this heading"></a></h3>
+<h3>4.2 A2A Integration Benefits<a class="headerlink" href="#a2a-integration-benefits" title="Link to this heading">#</a></h3>
 <p>The A2A protocol provides several key advantages for QRC deployment <a class="footnote-reference brackets" href="#id190" id="id51" role="doc-noteref"><span class="fn-bracket">[</span>38<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id191" id="id52" role="doc-noteref"><span class="fn-bracket">[</span>39<span class="fn-bracket">]</span></a>:</p>
 <ol class="arabic simple">
 <li><p><strong>Dynamic Resource Allocation</strong>: Automated distribution of tasks between quantum and classical resources based on real-time performance metrics <a class="footnote-reference brackets" href="#id162" id="id53" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id165" id="id54" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a>.</p></li>
@@ -176,9 +458,9 @@
 </section>
 </section>
 <section id="industrial-applications-and-roi-analysis">
-<h2>5. Industrial Applications and ROI Analysis<a class="headerlink" href="#industrial-applications-and-roi-analysis" title="Link to this heading"></a></h2>
+<h2>5. Industrial Applications and ROI Analysis<a class="headerlink" href="#industrial-applications-and-roi-analysis" title="Link to this heading">#</a></h2>
 <section id="f1-aerodynamics-chaotic-fluid-dynamics-prediction">
-<h3>5.1 F1 Aerodynamics: Chaotic Fluid Dynamics Prediction<a class="headerlink" href="#f1-aerodynamics-chaotic-fluid-dynamics-prediction" title="Link to this heading"></a></h3>
+<h3>5.1 F1 Aerodynamics: Chaotic Fluid Dynamics Prediction<a class="headerlink" href="#f1-aerodynamics-chaotic-fluid-dynamics-prediction" title="Link to this heading">#</a></h3>
 <p>Formula 1 aerodynamics presents an ideal application for QRC due to the chaotic nature of turbulent flows around complex geometries <a class="footnote-reference brackets" href="#id187" id="id61" role="doc-noteref"><span class="fn-bracket">[</span>35<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id197" id="id62" role="doc-noteref"><span class="fn-bracket">[</span>45<span class="fn-bracket">]</span></a>. Our implementation enables:</p>
 <ul class="simple">
 <li><p><strong>Enhanced CFD Optimization</strong>: 3× speedup in aerodynamic simulation convergence</p></li>
@@ -188,7 +470,7 @@
 <p>The economic impact includes potential annual savings of $6.7M per F1 team against initial investment of $2M, yielding 3.3× ROI through reduced compute costs and accelerated development cycles <a class="footnote-reference brackets" href="#id187" id="id63" role="doc-noteref"><span class="fn-bracket">[</span>35<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id198" id="id64" role="doc-noteref"><span class="fn-bracket">[</span>46<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="cybersecurity-quantum-chaos-fingerprinting">
-<h3>5.2 Cybersecurity: Quantum Chaos Fingerprinting<a class="headerlink" href="#cybersecurity-quantum-chaos-fingerprinting" title="Link to this heading"></a></h3>
+<h3>5.2 Cybersecurity: Quantum Chaos Fingerprinting<a class="headerlink" href="#cybersecurity-quantum-chaos-fingerprinting" title="Link to this heading">#</a></h3>
 <p>Network traffic exhibits chaotic dynamics that can be leveraged for anomaly detection through quantum fingerprinting <a class="footnote-reference brackets" href="#id189" id="id65" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id192" id="id66" role="doc-noteref"><span class="fn-bracket">[</span>40<span class="fn-bracket">]</span></a>. Our approach:</p>
 <ul class="simple">
 <li><p><strong>Real-Time Anomaly Detection</strong>: Identification of subtle pattern deviations indicative of attacks</p></li>
@@ -198,7 +480,7 @@
 <p>Implementation projects 30% improvement in detection capabilities with $2.7M annual value against $1.5M investment, yielding 1.8× ROI through reduced breach incidents and security staff efficiency <a class="footnote-reference brackets" href="#id189" id="id67" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id199" id="id68" role="doc-noteref"><span class="fn-bracket">[</span>47<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="finance-stochastic-volatility-modeling">
-<h3>5.3 Finance: Stochastic Volatility Modeling<a class="headerlink" href="#finance-stochastic-volatility-modeling" title="Link to this heading"></a></h3>
+<h3>5.3 Finance: Stochastic Volatility Modeling<a class="headerlink" href="#finance-stochastic-volatility-modeling" title="Link to this heading">#</a></h3>
 <p>Financial markets demonstrate chaotic behavior particularly evident in volatility dynamics, making them ideal targets for QRC prediction <a class="footnote-reference brackets" href="#id193" id="id69" role="doc-noteref"><span class="fn-bracket">[</span>41<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id200" id="id70" role="doc-noteref"><span class="fn-bracket">[</span>48<span class="fn-bracket">]</span></a>. Applications include:</p>
 <ul class="simple">
 <li><p><strong>High-Frequency Trading</strong>: Microsecond-scale prediction of price movement patterns</p></li>
@@ -208,7 +490,7 @@
 <p>For major trading firms, even a 0.1% edge improvement translates to approximately $250M annual value against $3M deployment investment, representing an exceptional 83× ROI potential <a class="footnote-reference brackets" href="#id193" id="id71" role="doc-noteref"><span class="fn-bracket">[</span>41<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id200" id="id72" role="doc-noteref"><span class="fn-bracket">[</span>48<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="education-interactive-quantum-chaos-simulators">
-<h3>5.4 Education: Interactive Quantum Chaos Simulators<a class="headerlink" href="#education-interactive-quantum-chaos-simulators" title="Link to this heading"></a></h3>
+<h3>5.4 Education: Interactive Quantum Chaos Simulators<a class="headerlink" href="#education-interactive-quantum-chaos-simulators" title="Link to this heading">#</a></h3>
 <p>Educational applications represent an important pathway to workforce development and ecosystem growth <a class="footnote-reference brackets" href="#id201" id="id73" role="doc-noteref"><span class="fn-bracket">[</span>49<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id202" id="id74" role="doc-noteref"><span class="fn-bracket">[</span>50<span class="fn-bracket">]</span></a>. Our QRC-based educational platform enables:</p>
 <ul class="simple">
 <li><p><strong>Interactive Chaos Visualization</strong>: Real-time exploration of chaotic system evolution</p></li>
@@ -221,9 +503,9 @@
 </section>
 </section>
 <section id="implementation-forest-sdk-and-multi-chip-scaling">
-<h2>6. Implementation: Forest SDK and Multi-Chip Scaling<a class="headerlink" href="#implementation-forest-sdk-and-multi-chip-scaling" title="Link to this heading"></a></h2>
+<h2>6. Implementation: Forest SDK and Multi-Chip Scaling<a class="headerlink" href="#implementation-forest-sdk-and-multi-chip-scaling" title="Link to this heading">#</a></h2>
 <section id="core-9-qubit-qrc-circuit-implementation">
-<h3>6.1 Core 9-Qubit QRC Circuit Implementation<a class="headerlink" href="#core-9-qubit-qrc-circuit-implementation" title="Link to this heading"></a></h3>
+<h3>6.1 Core 9-Qubit QRC Circuit Implementation<a class="headerlink" href="#core-9-qubit-qrc-circuit-implementation" title="Link to this heading">#</a></h3>
 <p>We developed a comprehensive implementation using Rigetti’s Forest SDK and PyQuil framework to enable immediate deployment on Novera hardware <a class="footnote-reference brackets" href="#id194" id="id77" role="doc-noteref"><span class="fn-bracket">[</span>42<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id195" id="id78" role="doc-noteref"><span class="fn-bracket">[</span>43<span class="fn-bracket">]</span></a>. The core implementation includes:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyquil</span><span class="w"> </span><span class="kn">import</span> <span class="n">Program</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">pyquil.gates</span><span class="w"> </span><span class="kn">import</span> <span class="n">RX</span><span class="p">,</span> <span class="n">CZ</span><span class="p">,</span> <span class="n">MEASURE</span>
@@ -248,7 +530,7 @@
 <p>This implementation leverages Novera’s tunable couplers for enhanced expressivity while maintaining compatibility with Rigetti’s quantum cloud services <a class="footnote-reference brackets" href="#id196" id="id79" role="doc-noteref"><span class="fn-bracket">[</span>44<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id198" id="id80" role="doc-noteref"><span class="fn-bracket">[</span>46<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="multi-chip-scaling-for-36-qubit-systems">
-<h3>6.2 Multi-Chip Scaling for 36-Qubit Systems<a class="headerlink" href="#multi-chip-scaling-for-36-qubit-systems" title="Link to this heading"></a></h3>
+<h3>6.2 Multi-Chip Scaling for 36-Qubit Systems<a class="headerlink" href="#multi-chip-scaling-for-36-qubit-systems" title="Link to this heading">#</a></h3>
 <p>To achieve the 36-qubit configuration in Rigetti’s 2025 roadmap, we developed a multi-chip implementation that coordinates multiple 9-qubit Novera QPUs through spatial multiplexing <a class="footnote-reference brackets" href="#id199" id="id81" role="doc-noteref"><span class="fn-bracket">[</span>47<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id175" id="id82" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a>. Key features include:</p>
 <ol class="arabic simple">
 <li><p><strong>Distributed Encoding</strong>: Phase-shifted data encoding across multiple chips for parallel processing</p></li>
@@ -259,9 +541,9 @@
 </section>
 </section>
 <section id="error-mitigation-with-abaa-technology">
-<h2>7. Error Mitigation with ABAA Technology<a class="headerlink" href="#error-mitigation-with-abaa-technology" title="Link to this heading"></a></h2>
+<h2>7. Error Mitigation with ABAA Technology<a class="headerlink" href="#error-mitigation-with-abaa-technology" title="Link to this heading">#</a></h2>
 <section id="alternating-bias-assisted-annealing">
-<h3>7.1 Alternating-Bias Assisted Annealing<a class="headerlink" href="#alternating-bias-assisted-annealing" title="Link to this heading"></a></h3>
+<h3>7.1 Alternating-Bias Assisted Annealing<a class="headerlink" href="#alternating-bias-assisted-annealing" title="Link to this heading">#</a></h3>
 <p>Rigetti’s ABAA technique represents a transformative approach to superconducting qubit optimization, enabling precise frequency targeting and reduced defect density in Josephson junctions <a class="footnote-reference brackets" href="#id170" id="id85" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id171" id="id86" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a>. For QRC applications, we developed an ABAA-specific implementation that:</p>
 <ol class="arabic simple">
 <li><p><strong>Optimizes Qubit Frequencies</strong>: Targets specific frequency distributions to minimize crosstalk</p></li>
@@ -270,12 +552,12 @@
 </ol>
 </section>
 <section id="error-threshold-analysis">
-<h3>7.2 Error Threshold Analysis<a class="headerlink" href="#error-threshold-analysis" title="Link to this heading"></a></h3>
+<h3>7.2 Error Threshold Analysis<a class="headerlink" href="#error-threshold-analysis" title="Link to this heading">#</a></h3>
 <p>We derived theoretical error thresholds specific to chaotic system prediction, determining that Novera’s 99.4% two-qubit fidelity enables approximately 83 sequential gates while maintaining 95% climate prediction accuracy <a class="footnote-reference brackets" href="#id170" id="id87" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id174" id="id88" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a>. This threshold analysis guides circuit depth limitations and measurement strategies to maximize prediction horizon <a class="footnote-reference brackets" href="#id176" id="id89" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id183" id="id90" role="doc-noteref"><span class="fn-bracket">[</span>31<span class="fn-bracket">]</span></a>.</p>
 </section>
 </section>
 <section id="investment-strategy-and-market-opportunity">
-<h2>8. Investment Strategy and Market Opportunity<a class="headerlink" href="#investment-strategy-and-market-opportunity" title="Link to this heading"></a></h2>
+<h2>8. Investment Strategy and Market Opportunity<a class="headerlink" href="#investment-strategy-and-market-opportunity" title="Link to this heading">#</a></h2>
 <p>The convergence of Rigetti’s hardware advances and QRC theoretical development creates substantial market opportunities across multiple sectors <a class="footnote-reference brackets" href="#id205" id="id91" role="doc-noteref"><span class="fn-bracket">[</span>53<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id206" id="id92" role="doc-noteref"><span class="fn-bracket">[</span>54<span class="fn-bracket">]</span></a>. Our analysis projects:</p>
 <ol class="arabic simple">
 <li><p><strong>Total Addressable Market</strong>: $51.5B across identified application areas</p></li>
@@ -286,7 +568,7 @@
 <p>Complete investment details and sector-specific projections are available in the supplementary materials <a class="footnote-reference brackets" href="#id206" id="id93" role="doc-noteref"><span class="fn-bracket">[</span>54<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id207" id="id94" role="doc-noteref"><span class="fn-bracket">[</span>55<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="conclusion-and-future-directions">
-<h2>9. Conclusion and Future Directions<a class="headerlink" href="#conclusion-and-future-directions" title="Link to this heading"></a></h2>
+<h2>9. Conclusion and Future Directions<a class="headerlink" href="#conclusion-and-future-directions" title="Link to this heading">#</a></h2>
 <p>This research establishes a comprehensive framework for scaling quantum reservoir computing from theoretical 4-qubit implementations to commercial-ready 9-qubit and 36-qubit systems leveraging Rigetti’s Novera architecture <a class="footnote-reference brackets" href="#id153" id="id95" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id174" id="id96" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a>. Our work demonstrates:</p>
 <ol class="arabic simple">
 <li><p><strong>Projected Performance Scaling</strong>: Clear path from 8.5 to 67.2 Lyapunov times average prediction horizon</p></li>
@@ -297,7 +579,7 @@
 <p>Future research will focus on extending this framework to Rigetti’s planned 108-qubit and 336-qubit systems, further improving the encoding and readout mechanisms, and developing application-specific optimizations for targeted industries <a class="footnote-reference brackets" href="#id175" id="id97" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a><a class="footnote-reference brackets" href="#id204" id="id98" role="doc-noteref"><span class="fn-bracket">[</span>52<span class="fn-bracket">]</span></a>.</p>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <p>Steinegger, J., &amp; Räth, C. (2025). Predicting three-dimensional chaotic systems with four qubit quantum systems. Nature Scientific Reports.
 <a class="footnote-reference brackets" href="#id154" id="id99" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Quantum reservoir computing has been demonstrated to predict chaotic systems with minimal quantum resources.
 <a class="footnote-reference brackets" href="#id155" id="id100" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> Rigetti Computing. (2023). Meet the Novera™ QPU. Product Documentation.
@@ -409,7 +691,7 @@
 <aside class="footnote brackets" id="id163" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id18">1</a>,<a role="doc-backlink" href="#id50">2</a>,<a role="doc-backlink" href="#id108">3</a>)</span>
-<p><a class="reference external" href="https://github.com/google-a2a/A2A">https://github.com/google-a2a/A2A</a></p>
+<p><a class="github reference external" href="https://github.com/google-a2a/A2A">google-a2a/A2A</a></p>
 </aside>
 <aside class="footnote brackets" id="id164" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
@@ -569,7 +851,7 @@
 <aside class="footnote brackets" id="id195" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>43<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id58">1</a>,<a role="doc-backlink" href="#id78">2</a>,<a role="doc-backlink" href="#id139">3</a>)</span>
-<p><a class="reference external" href="https://github.com/rigetti/pyquil">https://github.com/rigetti/pyquil</a></p>
+<p><a class="github reference external" href="https://github.com/rigetti/pyquil">rigetti/pyquil</a></p>
 </aside>
 <aside class="footnote brackets" id="id196" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>44<span class="fn-bracket">]</span></span>
@@ -655,31 +937,121 @@
     </script>
     <script>kernelName = 'python3'</script>
 
-           </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executive-summary">Executive Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-quantum-reservoir-computing-fundamentals">1. Introduction: Quantum Reservoir Computing Fundamentals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rigetti-novera-architecture-enabling-qrc-at-scale">2. Rigetti Novera™ Architecture: Enabling QRC at Scale</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-specifications">2.1 Hardware Specifications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-for-qrc-implementation">2.2 Advantages for QRC Implementation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theoretical-scaling-laws-and-performance-projections">3. Theoretical Scaling Laws and Performance Projections</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scaling-methodology">3.1 Scaling Methodology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-projections">3.2 Performance Projections</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-classical-hybrid-architecture-and-a2a-protocol">4. Quantum-Classical Hybrid Architecture and A2A Protocol</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agentic-ai-orchestration">4.1 Agentic AI Orchestration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a2a-integration-benefits">4.2 A2A Integration Benefits</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#industrial-applications-and-roi-analysis">5. Industrial Applications and ROI Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f1-aerodynamics-chaotic-fluid-dynamics-prediction">5.1 F1 Aerodynamics: Chaotic Fluid Dynamics Prediction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cybersecurity-quantum-chaos-fingerprinting">5.2 Cybersecurity: Quantum Chaos Fingerprinting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finance-stochastic-volatility-modeling">5.3 Finance: Stochastic Volatility Modeling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#education-interactive-quantum-chaos-simulators">5.4 Education: Interactive Quantum Chaos Simulators</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementation-forest-sdk-and-multi-chip-scaling">6. Implementation: Forest SDK and Multi-Chip Scaling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-9-qubit-qrc-circuit-implementation">6.1 Core 9-Qubit QRC Circuit Implementation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-chip-scaling-for-36-qubit-systems">6.2 Multi-Chip Scaling for 36-Qubit Systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-mitigation-with-abaa-technology">7. Error Mitigation with ABAA Technology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alternating-bias-assisted-annealing">7.1 Alternating-Bias Assisted Annealing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-threshold-analysis">7.2 Error Threshold Analysis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#investment-strategy-and-market-opportunity">8. Investment Strategy and Market Opportunity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-and-future-directions">9. Conclusion and Future Directions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
-          <footer>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Mo Houshmand
+</p>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2025.</p>
   </div>
+  
+  <div class="footer-item">
+    
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
 
-</footer>
-        </div>
-      </div>
-    </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
 
-</body>
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

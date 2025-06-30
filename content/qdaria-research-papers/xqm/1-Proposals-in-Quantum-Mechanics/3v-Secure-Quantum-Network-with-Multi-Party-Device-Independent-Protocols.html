@@ -1,72 +1,183 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../../../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Secure Quantum Network with Multi-Party Device-Independent Protocols (V) &mdash; Daniel Mo Houshmand</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=20074c1a" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/tabs.css?v=4c969af8" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=d2dc8771" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/mo_addmination.css?v=9870a3a3" />
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Secure Quantum Network with Multi-Party Device-Independent Protocols (V) &#8212; Daniel Mo Houshmand</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
-      <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="../../../../_static/copybutton.js?v=f281be69"></script>
-      <script src="../../../../_static/scripts/sphinx-book-theme.js"></script>
-      <script src="../../../../_static/tabs.js?v=3ee01567"></script>
-      <script>let toggleHintShow = 'Click to show';</script>
-      <script>let toggleHintHide = 'Click to hide';</script>
-      <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <script src="../../../../_static/chart-config.js?v=b454993d"></script>
-    <script src="../../../../_static/js/theme.js"></script>
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=20074c1a" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=d2dc8771" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/chart-positioning-fixes.css?v=e0bca496" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mo_addmination.css?v=9870a3a3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/qdaria-research-papers/xqm/1-Proposals-in-Quantum-Mechanics/3v-Secure-Quantum-Network-with-Multi-Party-Device-Independent-Protocols';</script>
+    <script src="../../../../_static/chart-config.js?v=2c3bad59"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="../../../../index.html">
-            
-              <img src="../../../../_static/D58.png" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
-<ul>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/D58.png" class="logo__image only-light" alt="Daniel Mo Houshmand - Home"/>
+    <script>document.write(`<img src="../../../../_static/D58.png" class="logo__image only-dark" alt="Daniel Mo Houshmand - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
@@ -75,40 +186,188 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../qdaria-core/qdaria-business/timeline.html">9. Strategic Plan for QDaria’s Quantum Computer Launch</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../index.html">Project name not set</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Secure Quantum Network with Multi-Party Device-Independent Protocols (V)</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../../_sources/content/qdaria-research-papers/xqm/1-Proposals-in-Quantum-Mechanics/3v-Secure-Quantum-Network-with-Multi-Party-Device-Independent-Protocols.md" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/qdaria-research-papers/xqm/1-Proposals-in-Quantum-Mechanics/3v-Secure-Quantum-Network-with-Multi-Party-Device-Independent-Protocols.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Secure Quantum Network with Multi-Party Device-Independent Protocols (V)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-work">Prior Work</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-methodology">Proposed Methodology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entanglement-distribution">Entanglement Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#device-independent-qkd-alicebob">Device-Independent QKD (Alice–Bob)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-digital-signatures-alicecharliebob">Quantum Digital Signatures (Alice–Charlie–Bob)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-secret-sharing">Quantum Secret Sharing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-network-control">AI Network Control</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-results">Expected Results</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="secure-quantum-network-with-multi-party-device-independent-protocols-v">
-<h1>Secure Quantum Network with Multi-Party Device-Independent Protocols (V)<a class="headerlink" href="#secure-quantum-network-with-multi-party-device-independent-protocols-v" title="Link to this heading"></a></h1>
+<h1>Secure Quantum Network with Multi-Party Device-Independent Protocols (V)<a class="headerlink" href="#secure-quantum-network-with-multi-party-device-independent-protocols-v" title="Link to this heading">#</a></h1>
 <section id="abstract">
-<h2>Abstract:<a class="headerlink" href="#abstract" title="Link to this heading"></a></h2>
+<h2>Abstract:<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
 <p>We present a comprehensive quantum cryptography network that goes beyond point-to-point key distribution, incorporating multi-party protocols and device-independent security. Using the Quantum Cryptography Kit, we establish a three-node network where two users (Alice and Bob) and a third party (Charlie) engage in advanced cryptographic tasks: quantum key distribution (QKD), quantum digital signatures, and secret sharing. The network utilizes polarization-entangled photon sources and Bell inequality tests to achieve device-independent QKD – ensuring security even if the equipment is untrusted ￼. A cloud-based AI controls dynamic basis selection and error correction parameters, adapting in real-time to maximize key rate under changing conditions. We demonstrate key exchange with device-independent security over 10 km fiber links, quantum digital signature of a 1 KB message with 0.1% authentication error rate over 50 km ￼, and a three-way secret sharing protocol where any two of the three parties can reconstruct a secret but one alone cannot. This is the first integration of these quantum cryptographic primitives in one network, showing interoperability and enhanced security. We validate a Bell-CHSH violation S&gt;2.5 in our entanglement distribution (enabling DI-QKD) ￼, and we demonstrate that our adaptive AI control increases secure key rate by ~20% under variable channel noise. The results confirm the feasibility of a small quantum internet with unprecedented security guarantees, paving the way for commercial deployment of multi-user quantum-secure networks.</p>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Quantum cryptography has matured from theory to field deployments in the past decade, primarily in the form of Quantum Key Distribution (QKD) between two parties. Modern QKD systems can distribute secret keys over tens of kilometers of fiber or even via satellite. However, current QKD networks often rely on trusted nodes and are limited to point-to-point links. Additionally, most implementations are device-dependent – their security proofs assume the devices work as specified. If devices have flaws or backdoors, the security could be compromised. Two frontier developments aim to address these issues:</p>
 <ol class="arabic simple">
 <li><p>Device-Independent QKD (DI-QKD): security is guaranteed by the violation of a Bell inequality, meaning even a malicious device can’t cheat without breaking quantum physics ￼.</p></li>
@@ -121,34 +380,34 @@
 <li><p>A (2-out-of-3) quantum secret sharing: the secret is encoded such that any two parties can recover it, but one alone cannot, achieving information-theoretic security.</p></li>
 </ul>
 <section id="prior-work">
-<h3>Prior Work<a class="headerlink" href="#prior-work" title="Link to this heading"></a></h3>
+<h3>Prior Work<a class="headerlink" href="#prior-work" title="Link to this heading">#</a></h3>
 <p>DI-QKD has been experimentally demonstrated in a lab setting over short distances, using entangled photons and high-efficiency detectors to close loopholes ￼. It’s extremely challenging due to detection efficiency requirements and noise; so far, only sub-kilometer effective distances were shown. Quantum digital signatures have been demonstrated over fiber (~100 km) using phase-encoded coherent states and attenuated laser pulses ￼, and also using polarization-entangled photons for shorter distances. Secret sharing has been done in proof-of-principle experiments (e.g., with 3 photons entangled in a GHZ state and distributed). But no network has combined these, and no DI-QKD has been run in a multi-node environment where entanglement must be distributed between separate labs.</p>
 <p>Our advancement is to realize DI-QKD in a practical link and seamlessly use the same entangled photon infrastructure for other tasks. We take advantage of the Quantum Optics Kit’s entangled photon source (likely a polarization-entangled pair source) and the Polarization &amp; 3D Cinema Kit components (polarizers, waveplates, etc.) to implement measurement settings for Bell tests and QKD bases. The Breadboard and Damping hardware will ensure stability for long Bell test runs (since DI-QKD needs very stable interference to accumulate high S-parameter violation). The network will be synchronized and controlled by an AI orchestration system that monitors quantum bit error rates (QBER), Bell inequality statistics, and dynamically adjusts settings (like biasing basis choice for efficiency ￼ or switching protocols when one link has issues).</p>
 </section>
 </section>
 <section id="proposed-methodology">
-<h2>Proposed Methodology<a class="headerlink" href="#proposed-methodology" title="Link to this heading"></a></h2>
+<h2>Proposed Methodology<a class="headerlink" href="#proposed-methodology" title="Link to this heading">#</a></h2>
 <section id="entanglement-distribution">
-<h3>Entanglement Distribution<a class="headerlink" href="#entanglement-distribution" title="Link to this heading"></a></h3>
+<h3>Entanglement Distribution<a class="headerlink" href="#entanglement-distribution" title="Link to this heading">#</a></h3>
 <p>Charlie’s station houses a source of polarization-entangled photon pairs (for instance, a SPDC crystal pumped by a UV laser, producing photons at 810 nm). One photon from each pair is sent to Alice, the other to Bob, via low-loss fibers (~10 km spool or free-space equivalent). To claim device-independent security, Alice and Bob’s measurement stations each have two polarization analyzers (for two basis choices) and high-efficiency single-photon detectors (we use superconducting nanowire detectors, efficiency ~85%). Each round, a synchronization signal (timing provided by a common clock or a weak classical laser pulse) triggers Alice and Bob to choose a measurement basis (via Pockels cell or motorized waveplate) independently and record detection outcomes. Over many rounds, they accumulate correlation statistics for the chosen basis combinations. We specifically implement a CHSH Bell test: Alice chooses between measuring polarization in basis <span class="math notranslate nohighlight">\(A_0\)</span> or <span class="math notranslate nohighlight">\(A_1\)</span>, Bob chooses <span class="math notranslate nohighlight">\(B_0\)</span> or <span class="math notranslate nohighlight">\(B_1\)</span>, where these are polarization angles (like <span class="math notranslate nohighlight">\(A_0=0^\circ, A_1=45^\circ; B_0=22.5^\circ, B_1=67.5^\circ\)</span>). These settings are optimized to violate the CHSH inequality strongly with our source ￼. The AI helps by finely adjusting these angles to maximize S, and by compensating any polarization drift in fibers (using the polarization controller in the kit).</p>
 <p>We expect to observe a Bell-CHSH parameter <span class="math notranslate nohighlight">\(S\)</span> around 2.5 (well above the classical limit 2) with low noise ￼. This high violation is the basis of DI-QKD security – it certifies that the entanglement is high-quality and no local hidden variables (or adversarial tampering) can explain the correlations.</p>
 </section>
 <section id="device-independent-qkd-alicebob">
-<h3>Device-Independent QKD (Alice–Bob)<a class="headerlink" href="#device-independent-qkd-alicebob" title="Link to this heading"></a></h3>
+<h3>Device-Independent QKD (Alice–Bob)<a class="headerlink" href="#device-independent-qkd-alicebob" title="Link to this heading">#</a></h3>
 <p>From the same data, Alice and Bob can extract a secret key. Typically, in DI-QKD, certain measurement outcomes (e.g., when both choose <span class="math notranslate nohighlight">\(A_0\)</span> and <span class="math notranslate nohighlight">\(B_0\)</span> bases) are used for key bits, while others (like the combinations for Bell test) are used to estimate eavesdropper information (through S parameter). Because our Bell violation is strong, they can bound the Eve’s information and apply privacy amplification to generate a final key with information-theoretic security ￼. We will implement error correction via an efficient LDPC or CASCADE algorithm on the classical side (the AI toggles parameters like block length based on QBER). We plan to generate at least several kilobits of secure key. Even if the rate is modest (~bps due to high entangled photon loss over 10 km), this is sufficient to use for one-time-pad encryption of a short sensitive message. We will demonstrate this by encrypting a short text between Alice and Bob with the key.</p>
 </section>
 <section id="quantum-digital-signatures-alicecharliebob">
-<h3>Quantum Digital Signatures (Alice–Charlie–Bob)<a class="headerlink" href="#quantum-digital-signatures-alicecharliebob" title="Link to this heading"></a></h3>
+<h3>Quantum Digital Signatures (Alice–Charlie–Bob)<a class="headerlink" href="#quantum-digital-signatures-alicecharliebob" title="Link to this heading">#</a></h3>
 <p>For QDS, one approach is: Alice distributes identical keys to Bob and Charlie using QKD (or pre-shared if easier). Then to sign a message, she sends each a string of classical bits derived from those keys. However, a more “quantum” approach, closer to original QDS proposals, is that Alice sends sequences of single photons in certain states to Bob and Charlie. In our setup, we can have Alice use a weak coherent pulse source (from the Cryptography Kit’s BB84 source perhaps) to send a sequence of polarization states (signature bits) to both Bob and Charlie via beamsplitters or time-separated transmissions. Bob and Charlie measure these in random bases and keep results. Later, Alice announces the basis choices and the recipients can partially verify the states. The security comes from the inability of an attacker to replicate the signature string to both parties without disturbing it ￼. We will implement a variant: use entangled photons to distribute correlated strings to Bob and Charlie, as in refs ￼ – this is advanced, but perhaps not needed if we use simpler differential-phase QDS with attenuated pulses (our focus is not to reinvent QDS but to integrate it).</p>
 <p>In practice, we will demonstrate that Bob and Charlie can verify Alice’s signature and that if Bob tries to forge (forward a message with “Alice’s signature” that Alice did not send), Charlie will detect a mismatch with high probability ￼. We’ll sign a 1 KB text file: Alice sends the quantum signature states, Bob and Charlie store measurement results, and then we check that Bob and Charlie’s results agree with Alice’s true signature sufficiently to accept (and any forgery attempt leads to rejection). Metrics: Probability of Bob or Charlie accepting a valid signature &gt;99%, probability of accepting a forged signature &lt;0.1% ￼. Those are in line with prior QDS experiments and we aim to match them over our fiber lengths.</p>
 </section>
 <section id="quantum-secret-sharing">
-<h3>Quantum Secret Sharing<a class="headerlink" href="#quantum-secret-sharing" title="Link to this heading"></a></h3>
+<h3>Quantum Secret Sharing<a class="headerlink" href="#quantum-secret-sharing" title="Link to this heading">#</a></h3>
 <p>We create a tripartite entangled state, e.g., a three-photon GHZ state (<span class="math notranslate nohighlight">\(|HHH\rangle + |VVV\rangle\)</span>) and distribute one photon to each party. Our Quantum Optics Kit might not directly have a three-photon source, but we can improvise: use the entangled pair source plus an additional single photon or another pair and perform a fusion (similar to cluster fusion) to get three entangled photons. Alternatively, use two pairs: one pair between Alice–Bob, another between Alice–Charlie, then have Alice perform a Bell-state measurement on her two photons to project Bob and Charlie’s photons (plus an unmeasured virtual qubit at Alice) into a GHZ-type state. This entangles all three parties (an event heralded by a 2-photon detection at Alice). The success probability is low but enough to get statistical data.</p>
 <p>With a GHZ shared, we can do secret sharing: encode a secret bit by preparing the GHZ state in <span class="math notranslate nohighlight">\(|HHH\rangle\)</span> (which we call bit 0) or <span class="math notranslate nohighlight">\(|VVV\rangle\)</span> (bit 1) – or by phase-flipping it (GHZ+ vs GHZ-). To retrieve the secret, at least two parties measure in the appropriate basis and communicate their results. For example, if Alice and Bob share their measurement outcomes, they can infer Charlie’s and thus the secret. But a single party alone has random outcomes (no info). We will verify that (a) any two of {Alice, Bob, Charlie} can reconstruct the secret with high fidelity (~95% correct), and (b) any one party alone has ~50% success (basically guesswork). Due to limited GHZ production, this will be more of a proof-of-concept (maybe tens of detected GHZ states to show correlations).</p>
 </section>
 <section id="ai-network-control">
-<h3>AI Network Control<a class="headerlink" href="#ai-network-control" title="Link to this heading"></a></h3>
+<h3>AI Network Control<a class="headerlink" href="#ai-network-control" title="Link to this heading">#</a></h3>
 <p>Overseeing all this is an intelligent control system. It handles:</p>
 <ul class="simple">
 <li><p>Polarization compensation: Fibers can drift; the AI uses Charlie’s entanglement source for continuous Bell basis measurements (or occasional strong pulses with known polarization) to adjust polarization controllers at Bob and Alice to maintain alignment (minimizing QBER).</p></li>
@@ -159,7 +418,7 @@ We will report that the AI increased key rates: e.g., by adaptively switching to
 </section>
 </section>
 <section id="expected-results">
-<h2>Expected Results<a class="headerlink" href="#expected-results" title="Link to this heading"></a></h2>
+<h2>Expected Results<a class="headerlink" href="#expected-results" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Device-Independent Key Exchange: Alice and Bob will share a secret key with unconditional security despite not trusting their devices. We will demonstrate a positive secure key rate under the DI paradigm, which is a first for a multi-node setting. For example, we might achieve a secure key rate of a few bits per second over 10 km. This sounds slow, but DI-QKD is extremely demanding; the significance is that it’s &gt;0. We will cite the DI-QKD theory that if S &gt; 2.4 and QBER &lt; ~2%, a positive key rate is achievable ￼ – our experiment meeting those thresholds will thus produce a secure key. We’ll perform privacy amplification on, say, <span class="math notranslate nohighlight">\(10^6\)</span> raw bits to distill <span class="math notranslate nohighlight">\(10^3\)</span> final secret bits, and verify that no known attacks can compromise them (by checking the Bell inequality statistical confidence, etc.). To illustrate use, we might one-time-pad encrypt a short text (“Quantum networks are secure!”) and send it, showing Bob decrypts correctly.</p></li>
 <li><p>Multi-Party Entanglement and Protocols: We expect to show for the first time a quantum digital signature implemented with entangled photons in a network. The metrics could be: Alice’s 1 KB signed message is accepted by Bob and Charlie with no errors in 100 trials, whereas a forged signature from Bob was rejected in all trials – demonstrating the security. Compared to prior work which did this over 100 km but with trusted devices ￼, our addition is using the same network entanglement infrastructure and showing it works in tandem with QKD.</p></li>
@@ -196,31 +455,98 @@ We will report that the AI increased key rates: e.g., by adaptively switching to
     </script>
     <script>kernelName = 'python3'</script>
 
-           </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-work">Prior Work</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-methodology">Proposed Methodology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entanglement-distribution">Entanglement Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#device-independent-qkd-alicebob">Device-Independent QKD (Alice–Bob)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-digital-signatures-alicecharliebob">Quantum Digital Signatures (Alice–Charlie–Bob)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-secret-sharing">Quantum Secret Sharing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-network-control">AI Network Control</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expected-results">Expected Results</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
-          <footer>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Mo Houshmand
+</p>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2025.</p>
   </div>
+  
+  <div class="footer-item">
+    
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
 
-</footer>
-        </div>
-      </div>
-    </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
 
-</body>
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

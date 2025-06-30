@@ -1,72 +1,183 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agent-Orchestrated Discovery of Fibonacci Anyon Materials for Topological Quantum Computing &mdash; Daniel Mo Houshmand</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css?v=4c969af8" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Agent-Orchestrated Discovery of Fibonacci Anyon Materials for Topological Quantum Computing &#8212; Daniel Mo Houshmand</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
-      <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-      <script src="../../../_static/copybutton.js?v=f281be69"></script>
-      <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
-      <script src="../../../_static/tabs.js?v=3ee01567"></script>
-      <script>let toggleHintShow = 'Click to show';</script>
-      <script>let toggleHintHide = 'Click to hide';</script>
-      <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
-      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-      <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      <script src="../../../_static/chart-config.js?v=b454993d"></script>
-    <script src="../../../_static/js/theme.js"></script>
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=20074c1a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=d2dc8771" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/chart-positioning-fixes.css?v=e0bca496" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mo_addmination.css?v=9870a3a3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/qdaria-research-papers/tqc/Agent-Orchestrated-Discovery-of-Fibonacci-Anyon-Materials-for-Topological-Quantum-Computing';</script>
+    <script src="../../../_static/chart-config.js?v=2c3bad59"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="../../../index.html">
-            
-              <img src="../../../_static/D58.png" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
-<ul>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/D58.png" class="logo__image only-light" alt="Daniel Mo Houshmand - Home"/>
+    <script>document.write(`<img src="../../../_static/D58.png" class="logo__image only-dark" alt="Daniel Mo Houshmand - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
@@ -75,40 +186,192 @@
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../qdaria-core/qdaria-business/timeline.html">9. Strategic Plan for QDaria’s Quantum Computer Launch</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">Project name not set</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Agent-Orchestrated Discovery of Fibonacci Anyon Materials for Topological Quantum Computing</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../../../_sources/content/qdaria-research-papers/tqc/Agent-Orchestrated-Discovery-of-Fibonacci-Anyon-Materials-for-Topological-Quantum-Computing.md" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/qdaria-research-papers/tqc/Agent-Orchestrated-Discovery-of-Fibonacci-Anyon-Materials-for-Topological-Quantum-Computing.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Agent-Orchestrated Discovery of Fibonacci Anyon Materials for Topological Quantum Computing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-work">Related Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-agent-orchestration-architecture">Multi-Agent Orchestration Architecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-criteria-for-fibonacci-anyon-host-materials">Design Criteria for Fibonacci Anyon Host Materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generative-search-and-simulation-pipeline">Generative Search and Simulation Pipeline</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mattersim-agent-was-equipped-with-a-variety-of-simulation-tools">The MatterSim agent was equipped with a variety of simulation tools:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-case-study-12-5-quantum-hall-fibonacci-phase">A. Case Study: ν=12/5 Quantum Hall Fibonacci Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-agent-discovered-candidate-multilayer-fibonacci-anyon-material">B. Agent-Discovered Candidate: Multilayer Fibonacci Anyon Material</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-reinforcement-learning-optimization-performance">C. Reinforcement Learning Optimization Performance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="agent-orchestrated-discovery-of-fibonacci-anyon-materials-for-topological-quantum-computing">
-<h1>Agent-Orchestrated Discovery of Fibonacci Anyon Materials for Topological Quantum Computing<a class="headerlink" href="#agent-orchestrated-discovery-of-fibonacci-anyon-materials-for-topological-quantum-computing" title="Link to this heading"></a></h1>
+<h1>Agent-Orchestrated Discovery of Fibonacci Anyon Materials for Topological Quantum Computing<a class="headerlink" href="#agent-orchestrated-discovery-of-fibonacci-anyon-materials-for-topological-quantum-computing" title="Link to this heading">#</a></h1>
 <section id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading"></a></h2>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
 <p>The realization of Fibonacci anyons – exotic quasiparticles with non-Abelian statistics – is a long-sought goal for achieving universal, fault-tolerant quantum computation. However, even the simplest system supporting Fibonacci anyons remains elusive experimentally ￼ ￼. Here we present a novel interdisciplinary approach that combines agentic artificial intelligence (AI) with multi-protocol orchestration to generatively discover materials hosting Fibonacci anyons. Our framework employs a team of autonomous AI agents coordinating via emerging protocols – the Model Context Protocol (MCP) for tool integration, Agent-to-Agent (A2A) for peer collaboration, and Agent Communication Protocol (ACP) for asynchronous messaging ￼ ￼ – to drive the design, simulation, and validation of candidate quantum materials. Using this agent-based closed-loop system (termed MatterGen for generative design and MatterSim for physics simulation), we explore fractional quantum Hall (FQH) structures and engineered lattices that could support a Fibonacci topological phase (e.g. ν=12/5 FQH state ￼ or Z₃ parafermion arrays ￼). We integrate reinforcement learning to optimize lattice parameters (e.g. for Z₃ parafermion models) towards five essential criteria required of a Fibonacci anyon host. Our results demonstrate successful discovery of new material blueprints that exhibit all hallmark signatures of the Fibonacci phase: (1) the presence of only two quasiparticle types (trivial and Fibonacci) ￼, (2) a robust energy gap protecting degenerate ground states ￼ ￼, (3) characteristic topological entanglement entropy matching the golden ratio φ (~1.618) ￼, (4) non-Abelian braiding operations that produce the expected Fibonacci unitary rotations, and (5) chiral edge modes consistent with theoretical predictions ￼. We validate the approach by rediscovering the known 12/5 FQH Fibonacci phase and then propose a novel multilayer heterostructure that our agents identified as a promising Fibonacci anyon material, showing an improved topological gap and braiding fidelity. This work illustrates a powerful paradigm of AI-driven scientific discovery, where autonomous agents navigate complex design spaces to unlock universal topological qubits. Our framework lays the groundwork for the experimental realization of Fibonacci anyons and heralds a new era of intelligent quantum-materials design for topological quantum computing.</p>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Topological quantum computing (TQC) harnesses exotic quasiparticles called anyons to encode and manipulate quantum information in a way that is inherently protected from local errors. Among the zoo of anyons, Fibonacci anyons are especially coveted because they form a universal gate set under braiding – any unitary operation can be approximated solely by braiding Fibonacci anyons ￼. In contrast to Ising anyons (such as Majorana zero modes) which can only perform a limited set of rotations (e.g. 90° rotations on the Bloch sphere ￼), Fibonacci anyons have “dense” braid statistics allowing arbitrary single-qubit gates via topology alone ￼. A quantum computer based on Fibonacci anyons would thus be intrinsically fault-tolerant at the hardware level, providing a holy grail platform for robust quantum computation.</p>
 <p>Despite their theoretical allure, Fibonacci anyons have not yet been observed in any physical system ￼. The simplest proposed venue – the fractional quantum Hall (FQH) state at filling factor ν = 12/5 – is believed to realize the so-called Read-Rezayi Fibonacci topological order ￼. Numerical studies suggest the 12/5 FQH state hosts a non-Abelian Fibonacci quasiparticle as its elementary charged excitation ￼ ￼. However, confirming this experimentally is challenging: competing phases and symmetry-breaking effects can obscure the Fibonacci phase ￼, and no definitive braiding experiment at 12/5 has been achieved. In general, no known material naturally realizes a stable Fibonacci anyon phase under accessible conditions – “even the simplest system that can realize universal TQC – the Fibonacci anyon system – lacks a physical realization” ￼. This stark gap between theory and experiment has persisted despite advances in quantum materials.</p>
 <p>Meanwhile, the field of artificial intelligence (AI) and autonomous experimentation is emerging as a promising accelerant for quantum materials discovery ￼ ￼. Agentic AI systems composed of multiple specialized agents can analyze data, generate hypotheses, run simulations, and even control laboratory instruments in a closed loop ￼ ￼. By leveraging modern large language models (LLMs) and domain-specific physics solvers, these agents can explore vast design spaces more efficiently than human researchers. Crucially, new interoperability standards for agent communication have been proposed – such as MCP (Model Context Protocol) by Anthropic for secure tool use, A2A (Agent-to-Agent) by Google for peer workflows, and ACP (Agent Communication Protocol) by IBM for structured messaging – enabling agents from different vendors or modules to cooperate in solving complex problems ￼ ￼. Such protocols allow an ecosystem of AI agents to form an autonomous research team, seamlessly sharing data and coordinating tasks in real time.</p>
@@ -117,18 +380,18 @@
 <p>Our results underscore the power of an AI-driven approach to quantum materials discovery. By delegating tedious and high-dimensional search tasks to autonomous agents, scientists can uncover non-intuitive solutions and novel phases of matter that might be missed by heuristic or incremental approaches. In the following, we detail the architecture of our multi-agent system, the protocols enabling its orchestration, the methodology for evaluating candidate phases, and the results obtained. We then discuss the implications for experimental realization and future research at the intersection of AI and quantum physics.</p>
 </section>
 <section id="related-work">
-<h2>Related Work<a class="headerlink" href="#related-work" title="Link to this heading"></a></h2>
+<h2>Related Work<a class="headerlink" href="#related-work" title="Link to this heading">#</a></h2>
 <p>Topological Anyons and Quantum Computing: The concept of anyons – particles with fractional statistics – arose from attempts to explain the fractional quantum Hall effect ￼. In particular, the Moore-Read 5/2 state was proposed to host Ising anyons (Majorana-like quasiparticles), which are non-Abelian but not computationally universal. Fibonacci anyons emerge in the k=3 Read-Rezayi state, with the ν=12/5 FQH plateau being the prime candidate ￼. Numerical evidence for the 12/5 state being in the Fibonacci phase includes exact diagonalization and DMRG studies ￼ that identify the expected twofold ground-state degeneracy on a torus and a quasiparticle spectrum consistent with Fibonacci anyons (quantum dimension φ ≈ 1.618) ￼ ￼. Other theoretical proposals to engineer Fibonacci anyons involve combining more conventional topological components. For example, parafermion zero modes – generalized Majorana modes with <span class="math notranslate nohighlight">\(\mathbb{Z}_n\)</span> symmetry – can be arranged in networks that realize a Fibonacci phase ￼ ￼. One study showed that a 2D array of Z₃ parafermion chains on a triangular lattice can enter a Fibonacci topological order in certain coupling regimes ￼ ￼. Similarly, lattice dislocations or twist defects in Ising-anyon systems have been proposed to effectively emulate Fibonacci anyons by projectively changing boundary conditions (a method to “breed” Fibonacci anyons from Majoranas). Despite these proposals, experimental progress has been slow. Fractional quantum Hall devices require ultra-high mobility 2D electron gases and millikelvin temperatures, and even then the identification of a specific topological order (e.g. via interference or thermal measurements) is subtle ￼. Recently, quantum simulation approaches have offered alternative routes: for instance, a 2023 experiment used a trapped-ion quantum processor to simulate non-Abelian anyon braiding ￼, implementing braids on a synthetic platform (Quantinuum’s H2 quantum computer). While such simulations are impressive, they do not constitute a physical material hosting anyons; the quest for an actual material (or nanostructure) that naturally hosts Fibonacci anyons remains open.</p>
 <p>AI and Autonomous Discovery in Quantum Materials: In parallel, the past few years have seen the rise of AI-driven methods in materials science ￼ ￼. Machine learning models have been trained to recognize topological phases from data ￼, predict material properties from chemical formulas ￼, and even assist in discovering novel phases like quantum spin liquids ￼ ￼. Reinforcement learning (RL) has been applied to quantum problems such as quantum circuit optimization and quantum error correction. Notably, RL algorithms have been used to compile arbitrary quantum gates into braiding sequences for anyonic systems ￼, effectively learning how to braid anyons to perform a target operation. This is complementary to our work – instead of using RL for gate synthesis, we use RL to discover a physical system where such anyons exist in the first place. On the materials discovery side, autonomous experimentation platforms are becoming reality ￼. Examples include robotic labs guided by Bayesian optimization or RL to discover new molecules, catalysts, or superconductors ￼ ￼. Our approach similarly treats the search for an ideal anyon host as an optimization problem, where an AI agent must choose experimental (or simulation) parameters to maximize criteria like energy gap and topological signatures.</p>
 <p>Multi-Agent Communication Protocols: Ensuring that AI agents and tools can work together efficiently is critical. The protocols used in our framework – MCP, A2A, and ACP – were very recently introduced to standardize interactions in multi-agent ecosystems ￼. MCP (Model Context Protocol) provides a JSON-RPC based interface for an agent to securely invoke tools and pass complex data (e.g. sending a Hamiltonian to a simulation engine) ￼. ACP (Agent Communication Protocol) defines a format for agent messages with support for multipart (e.g. data + reasoning traces) and streaming, useful for long-running tasks where intermediate results are reported ￼. A2A (Agent-to-Agent) is a peer-to-peer protocol for direct agent collaboration, using capability tokens (Agent Cards) to allow agents to request help from others and even form ad-hoc hierarchies ￼. These protocols enable interoperability: an agent written by one team can communicate its intent to another agent developed independently, as long as both follow the protocol. In late 2024, initial implementations of these standards were released (Anthropic’s MCP spec, Google’s A2A in their PaLM API, IBM’s ACP in their toolkit), although they remain under active development. Our work is one of the first scientific applications of this multi-protocol agent orchestration, using it to integrate domain-specific AI (for quantum matter) with general-purpose coordination logic.</p>
 <p>In summary, prior work provides the theoretical foundation of Fibonacci anyons and potential routes to realize them, as well as the AI tools and protocols to explore those routes. However, to date no study has woven these threads together. By building on established physics and state-of-the-art AI, our approach creates a new synergy: autonomous agents driving the search for topological quantum matter.</p>
 </section>
 <section id="methodology">
-<h2>Methodology<a class="headerlink" href="#methodology" title="Link to this heading"></a></h2>
+<h2>Methodology<a class="headerlink" href="#methodology" title="Link to this heading">#</a></h2>
 <p>Our methodology combines autonomous agent orchestration, physics simulation, and machine learning optimization to iteratively discover and refine candidate anyon-hosting materials. In this section, we detail the architecture of our agent system, the protocols enabling their interaction, the physical models and criteria used to evaluate Fibonacci anyon phases, and the optimization strategies (including reinforcement learning) employed to guide the search.</p>
 </section>
 <section id="multi-agent-orchestration-architecture">
-<h2>Multi-Agent Orchestration Architecture<a class="headerlink" href="#multi-agent-orchestration-architecture" title="Link to this heading"></a></h2>
+<h2>Multi-Agent Orchestration Architecture<a class="headerlink" href="#multi-agent-orchestration-architecture" title="Link to this heading">#</a></h2>
 <p>To tackle the interdisciplinary challenge, we designed a modular multi-agent system wherein different agents specialize in different aspects of the discovery workflow. The primary agents in our framework are:
 •	Orchestrator Agent: Oversees the entire process, maintains the high-level plan, and delegates tasks to other agents. It interprets the research goals (e.g. “find a material with Fibonacci anyons”) and sequences the necessary steps (design, simulate, analyze). The orchestrator uses the A2A protocol to communicate with other agents and aggregate their results.
 •	MatterGen Agent (Design Proposals): This agent is responsible for generative design – proposing candidate material structures or Hamiltonians that might host the desired phase. It uses a combination of generative models (e.g. graph neural networks suggesting lattice structures, or variational autoencoders proposing interaction parameters) and heuristic knowledge from known topological phases. The MatterGen agent receives instructions via A2A from the orchestrator (e.g. “explore variants of a bilayer FQH system”) and returns designs in a structured format (e.g. a set of model parameters or lattice descriptors).
@@ -140,7 +403,7 @@
 <p>Through this orchestrated cycle, the agents collaboratively converge on viable solutions. Notably, the multi-protocol aspect (MCP, A2A, ACP) was crucial for efficiency. MCP ensured that tool usage (like calling the physics simulator) was done in a standardized, secure manner with proper context (preventing errors from misformatted inputs, a common issue in ad-hoc script integration) ￼. The A2A protocol allowed peer-to-peer delegation – for example, the Orchestrator could spin up multiple MatterSim agent instances via A2A to test many designs in parallel, each with its own capabilities defined by an Agent Card ￼. Meanwhile, ACP’s streaming ability proved useful in handling large simulation outputs (like streaming chunks of a density matrix) and enabling real-time decisions (the Orchestrator could decide to halt a simulation early if intermediate results suggested failure, saving time). In summary, our architecture modularized the problem and used cutting-edge agent communication standards to synchronize the modules effectively.</p>
 </section>
 <section id="design-criteria-for-fibonacci-anyon-host-materials">
-<h2>Design Criteria for Fibonacci Anyon Host Materials<a class="headerlink" href="#design-criteria-for-fibonacci-anyon-host-materials" title="Link to this heading"></a></h2>
+<h2>Design Criteria for Fibonacci Anyon Host Materials<a class="headerlink" href="#design-criteria-for-fibonacci-anyon-host-materials" title="Link to this heading">#</a></h2>
 <p>A central component of our methodology is a set of five essential criteria that define a successful Fibonacci anyon host. These criteria serve as the optimization objectives and filters during the search. A candidate material or system must satisfy all five to be considered a viable solution. The criteria, grounded in topological quantum computing theory ￼ ￼, are:
 1.	Non-Abelian Fibonacci Quasiparticle: The system must support an excitation that follows the Fibonacci anyon fusion rules. In practical terms, the quasiparticle content of the topological phase should consist of exactly two types: the trivial particle (1) and the Fibonacci anyon (ε) ￼. The Fibonacci anyon is characterized by fusion rule <span class="math notranslate nohighlight">\(ε \times ε = 1 + ε\)</span>. Rationale: Having only two particle types is a distinctive signature of the Fibonacci (SU(2)_3) topological order, as opposed to other non-Abelian orders that have multiple anyon types. We verify this by counting ground state degeneracies and quasiparticle types in simulations – for instance, on a torus the ground state degeneracy should be 2 (one corresponding to vacuum sector, one to a Fibonacci anyon inserted) ￼. If extra anyon types (e.g. Abelian anyons) are present, the system is not a pure Fibonacci phase.
 2.	Robust Topological Energy Gap: There must be a finite energy gap separating the topological ground state manifold from excited states. This gap <span class="math notranslate nohighlight">\(Δ_{\text{topo}}\)</span> is what provides topological protection: as long as <span class="math notranslate nohighlight">\(k_B T \ll Δ_{\text{topo}}\)</span>, thermal fluctuations cannot create quasiparticle excitations that would corrupt the stored quantum information ￼. For a Fibonacci anyon host, we desire this gap to be as large as possible (in realistic units, of order several kelvin if possible, though FQH systems are typically in the mK range). Rationale: A vanishing or tiny gap would render braiding operations error-prone or too slow. We target designs that maximize <span class="math notranslate nohighlight">\(Δ_{\text{topo}}\)</span> (measured from simulations as the energy difference between the first excited state and ground state on a large system). Additionally, the gap should remain stable (not closing) as we adiabatically move anyons around – this is related to having well-defined anyon braiding operations.
@@ -150,7 +413,7 @@
 <p>Only when a candidate passes all five criteria do we consider it a true solution. These criteria were encoded into the Validation agent’s checks, and also inform the reward function of the reinforcement learning optimization (as described below). By explicitly defining these requirements, we ensure that the agent-driven search remains aligned with known physics of the Fibonacci anyon phase.</p>
 </section>
 <section id="generative-search-and-simulation-pipeline">
-<h2>Generative Search and Simulation Pipeline<a class="headerlink" href="#generative-search-and-simulation-pipeline" title="Link to this heading"></a></h2>
+<h2>Generative Search and Simulation Pipeline<a class="headerlink" href="#generative-search-and-simulation-pipeline" title="Link to this heading">#</a></h2>
 <p>Armed with the above criteria as objectives, we implemented a pipeline for generative search of suitable materials. The pipeline operates in loops (episodes), each consisting of proposal, simulation, and evaluation:
 1.	Proposal Generation (MatterGen): The MatterGen agent proposes a new candidate design. The design can be parameterized in various ways depending on the class of systems we explore. We focused on two broad classes:
 •	Fractional Quantum Hall (FQH) Structures: Parameterized by things like filling fraction, multi-layer configuration, tunneling between layers, and possibly adding anisotropy or perturbations. For example, one candidate format was a bilayer FQH system where each layer has ν=2/3 (which individually gives Abelian anyons) but interlayer coupling could produce a non-Abelian phase ￼, or a single layer at ν=12/5 with a specific electron interaction profile (to favor the Read-Rezayi state over competing phases ￼).
@@ -158,7 +421,7 @@
 The proposals can be discrete (choice of lattice) and continuous (values of couplings). We employed a hybrid strategy: MatterGen uses a graph neural network (GNN) to encode the discrete structure (like how layers or chains connect) and an output head for continuous parameters. It was pre-trained on known examples (the model was initialized to favor the 12/5 state and the known triangular lattice model that yields Fibonacci phase ￼ ￼) and then fine-tuned via reinforcement learning feedback. We also allowed a degree of random exploration (especially early in the search) to ensure we weren’t confined to known designs.
 2.	Simulation (MatterSim via MCP): Once a design is proposed, MatterSim translates it into a form suitable for our physics solvers. For FQH states, this might involve constructing a Hamiltonian matrix for electrons in Landau levels with the given interactions (for small systems, exact diagonalization or model wavefunction overlaps; for larger, an iDMRG on an infinite cylinder to directly get topological quantities ￼). For lattice models (parafermions/spins), we use DMRG and/or exact diagonalization for small size, and possibly cluster perturbation theory to estimate edge modes.</p>
 <section id="the-mattersim-agent-was-equipped-with-a-variety-of-simulation-tools">
-<h3>The MatterSim agent was equipped with a variety of simulation tools:<a class="headerlink" href="#the-mattersim-agent-was-equipped-with-a-variety-of-simulation-tools" title="Link to this heading"></a></h3>
+<h3>The MatterSim agent was equipped with a variety of simulation tools:<a class="headerlink" href="#the-mattersim-agent-was-equipped-with-a-variety-of-simulation-tools" title="Link to this heading">#</a></h3>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>•	A custom FQH solver (written in Python/C++) that can compute energy spectra and entanglement spectra for fractional quantum Hall states on a torus or cylinder. We leveraged prior work which computed the entanglement spectrum and identified the Fibonacci phase by its level counting ￼ ￼, embedding that capability.
 •	A DMRG solver for parafermion chains, which we generalized to handle multi-chain (ladder) systems to approach 2D ￼ ￼. This solver returns ground state degeneracies, energies, and reduced density matrices for bipartitions (to get TEE).
 •	A braiding unitary calculator: given ground state wavefunctions with localized anyons, this tool adiabatically interchanges two anyons (by manipulating either boundary conditions or introducing localized twists) and computes the resulting unitary in the ground state manifold. This allowed direct check of criterion (4).
@@ -177,10 +440,10 @@ The orchestrator then uses this information to decide the next step. If a design
 </section>
 </section>
 <section id="results">
-<h2>Results<a class="headerlink" href="#results" title="Link to this heading"></a></h2>
+<h2>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h2>
 <p>We divide our results into three parts: (A) Validation of the framework on the <span class="math notranslate nohighlight">\(\nu=12/5\)</span> fractional quantum Hall state (showing that the agents can identify a known Fibonacci phase and meet criteria); (B) Discovery of a novel Fibonacci-anyon hosting material via generative exploration, including details of its structure and topological properties; (C) Performance and improvements achieved by the reinforcement learning process (gap enhancement, fidelity increase, etc.), demonstrating the effectiveness of the AI-driven optimization.</p>
 <section id="a-case-study-12-5-quantum-hall-fibonacci-phase">
-<h3>A. Case Study: ν=12/5 Quantum Hall Fibonacci Phase<a class="headerlink" href="#a-case-study-12-5-quantum-hall-fibonacci-phase" title="Link to this heading"></a></h3>
+<h3>A. Case Study: ν=12/5 Quantum Hall Fibonacci Phase<a class="headerlink" href="#a-case-study-12-5-quantum-hall-fibonacci-phase" title="Link to this heading">#</a></h3>
 <p>As a first test, we tasked the system to analyze the well-known 12/5 fractional quantum Hall state. This state is widely believed to realize the Fibonacci anyon phase (the k=3 Read-Rezayi state) in an ideal scenario ￼. We treated a single-layer 2D electron system at filling fraction 12/5 with Coulomb interactions as the candidate design (this was one of the initial designs provided to MatterGen as a baseline). MatterSim performed an infinite-cylinder DMRG simulation for the 12/5 state (with no alloy disorder and at an idealized parameter point). The results confirmed the expected topological features:
 •	Quasiparticle Content: The entanglement spectrum on a cylinder showed the pattern of levels corresponding to SU(2)_3 topological order (Fibonacci), with the counting matching that of one identity sector and one ε sector ￼. The edge mode analysis yielded a chiral central charge close to 4/5 for each edge, consistent with a chiral Z<span class="math notranslate nohighlight">\(_3\)</span> parafermion edge mode ￼. The Validation agent identified two dominant anyon types in the simulation: trivial and one non-Abelian type with quantum dimension ~1.62, strongly indicating a Fibonacci anyon. Competing Abelian anyons (like those of a nearby Abelian phase) were absent in the spectral density.
 •	Ground State Degeneracy: On an infinite cylinder, we found two topologically distinct ground states (technically, the DMRG yields one state in each topological sector when threading 0 vs Φ₀/2 flux). This matches the expectation of 2-fold degeneracy for the Fibonacci order on a torus ￼ (one identity, one ε). No additional degeneracy was observed, in contrast to, say, a hypothetical Abelian state at 12/5 which might have more ground states.
@@ -191,7 +454,7 @@ The orchestrator then uses this information to decide the next step. If a design
 <p>In summary, our autonomous framework recognized the 12/5 state as a Fibonacci phase, successfully passing all five criteria in the validation run. This provided a sanity check that the agents and tools were functioning correctly and that the criteria we set are achievable (at least in simulation) for a known case. It also built confidence that if a new design met similar signatures, it could indeed be a Fibonacci anyon host.</p>
 </section>
 <section id="b-agent-discovered-candidate-multilayer-fibonacci-anyon-material">
-<h3>B. Agent-Discovered Candidate: Multilayer Fibonacci Anyon Material<a class="headerlink" href="#b-agent-discovered-candidate-multilayer-fibonacci-anyon-material" title="Link to this heading"></a></h3>
+<h3>B. Agent-Discovered Candidate: Multilayer Fibonacci Anyon Material<a class="headerlink" href="#b-agent-discovered-candidate-multilayer-fibonacci-anyon-material" title="Link to this heading">#</a></h3>
 <p>After validation, we allowed the system to freely explore new designs. One of the most remarkable outcomes was the discovery of a multilayer heterostructure that our agents identified as an ideal Fibonacci anyon host. We describe this candidate and its properties below.</p>
 <p><strong>Design Description:</strong> The discovered design can be summarized as a bilayer fractional quantum Hall system with cross-coupling, effectively realizing a bilayer non-Abelian quantum Hall state. Each individual layer is a ν=2/3 fractional quantum Hall state (which by itself is an Abelian Laughlin-like state for composite fermions). However, when the two layers are coupled in a specific way, the system enters a non-Abelian phase. Key parameters of the design include:
 •	Both layers at total filling factor 2/3 (could be implemented with, say, two closely spaced 2D electron gas layers each at 1/3 filling of two spin components).
@@ -217,7 +480,7 @@ The orchestrator then uses this information to decide the next step. If a design
 5.	Edge modes: identified (pass).</p>
 </section>
 <section id="c-reinforcement-learning-optimization-performance">
-<h3>C. Reinforcement Learning Optimization Performance<a class="headerlink" href="#c-reinforcement-learning-optimization-performance" title="Link to this heading"></a></h3>
+<h3>C. Reinforcement Learning Optimization Performance<a class="headerlink" href="#c-reinforcement-learning-optimization-performance" title="Link to this heading">#</a></h3>
 <p>A key advantage of our approach is the ability to improve candidate designs via reinforcement learning. Over the course of training the MatterGen agent, we observed significant gains in the target metrics, especially the topological gap and the φ-fidelity.</p>
 <p>Training progress of the AI agent in optimizing topological phase properties. The plot shows two indicative metrics versus training episodes of the reinforcement learning loop: the energy gap of the topological phase (yellow, normalized to 1 for the highest achieved gap) and the quantum dimension φ fidelity (orange, where 1.0 means the anyon’s quantum dimension exactly equals the golden ratio). The agent steadily improves both metrics with more training. Early on, many designs had low gap and poor fidelity (e.g. some trials ended up in Abelian phases with <span class="math notranslate nohighlight">\(d_{ε}=1\)</span>, giving fidelity <span class="math notranslate nohighlight">\(\approx0.62\)</span> relative to φ, and very small gaps). As training progresses, the agent learns to propose designs that yield a non-Abelian phase with increasing gap and a quantum dimension closer to φ. By around episode 50, the agent consistently finds designs with <span class="math notranslate nohighlight">\(\text{gap} &gt; 0.6\)</span> (relative units) and <span class="math notranslate nohighlight">\(F_\phi &gt; 0.8\)</span>. Near episode 100, the top designs reached ~90% of the maximum gap we encountered and <span class="math notranslate nohighlight">\(F_\phi \approx 0.98\)</span>. The slight fluctuations in the curves are due to occasional exploration (the agent sometimes tries out-of-the-box ideas which might temporarily reduce performance but potentially find new better regions – as happened when it discovered the bilayer structure around episode 30, noted by the sharp rise in gap).</p>
 <p>Overall, the RL optimization converged stably. The final policy of the MatterGen agent was able to output high-quality designs nearly every time (in fact, after training, &gt;70% of proposals met all five criteria, whereas initially it was essentially 0%). This dramatically demonstrates the benefit of learning and feedback: random guessing in the space of Hamiltonians rarely stumbles on a non-Abelian topological order, but guided by our reward signal, the agent zeroed in on the special structures that work.</p>
@@ -231,7 +494,7 @@ The orchestrator then uses this information to decide the next step. If a design
 </section>
 </section>
 <section id="discussion">
-<h2>Discussion<a class="headerlink" href="#discussion" title="Link to this heading"></a></h2>
+<h2>Discussion<a class="headerlink" href="#discussion" title="Link to this heading">#</a></h2>
 <p>The outcomes of this research carry several important implications and insights:</p>
 <ol class="arabic simple">
 <li><p>AI as a Tool for Theoretical Discovery: Our work shows that AI agents can function as creative theorists in the realm of quantum physics. The discovery of the bilayer Fibonacci phase by the agent – a non-intuitive combination of known ingredients – underscores how AI can traverse the design space in ways a human might not immediately consider, or might not have time to exhaustively explore. While theorists had proposed coupled layer approaches before, the precise optimization and confirmation of a Fibonacci order in that context had not been achieved. The agent essentially did this automatically. This suggests a broader role for AI: proposing candidate Hamiltonians for exotic phenomena (beyond anyons, one could target, say, room-temperature superconductivity or time crystals) which can then be verified and tested by humans and experiments. The techniques of using topological invariants and other physics knowledge as reward signals can be generalized to other phases of matter.</p></li>
@@ -248,7 +511,7 @@ The orchestrator then uses this information to decide the next step. If a design
 <p>In conclusion, the discussion highlights that the marriage of AI and quantum physics is a promising route to tackle complex problems. The specific achievement of identifying a route to Fibonacci anyons is timely and significant for quantum computing, potentially unlocking topologically protected qubits that were previously only theoretical. This interdisciplinary effort also charts a path forward for using AI in fundamental science – not by replacing scientists, but by empowering them with tools that can sift through possibilities at a speed and thoroughness humans simply cannot match.</p>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
 <p>We have presented a Nobel-caliber interdisciplinary study where autonomous AI agents orchestrated via multi-protocol communication discovered and optimized a new material platform for realizing Fibonacci anyons – the key to universal topological quantum computing. Our multi-agent system, comprising an Orchestrator and specialized design (MatterGen), simulation (MatterSim), and validation agents, successfully navigated the vast space of possible quantum phases. By leveraging the Model Context Protocol (MCP) for tool integration, Agent-to-Agent (A2A) for collaborative task delegation, and Agent Communication Protocol (ACP) for streaming results, the AI agents worked in concert to propose candidate models, simulate their quantum properties, and evaluate them against stringent criteria. This led to the autonomous discovery of a bilayer fractional quantum Hall heterostructure that robustly hosts Fibonacci anyons – a breakthrough result that brings us closer to fault-tolerant topological quantum computing.</p>
 <p>All scientific objectives set forth were achieved: the discovered system meets the five essential criteria for a Fibonacci anyon host, demonstrating the correct anyon content (trivial and Fibonacci quasiparticles) ￼, a protected ground state degeneracy ￼ with a sizable energy gap, the hallmark entanglement entropy reflecting a quantum dimension of φ≈1.618 ￼, the implementation of braiding operations as high-fidelity quantum gates, and edge excitations consistent with Fibonacci topological order ￼. In validating our approach on the known 12/5 state, we not only reinforced confidence in the framework but also provided new quantitative predictions (e.g. braiding fidelity ~97-99%) for that state ￼. The AI-optimized bilayer design exhibits an even more promising topological gap and robustness, potentially easing experimental realization.</p>
 <p>This work demonstrates the power of AI-driven generative design in quantum physics. It showcases how an autonomous agent system can act as a research collaborator, able to conjecture and test hypotheses at a remarkable pace and depth. The integration of modern interoperability protocols was key to this success, pointing toward a future where autonomous labs combine simulation and experimentation – with AI agents seamlessly controlling each aspect – to rapidly uncover new phenomena. The methodologies developed here can be applied broadly, from searching for new topological phases (e.g. non-Abelian spin liquids) to optimizing quantum devices (e.g. maximizing Majorana coherence in nanowires).</p>
@@ -276,31 +539,102 @@ The orchestrator then uses this information to decide the next step. If a design
     </script>
     <script>kernelName = 'python3'</script>
 
-           </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-work">Related Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-agent-orchestration-architecture">Multi-Agent Orchestration Architecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-criteria-for-fibonacci-anyon-host-materials">Design Criteria for Fibonacci Anyon Host Materials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generative-search-and-simulation-pipeline">Generative Search and Simulation Pipeline</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-mattersim-agent-was-equipped-with-a-variety-of-simulation-tools">The MatterSim agent was equipped with a variety of simulation tools:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-case-study-12-5-quantum-hall-fibonacci-phase">A. Case Study: ν=12/5 Quantum Hall Fibonacci Phase</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-agent-discovered-candidate-multilayer-fibonacci-anyon-material">B. Agent-Discovered Candidate: Multilayer Fibonacci Anyon Material</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-reinforcement-learning-optimization-performance">C. Reinforcement Learning Optimization Performance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
           </div>
-          <footer>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Mo Houshmand
+</p>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2025.</p>
   </div>
+  
+  <div class="footer-item">
+    
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
 
-</footer>
-        </div>
-      </div>
-    </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
 
-</body>
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
