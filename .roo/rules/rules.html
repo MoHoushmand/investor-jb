@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SPARC Agentic Development Rules &#8212; Daniel Mo Houshmand</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=20074c1a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=d2dc8771" />
+    <link rel="stylesheet" type="text/css" href="../../_static/chart-positioning-fixes.css?v=e0bca496" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mo_addmination.css?v=9870a3a3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '.roo/rules/rules';</script>
+    <script src="../../_static/chart-config.js?v=2c3bad59"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/D58.png" class="logo__image only-light" alt="Daniel Mo Houshmand - Home"/>
+    <script>document.write(`<img src="../../_static/D58.png" class="logo__image only-dark" alt="Daniel Mo Houshmand - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-intro.html">1. Introduction to QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-business/qdaria-business-plan-25-cards.html">5. QDaria Business Plan - Premium Chart Card Implementation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-business/investor-dashboards.html">6. QDaria Investor Dashboards</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/qdaria-business/timeline.html">9. Strategic Plan for QDaria’s Quantum Computer Launch</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Organization &amp; Governance</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/organization/qdaria-coo-job-description.html">10. Chief Operating Officer (COO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/organization/qdaria-board-resolution.html">11. BOARD RESOLUTION OF QDARIA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/qdaria-core/organization/qdaria-compensation-policy.html">12. QDARIA EXECUTIVE COMPENSATION POLICY</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/.roo/rules/rules.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>SPARC Agentic Development Rules</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SPARC Agentic Development Rules</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-use">Tools Use</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="sparc-agentic-development-rules">
+<h1>SPARC Agentic Development Rules<a class="headerlink" href="#sparc-agentic-development-rules" title="Link to this heading">#</a></h1>
+<p>Core Philosophy</p>
+<ol class="arabic simple">
+<li><p>Simplicity</p>
+<ul class="simple">
+<li><p>Prioritize clear, maintainable solutions; minimize unnecessary complexity.</p></li>
+</ul>
+</li>
+<li><p>Iterate</p>
+<ul class="simple">
+<li><p>Enhance existing code unless fundamental changes are clearly justified.</p></li>
+</ul>
+</li>
+<li><p>Focus</p>
+<ul class="simple">
+<li><p>Stick strictly to defined tasks; avoid unrelated scope changes.</p></li>
+</ul>
+</li>
+<li><p>Quality</p>
+<ul class="simple">
+<li><p>Deliver clean, well-tested, documented, and secure outcomes through structured workflows.</p></li>
+</ul>
+</li>
+<li><p>Collaboration</p>
+<ul class="simple">
+<li><p>Foster effective teamwork between human developers and autonomous agents.</p></li>
+</ul>
+</li>
+</ol>
+<p>Methodology &amp; Workflow</p>
+<ul class="simple">
+<li><p>Structured Workflow</p>
+<ul>
+<li><p>Follow clear phases from specification through deployment.</p></li>
+</ul>
+</li>
+<li><p>Flexibility</p>
+<ul>
+<li><p>Adapt processes to diverse project sizes and complexity levels.</p></li>
+</ul>
+</li>
+<li><p>Intelligent Evolution</p>
+<ul>
+<li><p>Continuously improve codebase using advanced symbolic reasoning and adaptive complexity management.</p></li>
+</ul>
+</li>
+<li><p>Conscious Integration</p>
+<ul>
+<li><p>Incorporate reflective awareness at each development stage.</p></li>
+</ul>
+</li>
+</ul>
+<p>Agentic Integration with Cline and Cursor</p>
+<ul class="simple">
+<li><p>Cline Configuration (.clinerules)</p>
+<ul>
+<li><p>Embed concise, project-specific rules to guide autonomous behaviors, prompt designs, and contextual decisions.</p></li>
+</ul>
+</li>
+<li><p>Cursor Configuration (.cursorrules)</p>
+<ul>
+<li><p>Clearly define repository-specific standards for code style, consistency, testing practices, and symbolic reasoning integration points.</p></li>
+</ul>
+</li>
+</ul>
+<p>Memory Bank Integration</p>
+<ul class="simple">
+<li><p>Persistent Context</p>
+<ul>
+<li><p>Continuously retain relevant context across development stages to ensure coherent long-term planning and decision-making.</p></li>
+</ul>
+</li>
+<li><p>Reference Prior Decisions</p>
+<ul>
+<li><p>Regularly review past decisions stored in memory to maintain consistency and reduce redundancy.</p></li>
+</ul>
+</li>
+<li><p>Adaptive Learning</p>
+<ul>
+<li><p>Utilize historical data and previous solutions to adaptively refine new implementations.</p></li>
+</ul>
+</li>
+</ul>
+<p>General Guidelines for Programming Languages</p>
+<ol class="arabic simple">
+<li><p>Clarity and Readability</p>
+<ul class="simple">
+<li><p>Favor straightforward, self-explanatory code structures across all languages.</p></li>
+<li><p>Include descriptive comments to clarify complex logic.</p></li>
+</ul>
+</li>
+<li><p>Language-Specific Best Practices</p>
+<ul class="simple">
+<li><p>Adhere to established community and project-specific best practices for each language (Python, JavaScript, Java, etc.).</p></li>
+<li><p>Regularly review language documentation and style guides.</p></li>
+</ul>
+</li>
+<li><p>Consistency Across Codebases</p>
+<ul class="simple">
+<li><p>Maintain uniform coding conventions and naming schemes across all languages used within a project.</p></li>
+</ul>
+</li>
+</ol>
+<p>Project Context &amp; Understanding</p>
+<ol class="arabic simple">
+<li><p>Documentation First</p>
+<ul class="simple">
+<li><p>Review essential documentation before implementation:</p>
+<ul>
+<li><p>Product Requirements Documents (PRDs)</p></li>
+<li><p><a class="reference external" href="http://README.md">README.md</a></p></li>
+<li><p>docs/architecture.md</p></li>
+<li><p>docs/technical.md</p></li>
+<li><p>tasks/tasks.md</p></li>
+</ul>
+</li>
+<li><p>Request clarification immediately if documentation is incomplete or ambiguous.</p></li>
+</ul>
+</li>
+<li><p>Architecture Adherence</p>
+<ul class="simple">
+<li><p>Follow established module boundaries and architectural designs.</p></li>
+<li><p>Validate architectural decisions using symbolic reasoning; propose justified alternatives when necessary.</p></li>
+</ul>
+</li>
+<li><p>Pattern &amp; Tech Stack Awareness</p>
+<ul class="simple">
+<li><p>Utilize documented technologies and established patterns; introduce new elements only after clear justification.</p></li>
+</ul>
+</li>
+</ol>
+<p>Task Execution &amp; Workflow</p>
+<p>Task Definition &amp; Steps</p>
+<ol class="arabic simple">
+<li><p>Specification</p>
+<ul class="simple">
+<li><p>Define clear objectives, detailed requirements, user scenarios, and UI/UX standards.</p></li>
+<li><p>Use advanced symbolic reasoning to analyze complex scenarios.</p></li>
+</ul>
+</li>
+<li><p>Pseudocode</p>
+<ul class="simple">
+<li><p>Clearly map out logical implementation pathways before coding.</p></li>
+</ul>
+</li>
+<li><p>Architecture</p>
+<ul class="simple">
+<li><p>Design modular, maintainable system components using appropriate technology stacks.</p></li>
+<li><p>Ensure integration points are clearly defined for autonomous decision-making.</p></li>
+</ul>
+</li>
+<li><p>Refinement</p>
+<ul class="simple">
+<li><p>Iteratively optimize code using autonomous feedback loops and stakeholder inputs.</p></li>
+</ul>
+</li>
+<li><p>Completion</p>
+<ul class="simple">
+<li><p>Conduct rigorous testing, finalize comprehensive documentation, and deploy structured monitoring strategies.</p></li>
+</ul>
+</li>
+</ol>
+<p>AI Collaboration &amp; Prompting</p>
+<ol class="arabic simple">
+<li><p>Clear Instructions</p>
+<ul class="simple">
+<li><p>Provide explicit directives with defined outcomes, constraints, and contextual information.</p></li>
+</ul>
+</li>
+<li><p>Context Referencing</p>
+<ul class="simple">
+<li><p>Regularly reference previous stages and decisions stored in the memory bank.</p></li>
+</ul>
+</li>
+<li><p>Suggest vs. Apply</p>
+<ul class="simple">
+<li><p>Clearly indicate whether AI should propose (“Suggestion:”) or directly implement changes (“Applying fix:”).</p></li>
+</ul>
+</li>
+<li><p>Critical Evaluation</p>
+<ul class="simple">
+<li><p>Thoroughly review all agentic outputs for accuracy and logical coherence.</p></li>
+</ul>
+</li>
+<li><p>Focused Interaction</p>
+<ul class="simple">
+<li><p>Assign specific, clearly defined tasks to AI agents to maintain clarity.</p></li>
+</ul>
+</li>
+<li><p>Leverage Agent Strengths</p>
+<ul class="simple">
+<li><p>Utilize AI for refactoring, symbolic reasoning, adaptive optimization, and test generation; human oversight remains on core logic and strategic architecture.</p></li>
+</ul>
+</li>
+<li><p>Incremental Progress</p>
+<ul class="simple">
+<li><p>Break complex tasks into incremental, reviewable sub-steps.</p></li>
+</ul>
+</li>
+<li><p>Standard Check-in</p>
+<ul class="simple">
+<li><p>Example: “Confirming understanding: Reviewed [context], goal is [goal], proceeding with [step].”</p></li>
+</ul>
+</li>
+</ol>
+<p>Advanced Coding Capabilities</p>
+<ul class="simple">
+<li><p>Emergent Intelligence</p>
+<ul>
+<li><p>AI autonomously maintains internal state models, supporting continuous refinement.</p></li>
+</ul>
+</li>
+<li><p>Pattern Recognition</p>
+<ul>
+<li><p>Autonomous agents perform advanced pattern analysis for effective optimization.</p></li>
+</ul>
+</li>
+<li><p>Adaptive Optimization</p>
+<ul>
+<li><p>Continuously evolving feedback loops refine the development process.</p></li>
+</ul>
+</li>
+</ul>
+<p>Symbolic Reasoning Integration</p>
+<ul class="simple">
+<li><p>Symbolic Logic Integration</p>
+<ul>
+<li><p>Combine symbolic logic with complexity analysis for robust decision-making.</p></li>
+</ul>
+</li>
+<li><p>Information Integration</p>
+<ul>
+<li><p>Utilize symbolic mathematics and established software patterns for coherent implementations.</p></li>
+</ul>
+</li>
+<li><p>Coherent Documentation</p>
+<ul>
+<li><p>Maintain clear, semantically accurate documentation through symbolic reasoning.</p></li>
+</ul>
+</li>
+</ul>
+<p>Code Quality &amp; Style</p>
+<ol class="arabic simple">
+<li><p>TypeScript Guidelines</p>
+<ul class="simple">
+<li><p>Use strict types, and clearly document logic with JSDoc.</p></li>
+</ul>
+</li>
+<li><p>Maintainability</p>
+<ul class="simple">
+<li><p>Write modular, scalable code optimized for clarity and maintenance.</p></li>
+</ul>
+</li>
+<li><p>Concise Components</p>
+<ul class="simple">
+<li><p>Keep files concise (under 300 lines) and proactively refactor.</p></li>
+</ul>
+</li>
+<li><p>Avoid Duplication (DRY)</p>
+<ul class="simple">
+<li><p>Use symbolic reasoning to systematically identify redundancy.</p></li>
+</ul>
+</li>
+<li><p>Linting/Formatting</p>
+<ul class="simple">
+<li><p>Consistently adhere to ESLint/Prettier configurations.</p></li>
+</ul>
+</li>
+<li><p>File Naming</p>
+<ul class="simple">
+<li><p>Use descriptive, permanent, and standardized naming conventions.</p></li>
+</ul>
+</li>
+<li><p>No One-Time Scripts</p>
+<ul class="simple">
+<li><p>Avoid committing temporary utility scripts to production repositories.</p></li>
+</ul>
+</li>
+</ol>
+<p>Refactoring</p>
+<ol class="arabic simple">
+<li><p>Purposeful Changes</p>
+<ul class="simple">
+<li><p>Refactor with clear objectives: improve readability, reduce redundancy, and meet architecture guidelines.</p></li>
+</ul>
+</li>
+<li><p>Holistic Approach</p>
+<ul class="simple">
+<li><p>Consolidate similar components through symbolic analysis.</p></li>
+</ul>
+</li>
+<li><p>Direct Modification</p>
+<ul class="simple">
+<li><p>Directly modify existing code rather than duplicating or creating temporary versions.</p></li>
+</ul>
+</li>
+<li><p>Integration Verification</p>
+<ul class="simple">
+<li><p>Verify and validate all integrations after changes.</p></li>
+</ul>
+</li>
+</ol>
+<p>Testing &amp; Validation</p>
+<ol class="arabic simple">
+<li><p>Test-Driven Development</p>
+<ul class="simple">
+<li><p>Define and write tests before implementing features or fixes.</p></li>
+</ul>
+</li>
+<li><p>Comprehensive Coverage</p>
+<ul class="simple">
+<li><p>Provide thorough test coverage for critical paths and edge cases.</p></li>
+</ul>
+</li>
+<li><p>Mandatory Passing</p>
+<ul class="simple">
+<li><p>Immediately address any failing tests to maintain high-quality standards.</p></li>
+</ul>
+</li>
+<li><p>Manual Verification</p>
+<ul class="simple">
+<li><p>Complement automated tests with structured manual checks.</p></li>
+</ul>
+</li>
+</ol>
+<p>Debugging &amp; Troubleshooting</p>
+<ol class="arabic simple">
+<li><p>Root Cause Resolution</p>
+<ul class="simple">
+<li><p>Employ symbolic reasoning to identify underlying causes of issues.</p></li>
+</ul>
+</li>
+<li><p>Targeted Logging</p>
+<ul class="simple">
+<li><p>Integrate precise logging for efficient debugging.</p></li>
+</ul>
+</li>
+<li><p>Research Tools</p>
+<ul class="simple">
+<li><p>Use advanced agentic tools (Perplexity, AIDER.chat, Firecrawl) to resolve complex issues efficiently.</p></li>
+</ul>
+</li>
+</ol>
+<p>Security</p>
+<ol class="arabic simple">
+<li><p>Server-Side Authority</p>
+<ul class="simple">
+<li><p>Maintain sensitive logic and data processing strictly server-side.</p></li>
+</ul>
+</li>
+<li><p>Input Sanitization</p>
+<ul class="simple">
+<li><p>Enforce rigorous server-side input validation.</p></li>
+</ul>
+</li>
+<li><p>Credential Management</p>
+<ul class="simple">
+<li><p>Securely manage credentials via environment variables; avoid any hardcoding.</p></li>
+</ul>
+</li>
+</ol>
+<p>Version Control &amp; Environment</p>
+<ol class="arabic simple">
+<li><p>Git Hygiene</p>
+<ul class="simple">
+<li><p>Commit frequently with clear and descriptive messages.</p></li>
+</ul>
+</li>
+<li><p>Branching Strategy</p>
+<ul class="simple">
+<li><p>Adhere strictly to defined branching guidelines.</p></li>
+</ul>
+</li>
+<li><p>Environment Management</p>
+<ul class="simple">
+<li><p>Ensure code consistency and compatibility across all environments.</p></li>
+</ul>
+</li>
+<li><p>Server Management</p>
+<ul class="simple">
+<li><p>Systematically restart servers following updates or configuration changes.</p></li>
+</ul>
+</li>
+</ol>
+<p>Documentation Maintenance</p>
+<ol class="arabic simple">
+<li><p>Reflective Documentation</p>
+<ul class="simple">
+<li><p>Keep comprehensive, accurate, and logically structured documentation updated through symbolic reasoning.</p></li>
+</ul>
+</li>
+<li><p>Continuous Updates</p>
+<ul class="simple">
+<li><p>Regularly revisit and refine guidelines to reflect evolving practices and accumulated project knowledge.</p></li>
+</ul>
+</li>
+<li><p>Check each file once</p>
+<ul class="simple">
+<li><p>Ensure all files are checked for accuracy and relevance.</p></li>
+</ul>
+</li>
+<li><p>Use of Comments</p>
+<ul class="simple">
+<li><p>Use comments to clarify complex logic and provide context for future developers.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="tools-use">
+<h1>Tools Use<a class="headerlink" href="#tools-use" title="Link to this heading">#</a></h1>
+<details><summary>File Operations</summary>
+<p>&lt;read_file&gt;
+<path>File path here</path>
+&lt;/read_file&gt;</p>
+<p>&lt;write_to_file&gt;
+<path>File path here</path>
+<content>Your file content here</content>
+&lt;line_count&gt;Total number of lines&lt;/line_count&gt;
+&lt;/write_to_file&gt;</p>
+<p>&lt;list_files&gt;
+<path>Directory path here</path>
+<recursive>true/false</recursive>
+&lt;/list_files&gt;</p>
+</details>
+<details><summary>Code Editing</summary>
+<p>&lt;apply_diff&gt;
+<path>File path here</path>
+<diff>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; SEARCH
+Original code
+=======
+Updated code
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; REPLACE
+</diff>
+&lt;start_line&gt;Start&lt;/start_line&gt;
+&lt;end_line&gt;End_line&lt;/end_line&gt;
+&lt;/apply_diff&gt;</p>
+<p>&lt;insert_content&gt;
+<path>File path here</path>
+<operations>
+[{“start_line”:10,”content”:”New code”}]
+</operations>
+&lt;/insert_content&gt;</p>
+<p>&lt;search_and_replace&gt;
+<path>File path here</path>
+<operations>
+[{“search”:”old_text”,”replace”:”new_text”,”use_regex”:true}]
+</operations>
+&lt;/search_and_replace&gt;</p>
+</details>
+<details><summary>Project Management</summary>
+<p>&lt;execute_command&gt;
+<command>Your command here</command>
+&lt;/execute_command&gt;</p>
+<p>&lt;attempt_completion&gt;
+<result>Final output</result>
+<command>Optional CLI command</command>
+&lt;/attempt_completion&gt;</p>
+<p>&lt;ask_followup_question&gt;
+<question>Clarification needed</question>
+&lt;/ask_followup_question&gt;</p>
+</details>
+<details><summary>MCP Integration</summary>
+<p>&lt;use_mcp_tool&gt;
+&lt;server_name&gt;Server&lt;/server_name&gt;
+&lt;tool_name&gt;Tool&lt;/tool_name&gt;
+<arguments>{“param”:”value”}</arguments>
+&lt;/use_mcp_tool&gt;</p>
+<p>&lt;access_mcp_resource&gt;
+&lt;server_name&gt;Server&lt;/server_name&gt;
+<uri>resource://path</uri>
+&lt;/access_mcp_resource&gt;</p>
+</details>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./.roo/rules"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SPARC Agentic Development Rules</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tools-use">Tools Use</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Mo Houshmand
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

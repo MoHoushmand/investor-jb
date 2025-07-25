@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CLAUDE.md &#8212; Daniel Mo Houshmand</title>
+    <title>Claude Code Configuration for Claude Flow &#8212; Daniel Mo Houshmand</title>
   
   
   
@@ -177,7 +177,7 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">QDaria Intro</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-intro.html">1. Intro QDaria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-intro.html">1. Introduction to QDaria</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/qdaria-business-plan-25.html">2. QDaria Business Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/chart-enhancement-guide.html">3. Chart Enhancement Implementation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/chart-card-examples.html">4. QDaria Chart Card Examples</a></li>
@@ -186,6 +186,12 @@
 <li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/competitive-intelligence-visualizations.html">7. QDaria Competitive Intelligence Visualizations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/qdaria-whitepaper.html">8. <strong>QDaria Quantum Computing Whitepaper</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/qdaria-business/timeline.html">9. Strategic Plan for QDaria’s Quantum Computer Launch</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Organization &amp; Governance</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/organization/qdaria-coo-job-description.html">10. Chief Operating Officer (COO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/organization/qdaria-board-resolution.html">11. BOARD RESOLUTION OF QDARIA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/qdaria-core/organization/qdaria-compensation-policy.html">12. QDARIA EXECUTIVE COMPENSATION POLICY</a></li>
 </ul>
 
     </div>
@@ -324,7 +330,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CLAUDE.md</h1>
+    <h1>Claude Code Configuration for Claude Flow</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -334,15 +340,91 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-overview">Project Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-commands">Build Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-structure">Project Structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-configuration">Key Configuration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-notes">Development Notes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-visualizations">Interactive Visualizations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-plotly-charts">Adding New Plotly Charts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-parallel-execution-after-swarm-init">🚨 CRITICAL: PARALLEL EXECUTION AFTER SWARM INIT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-concurrent-execution-for-all-actions">🚨 CRITICAL: CONCURRENT EXECUTION FOR ALL ACTIONS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-concurrent-patterns">🔴 MANDATORY CONCURRENT PATTERNS:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-1-message-all-related-operations">⚡ GOLDEN RULE: “1 MESSAGE = ALL RELATED OPERATIONS”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrent-execution-checklist">🎯 CONCURRENT EXECUTION CHECKLIST:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-claude-code-does-all-real-work">🚀 CRITICAL: Claude Code Does ALL Real Work</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-code-is-the-only-executor">🎯 CLAUDE CODE IS THE ONLY EXECUTOR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-code-always-handles">✅ Claude Code ALWAYS Handles:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-flow-mcp-tools-only-handle">🧠 Claude Flow MCP Tools ONLY Handle:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-separation-of-concerns">🚨 CRITICAL SEPARATION OF CONCERNS:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-principle">⚠️ Key Principle:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-execution-pattern">🔄 WORKFLOW EXECUTION PATTERN:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remember">🚨 REMEMBER:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-parallel-execution-batch-operations">🚀 CRITICAL: Parallel Execution &amp; Batch Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-rule-1-batch-everything">🚨 MANDATORY RULE #1: BATCH EVERYTHING</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-golden-rule-of-swarms">⚡ THE GOLDEN RULE OF SWARMS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-todo-and-task-batching">🚨 MANDATORY TODO AND TASK BATCHING</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-tool-examples">📦 BATCH TOOL EXAMPLES</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-operations-by-type">🎯 BATCH OPERATIONS BY TYPE</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-setup-stdio-mcp-recommended">🚀 Quick Setup (Stdio MCP - Recommended)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-mcp-server-stdio-no-port-needed">1. Add MCP Server (Stdio - No Port Needed)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-mcp-tools-for-coordination-in-claude-code">2. Use MCP Tools for Coordination in Claude Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-mcp-tools-for-coordination">Available MCP Tools for Coordination</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordination-tools">Coordination Tools:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring-tools">Monitoring Tools:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-neural-tools">Memory &amp; Neural Tools:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-integration-tools-new">GitHub Integration Tools (NEW!):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#system-tools">System Tools:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-examples-coordination-focused">Workflow Examples (Coordination-Focused)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-coordination-example">Research Coordination Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#development-coordination-example">Development Coordination Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-repository-management-example-new">GitHub Repository Management Example (NEW!)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-coordination">Best Practices for Coordination</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do">✅ DO:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t">❌ DON’T:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-and-persistence">Memory and Persistence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-benefits">Performance Benefits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-code-hooks-integration">Claude Code Hooks Integration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-operation-hooks">Pre-Operation Hooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-operation-hooks">Post-Operation Hooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-management">Session Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-features-v2-0-0">Advanced Features (v2.0.0!)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-tips">Integration Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#swarm-orchestration-pattern">🧠 SWARM ORCHESTRATION PATTERN</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#you-are-the-swarm-orchestrator-immediately-spawn-agents-in-parallel-to-execute-tasks">You are the SWARM ORCHESTRATOR. <strong>IMMEDIATELY SPAWN AGENTS IN PARALLEL</strong> to execute tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-instruction-you-are-the-swarm-orchestrator">🚨 CRITICAL INSTRUCTION: You are the SWARM ORCHESTRATOR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agent-count-configuration">🎯 AGENT COUNT CONFIGURATION</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-agent-coordination-protocol">📋 MANDATORY AGENT COORDINATION PROTOCOL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-every-agent-must-follow-this-protocol">🔴 CRITICAL: Every Agent MUST Follow This Protocol</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agent-prompt-template">🎯 AGENT PROMPT TEMPLATE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-execution-is-mandatory">⚡ PARALLEL EXECUTION IS MANDATORY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-swarm-pattern">🎯 MANDATORY SWARM PATTERN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-task-tracking-format">📊 VISUAL TASK TRACKING FORMAT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#real-example-full-stack-app-development">🎯 REAL EXAMPLE: Full-Stack App Development</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#never-do-this-sequential-wrong">🚫 NEVER DO THIS (Sequential = WRONG):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-coordination-pattern">🔄 MEMORY COORDINATION PATTERN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-tips">⚡ PERFORMANCE TIPS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-swarm-status">🎨 VISUAL SWARM STATUS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-todowrite-and-task-tool-batching">📝 CRITICAL: TODOWRITE AND TASK TOOL BATCHING</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-batching-rules-for-todos-and-tasks">🚨 MANDATORY BATCHING RULES FOR TODOS AND TASKS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-flow-v2-0-0-features">Claude Flow v2.0.0 Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support">Support</a></li>
 </ul>
             </nav>
         </div>
@@ -354,89 +436,952 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="claude-md">
-<h1><a class="reference external" href="http://CLAUDE.md">CLAUDE.md</a><a class="headerlink" href="#claude-md" title="Link to this heading">#</a></h1>
-<p>This file provides guidance to Claude Code (<a class="reference external" href="http://claude.ai/code">claude.ai/code</a>) when working with code in this repository.</p>
-<section id="project-overview">
-<h2>Project Overview<a class="headerlink" href="#project-overview" title="Link to this heading">#</a></h2>
-<p>This is a Jupyter Book project that creates documentation for QDaria, focusing on quantum computing research across three main areas:</p>
-<ul class="simple">
-<li><p>Quantum Reservoir Computing (QRC)</p></li>
-<li><p>Topological Quantum Computing (TQC)</p></li>
-<li><p>Experimental Quantum Mechanics (XQM)</p></li>
-</ul>
+  <section id="claude-code-configuration-for-claude-flow">
+<h1>Claude Code Configuration for Claude Flow<a class="headerlink" href="#claude-code-configuration-for-claude-flow" title="Link to this heading">#</a></h1>
+<section id="critical-parallel-execution-after-swarm-init">
+<h2>🚨 CRITICAL: PARALLEL EXECUTION AFTER SWARM INIT<a class="headerlink" href="#critical-parallel-execution-after-swarm-init" title="Link to this heading">#</a></h2>
+<p><strong>MANDATORY RULE</strong>: Once swarm is initialized with memory, ALL subsequent operations MUST be parallel:</p>
+<ol class="arabic simple">
+<li><p><strong>TodoWrite</strong> → Always batch 5-10+ todos in ONE call</p></li>
+<li><p><strong>Task spawning</strong> → Spawn ALL agents in ONE message</p></li>
+<li><p><strong>File operations</strong> → Batch ALL reads/writes together</p></li>
+<li><p><strong>NEVER</strong> operate sequentially after swarm init</p></li>
+</ol>
 </section>
-<section id="build-commands">
-<h2>Build Commands<a class="headerlink" href="#build-commands" title="Link to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Build the book</span>
-jupyter-book<span class="w"> </span>build<span class="w"> </span>.
-
-<span class="c1"># Clean build artifacts</span>
-jupyter-book<span class="w"> </span>clean<span class="w"> </span>.
-
-<span class="c1"># Deploy to GitHub Pages</span>
-ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+<section id="critical-concurrent-execution-for-all-actions">
+<h2>🚨 CRITICAL: CONCURRENT EXECUTION FOR ALL ACTIONS<a class="headerlink" href="#critical-concurrent-execution-for-all-actions" title="Link to this heading">#</a></h2>
+<p><strong>ABSOLUTE RULE</strong>: ALL operations MUST be concurrent/parallel in a single message:</p>
+<section id="mandatory-concurrent-patterns">
+<h3>🔴 MANDATORY CONCURRENT PATTERNS:<a class="headerlink" href="#mandatory-concurrent-patterns" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>TodoWrite</strong>: ALWAYS batch ALL todos in ONE call (5-10+ todos minimum)</p></li>
+<li><p><strong>Task tool</strong>: ALWAYS spawn ALL agents in ONE message with full instructions</p></li>
+<li><p><strong>File operations</strong>: ALWAYS batch ALL reads/writes/edits in ONE message</p></li>
+<li><p><strong>Bash commands</strong>: ALWAYS batch ALL terminal operations in ONE message</p></li>
+<li><p><strong>Memory operations</strong>: ALWAYS batch ALL memory store/retrieve in ONE message</p></li>
+</ol>
+</section>
+<section id="golden-rule-1-message-all-related-operations">
+<h3>⚡ GOLDEN RULE: “1 MESSAGE = ALL RELATED OPERATIONS”<a class="headerlink" href="#golden-rule-1-message-all-related-operations" title="Link to this heading">#</a></h3>
+<p><strong>Examples of CORRECT concurrent execution:</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// ✅ CORRECT: Everything in ONE message</span>
+<span class="p">[</span><span class="nx">Single</span><span class="w"> </span><span class="nx">Message</span><span class="p">]</span><span class="o">:</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">TodoWrite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">todos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="o">+</span><span class="w"> </span><span class="nx">todos</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">statuses</span><span class="o">/</span><span class="nx">priorities</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;Agent 1 with full instructions and hooks&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;Agent 2 with full instructions and hooks&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;Agent 3 with full instructions and hooks&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Read</span><span class="p">(</span><span class="s2">&quot;file1.js&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Read</span><span class="p">(</span><span class="s2">&quot;file2.js&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Read</span><span class="p">(</span><span class="s2">&quot;file3.js&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Write</span><span class="p">(</span><span class="s2">&quot;output1.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Write</span><span class="p">(</span><span class="s2">&quot;output2.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;npm install&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;npm test&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;npm run build&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Examples of WRONG sequential execution:</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// ❌ WRONG: Multiple messages (NEVER DO THIS)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span><span class="w"> </span><span class="nx">TodoWrite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">todos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">single</span><span class="w"> </span><span class="nx">todo</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span><span class="w"> </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;Agent 1&quot;</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span><span class="w"> </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;Agent 2&quot;</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">4</span><span class="o">:</span><span class="w"> </span><span class="nx">Read</span><span class="p">(</span><span class="s2">&quot;file1.js&quot;</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span><span class="w"> </span><span class="nx">Write</span><span class="p">(</span><span class="s2">&quot;output1.js&quot;</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">6</span><span class="o">:</span><span class="w"> </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;npm install&quot;</span><span class="p">)</span>
+<span class="c1">// This is 6x slower and breaks coordination!</span>
 </pre></div>
 </div>
 </section>
-<section id="project-structure">
-<h2>Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading">#</a></h2>
-<p>The content is organized under <code class="docutils literal notranslate"><span class="pre">/content/</span></code> with the following structure:</p>
+<section id="concurrent-execution-checklist">
+<h3>🎯 CONCURRENT EXECUTION CHECKLIST:<a class="headerlink" href="#concurrent-execution-checklist" title="Link to this heading">#</a></h3>
+<p>Before sending ANY message, ask yourself:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">qdaria-core/</span></code> - Core QDaria documentation and business materials</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">research-papers/</span></code> - Academic research papers organized by topic:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">qrc/</span></code> - Quantum Reservoir Computing papers</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tqc/</span></code> - Topological Quantum Computing papers</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xqm/</span></code> - Experimental Quantum Mechanics papers</p></li>
+<li><p>✅ Are ALL related TodoWrite operations batched together?</p></li>
+<li><p>✅ Are ALL Task spawning operations in ONE message?</p></li>
+<li><p>✅ Are ALL file operations (Read/Write/Edit) batched together?</p></li>
+<li><p>✅ Are ALL bash commands grouped in ONE message?</p></li>
+<li><p>✅ Are ALL memory operations concurrent?</p></li>
 </ul>
-</li>
+<p>If ANY answer is “No”, you MUST combine operations into a single message!</p>
+</section>
+</section>
+<section id="critical-claude-code-does-all-real-work">
+<h2>🚀 CRITICAL: Claude Code Does ALL Real Work<a class="headerlink" href="#critical-claude-code-does-all-real-work" title="Link to this heading">#</a></h2>
+<section id="claude-code-is-the-only-executor">
+<h3>🎯 CLAUDE CODE IS THE ONLY EXECUTOR<a class="headerlink" href="#claude-code-is-the-only-executor" title="Link to this heading">#</a></h3>
+<p><strong>ABSOLUTE RULE</strong>: Claude Code performs ALL actual work:</p>
+</section>
+<section id="claude-code-always-handles">
+<h3>✅ Claude Code ALWAYS Handles:<a class="headerlink" href="#claude-code-always-handles" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>🔧 <strong>ALL file operations</strong> (Read, Write, Edit, MultiEdit, Glob, Grep)</p></li>
+<li><p>💻 <strong>ALL code generation</strong> and programming tasks</p></li>
+<li><p>🖥️ <strong>ALL bash commands</strong> and system operations</p></li>
+<li><p>🏗️ <strong>ALL actual implementation</strong> work</p></li>
+<li><p>🔍 <strong>ALL project navigation</strong> and code analysis</p></li>
+<li><p>📝 <strong>ALL TodoWrite</strong> and task management</p></li>
+<li><p>🔄 <strong>ALL git operations</strong> (commit, push, merge)</p></li>
+<li><p>📦 <strong>ALL package management</strong> (npm, pip, etc.)</p></li>
+<li><p>🧪 <strong>ALL testing</strong> and validation</p></li>
+<li><p>🔧 <strong>ALL debugging</strong> and troubleshooting</p></li>
 </ul>
 </section>
-<section id="key-configuration">
-<h2>Key Configuration<a class="headerlink" href="#key-configuration" title="Link to this heading">#</a></h2>
+<section id="claude-flow-mcp-tools-only-handle">
+<h3>🧠 Claude Flow MCP Tools ONLY Handle:<a class="headerlink" href="#claude-flow-mcp-tools-only-handle" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><strong>_config.yml</strong> - Main Jupyter Book configuration (theme, execution settings, Sphinx options)</p></li>
-<li><p><strong>_toc.yml</strong> - Table of contents structure defining book organization</p></li>
-<li><p><strong>references.bib</strong> - Bibliography for citations</p></li>
-<li><p><strong>_static/</strong> - Static assets including custom CSS and logos</p></li>
+<li><p>🎯 <strong>Coordination only</strong> - Planning Claude Code’s actions</p></li>
+<li><p>💾 <strong>Memory management</strong> - Storing decisions and context</p></li>
+<li><p>🤖 <strong>Neural features</strong> - Learning from Claude Code’s work</p></li>
+<li><p>📊 <strong>Performance tracking</strong> - Monitoring Claude Code’s efficiency</p></li>
+<li><p>🐝 <strong>Swarm orchestration</strong> - Coordinating multiple Claude Code instances</p></li>
+<li><p>🔗 <strong>GitHub integration</strong> - Advanced repository coordination</p></li>
 </ul>
 </section>
-<section id="development-notes">
-<h2>Development Notes<a class="headerlink" href="#development-notes" title="Link to this heading">#</a></h2>
+<section id="critical-separation-of-concerns">
+<h3>🚨 CRITICAL SEPARATION OF CONCERNS:<a class="headerlink" href="#critical-separation-of-concerns" title="Link to this heading">#</a></h3>
+<p><strong>❌ MCP Tools NEVER:</strong></p>
 <ul class="simple">
-<li><p>The book uses the Sphinx RTD theme with custom styling</p></li>
-<li><p>Jupyter notebooks can be executed during build</p></li>
-<li><p>GitHub integration is configured for version control</p></li>
-<li><p>Thebe is enabled for interactive code execution in the browser</p></li>
+<li><p>Write files or create content</p></li>
+<li><p>Execute bash commands</p></li>
+<li><p>Generate code</p></li>
+<li><p>Perform file operations</p></li>
+<li><p>Handle TodoWrite operations</p></li>
+<li><p>Execute system commands</p></li>
+<li><p>Do actual implementation work</p></li>
+</ul>
+<p><strong>✅ MCP Tools ONLY:</strong></p>
+<ul class="simple">
+<li><p>Coordinate and plan</p></li>
+<li><p>Store memory and context</p></li>
+<li><p>Track performance</p></li>
+<li><p>Orchestrate workflows</p></li>
+<li><p>Provide intelligence insights</p></li>
 </ul>
 </section>
-<section id="interactive-visualizations">
-<h2>Interactive Visualizations<a class="headerlink" href="#interactive-visualizations" title="Link to this heading">#</a></h2>
-<p>This project uses <strong>Plotly.js</strong> for interactive data visualizations in the business plan and other documents:</p>
-<ul class="simple">
-<li><p><strong>Why Plotly.js</strong>: Provides professional, interactive charts suitable for investor presentations with features like hover tooltips, zoom/pan, and export capabilities</p></li>
-<li><p><strong>Implementation</strong>: Charts are embedded directly in markdown files using <code class="docutils literal notranslate"><span class="pre">&lt;script&gt;</span></code> tags with the Plotly CDN</p></li>
-<li><p><strong>Configuration</strong>: The <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> has been updated to support raw HTML/JS content with MyST extensions</p></li>
-<li><p><strong>Chart Types Used</strong>:</p>
-<ul>
-<li><p>Bar charts for competitor funding comparisons</p></li>
-<li><p>Line/area charts for financial projections</p></li>
-<li><p>Timeline/Gantt charts for execution roadmaps</p></li>
-<li><p>Organizational charts for company structure</p></li>
-</ul>
-</li>
-</ul>
-<section id="adding-new-plotly-charts">
-<h3>Adding New Plotly Charts<a class="headerlink" href="#adding-new-plotly-charts" title="Link to this heading">#</a></h3>
-<p>To add a new Plotly.js visualization:</p>
+<section id="key-principle">
+<h3>⚠️ Key Principle:<a class="headerlink" href="#key-principle" title="Link to this heading">#</a></h3>
+<p><strong>MCP tools coordinate, Claude Code executes.</strong> Think of MCP tools as the “brain” that plans and coordinates, while Claude Code is the “hands” that do all the actual work.</p>
+</section>
+<section id="workflow-execution-pattern">
+<h3>🔄 WORKFLOW EXECUTION PATTERN:<a class="headerlink" href="#workflow-execution-pattern" title="Link to this heading">#</a></h3>
+<p><strong>✅ CORRECT Workflow:</strong></p>
 <ol class="arabic simple">
-<li><p>Create a div with a unique ID: <code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">id=&quot;myChart&quot;&gt;&lt;/div&gt;</span></code></p></li>
-<li><p>Include the Plotly CDN: <code class="docutils literal notranslate"><span class="pre">&lt;script</span> <span class="pre">src=&quot;https://cdn.plot.ly/plotly-2.27.0.min.js&quot;&gt;&lt;/script&gt;</span></code></p></li>
-<li><p>Add your chart script wrapped in DOMContentLoaded for proper loading</p></li>
-<li><p>Use responsive design settings for mobile compatibility</p></li>
+<li><p><strong>MCP</strong>: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__swarm_init</span></code> (coordination setup)</p></li>
+<li><p><strong>MCP</strong>: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__agent_spawn</span></code> (planning agents)</p></li>
+<li><p><strong>MCP</strong>: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__task_orchestrate</span></code> (task coordination)</p></li>
+<li><p><strong>Claude Code</strong>: <code class="docutils literal notranslate"><span class="pre">Task</span></code> tool to spawn agents with coordination instructions</p></li>
+<li><p><strong>Claude Code</strong>: <code class="docutils literal notranslate"><span class="pre">TodoWrite</span></code> with ALL todos batched (5-10+ in ONE call)</p></li>
+<li><p><strong>Claude Code</strong>: <code class="docutils literal notranslate"><span class="pre">Read</span></code>, <code class="docutils literal notranslate"><span class="pre">Write</span></code>, <code class="docutils literal notranslate"><span class="pre">Edit</span></code>, <code class="docutils literal notranslate"><span class="pre">Bash</span></code> (actual work)</p></li>
+<li><p><strong>MCP</strong>: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__memory_usage</span></code> (store results)</p></li>
+</ol>
+<p><strong>❌ WRONG Workflow:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>MCP</strong>: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__terminal_execute</span></code> (DON’T DO THIS)</p></li>
+<li><p><strong>MCP</strong>: File creation via MCP (DON’T DO THIS)</p></li>
+<li><p><strong>MCP</strong>: Code generation via MCP (DON’T DO THIS)</p></li>
+<li><p><strong>Claude Code</strong>: Sequential Task calls (DON’T DO THIS)</p></li>
+<li><p><strong>Claude Code</strong>: Individual TodoWrite calls (DON’T DO THIS)</p></li>
 </ol>
 </section>
+<section id="remember">
+<h3>🚨 REMEMBER:<a class="headerlink" href="#remember" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>MCP tools</strong> = Coordination, planning, memory, intelligence</p></li>
+<li><p><strong>Claude Code</strong> = All actual execution, coding, file operations</p></li>
+</ul>
+</section>
+</section>
+<section id="critical-parallel-execution-batch-operations">
+<h2>🚀 CRITICAL: Parallel Execution &amp; Batch Operations<a class="headerlink" href="#critical-parallel-execution-batch-operations" title="Link to this heading">#</a></h2>
+<section id="mandatory-rule-1-batch-everything">
+<h3>🚨 MANDATORY RULE #1: BATCH EVERYTHING<a class="headerlink" href="#mandatory-rule-1-batch-everything" title="Link to this heading">#</a></h3>
+<p><strong>When using swarms, you MUST use BatchTool for ALL operations:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>NEVER</strong> send multiple messages for related operations</p></li>
+<li><p><strong>ALWAYS</strong> combine multiple tool calls in ONE message</p></li>
+<li><p><strong>PARALLEL</strong> execution is MANDATORY, not optional</p></li>
+</ol>
+</section>
+<section id="the-golden-rule-of-swarms">
+<h3>⚡ THE GOLDEN RULE OF SWARMS<a class="headerlink" href="#the-golden-rule-of-swarms" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">If</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">do</span> <span class="n">X</span> <span class="n">operations</span><span class="p">,</span> <span class="n">they</span> <span class="n">should</span> <span class="n">be</span> <span class="ow">in</span> <span class="mi">1</span> <span class="n">message</span><span class="p">,</span> <span class="ow">not</span> <span class="n">X</span> <span class="n">messages</span>
+</pre></div>
+</div>
+</section>
+<section id="mandatory-todo-and-task-batching">
+<h3>🚨 MANDATORY TODO AND TASK BATCHING<a class="headerlink" href="#mandatory-todo-and-task-batching" title="Link to this heading">#</a></h3>
+<p><strong>CRITICAL RULE FOR TODOS AND TASKS:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>TodoWrite</strong> MUST ALWAYS include ALL todos in ONE call (5-10+ todos)</p></li>
+<li><p><strong>Task</strong> tool calls MUST be batched - spawn multiple agents in ONE message</p></li>
+<li><p><strong>NEVER</strong> update todos one by one - this breaks parallel coordination</p></li>
+<li><p><strong>NEVER</strong> spawn agents sequentially - ALL agents spawn together</p></li>
+</ol>
+</section>
+<section id="batch-tool-examples">
+<h3>📦 BATCH TOOL EXAMPLES<a class="headerlink" href="#batch-tool-examples" title="Link to this heading">#</a></h3>
+<p><strong>✅ CORRECT - Everything in ONE Message:</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nx">Single</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">BatchTool</span><span class="p">]</span><span class="o">:</span>
+<span class="w">  </span><span class="c1">// MCP coordination setup</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__swarm_init</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">topology</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;mesh&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">maxAgents</span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;researcher&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;coder&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;analyst&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tester&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;coordinator&quot;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Claude Code execution - ALL in parallel</span>
+<span class="w">  </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;You are researcher agent. MUST coordinate via hooks...&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;You are coder agent. MUST coordinate via hooks...&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;You are analyst agent. MUST coordinate via hooks...&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;You are tester agent. MUST coordinate via hooks...&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">TodoWrite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">todos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">5</span><span class="o">-</span><span class="mf">10</span><span class="w"> </span><span class="nx">todos</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">priorities</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">statuses</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// File operations in parallel</span>
+<span class="w">  </span><span class="nx">Bash</span><span class="w"> </span><span class="s2">&quot;mkdir -p app/{src,tests,docs}&quot;</span>
+<span class="w">  </span><span class="nx">Write</span><span class="w"> </span><span class="s2">&quot;app/package.json&quot;</span>
+<span class="w">  </span><span class="nx">Write</span><span class="w"> </span><span class="s2">&quot;app/README.md&quot;</span>
+<span class="w">  </span><span class="nx">Write</span><span class="w"> </span><span class="s2">&quot;app/src/index.js&quot;</span>
+</pre></div>
+</div>
+<p><strong>❌ WRONG - Multiple Messages (NEVER DO THIS):</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Message</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span><span class="w"> </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__swarm_init</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span><span class="w"> </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;researcher agent&quot;</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span><span class="w"> </span><span class="nx">Task</span><span class="p">(</span><span class="s2">&quot;coder agent&quot;</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">4</span><span class="o">:</span><span class="w"> </span><span class="nx">TodoWrite</span><span class="p">({</span><span class="w"> </span><span class="nx">todo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;single todo&quot;</span><span class="w"> </span><span class="p">})</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span><span class="w"> </span><span class="nx">Bash</span><span class="w"> </span><span class="s2">&quot;mkdir src&quot;</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">6</span><span class="o">:</span><span class="w"> </span><span class="nx">Write</span><span class="w"> </span><span class="s2">&quot;package.json&quot;</span>
+<span class="c1">// This is 6x slower and breaks parallel coordination!</span>
+</pre></div>
+</div>
+</section>
+<section id="batch-operations-by-type">
+<h3>🎯 BATCH OPERATIONS BY TYPE<a class="headerlink" href="#batch-operations-by-type" title="Link to this heading">#</a></h3>
+<p><strong>Todo and Task Operations (Single Message):</strong></p>
+<ul class="simple">
+<li><p><strong>TodoWrite</strong> → ALWAYS include 5-10+ todos in ONE call</p></li>
+<li><p><strong>Task agents</strong> → Spawn ALL agents with full instructions in ONE message</p></li>
+<li><p><strong>Agent coordination</strong> → ALL Task calls must include coordination hooks</p></li>
+<li><p><strong>Status updates</strong> → Update ALL todo statuses together</p></li>
+<li><p><strong>NEVER</strong> split todos or Task calls across messages!</p></li>
+</ul>
+<p><strong>File Operations (Single Message):</strong></p>
+<ul class="simple">
+<li><p>Read 10 files? → One message with 10 Read calls</p></li>
+<li><p>Write 5 files? → One message with 5 Write calls</p></li>
+<li><p>Edit 1 file many times? → One MultiEdit call</p></li>
+</ul>
+<p><strong>Swarm Operations (Single Message):</strong></p>
+<ul class="simple">
+<li><p>Need 8 agents? → One message with swarm_init + 8 agent_spawn calls</p></li>
+<li><p>Multiple memories? → One message with all memory_usage calls</p></li>
+<li><p>Task + monitoring? → One message with task_orchestrate + swarm_monitor</p></li>
+</ul>
+<p><strong>Command Operations (Single Message):</strong></p>
+<ul class="simple">
+<li><p>Multiple directories? → One message with all mkdir commands</p></li>
+<li><p>Install + test + lint? → One message with all npm commands</p></li>
+<li><p>Git operations? → One message with all git commands</p></li>
+</ul>
+</section>
+</section>
+<section id="quick-setup-stdio-mcp-recommended">
+<h2>🚀 Quick Setup (Stdio MCP - Recommended)<a class="headerlink" href="#quick-setup-stdio-mcp-recommended" title="Link to this heading">#</a></h2>
+<section id="add-mcp-server-stdio-no-port-needed">
+<h3>1. Add MCP Server (Stdio - No Port Needed)<a class="headerlink" href="#add-mcp-server-stdio-no-port-needed" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add Claude Flow MCP server to Claude Code using stdio</span>
+claude<span class="w"> </span>mcp<span class="w"> </span>add<span class="w"> </span>claude-flow<span class="w"> </span>npx<span class="w"> </span>claude-flow@alpha<span class="w"> </span>mcp<span class="w"> </span>start
+</pre></div>
+</div>
+</section>
+<section id="use-mcp-tools-for-coordination-in-claude-code">
+<h3>2. Use MCP Tools for Coordination in Claude Code<a class="headerlink" href="#use-mcp-tools-for-coordination-in-claude-code" title="Link to this heading">#</a></h3>
+<p>Once configured, Claude Flow MCP tools enhance Claude Code’s coordination:</p>
+<p><strong>Initialize a swarm:</strong></p>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__swarm_init</span></code> tool to set up coordination topology</p></li>
+<li><p>Choose: mesh, hierarchical, ring, or star</p></li>
+<li><p>This creates a coordination framework for Claude Code’s work</p></li>
+</ul>
+<p><strong>Spawn agents:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__agent_spawn</span></code> tool to create specialized coordinators</p></li>
+<li><p>Agent types represent different thinking patterns, not actual coders</p></li>
+<li><p>They help Claude Code approach problems from different angles</p></li>
+</ul>
+<p><strong>Orchestrate tasks:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__task_orchestrate</span></code> tool to coordinate complex workflows</p></li>
+<li><p>This breaks down tasks for Claude Code to execute systematically</p></li>
+<li><p>The agents don’t write code - they coordinate Claude Code’s actions</p></li>
+</ul>
+</section>
+</section>
+<section id="available-mcp-tools-for-coordination">
+<h2>Available MCP Tools for Coordination<a class="headerlink" href="#available-mcp-tools-for-coordination" title="Link to this heading">#</a></h2>
+<section id="coordination-tools">
+<h3>Coordination Tools:<a class="headerlink" href="#coordination-tools" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__swarm_init</span></code> - Set up coordination topology for Claude Code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__agent_spawn</span></code> - Create cognitive patterns to guide Claude Code</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__task_orchestrate</span></code> - Break down and coordinate complex tasks</p></li>
+</ul>
+</section>
+<section id="monitoring-tools">
+<h3>Monitoring Tools:<a class="headerlink" href="#monitoring-tools" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__swarm_status</span></code> - Monitor coordination effectiveness</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__agent_list</span></code> - View active cognitive patterns</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__agent_metrics</span></code> - Track coordination performance</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__task_status</span></code> - Check workflow progress</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__task_results</span></code> - Review coordination outcomes</p></li>
+</ul>
+</section>
+<section id="memory-neural-tools">
+<h3>Memory &amp; Neural Tools:<a class="headerlink" href="#memory-neural-tools" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__memory_usage</span></code> - Persistent memory across sessions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__neural_status</span></code> - Neural pattern effectiveness</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__neural_train</span></code> - Improve coordination patterns</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__neural_patterns</span></code> - Analyze thinking approaches</p></li>
+</ul>
+</section>
+<section id="github-integration-tools-new">
+<h3>GitHub Integration Tools (NEW!):<a class="headerlink" href="#github-integration-tools-new" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__github_swarm</span></code> - Create specialized GitHub management swarms</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__repo_analyze</span></code> - Deep repository analysis with AI</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__pr_enhance</span></code> - AI-powered pull request improvements</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__issue_triage</span></code> - Intelligent issue classification</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__code_review</span></code> - Automated code review with swarms</p></li>
+</ul>
+</section>
+<section id="system-tools">
+<h3>System Tools:<a class="headerlink" href="#system-tools" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__benchmark_run</span></code> - Measure coordination efficiency</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__features_detect</span></code> - Available capabilities</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__swarm_monitor</span></code> - Real-time coordination tracking</p></li>
+</ul>
+</section>
+</section>
+<section id="workflow-examples-coordination-focused">
+<h2>Workflow Examples (Coordination-Focused)<a class="headerlink" href="#workflow-examples-coordination-focused" title="Link to this heading">#</a></h2>
+<section id="research-coordination-example">
+<h3>Research Coordination Example<a class="headerlink" href="#research-coordination-example" title="Link to this heading">#</a></h3>
+<p><strong>Context:</strong> Claude Code needs to research a complex topic systematically</p>
+<p><strong>Step 1:</strong> Set up research coordination</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__swarm_init</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;topology&quot;:</span> <span class="pre">&quot;mesh&quot;,</span> <span class="pre">&quot;maxAgents&quot;:</span> <span class="pre">5,</span> <span class="pre">&quot;strategy&quot;:</span> <span class="pre">&quot;balanced&quot;}</span></code></p></li>
+<li><p>Result: Creates a mesh topology for comprehensive exploration</p></li>
+</ul>
+<p><strong>Step 2:</strong> Define research perspectives</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__agent_spawn</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;type&quot;:</span> <span class="pre">&quot;researcher&quot;,</span> <span class="pre">&quot;name&quot;:</span> <span class="pre">&quot;Literature</span> <span class="pre">Review&quot;}</span></code></p></li>
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__agent_spawn</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;type&quot;:</span> <span class="pre">&quot;analyst&quot;,</span> <span class="pre">&quot;name&quot;:</span> <span class="pre">&quot;Data</span> <span class="pre">Analysis&quot;}</span></code></p></li>
+<li><p>Result: Different cognitive patterns for Claude Code to use</p></li>
+</ul>
+<p><strong>Step 3:</strong> Coordinate research execution</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__task_orchestrate</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;task&quot;:</span> <span class="pre">&quot;Research</span> <span class="pre">neural</span> <span class="pre">architecture</span> <span class="pre">search</span> <span class="pre">papers&quot;,</span> <span class="pre">&quot;strategy&quot;:</span> <span class="pre">&quot;adaptive&quot;}</span></code></p></li>
+<li><p>Result: Claude Code systematically searches, reads, and analyzes papers</p></li>
+</ul>
+<p><strong>What Actually Happens:</strong></p>
+<ol class="arabic simple">
+<li><p>The swarm sets up a coordination framework</p></li>
+<li><p>Each agent MUST use Claude Flow hooks for coordination:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">npx</span> <span class="pre">claude-flow&#64;alpha</span> <span class="pre">hooks</span> <span class="pre">pre-task</span></code> before starting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">npx</span> <span class="pre">claude-flow&#64;alpha</span> <span class="pre">hooks</span> <span class="pre">post-edit</span></code> after each file operation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">npx</span> <span class="pre">claude-flow&#64;alpha</span> <span class="pre">hooks</span> <span class="pre">notification</span></code> to share decisions</p></li>
+</ul>
+</li>
+<li><p>Claude Code uses its native Read, WebSearch, and Task tools</p></li>
+<li><p>The swarm coordinates through shared memory and hooks</p></li>
+<li><p>Results are synthesized by Claude Code with full coordination history</p></li>
+</ol>
+</section>
+<section id="development-coordination-example">
+<h3>Development Coordination Example<a class="headerlink" href="#development-coordination-example" title="Link to this heading">#</a></h3>
+<p><strong>Context:</strong> Claude Code needs to build a complex system with multiple components</p>
+<p><strong>Step 1:</strong> Set up development coordination</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__swarm_init</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;topology&quot;:</span> <span class="pre">&quot;hierarchical&quot;,</span> <span class="pre">&quot;maxAgents&quot;:</span> <span class="pre">8,</span> <span class="pre">&quot;strategy&quot;:</span> <span class="pre">&quot;specialized&quot;}</span></code></p></li>
+<li><p>Result: Hierarchical structure for organized development</p></li>
+</ul>
+<p><strong>Step 2:</strong> Define development perspectives</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__agent_spawn</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;type&quot;:</span> <span class="pre">&quot;architect&quot;,</span> <span class="pre">&quot;name&quot;:</span> <span class="pre">&quot;System</span> <span class="pre">Design&quot;}</span></code></p></li>
+<li><p>Result: Architectural thinking pattern for Claude Code</p></li>
+</ul>
+<p><strong>Step 3:</strong> Coordinate implementation</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__task_orchestrate</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;task&quot;:</span> <span class="pre">&quot;Implement</span> <span class="pre">user</span> <span class="pre">authentication</span> <span class="pre">with</span> <span class="pre">JWT&quot;,</span> <span class="pre">&quot;strategy&quot;:</span> <span class="pre">&quot;parallel&quot;}</span></code></p></li>
+<li><p>Result: Claude Code implements features using its native tools</p></li>
+</ul>
+<p><strong>What Actually Happens:</strong></p>
+<ol class="arabic simple">
+<li><p>The swarm creates a development coordination plan</p></li>
+<li><p>Each agent coordinates using mandatory hooks:</p>
+<ul class="simple">
+<li><p>Pre-task hooks for context loading</p></li>
+<li><p>Post-edit hooks for progress tracking</p></li>
+<li><p>Memory storage for cross-agent coordination</p></li>
+</ul>
+</li>
+<li><p>Claude Code uses Write, Edit, Bash tools for implementation</p></li>
+<li><p>Agents share progress through Claude Flow memory</p></li>
+<li><p>All code is written by Claude Code with full coordination</p></li>
+</ol>
+</section>
+<section id="github-repository-management-example-new">
+<h3>GitHub Repository Management Example (NEW!)<a class="headerlink" href="#github-repository-management-example-new" title="Link to this heading">#</a></h3>
+<p><strong>Context:</strong> Claude Code needs to manage a complex GitHub repository</p>
+<p><strong>Step 1:</strong> Initialize GitHub swarm</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__github_swarm</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;repository&quot;:</span> <span class="pre">&quot;owner/repo&quot;,</span> <span class="pre">&quot;agents&quot;:</span> <span class="pre">5,</span> <span class="pre">&quot;focus&quot;:</span> <span class="pre">&quot;maintenance&quot;}</span></code></p></li>
+<li><p>Result: Specialized swarm for repository management</p></li>
+</ul>
+<p><strong>Step 2:</strong> Analyze repository health</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__repo_analyze</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;deep&quot;:</span> <span class="pre">true,</span> <span class="pre">&quot;include&quot;:</span> <span class="pre">[&quot;issues&quot;,</span> <span class="pre">&quot;prs&quot;,</span> <span class="pre">&quot;code&quot;]}</span></code></p></li>
+<li><p>Result: Comprehensive repository analysis</p></li>
+</ul>
+<p><strong>Step 3:</strong> Enhance pull requests</p>
+<ul class="simple">
+<li><p>Tool: <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__pr_enhance</span></code></p></li>
+<li><p>Parameters: <code class="docutils literal notranslate"><span class="pre">{&quot;pr_number&quot;:</span> <span class="pre">123,</span> <span class="pre">&quot;add_tests&quot;:</span> <span class="pre">true,</span> <span class="pre">&quot;improve_docs&quot;:</span> <span class="pre">true}</span></code></p></li>
+<li><p>Result: AI-powered PR improvements</p></li>
+</ul>
+</section>
+</section>
+<section id="best-practices-for-coordination">
+<h2>Best Practices for Coordination<a class="headerlink" href="#best-practices-for-coordination" title="Link to this heading">#</a></h2>
+<section id="do">
+<h3>✅ DO:<a class="headerlink" href="#do" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Use MCP tools to coordinate Claude Code’s approach to complex tasks</p></li>
+<li><p>Let the swarm break down problems into manageable pieces</p></li>
+<li><p>Use memory tools to maintain context across sessions</p></li>
+<li><p>Monitor coordination effectiveness with status tools</p></li>
+<li><p>Train neural patterns for better coordination over time</p></li>
+<li><p>Leverage GitHub tools for repository management</p></li>
+</ul>
+</section>
+<section id="don-t">
+<h3>❌ DON’T:<a class="headerlink" href="#don-t" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Expect agents to write code (Claude Code does all implementation)</p></li>
+<li><p>Use MCP tools for file operations (use Claude Code’s native tools)</p></li>
+<li><p>Try to make agents execute bash commands (Claude Code handles this)</p></li>
+<li><p>Confuse coordination with execution (MCP coordinates, Claude executes)</p></li>
+</ul>
+</section>
+</section>
+<section id="memory-and-persistence">
+<h2>Memory and Persistence<a class="headerlink" href="#memory-and-persistence" title="Link to this heading">#</a></h2>
+<p>The swarm provides persistent memory that helps Claude Code:</p>
+<ul class="simple">
+<li><p>Remember project context across sessions</p></li>
+<li><p>Track decisions and rationale</p></li>
+<li><p>Maintain consistency in large projects</p></li>
+<li><p>Learn from previous coordination patterns</p></li>
+<li><p>Store GitHub workflow preferences</p></li>
+</ul>
+</section>
+<section id="performance-benefits">
+<h2>Performance Benefits<a class="headerlink" href="#performance-benefits" title="Link to this heading">#</a></h2>
+<p>When using Claude Flow coordination with Claude Code:</p>
+<ul class="simple">
+<li><p><strong>84.8% SWE-Bench solve rate</strong> - Better problem-solving through coordination</p></li>
+<li><p><strong>32.3% token reduction</strong> - Efficient task breakdown reduces redundancy</p></li>
+<li><p><strong>2.8-4.4x speed improvement</strong> - Parallel coordination strategies</p></li>
+<li><p><strong>27+ neural models</strong> - Diverse cognitive approaches</p></li>
+<li><p><strong>GitHub automation</strong> - Streamlined repository management</p></li>
+</ul>
+</section>
+<section id="claude-code-hooks-integration">
+<h2>Claude Code Hooks Integration<a class="headerlink" href="#claude-code-hooks-integration" title="Link to this heading">#</a></h2>
+<p>Claude Flow includes powerful hooks that automate coordination:</p>
+<section id="pre-operation-hooks">
+<h3>Pre-Operation Hooks<a class="headerlink" href="#pre-operation-hooks" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Auto-assign agents</strong> before file edits based on file type</p></li>
+<li><p><strong>Validate commands</strong> before execution for safety</p></li>
+<li><p><strong>Prepare resources</strong> automatically for complex operations</p></li>
+<li><p><strong>Optimize topology</strong> based on task complexity analysis</p></li>
+<li><p><strong>Cache searches</strong> for improved performance</p></li>
+<li><p><strong>GitHub context</strong> loading for repository operations</p></li>
+</ul>
+</section>
+<section id="post-operation-hooks">
+<h3>Post-Operation Hooks<a class="headerlink" href="#post-operation-hooks" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Auto-format code</strong> using language-specific formatters</p></li>
+<li><p><strong>Train neural patterns</strong> from successful operations</p></li>
+<li><p><strong>Update memory</strong> with operation context</p></li>
+<li><p><strong>Analyze performance</strong> and identify bottlenecks</p></li>
+<li><p><strong>Track token usage</strong> for efficiency metrics</p></li>
+<li><p><strong>Sync GitHub</strong> state for consistency</p></li>
+</ul>
+</section>
+<section id="session-management">
+<h3>Session Management<a class="headerlink" href="#session-management" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Generate summaries</strong> at session end</p></li>
+<li><p><strong>Persist state</strong> across Claude Code sessions</p></li>
+<li><p><strong>Track metrics</strong> for continuous improvement</p></li>
+<li><p><strong>Restore previous</strong> session context automatically</p></li>
+<li><p><strong>Export workflows</strong> for reuse</p></li>
+</ul>
+</section>
+<section id="advanced-features-v2-0-0">
+<h3>Advanced Features (v2.0.0!)<a class="headerlink" href="#advanced-features-v2-0-0" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>🚀 Automatic Topology Selection</strong> - Optimal swarm structure for each task</p></li>
+<li><p><strong>⚡ Parallel Execution</strong> - 2.8-4.4x speed improvements</p></li>
+<li><p><strong>🧠 Neural Training</strong> - Continuous learning from operations</p></li>
+<li><p><strong>📊 Bottleneck Analysis</strong> - Real-time performance optimization</p></li>
+<li><p><strong>🤖 Smart Auto-Spawning</strong> - Zero manual agent management</p></li>
+<li><p><strong>🛡️ Self-Healing Workflows</strong> - Automatic error recovery</p></li>
+<li><p><strong>💾 Cross-Session Memory</strong> - Persistent learning &amp; context</p></li>
+<li><p><strong>🔗 GitHub Integration</strong> - Repository-aware swarms</p></li>
+</ul>
+</section>
+<section id="configuration">
+<h3>Configuration<a class="headerlink" href="#configuration" title="Link to this heading">#</a></h3>
+<p>Hooks are pre-configured in <code class="docutils literal notranslate"><span class="pre">.claude/settings.json</span></code>. Key features:</p>
+<ul class="simple">
+<li><p>Automatic agent assignment for different file types</p></li>
+<li><p>Code formatting on save</p></li>
+<li><p>Neural pattern learning from edits</p></li>
+<li><p>Session state persistence</p></li>
+<li><p>Performance tracking and optimization</p></li>
+<li><p>Intelligent caching and token reduction</p></li>
+<li><p>GitHub workflow automation</p></li>
+</ul>
+<p>See <code class="docutils literal notranslate"><span class="pre">.claude/commands/</span></code> for detailed documentation on all features.</p>
+</section>
+</section>
+<section id="integration-tips">
+<h2>Integration Tips<a class="headerlink" href="#integration-tips" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Start Simple</strong>: Begin with basic swarm init and single agent</p></li>
+<li><p><strong>Scale Gradually</strong>: Add more agents as task complexity increases</p></li>
+<li><p><strong>Use Memory</strong>: Store important decisions and context</p></li>
+<li><p><strong>Monitor Progress</strong>: Regular status checks ensure effective coordination</p></li>
+<li><p><strong>Train Patterns</strong>: Let neural agents learn from successful coordinations</p></li>
+<li><p><strong>Enable Hooks</strong>: Use the pre-configured hooks for automation</p></li>
+<li><p><strong>GitHub First</strong>: Use GitHub tools for repository management</p></li>
+</ol>
+</section>
+<section id="swarm-orchestration-pattern">
+<h2>🧠 SWARM ORCHESTRATION PATTERN<a class="headerlink" href="#swarm-orchestration-pattern" title="Link to this heading">#</a></h2>
+<section id="you-are-the-swarm-orchestrator-immediately-spawn-agents-in-parallel-to-execute-tasks">
+<h3>You are the SWARM ORCHESTRATOR. <strong>IMMEDIATELY SPAWN AGENTS IN PARALLEL</strong> to execute tasks<a class="headerlink" href="#you-are-the-swarm-orchestrator-immediately-spawn-agents-in-parallel-to-execute-tasks" title="Link to this heading">#</a></h3>
+</section>
+<section id="critical-instruction-you-are-the-swarm-orchestrator">
+<h3>🚨 CRITICAL INSTRUCTION: You are the SWARM ORCHESTRATOR<a class="headerlink" href="#critical-instruction-you-are-the-swarm-orchestrator" title="Link to this heading">#</a></h3>
+<p><strong>MANDATORY</strong>: When using swarms, you MUST:</p>
+<ol class="arabic simple">
+<li><p><strong>SPAWN ALL AGENTS IN ONE BATCH</strong> - Use multiple tool calls in a SINGLE message</p></li>
+<li><p><strong>EXECUTE TASKS IN PARALLEL</strong> - Never wait for one task before starting another</p></li>
+<li><p><strong>USE BATCHTOOL FOR EVERYTHING</strong> - Multiple operations = Single message with multiple tools</p></li>
+<li><p><strong>ALL AGENTS MUST USE COORDINATION TOOLS</strong> - Every spawned agent MUST use claude-flow hooks and memory</p></li>
+</ol>
+</section>
+<section id="agent-count-configuration">
+<h3>🎯 AGENT COUNT CONFIGURATION<a class="headerlink" href="#agent-count-configuration" title="Link to this heading">#</a></h3>
+<p><strong>CRITICAL: Dynamic Agent Count Rules</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Check CLI Arguments First</strong>: If user runs <code class="docutils literal notranslate"><span class="pre">npx</span> <span class="pre">claude-flow&#64;alpha</span> <span class="pre">--agents</span> <span class="pre">5</span></code>, use 5 agents</p></li>
+<li><p><strong>Auto-Decide if No Args</strong>: Without CLI args, analyze task complexity:</p>
+<ul class="simple">
+<li><p>Simple tasks (1-3 components): 3-4 agents</p></li>
+<li><p>Medium tasks (4-6 components): 5-7 agents</p></li>
+<li><p>Complex tasks (7+ components): 8-12 agents</p></li>
+</ul>
+</li>
+<li><p><strong>Agent Type Distribution</strong>: Balance agent types based on task:</p>
+<ul class="simple">
+<li><p>Always include 1 coordinator</p></li>
+<li><p>For code-heavy tasks: more coders</p></li>
+<li><p>For design tasks: more architects/analysts</p></li>
+<li><p>For quality tasks: more testers/reviewers</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Example Auto-Decision Logic:</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// If CLI args provided: npx claude-flow@alpha --agents 6</span>
+<span class="nx">maxAgents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">CLI_ARGS</span><span class="p">.</span><span class="nx">agents</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">determineAgentCount</span><span class="p">(</span><span class="nx">task</span><span class="p">);</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">determineAgentCount</span><span class="p">(</span><span class="nx">task</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Analyze task complexity</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">task</span><span class="p">.</span><span class="nx">includes</span><span class="p">([</span><span class="s1">&#39;API&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;database&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;auth&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tests&#39;</span><span class="p">]))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">task</span><span class="p">.</span><span class="nx">includes</span><span class="p">([</span><span class="s1">&#39;frontend&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;backend&#39;</span><span class="p">]))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">6</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">task</span><span class="p">.</span><span class="nx">includes</span><span class="p">([</span><span class="s1">&#39;simple&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;script&#39;</span><span class="p">]))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// default</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="mandatory-agent-coordination-protocol">
+<h2>📋 MANDATORY AGENT COORDINATION PROTOCOL<a class="headerlink" href="#mandatory-agent-coordination-protocol" title="Link to this heading">#</a></h2>
+<section id="critical-every-agent-must-follow-this-protocol">
+<h3>🔴 CRITICAL: Every Agent MUST Follow This Protocol<a class="headerlink" href="#critical-every-agent-must-follow-this-protocol" title="Link to this heading">#</a></h3>
+<p>When you spawn an agent using the Task tool, that agent MUST:</p>
+<p><strong>1️⃣ BEFORE Starting Work:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check previous work and load context</span>
+npx<span class="w"> </span>claude-flow@alpha<span class="w"> </span>hooks<span class="w"> </span>pre-task<span class="w"> </span>--description<span class="w"> </span><span class="s2">&quot;[agent task]&quot;</span><span class="w"> </span>--auto-spawn-agents<span class="w"> </span><span class="nb">false</span>
+npx<span class="w"> </span>claude-flow@alpha<span class="w"> </span>hooks<span class="w"> </span>session-restore<span class="w"> </span>--session-id<span class="w"> </span><span class="s2">&quot;swarm-[id]&quot;</span><span class="w"> </span>--load-memory<span class="w"> </span><span class="nb">true</span>
+</pre></div>
+</div>
+<p><strong>2️⃣ DURING Work (After EVERY Major Step):</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Store progress in memory after each file operation</span>
+npx<span class="w"> </span>claude-flow@alpha<span class="w"> </span>hooks<span class="w"> </span>post-edit<span class="w"> </span>--file<span class="w"> </span><span class="s2">&quot;[filepath]&quot;</span><span class="w"> </span>--memory-key<span class="w"> </span><span class="s2">&quot;swarm/[agent]/[step]&quot;</span>
+
+<span class="c1"># Store decisions and findings</span>
+npx<span class="w"> </span>claude-flow@alpha<span class="w"> </span>hooks<span class="w"> </span>notification<span class="w"> </span>--message<span class="w"> </span><span class="s2">&quot;[what was done]&quot;</span><span class="w"> </span>--telemetry<span class="w"> </span><span class="nb">true</span>
+
+<span class="c1"># Check coordination with other agents</span>
+npx<span class="w"> </span>claude-flow@alpha<span class="w"> </span>hooks<span class="w"> </span>pre-search<span class="w"> </span>--query<span class="w"> </span><span class="s2">&quot;[what to check]&quot;</span><span class="w"> </span>--cache-results<span class="w"> </span><span class="nb">true</span>
+</pre></div>
+</div>
+<p><strong>3️⃣ AFTER Completing Work:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save all results and learnings</span>
+npx<span class="w"> </span>claude-flow@alpha<span class="w"> </span>hooks<span class="w"> </span>post-task<span class="w"> </span>--task-id<span class="w"> </span><span class="s2">&quot;[task]&quot;</span><span class="w"> </span>--analyze-performance<span class="w"> </span><span class="nb">true</span>
+npx<span class="w"> </span>claude-flow@alpha<span class="w"> </span>hooks<span class="w"> </span>session-end<span class="w"> </span>--export-metrics<span class="w"> </span><span class="nb">true</span><span class="w"> </span>--generate-summary<span class="w"> </span><span class="nb">true</span>
+</pre></div>
+</div>
+</section>
+<section id="agent-prompt-template">
+<h3>🎯 AGENT PROMPT TEMPLATE<a class="headerlink" href="#agent-prompt-template" title="Link to this heading">#</a></h3>
+<p>When spawning agents, ALWAYS include these coordination instructions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>You are the [Agent Type] agent in a coordinated swarm.
+
+MANDATORY COORDINATION:
+1. START: Run `npx claude-flow@alpha hooks pre-task --description &quot;[your task]&quot;`
+2. DURING: After EVERY file operation, run `npx claude-flow@alpha hooks post-edit --file &quot;[file]&quot; --memory-key &quot;agent/[step]&quot;`
+3. MEMORY: Store ALL decisions using `npx claude-flow@alpha hooks notification --message &quot;[decision]&quot;`
+4. END: Run `npx claude-flow@alpha hooks post-task --task-id &quot;[task]&quot; --analyze-performance true`
+
+Your specific task: [detailed task description]
+
+REMEMBER: Coordinate with other agents by checking memory BEFORE making decisions!
+</pre></div>
+</div>
+</section>
+<section id="parallel-execution-is-mandatory">
+<h3>⚡ PARALLEL EXECUTION IS MANDATORY<a class="headerlink" href="#parallel-execution-is-mandatory" title="Link to this heading">#</a></h3>
+<p><strong>THIS IS WRONG ❌ (Sequential - NEVER DO THIS):</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Message</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Initialize</span> <span class="n">swarm</span>
+<span class="n">Message</span> <span class="mi">2</span><span class="p">:</span> <span class="n">Spawn</span> <span class="n">agent</span> <span class="mi">1</span>
+<span class="n">Message</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Spawn</span> <span class="n">agent</span> <span class="mi">2</span>
+<span class="n">Message</span> <span class="mi">4</span><span class="p">:</span> <span class="n">TodoWrite</span> <span class="p">(</span><span class="n">single</span> <span class="n">todo</span><span class="p">)</span>
+<span class="n">Message</span> <span class="mi">5</span><span class="p">:</span> <span class="n">Create</span> <span class="n">file</span> <span class="mi">1</span>
+<span class="n">Message</span> <span class="mi">6</span><span class="p">:</span> <span class="n">TodoWrite</span> <span class="p">(</span><span class="n">another</span> <span class="n">single</span> <span class="n">todo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>THIS IS CORRECT ✅ (Parallel - ALWAYS DO THIS):</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Message</span> <span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="n">BatchTool</span><span class="p">]</span>
+  <span class="o">//</span> <span class="n">MCP</span> <span class="n">coordination</span> <span class="n">setup</span>
+  <span class="o">-</span> <span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__swarm_init</span>
+  <span class="o">-</span> <span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__agent_spawn</span> <span class="p">(</span><span class="n">researcher</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__agent_spawn</span> <span class="p">(</span><span class="n">coder</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__agent_spawn</span> <span class="p">(</span><span class="n">analyst</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__agent_spawn</span> <span class="p">(</span><span class="n">tester</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__agent_spawn</span> <span class="p">(</span><span class="n">coordinator</span><span class="p">)</span>
+
+<span class="n">Message</span> <span class="mi">2</span><span class="p">:</span> <span class="p">[</span><span class="n">BatchTool</span> <span class="o">-</span> <span class="n">Claude</span> <span class="n">Code</span> <span class="n">execution</span><span class="p">]</span>
+  <span class="o">//</span> <span class="n">Task</span> <span class="n">agents</span> <span class="k">with</span> <span class="n">full</span> <span class="n">coordination</span> <span class="n">instructions</span>
+  <span class="o">-</span> <span class="n">Task</span><span class="p">(</span><span class="s2">&quot;You are researcher agent. MANDATORY: Run hooks pre-task, post-edit, post-task. Task: Research API patterns&quot;</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">Task</span><span class="p">(</span><span class="s2">&quot;You are coder agent. MANDATORY: Run hooks pre-task, post-edit, post-task. Task: Implement REST endpoints&quot;</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">Task</span><span class="p">(</span><span class="s2">&quot;You are analyst agent. MANDATORY: Run hooks pre-task, post-edit, post-task. Task: Analyze performance&quot;</span><span class="p">)</span>
+  <span class="o">-</span> <span class="n">Task</span><span class="p">(</span><span class="s2">&quot;You are tester agent. MANDATORY: Run hooks pre-task, post-edit, post-task. Task: Write comprehensive tests&quot;</span><span class="p">)</span>
+
+  <span class="o">//</span> <span class="n">TodoWrite</span> <span class="k">with</span> <span class="n">ALL</span> <span class="n">todos</span> <span class="n">batched</span>
+  <span class="o">-</span> <span class="n">TodoWrite</span> <span class="p">{</span> <span class="n">todos</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;research&quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s2">&quot;Research API patterns&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s2">&quot;in_progress&quot;</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;design&quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s2">&quot;Design database schema&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s2">&quot;pending&quot;</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;implement&quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s2">&quot;Build REST endpoints&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s2">&quot;pending&quot;</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s2">&quot;Write unit tests&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s2">&quot;pending&quot;</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="s2">&quot;medium&quot;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;docs&quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s2">&quot;Create API documentation&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s2">&quot;pending&quot;</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="s2">&quot;low&quot;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;deploy&quot;</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="s2">&quot;Setup deployment&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="s2">&quot;pending&quot;</span><span class="p">,</span> <span class="n">priority</span><span class="p">:</span> <span class="s2">&quot;medium&quot;</span><span class="p">}</span>
+    <span class="p">]}</span>
+
+  <span class="o">//</span> <span class="n">File</span> <span class="n">operations</span> <span class="ow">in</span> <span class="n">parallel</span>
+  <span class="o">-</span> <span class="n">Write</span> <span class="s2">&quot;api/package.json&quot;</span>
+  <span class="o">-</span> <span class="n">Write</span> <span class="s2">&quot;api/server.js&quot;</span>
+  <span class="o">-</span> <span class="n">Write</span> <span class="s2">&quot;api/routes/users.js&quot;</span>
+  <span class="o">-</span> <span class="n">Bash</span> <span class="s2">&quot;mkdir -p api/{routes,models,tests}&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="mandatory-swarm-pattern">
+<h3>🎯 MANDATORY SWARM PATTERN<a class="headerlink" href="#mandatory-swarm-pattern" title="Link to this heading">#</a></h3>
+<p>When given ANY complex task with swarms:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>STEP 1: IMMEDIATE PARALLEL SPAWN (Single Message!)
+[BatchTool]:
+  // IMPORTANT: Check CLI args for agent count, otherwise auto-decide based on task complexity
+  - mcp__claude-flow__swarm_init {
+      topology: &quot;hierarchical&quot;,
+      maxAgents: CLI_ARGS.agents || AUTO_DECIDE(task_complexity), // Use CLI args or auto-decide
+      strategy: &quot;parallel&quot;
+    }
+
+  // Spawn agents based on maxAgents count and task requirements
+  // If CLI specifies 3 agents, spawn 3. If no args, auto-decide optimal count (3-12)
+  - mcp__claude-flow__agent_spawn { type: &quot;architect&quot;, name: &quot;System Designer&quot; }
+  - mcp__claude-flow__agent_spawn { type: &quot;coder&quot;, name: &quot;API Developer&quot; }
+  - mcp__claude-flow__agent_spawn { type: &quot;coder&quot;, name: &quot;Frontend Dev&quot; }
+  - mcp__claude-flow__agent_spawn { type: &quot;analyst&quot;, name: &quot;DB Designer&quot; }
+  - mcp__claude-flow__agent_spawn { type: &quot;tester&quot;, name: &quot;QA Engineer&quot; }
+  - mcp__claude-flow__agent_spawn { type: &quot;researcher&quot;, name: &quot;Tech Lead&quot; }
+  - mcp__claude-flow__agent_spawn { type: &quot;coordinator&quot;, name: &quot;PM&quot; }
+  - TodoWrite { todos: [multiple todos at once] }
+
+STEP 2: PARALLEL TASK EXECUTION (Single Message!)
+[BatchTool]:
+  - mcp__claude-flow__task_orchestrate { task: &quot;main task&quot;, strategy: &quot;parallel&quot; }
+  - mcp__claude-flow__memory_usage { action: &quot;store&quot;, key: &quot;init&quot;, value: {...} }
+  - Multiple Read operations
+  - Multiple Write operations
+  - Multiple Bash commands
+
+STEP 3: CONTINUE PARALLEL WORK (Never Sequential!)
+</pre></div>
+</div>
+</section>
+<section id="visual-task-tracking-format">
+<h3>📊 VISUAL TASK TRACKING FORMAT<a class="headerlink" href="#visual-task-tracking-format" title="Link to this heading">#</a></h3>
+<p>Use this format when displaying task progress:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>📊 Progress Overview
+   ├── Total Tasks: X
+   ├── ✅ Completed: X (X%)
+   ├── 🔄 In Progress: X (X%)
+   ├── ⭕ Todo: X (X%)
+   └── ❌ Blocked: X (X%)
+
+📋 Todo (X)
+   └── 🔴 001: [Task description] [PRIORITY] ▶
+
+🔄 In progress (X)
+   ├── 🟡 002: [Task description] ↳ X deps ▶
+   └── 🔴 003: [Task description] [PRIORITY] ▶
+
+✅ Completed (X)
+   ├── ✅ 004: [Task description]
+   └── ... (more completed tasks)
+
+Priority indicators: 🔴 HIGH/CRITICAL, 🟡 MEDIUM, 🟢 LOW
+Dependencies: ↳ X deps | Actionable: ▶
+</pre></div>
+</div>
+</section>
+<section id="real-example-full-stack-app-development">
+<h3>🎯 REAL EXAMPLE: Full-Stack App Development<a class="headerlink" href="#real-example-full-stack-app-development" title="Link to this heading">#</a></h3>
+<p><strong>Task</strong>: “Build a complete REST API with authentication, database, and tests”</p>
+<p><strong>🚨 MANDATORY APPROACH - Everything in Parallel:</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// ✅ CORRECT: SINGLE MESSAGE with ALL operations</span>
+<span class="p">[</span><span class="nx">BatchTool</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="mf">1</span><span class="p">]</span><span class="o">:</span>
+<span class="w">  </span><span class="c1">// Initialize and spawn ALL agents at once</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__swarm_init</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">topology</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hierarchical&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">maxAgents</span><span class="o">:</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="nx">strategy</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;parallel&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;architect&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;System Designer&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;coder&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;API Developer&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;coder&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Auth Expert&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;analyst&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;DB Designer&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tester&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Test Engineer&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;coordinator&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Lead&quot;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Update ALL todos at once - NEVER split todos!</span>
+<span class="w">  </span><span class="nx">TodoWrite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">todos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;design&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Design API architecture&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;in_progress&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;auth&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Implement authentication&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;db&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Design database schema&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;api&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Build REST endpoints&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;tests&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Write comprehensive tests&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;medium&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;docs&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Document API endpoints&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;low&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;deploy&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Setup deployment pipeline&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;medium&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;monitor&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Add monitoring&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;medium&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]}</span>
+
+<span class="w">  </span><span class="c1">// Start orchestration</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__task_orchestrate</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">task</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Build REST API&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">strategy</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;parallel&quot;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Store initial memory</span>
+<span class="w">  </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__memory_usage</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;store&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;project/init&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">started</span><span class="o">:</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+
+<span class="p">[</span><span class="nx">BatchTool</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="mf">2</span><span class="p">]</span><span class="o">:</span>
+<span class="w">  </span><span class="c1">// Create ALL directories at once</span>
+<span class="w">  </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;mkdir -p test-app/{src,tests,docs,config}&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;mkdir -p test-app/src/{models,routes,middleware,services}&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;mkdir -p test-app/tests/{unit,integration}&quot;</span><span class="p">)</span>
+
+<span class="w">  </span><span class="c1">// Write ALL base files at once</span>
+<span class="w">  </span><span class="nx">Write</span><span class="p">(</span><span class="s2">&quot;test-app/package.json&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">packageJsonContent</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Write</span><span class="p">(</span><span class="s2">&quot;test-app/.env.example&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">envContent</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Write</span><span class="p">(</span><span class="s2">&quot;test-app/README.md&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">readmeContent</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Write</span><span class="p">(</span><span class="s2">&quot;test-app/src/server.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">serverContent</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Write</span><span class="p">(</span><span class="s2">&quot;test-app/src/config/database.js&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">dbConfigContent</span><span class="p">)</span>
+
+<span class="p">[</span><span class="nx">BatchTool</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">Message</span><span class="w"> </span><span class="mf">3</span><span class="p">]</span><span class="o">:</span>
+<span class="w">  </span><span class="c1">// Read multiple files for context</span>
+<span class="w">  </span><span class="nx">Read</span><span class="p">(</span><span class="s2">&quot;test-app/package.json&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Read</span><span class="p">(</span><span class="s2">&quot;test-app/src/server.js&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Read</span><span class="p">(</span><span class="s2">&quot;test-app/.env.example&quot;</span><span class="p">)</span>
+
+<span class="w">  </span><span class="c1">// Run multiple commands</span>
+<span class="w">  </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;cd test-app &amp;&amp; npm install&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;cd test-app &amp;&amp; npm run lint&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nx">Bash</span><span class="p">(</span><span class="s2">&quot;cd test-app &amp;&amp; npm test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="never-do-this-sequential-wrong">
+<h3>🚫 NEVER DO THIS (Sequential = WRONG):<a class="headerlink" href="#never-do-this-sequential-wrong" title="Link to this heading">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// ❌ WRONG: Multiple messages, one operation each</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span><span class="w"> </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__swarm_init</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span><span class="w"> </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">(</span><span class="nx">just</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="nx">agent</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span><span class="w"> </span><span class="nx">mcp__claude</span><span class="o">-</span><span class="nx">flow__agent_spawn</span><span class="w"> </span><span class="p">(</span><span class="nx">another</span><span class="w"> </span><span class="nx">agent</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">4</span><span class="o">:</span><span class="w"> </span><span class="nx">TodoWrite</span><span class="w"> </span><span class="p">(</span><span class="nx">single</span><span class="w"> </span><span class="nx">todo</span><span class="p">)</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">5</span><span class="o">:</span><span class="w"> </span><span class="nx">Write</span><span class="w"> </span><span class="p">(</span><span class="nx">single</span><span class="w"> </span><span class="nx">file</span><span class="p">)</span>
+<span class="c1">// This is 5x slower and wastes swarm coordination!</span>
+</pre></div>
+</div>
+</section>
+<section id="memory-coordination-pattern">
+<h3>🔄 MEMORY COORDINATION PATTERN<a class="headerlink" href="#memory-coordination-pattern" title="Link to this heading">#</a></h3>
+<p>Every agent coordination step MUST use memory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">After</span> <span class="n">each</span> <span class="n">major</span> <span class="n">decision</span> <span class="ow">or</span> <span class="n">implementation</span>
+<span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__memory_usage</span>
+  <span class="n">action</span><span class="p">:</span> <span class="s2">&quot;store&quot;</span>
+  <span class="n">key</span><span class="p">:</span> <span class="s2">&quot;swarm-</span><span class="si">{id}</span><span class="s2">/agent-</span><span class="si">{name}</span><span class="s2">/</span><span class="si">{step}</span><span class="s2">&quot;</span>
+  <span class="n">value</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">timestamp</span><span class="p">:</span> <span class="n">Date</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+    <span class="n">decision</span><span class="p">:</span> <span class="s2">&quot;what was decided&quot;</span><span class="p">,</span>
+    <span class="n">implementation</span><span class="p">:</span> <span class="s2">&quot;what was built&quot;</span><span class="p">,</span>
+    <span class="n">nextSteps</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;step1&quot;</span><span class="p">,</span> <span class="s2">&quot;step2&quot;</span><span class="p">],</span>
+    <span class="n">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;dep1&quot;</span><span class="p">,</span> <span class="s2">&quot;dep2&quot;</span><span class="p">]</span>
+  <span class="p">}</span>
+
+<span class="o">//</span> <span class="n">To</span> <span class="n">retrieve</span> <span class="n">coordination</span> <span class="n">data</span>
+<span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__memory_usage</span>
+  <span class="n">action</span><span class="p">:</span> <span class="s2">&quot;retrieve&quot;</span>
+  <span class="n">key</span><span class="p">:</span> <span class="s2">&quot;swarm-</span><span class="si">{id}</span><span class="s2">/agent-</span><span class="si">{name}</span><span class="s2">/</span><span class="si">{step}</span><span class="s2">&quot;</span>
+
+<span class="o">//</span> <span class="n">To</span> <span class="n">check</span> <span class="nb">all</span> <span class="n">swarm</span> <span class="n">progress</span>
+<span class="n">mcp__claude</span><span class="o">-</span><span class="n">flow__memory_usage</span>
+  <span class="n">action</span><span class="p">:</span> <span class="s2">&quot;list&quot;</span>
+  <span class="n">pattern</span><span class="p">:</span> <span class="s2">&quot;swarm-</span><span class="si">{id}</span><span class="s2">/*&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="performance-tips">
+<h3>⚡ PERFORMANCE TIPS<a class="headerlink" href="#performance-tips" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Batch Everything</strong>: Never operate on single files when multiple are needed</p></li>
+<li><p><strong>Parallel First</strong>: Always think “what can run simultaneously?”</p></li>
+<li><p><strong>Memory is Key</strong>: Use memory for ALL cross-agent coordination</p></li>
+<li><p><strong>Monitor Progress</strong>: Use mcp<strong>claude-flow</strong>swarm_monitor for real-time tracking</p></li>
+<li><p><strong>Auto-Optimize</strong>: Let hooks handle topology and agent selection</p></li>
+</ol>
+</section>
+<section id="visual-swarm-status">
+<h3>🎨 VISUAL SWARM STATUS<a class="headerlink" href="#visual-swarm-status" title="Link to this heading">#</a></h3>
+<p>When showing swarm status, use this format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>🐝 Swarm Status: ACTIVE
+├── 🏗️ Topology: hierarchical
+├── 👥 Agents: 6/8 active
+├── ⚡ Mode: parallel execution
+├── 📊 Tasks: 12 total (4 complete, 6 in-progress, 2 pending)
+└── 🧠 Memory: 15 coordination points stored
+
+Agent Activity:
+├── 🟢 architect: Designing database schema...
+├── 🟢 coder-1: Implementing auth endpoints...
+├── 🟢 coder-2: Building user CRUD operations...
+├── 🟢 analyst: Optimizing query performance...
+├── 🟡 tester: Waiting for auth completion...
+└── 🟢 coordinator: Monitoring progress...
+</pre></div>
+</div>
+</section>
+</section>
+<section id="critical-todowrite-and-task-tool-batching">
+<h2>📝 CRITICAL: TODOWRITE AND TASK TOOL BATCHING<a class="headerlink" href="#critical-todowrite-and-task-tool-batching" title="Link to this heading">#</a></h2>
+<section id="mandatory-batching-rules-for-todos-and-tasks">
+<h3>🚨 MANDATORY BATCHING RULES FOR TODOS AND TASKS<a class="headerlink" href="#mandatory-batching-rules-for-todos-and-tasks" title="Link to this heading">#</a></h3>
+<p><strong>TodoWrite Tool Requirements:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>ALWAYS</strong> include 5-10+ todos in a SINGLE TodoWrite call</p></li>
+<li><p><strong>NEVER</strong> call TodoWrite multiple times in sequence</p></li>
+<li><p><strong>BATCH</strong> all todo updates together - status changes, new todos, completions</p></li>
+<li><p><strong>INCLUDE</strong> all priority levels (high, medium, low) in one call</p></li>
+</ol>
+<p><strong>Task Tool Requirements:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>SPAWN</strong> all agents using Task tool in ONE message</p></li>
+<li><p><strong>NEVER</strong> spawn agents one by one across multiple messages</p></li>
+<li><p><strong>INCLUDE</strong> full task descriptions and coordination instructions</p></li>
+<li><p><strong>BATCH</strong> related Task calls together for parallel execution</p></li>
+</ol>
+<p><strong>Example of CORRECT TodoWrite usage:</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// ✅ CORRECT - All todos in ONE call</span>
+<span class="nx">TodoWrite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">todos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Initialize system&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Analyze requirements&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;in_progress&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Design architecture&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Implement core&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;5&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Build features&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;medium&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;6&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Write tests&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;medium&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;7&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Add monitoring&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;medium&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;8&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Documentation&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;low&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Performance tuning&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;low&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;10&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Deploy to production&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">priority</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]}</span>
+</pre></div>
+</div>
+<p><strong>Example of WRONG TodoWrite usage:</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// ❌ WRONG - Multiple TodoWrite calls</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span><span class="w"> </span><span class="nx">TodoWrite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">todos</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Task 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span><span class="w"> </span><span class="nx">TodoWrite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">todos</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Task 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span>
+<span class="nx">Message</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span><span class="w"> </span><span class="nx">TodoWrite</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">todos</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Task 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span>
+<span class="c1">// This breaks parallel coordination!</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="claude-flow-v2-0-0-features">
+<h2>Claude Flow v2.0.0 Features<a class="headerlink" href="#claude-flow-v2-0-0-features" title="Link to this heading">#</a></h2>
+<p>Claude Flow extends the base coordination with:</p>
+<ul class="simple">
+<li><p><strong>🔗 GitHub Integration</strong> - Deep repository management</p></li>
+<li><p><strong>🎯 Project Templates</strong> - Quick-start for common projects</p></li>
+<li><p><strong>📊 Advanced Analytics</strong> - Detailed performance insights</p></li>
+<li><p><strong>🤖 Custom Agent Types</strong> - Domain-specific coordinators</p></li>
+<li><p><strong>🔄 Workflow Automation</strong> - Reusable task sequences</p></li>
+<li><p><strong>🛡️ Enhanced Security</strong> - Safer command execution</p></li>
+</ul>
+</section>
+<section id="support">
+<h2>Support<a class="headerlink" href="#support" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Documentation: <a class="github reference external" href="https://github.com/ruvnet/claude-flow">ruvnet/claude-flow</a></p></li>
+<li><p>Issues: <a class="github reference external" href="https://github.com/ruvnet/claude-flow/issues">ruvnet/claude-flow#issues</a></p></li>
+<li><p>Examples: <a class="github reference external" href="https://github.com/ruvnet/claude-flow/tree/main/examples">ruvnet/claude-flow</a></p></li>
+</ul>
+<hr class="docutils" />
+<p>Remember: <strong>Claude Flow coordinates, Claude Code creates!</strong> Start with <code class="docutils literal notranslate"><span class="pre">mcp__claude-flow__swarm_init</span></code> to enhance your development workflow.</p>
 </section>
 </section>
 
@@ -486,15 +1431,91 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-overview">Project Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-commands">Build Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-structure">Project Structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-configuration">Key Configuration</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-notes">Development Notes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-visualizations">Interactive Visualizations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-plotly-charts">Adding New Plotly Charts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-parallel-execution-after-swarm-init">🚨 CRITICAL: PARALLEL EXECUTION AFTER SWARM INIT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-concurrent-execution-for-all-actions">🚨 CRITICAL: CONCURRENT EXECUTION FOR ALL ACTIONS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-concurrent-patterns">🔴 MANDATORY CONCURRENT PATTERNS:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#golden-rule-1-message-all-related-operations">⚡ GOLDEN RULE: “1 MESSAGE = ALL RELATED OPERATIONS”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concurrent-execution-checklist">🎯 CONCURRENT EXECUTION CHECKLIST:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-claude-code-does-all-real-work">🚀 CRITICAL: Claude Code Does ALL Real Work</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-code-is-the-only-executor">🎯 CLAUDE CODE IS THE ONLY EXECUTOR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-code-always-handles">✅ Claude Code ALWAYS Handles:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-flow-mcp-tools-only-handle">🧠 Claude Flow MCP Tools ONLY Handle:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-separation-of-concerns">🚨 CRITICAL SEPARATION OF CONCERNS:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-principle">⚠️ Key Principle:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-execution-pattern">🔄 WORKFLOW EXECUTION PATTERN:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remember">🚨 REMEMBER:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-parallel-execution-batch-operations">🚀 CRITICAL: Parallel Execution &amp; Batch Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-rule-1-batch-everything">🚨 MANDATORY RULE #1: BATCH EVERYTHING</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-golden-rule-of-swarms">⚡ THE GOLDEN RULE OF SWARMS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-todo-and-task-batching">🚨 MANDATORY TODO AND TASK BATCHING</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-tool-examples">📦 BATCH TOOL EXAMPLES</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-operations-by-type">🎯 BATCH OPERATIONS BY TYPE</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-setup-stdio-mcp-recommended">🚀 Quick Setup (Stdio MCP - Recommended)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-mcp-server-stdio-no-port-needed">1. Add MCP Server (Stdio - No Port Needed)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-mcp-tools-for-coordination-in-claude-code">2. Use MCP Tools for Coordination in Claude Code</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-mcp-tools-for-coordination">Available MCP Tools for Coordination</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordination-tools">Coordination Tools:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring-tools">Monitoring Tools:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-neural-tools">Memory &amp; Neural Tools:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-integration-tools-new">GitHub Integration Tools (NEW!):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#system-tools">System Tools:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-examples-coordination-focused">Workflow Examples (Coordination-Focused)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-coordination-example">Research Coordination Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#development-coordination-example">Development Coordination Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-repository-management-example-new">GitHub Repository Management Example (NEW!)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-coordination">Best Practices for Coordination</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do">✅ DO:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#don-t">❌ DON’T:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-and-persistence">Memory and Persistence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-benefits">Performance Benefits</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-code-hooks-integration">Claude Code Hooks Integration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-operation-hooks">Pre-Operation Hooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-operation-hooks">Post-Operation Hooks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#session-management">Session Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-features-v2-0-0">Advanced Features (v2.0.0!)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-tips">Integration Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#swarm-orchestration-pattern">🧠 SWARM ORCHESTRATION PATTERN</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#you-are-the-swarm-orchestrator-immediately-spawn-agents-in-parallel-to-execute-tasks">You are the SWARM ORCHESTRATOR. <strong>IMMEDIATELY SPAWN AGENTS IN PARALLEL</strong> to execute tasks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-instruction-you-are-the-swarm-orchestrator">🚨 CRITICAL INSTRUCTION: You are the SWARM ORCHESTRATOR</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agent-count-configuration">🎯 AGENT COUNT CONFIGURATION</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-agent-coordination-protocol">📋 MANDATORY AGENT COORDINATION PROTOCOL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-every-agent-must-follow-this-protocol">🔴 CRITICAL: Every Agent MUST Follow This Protocol</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agent-prompt-template">🎯 AGENT PROMPT TEMPLATE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-execution-is-mandatory">⚡ PARALLEL EXECUTION IS MANDATORY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-swarm-pattern">🎯 MANDATORY SWARM PATTERN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-task-tracking-format">📊 VISUAL TASK TRACKING FORMAT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#real-example-full-stack-app-development">🎯 REAL EXAMPLE: Full-Stack App Development</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#never-do-this-sequential-wrong">🚫 NEVER DO THIS (Sequential = WRONG):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-coordination-pattern">🔄 MEMORY COORDINATION PATTERN</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-tips">⚡ PERFORMANCE TIPS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-swarm-status">🎨 VISUAL SWARM STATUS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#critical-todowrite-and-task-tool-batching">📝 CRITICAL: TODOWRITE AND TASK TOOL BATCHING</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mandatory-batching-rules-for-todos-and-tasks">🚨 MANDATORY BATCHING RULES FOR TODOS AND TASKS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#claude-flow-v2-0-0-features">Claude Flow v2.0.0 Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#support">Support</a></li>
 </ul>
   </nav></div>
 
